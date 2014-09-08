@@ -1,0 +1,3352 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+]>
+
+
+<rdf:RDF xmlns="&obo;bco.owl#"
+     xml:base="&obo;bco.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://bco.googlecode.com/git/src/ontology/examples/bco_example_base_tdwg2013.owl">
+        <rdfs:label>The Biological Collections Ontology</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The Biological Collections Ontology was originally created at the Biocode Commons Hackathon at GSC14. Older versions can be viewed at http://code.google.com/p/biocode-commons/source/browse/#svn%2Ftrunk%2Fontologies%2Fbiocollections.  Some of the classes in this ontology may be replaced by existing or newly requested terms from OBI or other ontologies.
+
+The Biological Collections Ontology (BCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.</rdfs:comment>
+        <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
+        <dc:language rdf:datatype="&xsd;string">en</dc:language>
+        <protege:defaultLanguage rdf:datatype="&xsd;string">en</protege:defaultLanguage>
+        <dc:rights rdf:datatype="&xsd;string">http://creativecommons.org/publicdomain/zero/1.0/</dc:rights>
+        <dc:creator>Barry Smith</dc:creator>
+        <dc:creator>John Wieczorek</dc:creator>
+        <dc:creator>Ramona Walls</dc:creator>
+        <dc:creator>Biocode Commons Ontology Hackathon members</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://protege.stanford.edu/plugins/owl/protege#defaultLanguage -->
+
+    <owl:AnnotationProperty rdf:about="&protege;defaultLanguage"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000057 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;BCO_0000057">
+        <rdfs:label xml:lang="en">taxonomic inventory metadata preferred name</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000060 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;BCO_0000060">
+        <rdfs:label xml:lang="en">BCO preferred label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000111">
+        <rdfs:label xml:lang="en">editor preferred term</rdfs:label>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">editor preferred term</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000112">
+        <rdfs:label xml:lang="en">example of usage</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A phrase describing how a class name should be used. May also include other kinds of examples that facilitate immediate understanding of a class semantics, such as widely known prototypical subclasses or instances of the class. Although essential for high level terms, examples for low level terms (e.g., Affymetrix HU133 array) are not</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">example</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000113 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000113">
+        <rdfs:label xml:lang="en">in branch</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">An annotation property indicating which module the terms belong to. This is currently experimental and not implemented yet.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">GROUP:OBI</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000277</obo:IAO_0000119>
+        <obo:IAO_0000111 xml:lang="en">in branch</obo:IAO_0000111>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000114">
+        <rdfs:label xml:lang="en">has curation status</rdfs:label>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000281</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Bill Bug</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">has curation status</obo:IAO_0000111>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
+        <rdfs:label rdf:datatype="&xsd;string">definition</rdfs:label>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">definition</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000116">
+        <rdfs:label xml:lang="en">editor note</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obfoundry.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">editor note</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000117">
+        <rdfs:label xml:lang="en">definition editor</rdfs:label>
+        <rdfs:label xml:lang="en">term editor</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">20110707, MC: label update to term editor and definition modified accordingly. See http://code.google.com/p/information-artifact-ontology/issues/detail?id=115.</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">Name of editor entering the definition in the file. The definition editor is a point of contact for information regarding the term. The definition editor may be, but is not always, the author of the definition, which may have been worked upon by several people</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">definition editor</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">term editor</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000118">
+        <rdfs:label xml:lang="en">alternative term</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">An alternative name for a class or property which means the same thing as the preferred name (semantically equivalent)</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">alternative term</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000119">
+        <rdfs:label xml:lang="en">definition source</rdfs:label>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">definition source</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000231 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000231">
+        <rdfs:label xml:lang="en">has obsolescence reason</rdfs:label>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">Relates an annotation property to an obsolescence reason. The values of obsolescence reasons come from a list of predefined terms, instances of the class obsolescence reason specification.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">has obsolescence reason</obo:IAO_0000111>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000232">
+        <rdfs:label xml:lang="en">curator note</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">An administrative note of use for a curator but of no use for a user</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">curator note</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000411 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000411">
+        <rdfs:label rdf:datatype="&xsd;string">is denotator type</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">In OWL 2 add AnnotationPropertyRange(&apos;is denotator type&apos; &apos;denotator type&apos;)</obo:IAO_0000116>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">relates an class defined in an ontology, to the type of it&apos;s denotator</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">is denotator type</obo:IAO_0000111>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">For external terms/classes, the ontology from which the term was imported</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">imported from</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000424 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000424">
+        <rdfs:label xml:lang="en">expand expression to</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A macro expansion tag applied to an object property (or possibly a data property)  which can be used by a macro-expansion engine to generate more complex expressions from simpler ones</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">ObjectProperty: RO_0002104
+Label: has plasma membrane part
+Annotations: IAO_0000424 &quot;http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.org/obo/owl/GO#GO_0005886 and http://purl.obolibrary.org/obo/BFO_0000051 some ?Y)&quot;
+</obo:IAO_0000112>
+        <obo:IAO_0000111 xml:lang="en">expand expression to</obo:IAO_0000111>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000425 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000425">
+        <rdfs:label xml:lang="en">expand assertion to</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A macro expansion tag applied to an annotation property which can be expanded into a more detailed axiom.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000112 xml:lang="en">ObjectProperty: RO???
+Label: spatially disjoint from
+Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.org/obo/BFO_0000051 some ?X)  (http://purl.obolibrary.org/obo/BFO_0000051 some ?Y)&quot;
+</obo:IAO_0000112>
+        <obo:IAO_0000111 xml:lang="en">expand assertion to</obo:IAO_0000111>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000426 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000426">
+        <rdfs:label xml:lang="en">first order logic expression</rdfs:label>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">first order logic expression</obo:IAO_0000111>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000427 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000427">
+        <rdfs:label xml:lang="en">antisymmetric property</rdfs:label>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">antisymmetric property</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">part_of antisymmetric property xsd:true</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">use boolean value xsd:true to indicate that the property is an antisymmetric property</obo:IAO_0000115>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000589">
+        <rdfs:label xml:lang="en">OBO foundry unique label</rdfs:label>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">The intended usage of that property is as follow: OBO foundry unique labels are automatically generated based on regular expressions provided by each ontology, so that SO could specify unique label = &apos;sequence &apos; + [label], etc. , MA could specify &apos;mouse + [label]&apos; etc. Upon importing terms, ontology developers can choose to use the &apos;OBO foundry unique label&apos; for an imported term or not. The same applies to tools .</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">An alternative name for a class or property which is unique across the OBO Foundry.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBO Foundry &lt;http://obofoundry.org/&gt;</obo:IAO_0000119>
+        <obo:IAO_0000111 xml:lang="en">OBO foundry unique label</obo:IAO_0000111>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0100001">
+        <rdfs:label xml:lang="en">term replaced by</rdfs:label>
+        <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">Use on obsolete terms, relating the term to another term that can be used as a substitute</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">term replaced by</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_creation_date -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_creation_date"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;OBI_0000293">
+        <rdfs:label xml:lang="en">has_specified_input</rdfs:label>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how &apos;has participant&apos; works.</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Larry Hunter</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Melanie Coutot</obo:IAO_0000117>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">has_specified_input</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000112 xml:lang="en">see is_input_of example_of_usage</obo:IAO_0000112>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;OBI_0000299">
+        <rdfs:label xml:lang="en">has_specified_output</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Larry Hunter</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">has_specified_output</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;RO_0001900">
+        <rdfs:label xml:lang="en">temporal interpretation</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">https://code.google.com/p/obo-relations/wiki/ROAndTime</rdfs:seeAlso>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002161 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;RO_0002161">
+        <rdfs:label rdf:datatype="&xsd;string">never in taxon</rdfs:label>
+        <obo:IAO_0000115>x never in taxon T if and only if T is a class, and x does not instantiate the class expression &quot;in taxon some T&quot;. Note that this is a shortcut relation, and should be used as a hasValue restriction in OWL.</obo:IAO_0000115>
+        <obo:IAO_0000425>?X DisjointWith RO_0002162 some ?Y </obo:IAO_0000425>
+        <obo:IAO_0000112>tooth SubClassOf &apos;never in taxon&apos; value &apos;Aves&apos;</obo:IAO_0000112>
+        <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000119>PMID:17921072</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">PMID:20973947</obo:IAO_0000119>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="&dc;publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;shorthand">
+        <rdfs:label rdf:datatype="&xsd;string">shorthand</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:AnnotationProperty rdf:about="&foaf;homepage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000058 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BCO_0000058">
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+        <obo:IAO_0000115>The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of.</obo:IAO_0000115>
+        <rdfs:comment>This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, the BFO relation was replaced by has role at some time, which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace this relation.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000053"/>
+        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000075 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BCO_examples_0000075"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000050">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+Ambiguous between continuant-parthood and occurrent-parthood.
+
+domain: continuant
+range: continuant
+time: at some time
+
+domain: occurrent
+range: occurrent
+time: atemporal</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Parthood as a relation between instances: The primitive instance-level relation p part_of p1 is illustrated in assertions such as: this instance of rhodopsin mediated phototransduction part_of this instance of visual perception.    This relation satisfies at least the following standard axioms of mereology: reflexivity (for all p, p part_of p); anti-symmetry (for all p, p1, if p part_of p1 and p1 part_of p then p and p1 are identical); and transitivity (for all p, p1, p2, if p part_of p1 and p1 part_of p2, then p part_of p2). Analogous axioms hold also for parthood as a relation between spatial regions.    For parthood as a relation between continuants, these axioms need to be modified to take account of the incorporation of a temporal argument. Thus for example the axiom of transitivity for continuants will assert that if c part_of c1 at t and c1 part_of c2 at t, then also c part_of c2 at t.    Parthood as a relation between classes: To define part_of as a relation between classes we again need to distinguish the two cases of continuants and processes, even though the explicit reference to instants of time now falls away. For continuants, we have C part_of C1 if and only if any instance of C at any time is an instance-level part of some instance of C1 at that time, as for example in: cell nucleus part_ of cell.</obo:IAO_0000116>
+        <dc:source>http://www.obofoundry.org/ro/#OBO_REL:part_of</dc:source>
+        <obo:IAO_0000111 xml:lang="en">part of</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
+        <owl:inverseOf rdf:resource="&obo;BFO_0000051"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002131"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000051">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+Ambiguous between continuant-parthood and occurrent-parthood.
+
+domain: continuant
+range: continuant
+time: at some time
+
+domain: occurrent
+range: occurrent
+time: atemporal</obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">has part</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002131"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000054">
+        <rdfs:label xml:lang="en">realized in</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: realizable entity
+range: processual entity
+time: atemporal</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">is realized by</obo:IAO_0000118>
+        <obo:IAO_0000111 xml:lang="en">realized in</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">realized_in</obo:IAO_0000118>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000055">
+        <rdfs:label xml:lang="en">realizes</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: processual entity
+range: realizable entity
+time: atemporal</obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">realizes</obo:IAO_0000111>
+        <owl:inverseOf rdf:resource="&obo;BFO_0000054"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000062 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000062">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">preceded by</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">An example is: translation preceded_by transcription; aging preceded_by development (not however death preceded_by aging). Where derives_from links classes of continuants, preceded_by links classes of processes. Clearly, however, these two relations are not independent of each other. Thus if cells of type C1 derive_from cells of type C, then any cell division involving an instance of C1 in a given lineage is preceded_by cellular processes involving an instance of C.    The assertion P preceded_by P1 tells us something about Ps in general: that is, it tells us something about what happened earlier, given what we know about what happened later. Thus it does not provide information pointing in the opposite direction, concerning instances of P1 in general; that is, that each is such as to be succeeded by some instance of P. Note that an assertion to the effect that P preceded_by P1 is rather weak; it tells us little about the relations between the underlying instances in virtue of which the preceded_by relation obtains. Typically we will be interested in stronger relations, for example in the relation immediately_preceded_by, or in relations which combine preceded_by with a condition to the effect that the corresponding instances of P and P1 share participants, or that their participants are connected by relations of derivation, or (as a first step along the road to a treatment of causality) that the one process in some way affects (for example, initiates or regulates) the other.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: occurrent
+range: occurrent
+time: atemporal</obo:IAO_0000116>
+        <dc:source>http://www.obofoundry.org/ro/#OBO_REL:preceded_by</dc:source>
+        <obo:IAO_0000118 xml:lang="en">is preceded by</obo:IAO_0000118>
+        <obo:IAO_0000111 xml:lang="en">preceded by</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">preceded_by</obo:IAO_0000118>
+        <owl:inverseOf rdf:resource="&obo;BFO_0000063"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002086"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002091"/>
+            <rdf:Description rdf:about="&obo;BFO_0000062"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002092"/>
+            <rdf:Description rdf:about="&obo;BFO_0000062"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000063 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000063">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">precedes</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: occurrent
+range: occurrent
+time: atemporal</obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">precedes</obo:IAO_0000111>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000066">
+        <rdfs:label xml:lang="en">occurs in</rdfs:label>
+        <obo:IAO_0000118 xml:lang="en">Intended meaning:
+domain: occurrent
+range: independent continuant
+time: atemporal</obo:IAO_0000118>
+        <obo:IAO_0000111 xml:lang="en">occurs in</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">occurs_in</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">unfolds in</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">unfolds_in</obo:IAO_0000118>
+        <owl:inverseOf rdf:resource="&obo;BFO_0000067"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000066"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000066"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000067 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000067">
+        <rdfs:label xml:lang="en">contains process</rdfs:label>
+        <obo:IAO_0000111 xml:lang="en">site of</obo:IAO_0000111>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="&obo;IAO_0000136">
+        <rdfs:label xml:lang="en">is about</rdfs:label>
+        <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">This document is about information artifacts and their representations</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">is_about is a (currently) primitive relation that relates an information artifact to an entity.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000293">
+        <rdfs:label xml:lang="en">has_specified_input</rdfs:label>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how &apos;has participant&apos; works.</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Larry Hunter</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Melanie Coutot</obo:IAO_0000117>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">has_specified_input</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000112 xml:lang="en">see is_input_of example_of_usage</obo:IAO_0000112>
+        <rdfs:domain rdf:resource="&obo;OBI_0000011"/>
+        <owl:inverseOf rdf:resource="&obo;OBI_0000295"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002233"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000295 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000295">
+        <rdfs:label xml:lang="en">is_specified_input_of</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON:Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">is_specified_input_of</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000112 xml:lang="en">some Autologous EBV(Epstein-Barr virus)-transformed B-LCL (B lymphocyte cell line) is_input_for instance of Chromum Release Assay described at https://wiki.cbil.upenn.edu/obiwiki/index.php/Chromium_Release_assay</obo:IAO_0000112>
+        <rdfs:range rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002352"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000299">
+        <rdfs:label xml:lang="en">has_specified_output</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Larry Hunter</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">has_specified_output</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <rdfs:domain rdf:resource="&obo;OBI_0000011"/>
+        <owl:inverseOf rdf:resource="&obo;OBI_0000312"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002234"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000312 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000312">
+        <rdfs:label xml:lang="en">is_specified_output_of</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON:Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">is_specified_output_of</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <rdfs:range rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002353"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0000052">
+        <rdfs:label xml:lang="en">inheres in</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: specifically dependent continuant
+range: independent continuant
+time: at all times
+
+A specifically dependent continuant A inheres in its independent continuant B at all times during which A exists.</obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0000053">
+        <rdfs:label xml:lang="en">bearer of</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: independent continuant
+range: specifically dependent continuant
+time: at some time</obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">bearer of</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
+        <owl:inverseOf rdf:resource="&obo;RO_0000052"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0000056">
+        <rdfs:label xml:lang="en">participates in</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: continuant and (not spatial region)
+range: processual entity
+time: at some time</obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">participates in</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">participates_in</obo:IAO_0000118>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0000057">
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
+        <dc:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</dc:source>
+        <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: processual entity
+range: continuant and (not spatial region)
+time: at some time</obo:IAO_0000116>
+        <owl:inverseOf rdf:resource="&obo;RO_0000056"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001000 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0001000">
+        <rdfs:label xml:lang="en">derives from</rdfs:label>
+        <rdfs:comment xml:lang="en">See also BFO_0001009</rdfs:comment>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001001 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0001001">
+        <rdfs:label xml:lang="en">derives into</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0001000"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001015 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0001015">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">location of</rdfs:label>
+        <obo:IAO_0000111 xml:lang="en">location of</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">location_of</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001018 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0001018">
+        <rdfs:label xml:lang="en">contained in</rdfs:label>
+        <obo:IAO_0000116>Containment is location not involving parthood, and arises only where some immaterial continuant is involved.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Containment obtains in each case between material and immaterial continuants, for instance: lung contained_in thoracic cavity; bladder contained_in pelvic cavity. Hence containment is not a transitive relation.    If c part_of c1 at t then we have also, by our definition and by the axioms of mereology applied to spatial regions, c located_in c1 at t. Thus, many examples of instance-level location relations for continuants are in fact cases of instance-level parthood. For material continuants location and parthood coincide. Containment is location not involving parthood, and arises only where some immaterial continuant is involved. To understand this relation, we first define overlap for continuants as follows:    c1 overlap c2 at t =def for some c, c part_of c1 at t and c part_of c2 at t. The containment relation on the instance level can then be defined (see definition):</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: material entity
+range: spatial region or site (immaterial continuant)
+        </obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">contained in</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">contained_in</obo:IAO_0000118>
+        <owl:inverseOf rdf:resource="&obo;RO_0001019"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001019 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0001019">
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Intended meaning:
+domain: spatial region or site (immaterial continuant)
+range: material entity
+        </obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">contains</obo:IAO_0000111>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001025 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0001025">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus</obo:IAO_0000116>
+        <dc:source>http://www.obofoundry.org/ro/#OBO_REL:located_in</dc:source>
+        <obo:IAO_0000111 xml:lang="en">located in</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">located_in</obo:IAO_0000118>
+        <owl:inverseOf rdf:resource="&obo;RO_0001015"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002081 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002081">
+        <rdfs:label xml:lang="en">before_or_simultaneous_with</rdfs:label>
+        <obo:IAO_0000118 xml:lang="en">&lt;=</obo:IAO_0000118>
+        <rdfs:comment>Primitive instance level timing relation between events</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002082 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002082">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">simultaneous_with</rdfs:label>
+        <rdfs:comment xml:lang="en">t1 simultaneous_with t2 iff:=  t1 before_or_simultaneous_with t2  and not (t1 before t2)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002081"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002083 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002083">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">before</rdfs:label>
+        <rdfs:comment xml:lang="en">t1 before t2 iff:=  t1 before_or_simulataneous_with t2  and not (t1 simultaeous_with t2)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002081"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002084 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002084">
+        <rdfs:label xml:lang="en">during_which_ends</rdfs:label>
+        <rdfs:comment>Previously had ID  http://purl.obolibrary.org/obo/RO_0002122 in test files in sandpit - but this seems to have been dropped from ro-edit.owl at some point.  No re-use under this ID AFAIK, but leaving note here in case we run in to clashes down the line.  Official ID now chosen from DOS ID range.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&obo;RO_0002093"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002085 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002085">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">encompasses</rdfs:label>
+        <obo:IAO_0000118>di</obo:IAO_0000118>
+        <rdfs:comment>Previously had ID  http://purl.obolibrary.org/obo/RO_0002124 in test files in sandpit - but this seems to have been dropped from ro-edit.owl at some point.  No re-use under this ID AFAIK, but leaving note here in case we run in to clashes down the line.  Official ID now chosen from DOS ID range.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002088"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002092"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002086 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002086">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">ends_after</rdfs:label>
+        <rdfs:comment xml:lang="en">X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002093"/>
+            <rdf:Description rdf:about="&obo;BFO_0000062"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002087 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002087">
+        <rdfs:label xml:lang="en">immediately_preceded_by</rdfs:label>
+        <rdfs:comment xml:lang="en">X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)</rdfs:comment>
+        <obo:IAO_0000118>starts_at_end_of</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000062"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002090"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002088 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002088">
+        <rdfs:label xml:lang="en">during_which_starts</rdfs:label>
+        <rdfs:comment>Previously had ID  http://purl.obolibrary.org/obo/RO_0002123 in test files in sandpit - but this seems to have been dropped from ro-edit.owl at some point.  No re-use under this ID AFAIK, but leaving note here in case we run in to clashes down the line.  Official ID now chosen from DOS ID range.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&obo;RO_0002091"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002089 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002089">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">starts_before</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002090 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002090">
+        <rdfs:label xml:lang="en">immediately_precedes</rdfs:label>
+        <obo:IAO_0000118>meets</obo:IAO_0000118>
+        <rdfs:comment xml:lang="en">X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)</rdfs:comment>
+        <obo:IAO_0000118>ends_at_start_of</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000062"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002091 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002091">
+        <rdfs:label xml:lang="en">starts_during</rdfs:label>
+        <rdfs:comment xml:lang="en">X starts_during Y iff: (start(Y) before_or_simultaneous_with start(X)) AND (start(X) before_or_simultaneous_with end(Y))</rdfs:comment>
+        <obo:IAO_0000118>io</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002092 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002092">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">happens_during</rdfs:label>
+        <rdfs:comment xml:lang="en">X happens_during Y iff: (start(Y) before_or_simultaneous_with start(X)) AND (end(X) before_or_simultaneous_with end(Y))</rdfs:comment>
+        <obo:IAO_0000118>during</obo:IAO_0000118>
+        <obo:IAO_0000118>d</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002093"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002093 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002093">
+        <rdfs:label xml:lang="en">ends_during</rdfs:label>
+        <rdfs:comment xml:lang="en">X ends_during Y iff: ((start(Y) before_or_simultaneous_with end(X)) AND end(X) before_or_simultaneous_with end(Y). </rdfs:comment>
+        <obo:IAO_0000118>overlaps</obo:IAO_0000118>
+        <obo:IAO_0000118>o</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002131 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002131">
+        <rdfs:label xml:lang="en">overlaps</rdfs:label>
+        <obo:IAO_0000115>x overlaps y if and only if there exists some z such that x has part z and z part of y</obo:IAO_0000115>
+        <obo:IAO_0000424>http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)</obo:IAO_0000424>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002323"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000051"/>
+            <rdf:Description rdf:about="&obo;RO_0002131"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000051"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002150 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002150">
+        <rdfs:label xml:lang="en">connected to</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">David Osumi-Sutherland</obo:IAO_0000117>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">X connected_to Y if and only if X and Y share a fiat boundary.</obo:IAO_0000115>
+        <obo:IAO_0000232>Consider relabeling this to &quot;continuous with&quot; (FMA:85972). The standard notion of connectedness does not imply shared boundaries - e.g. Glasgow connected_to Edinburgh via M8; my patella connected_to my femur (via patellar-femoral joint)</obo:IAO_0000232>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002323"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002151 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002151">
+        <rdfs:label xml:lang="en">proper overlaps</rdfs:label>
+        <obo:IAO_0000426 rdf:datatype="&xsd;string">(forall (?x ?y) 
+	(iff 
+		(proper_overlaps ?x ?y)
+		(and 
+			(overlaps ?x ?y)
+			(not (part_of ?x ?y)) 
+			(not (part_of ?y ?x)))))</obo:IAO_0000426>
+        <obo:IAO_0000118 rdf:datatype="&xsd;string">partially overlaps</obo:IAO_0000118>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002131"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002163 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002163">
+        <rdfs:label rdf:datatype="&xsd;string">spatially disjoint from</rdfs:label>
+        <obo:IAO_0000115>A is spatially_disjoint_from B if and only if they have no parts in common</obo:IAO_0000115>
+        <obo:IAO_0000424>BFO_0000051 exactly 0 (BFO_0000050 some ?Y)</obo:IAO_0000424>
+        <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">There are two ways to encode this as a shortcut relation. The other possibility to use an annotation assertion between two classes, and expand this to a disjointness axiom. </obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002323"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002180 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002180">
+        <rdfs:label xml:lang="en">has component</rdfs:label>
+        <rdfs:comment xml:lang="en">For use in recording has_part with a cardinality constraint.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000051"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002217 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002217">
+        <rdfs:label xml:lang="en">actively participates in</rdfs:label>
+        <obo:IAO_0000115>x actively participates in y if and only if x participates in y and x realizes some active role</obo:IAO_0000115>
+        <obo:IAO_0000118>agent in</obo:IAO_0000118>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000056"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002218"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002218 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002218">
+        <rdfs:label xml:lang="en">has active participant</rdfs:label>
+        <obo:IAO_0000115>x has participant y if and only if x realizes some active role that inheres in y</obo:IAO_0000115>
+        <obo:IAO_0000118>has agent</obo:IAO_0000118>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000057"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002219 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002219">
+        <rdfs:label xml:lang="en">surrounded by</rdfs:label>
+        <obo:IAO_0000115>x surrounded_by y if and only if x is adjacent to y and for every region r that is adjacent to x, r overlaps y</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002220"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002220 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002220">
+        <rdfs:label xml:lang="en">adjacent to</rdfs:label>
+        <obo:IAO_0000115>x adjacent to y if and only if x and y share a boundary</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">TODO: replaced by BFO_0001008</rdfs:comment>
+        <obo:IAO_0000116>belongs in BFO?</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002163"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002221 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002221">
+        <rdfs:label xml:lang="en">surrounds</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002219"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002220"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002222 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002222">
+        <rdfs:label xml:lang="en">temporally related to</rdfs:label>
+        <dc:source rdf:datatype="&xsd;anyURI">https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1</dc:source>
+        <obo:IAO_0000119>Allen</obo:IAO_0000119>
+        <rdfs:comment>A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations.</rdfs:comment>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002223 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002223">
+        <rdfs:label xml:lang="en">starts</rdfs:label>
+        <obo:IAO_0000119>Allen</obo:IAO_0000119>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000115>inverse of starts with</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002224 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002224">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">starts with</rdfs:label>
+        <obo:IAO_0000112>Every insulin receptor signaling pathway starts with the binding of a ligand to the insulin receptor</obo:IAO_0000112>
+        <obo:IAO_0000115>x starts with y if and only if x has part y and the time point at which x starts is equivalent to the time point at which y starts. Formally: α(y) = α(x) ∧ ω(y) &lt; ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
+        <obo:IAO_0000118>started by</obo:IAO_0000118>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002223"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002229 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002229">
+        <rdfs:label xml:lang="en">ends</rdfs:label>
+        <obo:IAO_0000115>inverse of ends with</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002230"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002230 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002230">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">ends with</rdfs:label>
+        <obo:IAO_0000118>finished by</obo:IAO_0000118>
+        <obo:IAO_0000115>x ends with y if and only if x has part y and the time point at which x ends is equivalent to the time point at which y ends. Formally: α(y) &gt; α(x) ∧ ω(y) = ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002222"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002233 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002233">
+        <rdfs:label xml:lang="en">has input</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000057"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002234 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002234">
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000057"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002314 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002314">
+        <rdfs:label xml:lang="en">inheres in part of</rdfs:label>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0000052"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002323 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002323">
+        <rdfs:label xml:lang="en">mereotopologically related to</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000115>A mereological relationship or a topological relationship</obo:IAO_0000115>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002350 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002350">
+        <rdfs:label xml:lang="en">member of</rdfs:label>
+        <obo:IAO_0000118>is member of</obo:IAO_0000118>
+        <obo:IAO_0000118>member part of</obo:IAO_0000118>
+        <obo:IAO_0000119>SIO</obo:IAO_0000119>
+        <obo:IAO_0000115>is member of is a mereological relation between a item and a collection.</obo:IAO_0000115>
+        <obo:IAO_0000112>An organism that is a member of a population of organisms</obo:IAO_0000112>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000050"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002351"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002351">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+        <obo:IAO_0000119>SIO</obo:IAO_0000119>
+        <obo:IAO_0000115>has member is a mereological relation between a collection and an item.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000051"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002352 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002352">
+        <rdfs:label xml:lang="en">input of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000056"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002233"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002353 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002353">
+        <rdfs:label xml:lang="en">output of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000056"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002234"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002354 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002354">
+        <rdfs:label xml:lang="en">formed as result of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002353"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000047 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000047">
+        <rdfs:label xml:lang="en">taxonomic inventory process</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;OBI_0000011"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                        <owl:someValuesFrom rdf:resource="&obo;BCO_0000048"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <dc:source>https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
+        <rdfs:comment>not sure if this should be a type of assay or a type of planned process</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A planned process by which a taxonomic inventory is created.</obo:IAO_0000115>
+        <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
+        <obo:BCO_0000057 xml:lang="en">inventory  type</obo:BCO_0000057>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000048 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000048">
+        <rdfs:label xml:lang="en">taxonomic inventory</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="&obo;BCO_0000047"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <obo:IAO_0000112>The butterflies of Great Britain</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that is a list of taxa recorded in some geospatially defined area over some stated time period using some method involving some actor.</obo:IAO_0000115>
+        <obo:IAO_0000112>The plants of Yosemite National Park</obo:IAO_0000112>
+        <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
+        <obo:IAO_0000112>&quot;The Flora of North America&quot;</obo:IAO_0000112>
+        <dc:source xml:lang="en">https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000051 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000051">
+        <rdfs:label xml:lang="en">restricted search taxonomic inventory process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BCO_0000047"/>
+        <obo:IAO_0000115>A taxonomic inventory process that is restricted to defined plots, transects, or points, in which a person or group of people is comprehensively covering the entire defined area, usually with a defined survey time or pace. The search is restricted to a well-defined and human-scale geospatial area (traversable within a time course of less than a day) within which there is an expectation of a comprehensive accounting of the taxonomic items of interest. </obo:IAO_0000115>
+        <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
+        <obo:IAO_0000112>Pollard transect-- &quot;walk a 1km transect at a slow&amp;steady pace, and report on all TOI within 5m in front, and 2.5m on either side of you.&quot;</obo:IAO_0000112>
+        <dc:source xml:lang="en">https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
+        <obo:BCO_0000057 xml:lang="en">restricted search</obo:BCO_0000057>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000052 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000052">
+        <rdfs:label xml:lang="en">open search taxonomic inventory process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BCO_0000047"/>
+        <obo:IAO_0000115>Search restricted within a larger defined geographic area, but where effort isn&apos;t even or complete across the defined region.  That is, a planned search restricted to a larger, defined geographic area, but effort isn&apos;t evenly distributed throughout the area, nor expected to be a complete and comprehensive accounting of TOI&apos;s across the defined region.  Temporal duration is typically longer than restricted search-- lasting hours to all day.</obo:IAO_0000115>
+        <obo:IAO_0000112>Individual Christmas Bird Count by some team.  Organized field trip to a State Park.</obo:IAO_0000112>
+        <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
+        <dc:source xml:lang="en">https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
+        <obo:BCO_0000057 xml:lang="en">open search</obo:BCO_0000057>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000053 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000053">
+        <rdfs:label xml:lang="en">opportunistic search taxonomic inventory process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BCO_0000047"/>
+        <obo:IAO_0000112>Many E-Bird lists are of this nature; useful supplementary information is that observers should state whether they documented every taxon of interest they saw.</obo:IAO_0000112>
+        <obo:IAO_0000115>A taxonomic inventory process that is a more casual reporting of occurrences of taxa of interest, often intended to be comprehensive accounting of the taxa of interest, but with no planned trajectory for discovery, nor pre-specified investment of effort. </obo:IAO_0000115>
+        <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
+        <rdfs:comment xml:lang="en">This is more typically used to report multiple sightings, where the motivation is to record presence and abundance, rather than for individual anecdotal occurrences that are noteworthy.</rdfs:comment>
+        <dc:source xml:lang="en">https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
+        <obo:BCO_0000057 xml:lang="en">opportunistic search</obo:BCO_0000057>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000054 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000054">
+        <rdfs:label xml:lang="en">trap or sample taxonomic inventory process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BCO_0000047"/>
+        <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
+        <obo:IAO_0000115 xml:lang="en">A taxonomic inventory process that is typically highly restricted in geospatial extent that involves either the physical extracton of some evidence of the presence of the taxa of interest, such as scat, fur, other material samples or information artifacts such as photographs or sound recordings.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Can be highly targeted and or baited (pheromone trap), or general (pitfall). Trap events can either be &quot;triggered&quot; but of long-term deployment, or rigorously temporally specified (left out overnight). </rdfs:comment>
+        <obo:IAO_0000112 xml:lang="en">an inventory of insects in a area using pheremone traps</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">an inventory of the large mammals of a park based on camera traps</obo:IAO_0000112>
+        <dc:source xml:lang="en">https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
+        <obo:IAO_0000112 xml:lang="en">inventories based on trawl samples</obo:IAO_0000112>
+        <obo:BCO_0000057 xml:lang="en">trap/sample inventory</obo:BCO_0000057>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000055 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000055">
+        <rdfs:label xml:lang="en">adventitious taxonomic inventory process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BCO_0000047"/>
+        <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
+        <obo:IAO_0000115>A taxonomic inventory in which taxon occurrences are recorde as a co-variates of another study and later compiled as a taxonomic inventory.</obo:IAO_0000115>
+        <obo:BCO_0000057 xml:lang="en">adventitious inventory</obo:BCO_0000057>
+        <obo:IAO_0000112>data from ecological studies in which presence of some taxa is recorded to clarify population or community parameters</obo:IAO_0000112>
+        <dc:source xml:lang="en">https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000056 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000056">
+        <rdfs:label xml:lang="en">compilation taxonomic inventory process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BCO_0000047"/>
+        <rdfs:comment xml:lang="en">A compiliation taxonomic inventory process is typically required to document the occurences of taxa of interest over large geospatial areas, or to derive the most comprehensive accounting of presence and absence of taxa of interest in a larger region.</rdfs:comment>
+        <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
+        <obo:IAO_0000112>Atlases and Checklists</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A taxonomic inventory process in which a list of taxa of interes is assembled from various combinations of existing taxonomic inventories, rather than generated de novo from observations or samples.</obo:IAO_0000115>
+        <obo:BCO_0000057 xml:lang="en">compilation inventory</obo:BCO_0000057>
+        <dc:source xml:lang="en">https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000059 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000059">
+        <rdfs:label xml:lang="en">museum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000245"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000031"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>ISBN:9780759105096</obo:IAO_0000119>
+        <obo:IAO_0000115>An institution that cares for (conserves) a collection of artifacts and other objects of scientific, artistic, cultural, or historical importance and makes them available for public viewing through exhibits that may be permanent or temporary.</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">The Louvre Museum</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">The Smithsonian Institution</obo:IAO_0000112>
+        <rdfs:comment xml:lang="en">The class museum has meaning that is much broader than biological collecitons. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum.</rdfs:comment>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0001010 -->
+
+    <owl:Class rdf:about="&obo;CARO_0001010">
+        <rdfs:label rdf:datatype="&xsd;string">organism or virus or viroid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Object"/>
+        <obo:IAO_creation_date rdf:datatype="&xsd;string">9/18/11</obo:IAO_creation_date>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Material anatomical entity that is a member of an individual species or is a viral or viroid particle.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Melissa Haendel</obo:IAO_0000117>
+        <obo:IAO_0000412 xml:lang="en">Common Anatomy Reference Onotology - CARO2</obo:IAO_0000412>
+        <obo:IAO_0000589 xml:lang="en">organism or virus</obo:IAO_0000589>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000027">
+        <rdfs:label xml:lang="en">data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <obo:IAO_0000116 xml:lang="en">2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym.</obo:IAO_0000116>
+        <obo:IAO_0000112 xml:lang="en">Data items include counts of things, analyte concentrations, and statistical summaries.</obo:IAO_0000112>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">data</obo:IAO_0000118>
+        <obo:IAO_0000111 xml:lang="en">data item</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000030">
+        <rdfs:label xml:lang="en">information content entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant"/>
+        <obo:IAO_0000112 xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">an information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">information content entity</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000033 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000033">
+        <rdfs:label xml:lang="en">directive information entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <obo:IAO_0000116 xml:lang="en">8/6/2009 Alan Ruttenberg: Changed label from &quot;information entity about a realizable&quot; after discussions at ICBO</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">An information content entity whose concretizations indicate to their bearer how to realize them in a process.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">Werner pushed back on calling it realizable information entity as it isn&apos;t realizable. However this name isn&apos;t right either. An example would be a recipe. The realizable entity would be a plan, but the information entity isn&apos;t about the plan, it, once concretized, *is* the plan. -Alan</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000078 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000078">
+        <rdfs:label xml:lang="en">curation status specification</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000124"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000423"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000125"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000122"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000123"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000428"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000120"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000121"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000002"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000102"/>
+        <obo:IAO_0000116 xml:lang="en">Better to represent curation as a process with parts and then relate labels to that process (in IAO meeting)</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000266</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Bill Bug</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">curation status specification</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000102 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000102">
+        <rdfs:label xml:lang="en">data about an ontology part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">data about an ontology part is a data item about a part of an ontology, for example a term</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000225 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000225">
+        <rdfs:label xml:lang="en">obsolescence reason specification</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000230"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000227"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000228"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000226"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000103"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000229"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000102"/>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">The creation of this class has been inspired in part by Werner Ceusters&apos; paper, Applying evolutionary terminology auditing to the Gene Ontology.</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">obsolescence reason specification</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000409 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000409">
+        <rdfs:label rdf:datatype="&xsd;string">denotator type</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000410"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000420"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000421"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000102"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A denotator type indicates how a term should be interpreted from an ontological perspective.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">Barry Smith, Werner Ceusters</obo:IAO_0000119>
+        <obo:IAO_0000112 rdf:datatype="&xsd;string">The Basic Formal Ontology ontology makes a distinction between Universals and defined classes, where the formal are &quot;natural kinds&quot; and the latter arbitrary collections of entities.</obo:IAO_0000112>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000011">
+        <rdfs:label xml:lang="en">planned process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">&apos;Plan&apos; includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn&apos;t have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)</obo:IAO_0000116>
+        <obo:IAO_0000232 rdf:datatype="&xsd;string">6/11/9: Edited at workshop. Used to include: is initiated by an agent</obo:IAO_0000232>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000112 rdf:datatype="&xsd;string">Injecting mice with a vaccine in order to test its efficacy</obo:IAO_0000112>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">branch derived</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A processual entity that realizes a plan which is the concretization of a plan specification.</obo:IAO_0000115>
+        <obo:IAO_0000232 xml:lang="en">This class merges the previously separated objective driven process and planned process, as they the separation proved hard to maintain. (1/22/09, branch call)</obo:IAO_0000232>
+        <obo:IAO_0000111 xml:lang="en">planned process</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000070 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000070">
+        <rdfs:label xml:lang="en">assay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <obo:IAO_0000112 rdf:datatype="&xsd;string">Assay the wavelength of light emitted by excited Neon atoms. Count of geese flying over a house.</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A planned process with the objective to produce information about some evaluant</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">assay</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">measuring</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">scientific observation</obo:IAO_0000118>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000245 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000245">
+        <rdfs:label xml:lang="en">organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">GROUP: OBI</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Susanna Sansone</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organization is a continuant entity which can play roles,  has members, and has a set of organization rules.  Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members.</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">PMID: 16353909.AAPS J. 2005 Sep 22;7(2):E274-80. Review. The joint food and agriculture organization of the United Nations/World Health Organization Expert Committee on Food Additives and its role in the evaluation of the safety of veterinary drug residues in foods.</obo:IAO_0000112>
+        <obo:IAO_0000111 xml:lang="en">organization</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000272 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000272">
+        <rdfs:label xml:lang="en">protocol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <obo:IAO_0000119 xml:lang="en">OBI branch derived + wikipedia (http://en.wikipedia.org/wiki/Protocol_%28natural_sciences%29)</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">PMID: 18388943.Nat Protoc. 2008;3(4):612-8.Protocol for the induction of arthritis in C57BL/6 mice.</obo:IAO_0000112>
+        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a protocol is a plan specification which has sufficient level of detail and quantitative information to communicate it between domain experts, so that different domain experts will reliably be able to independently reproduce the process.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">protocol</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000973 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000973">
+        <rdfs:label xml:lang="en">sequence data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">GROUP: OBI</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Person:Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000112 rdf:datatype="&xsd;string">example of usage: the representation of a nucleotide sequence in FASTA format used for a sequence similarity search.</obo:IAO_0000112>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">sequence data</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0600047 -->
+
+    <owl:Class rdf:about="&obo;OBI_0600047">
+        <rdfs:label xml:lang="en">sequencing assay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000070"/>
+        <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
+        <obo:IAO_0000112 xml:lang="en">The use of the Sanger method of DNA sequencing to determine the order of the nucleotides in a DNA template</obo:IAO_0000112>
+        <obo:IAO_0000116 xml:lang="en">has_output should be sequence of input; we don&apos;t have sequence well defined yet</obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">sequencing assay</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">the use of a chemical or biochemical means to infer the sequence of a biomaterial</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000000 -->
+
+    <owl:Class rdf:about="&obo;bco_0000000">
+        <rdfs:label xml:lang="en">evidence role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <rdfs:comment>It might be better to request this term in OBI or IAO.</rdfs:comment>
+        <obo:IAO_0000112>A museum specimen that serves as evidence for a taxonomic identification process bears an evidence role.</obo:IAO_0000112>
+        <obo:IAO_0000115>A role that is borne by some entity as a result of the entity providing evidence to support an assertion.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000001 -->
+
+    <owl:Class rdf:about="&obo;bco_0000001">
+        <rdfs:label xml:lang="en">persistent evidence role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <obo:IAO_0000115>An evidence role that persists through time.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Could add relation that persistant evidence role is specifically dependent on a museum material samples.
+
+Deprecated because we do not need this term. Can use OBI:evidence role. Not clear what it means for an evidence role to persist through time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000002 -->
+
+    <owl:Class rdf:about="&obo;bco_0000002">
+        <rdfs:label xml:lang="en">collecting process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>This term is now redundant and is merged with material sampling process  http://purl.obolibrary.org/obo/bco_0000022.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000227"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000003 -->
+
+    <owl:Class rdf:about="&obo;bco_0000003">
+        <rdfs:label xml:lang="en">observing process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <obo:IAO_0000112>Observing butterflies during a transect walk.</obo:IAO_0000112>
+        <obo:IAO_0000115>A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity.</obo:IAO_0000115>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000112>A trip camera capture of an image of a jaguar is an observation, because it is &quot;selected&quot; by the camera as worthy of obsevation simply by virtue of moving in front of the camera.</obo:IAO_0000112>
+        <obo:IAO_0000112>Seeing three pelicans flying overhead on Christmas day.</obo:IAO_0000112>
+        <rdfs:comment xml:lang="en">The information artifact may written or recorded or just be stored in someone&apos;s head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances.</rdfs:comment>
+        <obo:BCO_0000057 xml:lang="en">sighting</obo:BCO_0000057>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000004 -->
+
+    <owl:Class rdf:about="&obo;bco_0000004">
+        <rdfs:label xml:lang="en">being there process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>This term was originally developed at the Semantics of Biodiversity workshop in 5/2012. It is no longer needed for the BCO.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A process of existing in a particular spatio-temporal region.</obo:IAO_0000115>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000005 -->
+
+    <owl:Class rdf:about="&obo;bco_0000005">
+        <rdfs:label xml:lang="en">printed report</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Object"/>
+        <rdfs:comment>IAO has the term document, which is defined as &quot;A collection of information content entities intended to be understood together as a whole&quot; and has as examples journal article, patent application, laboratory notebook, and book.  IAO also has a term for report, but it is not defined. With this term, we want to describe the physical object that corresponds to some information content entity, together with the information content contained in the document or report. This class may be less important for modeling collection data, but could be important for efforts to get hand written (specifically dependent) reports into an electronic (generically dependent) report, and monitoring that process.</rdfs:comment>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000112 xml:lang="en">a book</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">a field notebook</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000006 -->
+
+    <owl:Class rdf:about="&obo;bco_0000006">
+        <rdfs:label xml:lang="en">printed observational report</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;bco_0000005"/>
+        <obo:IAO_0000112>A field notebook.</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A printed report that records the outcome of some observing process.</obo:IAO_0000115>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000007 -->
+
+    <owl:Class rdf:about="&obo;bco_0000007">
+        <rdfs:label xml:lang="en">selecting process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0002233"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A process by which a person or machine decides that a particular material entity as worthy of collection or observation.</obo:IAO_0000115>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000112 xml:lang="en">Filtering sea water to extract only organisms smaller than a certain size.</obo:IAO_0000112>
+        <rdfs:comment xml:lang="en">The criteria for selection may be specified in a protocol or may be ad hoc.</rdfs:comment>
+        <obo:IAO_0000112 xml:lang="en">deciding which branch to collect for a herbarium specimen</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000016 -->
+
+    <owl:Class rdf:about="&obo;bco_0000016">
+        <rdfs:label xml:lang="en">submitting process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0002233"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000115>A planned process whereby a person submits a material sample to an organization.</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">a curator submitting a herbarium speciman to a museum</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">a researcher submitting a water sample to a laboratory storage collection</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000021 -->
+
+    <owl:Class rdf:about="&obo;bco_0000021">
+        <rdfs:label xml:lang="en">physical extraction process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0002233"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Considered acquisition in OBI, but that is about taking possession. Physical extraction may involve taking pocession, but it may also just involve extraction of something that is already posessed (e.g. of dna from cells). </rdfs:comment>
+        <obo:IAO_0000112>removing a fish from the ocean with a net</obo:IAO_0000112>
+        <obo:IAO_0000112>picking leaves from a plant</obo:IAO_0000112>
+        <obo:IAO_0000115>A process that involves removing a material entity from its original site to another site.</obo:IAO_0000115>
+        <obo:IAO_0000112>removing dna from cells</obo:IAO_0000112>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000022 -->
+
+    <owl:Class rdf:about="&obo;bco_0000022">
+        <rdfs:label xml:lang="en">material sampling process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BCO_examples_0000075"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BCO_examples_0000075"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BCO_examples_0000075"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000036"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:allValuesFrom rdf:resource="&obo;bco_0000036"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A planned process that includes selecting a material entity for study, physically extracting the material entity, and submitting the material entity to some institution for preservation or study.</obo:IAO_0000115>
+        <rdfs:comment>Consider use of specimen collection from OBI.</rdfs:comment>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000118 xml:lang="en">collecting event</obo:IAO_0000118>
+        <obo:IAO_0000112 xml:lang="en">collecting plant parts for herbarium specimens</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">collecting sea water samples as part of Ocean Sampling Day</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000023 -->
+
+    <owl:Class rdf:about="&obo;bco_0000023">
+        <rdfs:label xml:lang="en">data sampling process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000024 -->
+
+    <owl:Class rdf:about="&obo;bco_0000024">
+        <rdfs:label xml:lang="en">statistical sampling process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000025 -->
+
+    <owl:Class rdf:about="&obo;bco_0000025">
+        <rdfs:label xml:lang="en">locality description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000115 xml:lang="en">An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site.</rdfs:comment>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000026 -->
+
+    <owl:Class rdf:about="&obo;bco_0000026">
+        <rdfs:label xml:lang="en">material sample role</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="&obo;bco_0000022"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000115 xml:lang="en">A role that is borne by some material entity and  is realized by the material entity being the output of a material sampling process.</obo:IAO_0000115>
+        <rdfs:comment>This term may be replaced by OBI:specimen role.</rdfs:comment>
+        <obo:IAO_0000112>the role borne by a branch when it becomes a herbarium specimen</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000027 -->
+
+    <owl:Class rdf:about="&obo;bco_0000027">
+        <rdfs:label xml:lang="en">successful material sampling process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <obo:IAO_0000115 xml:lang="en">A sampling process that has as output some material sample.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Do not need this class. By virtue of the existance of the material sample, we know that the sampling process was successful.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000028 -->
+
+    <owl:Class rdf:about="&obo;bco_0000028">
+        <rdfs:label xml:lang="en">unsuccessful material sampling process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <obo:IAO_0000115 xml:lang="en">A material sampling process that has as output exactly zero material samples.</obo:IAO_0000115>
+        <rdfs:comment>Do not need this class. By virtue of the absence of the material sample, we know that the sampling process was unsuccessful.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000029 -->
+
+    <owl:Class rdf:about="&obo;bco_0000029">
+        <rdfs:label xml:lang="en">museum collection entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>At the GSC14 hackathon in 09/2012, we decided to deprecate this term.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000030 -->
+
+    <owl:Class rdf:about="&obo;bco_0000030">
+        <rdfs:label xml:lang="en">organismal museum collection entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;bco_0000029"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <obo:IAO_0000115 xml:lang="en">A museum collections entity that derives from an organismal entity,  has a persistent evidence role and &apos;depends on&apos; a process of collecting.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The label for this on the original diagram was &apos;collection object&apos;. However, not all entities in collections will fit the defition of &apos;object&apos;, so &apos;collection entity is probably a better name.
+
+The relation &apos;depends on&apos; cannot really be used here. Old BFO has &apos;inverse depends on&apos;, but this is not in the current BFO. See dwc_bfo2_new.owl for the original logical definition.
+
+At the GSC14 hackathon in 09/2012, we decided to deprecate this term.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000031 -->
+
+    <owl:Class rdf:about="&obo;bco_0000031">
+        <rdfs:label xml:lang="en">museum collection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000036"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000115 xml:lang="en">An object aggregate that has as member part a material sample that is located in museum as a result of a process of curation.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection.</rdfs:comment>
+        <obo:IAO_0000112>The herbarium collection at the New York Botanical Garden.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the painting collection at the Louvre Museum</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000032 -->
+
+    <owl:Class rdf:about="&obo;bco_0000032">
+        <rdfs:label xml:lang="en">organismal museum collection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;bco_0000031"/>
+        <obo:IAO_0000115 xml:lang="en">A museum collection that has as member part a material sample that was derived from an organism.</obo:IAO_0000115>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000112 xml:lang="en">the insect collection at the Smithsonian Institution</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000033 -->
+
+    <owl:Class rdf:about="&obo;bco_0000033">
+        <rdfs:label xml:lang="en">institution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>Replaced by OBI organization. Request institution as synonym in OBI.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000423"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000034 -->
+
+    <owl:Class rdf:about="&obo;bco_0000034">
+        <rdfs:label xml:lang="en">organismal entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <obo:IAO_0000115 xml:lang="en">A material entity that derives from an organism or virus or viroid.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">This class is understood to mean: A material entity that is either an organism, a part of an organism, a collection of organisms, or a fossil.
+
+The relation &apos;organismal entity derives from organism&apos; was in the original diagram. Subclasses of organismal entity include organism, and It is not clear if it is valid to that an organism derives from an organism (is the derives from relation reflexive?).
+
+At the GSC14 hackathon in 09/2012, we decided to deprecate this term.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000035 -->
+
+    <owl:Class rdf:about="&obo;bco_0000035">
+        <rdfs:label xml:lang="en">obsolete organism or virus or viroid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment xml:lang="en">This terms was replaced by a term imported from CARO.
+
+The original diagram only had organsim, but DWC and GOs both need to include viruses and viroids.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000423"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000036 -->
+
+    <owl:Class rdf:about="&obo;bco_0000036">
+        <rdfs:label xml:lang="en">material sample</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BCO_0000058"/>
+                        <owl:someValuesFrom rdf:resource="&obo;bco_0000026"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000112>A herbarium or museum specimen.</obo:IAO_0000112>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000112>A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA.
+</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A material entity that has a material sample role. A material entity takes on the material sample role by being the output of a material samping process. That is, is selected for study, collected, and submitted to an institution for preservation or study.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Material sample is already in OBI, but with a slightly different meaning. Consider import of OBI:specimen to replace this term.</rdfs:comment>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000037 -->
+
+    <owl:Class rdf:about="&obo;bco_0000037">
+        <rdfs:label xml:lang="en">data sample</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <obo:IAO_0000115 xml:lang="en">An information content entity (?) that is the result of some data sampling process.</obo:IAO_0000115>
+        <rdfs:comment>This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000038 -->
+
+    <owl:Class rdf:about="&obo;bco_0000038">
+        <rdfs:label xml:lang="en">statistical sample</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000039 -->
+
+    <owl:Class rdf:about="&obo;bco_0000039">
+        <rdfs:label xml:lang="en">protocol governed sampling activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>If sampling is a OBI planned process, that captures that it is protocal governed.</rdfs:comment>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000042 -->
+
+    <owl:Class rdf:about="&obo;bco_0000042">
+        <rdfs:label xml:lang="en">taxonomic identification process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <obo:IAO_0000112>Using BLAST to identify the taxa present in an environmental (metagenomic) sample.</obo:IAO_0000112>
+        <obo:IAO_0000112>Associating a museum specimen with a specific taxonomic concept based on its characters.</obo:IAO_0000112>
+        <obo:IAO_0000112>Using a key to identify a plant in the field.</obo:IAO_0000112>
+        <obo:IAO_0000112>Using DNA barcoding to identify a plant species.</obo:IAO_0000112>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000115>A process by which a material sample is associated with a taxon or taxa.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000043 -->
+
+    <owl:Class rdf:about="&obo;bco_0000043">
+        <rdfs:label xml:lang="en">process that yields a material representation of a material entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000232 xml:lang="en">Consider term from OBI or IAO.</obo:IAO_0000232>
+        <rdfs:comment xml:lang="en">Includes as output rubbings, casts, photographic prints, audio or video tapes.
+
+Needs a better name. Current name is the definition.</rdfs:comment>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000423"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000044 -->
+
+    <owl:Class rdf:about="&obo;bco_0000044">
+        <rdfs:label xml:lang="en">material target of observation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BCO_0000058"/>
+                        <owl:someValuesFrom rdf:resource="&obo;bco_0000046"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 xml:lang="en">A material entity that has a target of observation role, that is, a material entity that is the input of some observing process.</obo:IAO_0000115>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000112 xml:lang="en">A bird observed during a Christmas Bird Count</obo:IAO_0000112>
+        <obo:IAO_0000112>A bird observed during a transect walk.</obo:IAO_0000112>
+        <obo:IAO_0000112>An lizard observed in the field that is not collected but whose location is recorded in a field notebook. </obo:IAO_0000112>
+        <obo:IAO_0000112>A tree is forest plot that is measured for diameter at breast height (DBH).</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000045 -->
+
+    <owl:Class rdf:about="&obo;bco_0000045">
+        <rdfs:label xml:lang="en">process that yields an information artifact that is a representation of a material entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <rdfs:comment>Includes audio recordings and photographs (which are information artifacts).
+
+Needs a better name. Current name is the definition.</rdfs:comment>
+        <obo:IAO_0000232 xml:lang="en">Some instances of term could possibly be replaced by OBI:image acquisition. Maybe request another OBI term for audio recording acquisition.</obo:IAO_0000232>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000423"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000046 -->
+
+    <owl:Class rdf:about="&obo;bco_0000046">
+        <rdfs:label xml:lang="en">material target of observation role</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="&obo;bco_0000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
+        <obo:IAO_0000115>A role that is borne by some material entity and is realized by the material entity being the input of an observing process.</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">the role borne by a bird during a Christmas Bird Count</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#DbXref -->
+
+    <owl:Class rdf:about="&oboInOwl;DbXref">
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000102"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#Definition -->
+
+    <owl:Class rdf:about="&oboInOwl;Definition">
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000102"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
+
+    <owl:Class rdf:about="&oboInOwl;ObsoleteClass">
+        <rdfs:label rdf:datatype="&xsd;string">Obsolete Class</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#Subset -->
+
+    <owl:Class rdf:about="&oboInOwl;Subset">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000224"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000102"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#Synonym -->
+
+    <owl:Class rdf:about="&oboInOwl;Synonym">
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000102"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymType -->
+
+    <owl:Class rdf:about="&oboInOwl;SynonymType">
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000102"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1#Entity -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1#Entity">
+        <rdfs:label rdf:datatype="&xsd;string">entity</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Continuant"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Continuant -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Continuant">
+        <rdfs:label rdf:datatype="&xsd;string">continuant</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#DependentContinuant"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An entity [bfo:Entity] that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: a heart, a person, the color of a tomato, the mass of a cloud, a symphony orchestra, the disposition of blood to coagulate, the lawn and atmosphere in front of our building</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Synonyms: endurant</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#DependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#DependentContinuant">
+        <rdfs:label rdf:datatype="&xsd;string">dependent_continuant</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Continuant"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpatialRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is either dependent on one or other independent continuant [snap:IndependentContinuant] bearers or inheres in or is borne by other entities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Disposition">
+        <rdfs:label rdf:datatype="&xsd;string">disposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Function"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A realizable entity [snap:RealizableEntity] that essentially causes a specific process or transformation in the object [snap:Object] in which it inheres, under specific circumstances and in conjunction with the laws of nature. A general formula for dispositions is: X (object [snap:Object] has the disposition D to (transform, initiate a process) R under conditions C.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the disposition of vegetables to decay when not refrigerated, the disposition of a vase to brake if dropped, the disposition of blood to coagulate, the disposition of a patient with a weakened immune system to contract disease, the disposition of metal to conduct electricity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart">
+        <rdfs:label rdf:datatype="&xsd;string">fiat_object_part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Object"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Site"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A material entity [snap:MaterialEntity] that is part of an object [snap:Object] but is not demarcated by any physical discontinuities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: upper and lower lobes of the left lung, the dorsal and ventral surfaces of the body, the east side of Saarbruecken, the lower right portion of a human torso</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Synonyms: fiat substance part</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Function -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Function">
+        <rdfs:label rdf:datatype="&xsd;string">function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A realizable entity [snap:RealizableEntity] the manifestation of which is an essentially end-directed activity of a continuant [snap:Continuant] entity in virtue of that continuant [snap:Continuant] entity being a specific kind of entity in the kind or kinds of contexts that it is made for.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the function of a birth canal to enable transport, the function of the heart in the body: to pump blood, to receive de-oxygenated and oxygenated blood, etc., the function of reproduction in the transmission of genetic material, the digestive function of the stomach to nutriate the body, the function of a hammer to drive in nails, the function of a computer program to compute mathematical equations, the function of an automobile to provide transportation, the function of a judge in a court of law</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant">
+        <rdfs:label rdf:datatype="&xsd;string">generically_dependent_continuant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#DependentContinuant"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is dependent on one or other independent continuant [snap:IndependentContinuant] bearers. For every instance of A requires some instance of (an independent continuant [snap:IndependentContinuant] type) B but which instance of B serves can change from time to time.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: a certain PDF file that exists in different and in several hard drives</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant">
+        <rdfs:label rdf:datatype="&xsd;string">independent_continuant</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Site"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Continuant"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpatialRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is a bearer of quality [snap:Quality] and realizable entity [snap:RealizableEntity] entities, in which other entities inhere and which itself cannot inhere in anything.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: an organism, a heart, a leg, a person, a symphony orchestra, a chair, the bottom right portion of a human torso, the lawn and atmosphere in front of our building</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Synonyms: substantial entity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity">
+        <rdfs:label rdf:datatype="&xsd;string">material_entity</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Object"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Site"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An independent continuant [snap:IndependentContinuant] that is spatially extended whose identity is independent of that of other entities and can be maintained through time. Note: Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: collection of random bacteria, a chair, dorsal surface of the body</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Object -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Object">
+        <rdfs:label rdf:datatype="&xsd;string">object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Site"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A material entity [snap:MaterialEntity] that is spatially extended, maximally self-connected and self-contained (the parts of a substance are not separated from each other by spatial gaps) and possesses an internal unity. The identity of substantial object [snap:Object] entities is independent of that of other entities and can be maintained through time.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: an organism, a heart, a chair, a lung, an apple</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Synonyms: substance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate">
+        <rdfs:label rdf:datatype="&xsd;string">object_aggregate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Site"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A material entity [snap:MaterialEntity] that is a mereological sum of separate object [snap:Object] entities and possesses non-connected boundaries.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: a heap of stones, a group of commuters on the subway, a collection of random bacteria, a flock of geese, the patients in a hospital</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Synonyms: substance aggregate</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary">
+        <rdfs:label rdf:datatype="&xsd;string">object_boundary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Site"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: Boundaries are theoretically difficult entities to account for, however the intuitive notion of a physical boundary as a surface of some sort (whether inside or outside of a thing) will generally serve as a good guide for the use of this universal.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An independent continuant [snap:IndependentContinuant] that is a lower dimensional part of a spatial entity, normally a closed two-dimensional surface. Boundaries are those privileged parts of object [snap:Object] entities that exist at exactly the point where the object [snap:Object] is separated off from the rest of the existing entities in the world.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the surface of the skin, the surface of the earth, the surface of the interior of the stomach, the outer surface of a cell or cell wall</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Synonyms: substance boundary</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#OneDimensionalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#OneDimensionalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">one_dimensional_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpatialRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatial region [snap:SpatialRegion] with one dimension.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the part of space that is a line stretching from one end of absolute space to the other, an edge of a cube-shaped part of space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Quality -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality">
+        <rdfs:label rdf:datatype="&xsd;string">quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A specifically dependent continuant [snap:SpecificallyDependentContinuant] that is exhibited if it inheres in an entity or entities at all (a categorical property).</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the color of a tomato, the ambient temperature of air, the circumference of a waist, the shape of a nose, the mass of a piece of gold, the weight of a chimpanzee</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#RealizableEntity -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity">
+        <rdfs:label rdf:datatype="&xsd;string">realizable_entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: If a realizable entity [snap:RealizableEntity] inheres in a continuant [snap:Continuant], this does not imply that it is actually realized.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A specifically dependent continuant [snap:SpecificallyDependentContinuant] that inheres in continuant [snap:Continuant] entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the role of being a doctor, the function of the reproductive organs, the disposition of blood to coagulate, the disposition of metal to conduct electricity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Role -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Role">
+        <rdfs:label rdf:datatype="&xsd;string">role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A realizable entity [snap:RealizableEntity] the manifestation of which brings about some result or end that is not essential to a continuant [snap:Continuant] in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant [snap:Continuant] in some kinds of natural, social or institutional contexts.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the role of a person as a surgeon, the role of a chemical compound in an experiment, the role of a patient relative as defined by a hospital administrative form, the role of a woman as a legal mother in the context of system of laws, the role of a biological grandfather as legal guardian in the context of a system of laws, the role of ingested matter in digestion, the role of a student in a university</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Site -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Site">
+        <rdfs:label rdf:datatype="&xsd;string">site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: An instance of Site [snap:Site] is a mixture of independent continuant [snap:IndependentContinuant] entities which act as surrounding environments for other independent continuant [snap:IndependentContinuant] entities, most importantly for instances of object [snap:Object]. A site [snap:Site] is typically made of object [snap:Object] or fiat object part [snap:FiatObjectPart] entities and a surrounding medium in which is found an object [snap:Object] occupying the site [snap:Site]. Independent continuant [snap:IndependentContinuant] entities may be associated with others (which, then, are site [snap:Site] entities) through a relation of &quot;occupation&quot;. That relation is connected to, but distinct from, the relation of spatial location. Site [snap:Site] entities are not to be confused with spatial region [snap:SpatialRegion] entities. In BFO, site [snap:Site] allows for a so-called relational view of space which is different from the view corresponding to the class spatial region [snap:SpatialRegion] (see the comment on this class).</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An independent continuant [snap:IndependentContinuant] consisting of a characteristic spatial shape in relation to some arrangement of other continuant [snap:Continuant] entities and of the medium which is enclosed in whole or in part by this characteristic spatial shape. Site [snap:Site] entities are entities that can be occupied by other continuant [snap:Continuant] entities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: a particular room in a particular hospital, Maria&apos;s nostril or her intestines for a variety of bacteria.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#SpatialRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#SpatialRegion">
+        <rdfs:label rdf:datatype="&xsd;string">spatial_region</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#OneDimensionalRegion"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Continuant"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: All instances of continuant [snap:Continuant] are spatial entities, that is, they enter in the relation of (spatial) location with spatial region [snap:SpatialRegion] entities. As a particular case, the exact spatial location of a spatial region [snap:SpatialRegion] is this region itself.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: An instance of spatial region [snap:SpatialRegion] is a part of space. All parts of space are spatial region [snap:SpatialRegion] entities and only spatial region [snap:SpatialRegion] entities are parts of space. Space is the entire extent of the spatial universe, a designated individual, which is thus itself a spatial region [snap:SpatialRegion].</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: Space and spatial region [snap:SpatialRegion] entities are entities in their own rights which exist independently of any entities which can be located at them. This view of space is sometimes called &quot;absolutist&quot; or &quot;the container view&quot;. In BFO, the class site [snap:Site] allows for a so-called relational view of space, that is to say, a view according to which spatiality is a matter of relative location between entities and not a matter of being tied to space. The bridge between these two views is secured through the fact that while instances of site [snap:Site] are not spatial region [snap:SpatialRegion] entities, they are nevertheless spatial entities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is neither bearer of quality [snap:Quality] entities nor inheres in any other entities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the sum total of all space in the universe, parts of the sum total of all space in the universe</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant">
+        <rdfs:label rdf:datatype="&xsd;string">specifically_dependent_continuant</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#DependentContinuant"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the mass of a cloud, the smell of mozzarella, the liquidity of blood, the color of a tomato, the disposition of fish to decay, the role of being a doctor, the function of the heart in the body: to pump blood, to receive de-oxygenated and oxygenated blood, etc.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Synonyms: property, trope, mode</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">three_dimensional_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpatialRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatial region [snap:SpatialRegion] with three dimensions.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: a cube-shaped part of space, a sphere-shaped part of space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">two_dimensional_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpatialRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatial region [snap:SpatialRegion] with two dimensions.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the surface of a cube-shaped part of space, the surface of a sphere-shaped part of space, the surface of a rectilinear planar figure-shaped part of space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">zero_dimensional_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpatialRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatial region [snap:SpatialRegion] with no dimensions.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: a point</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ConnectedSpatiotemporalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ConnectedSpatiotemporalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">connected_spatiotemporal_region</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInstant"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInterval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ScatteredSpatiotemporalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatiotemporal region [span:SpatiotemporalRegion] that has temporal and spatial dimensions such that all points within the spatiotemporal region are mediately or immediately connected to all other points within the same spatiotemporal region [span:SpatiotemporalRegion].</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the spatial and temporal location of an individual organism&apos;s life, the spatial and temporal location of the development of a fetus</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">connected_temporal_region</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#TemporalInstant"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#TemporalInterval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#TemporalRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ScatteredTemporalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A temporal region [span:TemporalRegion] every point of which is mediately or immediately connected with every other point of which.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the 1970s years, the time from the beginning to the end of a heart attack, the time taken up by cellular meiosis</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#FiatProcessPart -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#FiatProcessPart">
+        <rdfs:label rdf:datatype="&xsd;string">fiat_process_part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessAggregate"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessBoundary"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualContext"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A processual entity [span:ProcessualEntity] that is part of a process but that does not have bona fide beginnings and endings corresponding to real discontinuities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: chewing during a meal, the middle part of a rainstorm, the worst part of a heart-attack, the most interesting part of Van Gogh&apos;s life</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#Occurrent -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#Occurrent">
+        <rdfs:label rdf:datatype="&xsd;string">occurrent</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#TemporalRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An entity [bfo:Entity] that has temporal parts and that happens, unfolds or develops through time. Sometimes also called perdurants.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the life of an organism, a surgical operation as processual context for a nosocomical infection, the spatiotemporal context occupied by a process of cellular meiosis, the most interesting part of Van Gogh&apos;s life, the spatiotemporal region occupied by the development of a cancer tumor</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Synonyms: perdurant</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#Process -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#Process">
+        <rdfs:label rdf:datatype="&xsd;string">process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessAggregate"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessBoundary"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualContext"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A processual entity [span:ProcessualEntity] that is a maximally connected spatiotemporal whole and has bona fide beginnings and endings corresponding to real discontinuities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the life of an organism, the process of sleeping, the process of cell-division</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ProcessAggregate -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessAggregate">
+        <rdfs:label rdf:datatype="&xsd;string">process_aggregate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessBoundary"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualContext"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A processual entity [span:ProcessualEntity] that is a mereological sum of process [span:Process] entities and possesses non-connected boundaries.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the beating of the hearts of each of seven individuals in the room, the playing of each of the members of an orchestra, a process of digestion and a process of thinking taken together</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ProcessBoundary -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessBoundary">
+        <rdfs:label rdf:datatype="&xsd;string">process_boundary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualContext"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A processual entity [span:ProcessualEntity] that is the fiat or bona fide instantaneous temporal process boundary.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: birth, death, the forming of a synapse, the onset of REM sleep, the detaching of a finger in an industrial accident, the final separation of two cells at the end of cell-division, the incision at the beginning of a surgery</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ProcessualContext -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualContext">
+        <rdfs:label rdf:datatype="&xsd;string">processual_context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: An instance of a processual context [span:ProcessualContext] is a mixture of processual entity [span:ProcessualEntity] which stand as surrounding environments for other processual entity [span:ProcessualEntity] entities. The class processual context [span:ProcessualContext] is the analogous among occurrent [span:Occurrent] entities to the class site [snap:Site] among continuant [snap:Continuant] entities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An occurrent [span:Occurrent] consisting of a characteristic spatial shape inhering in some arrangement of other occurrent [span:Occurrent] entities. Processual context [span:ProcessualContext] entities are characteristically entities at or in which other occurrent [span:Occurrent] entities can be located or occur.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: The processual context for a given manipulation occurring as part of an experiment is made of processual entities which occur in parallel, are not necessarily all parts of the experiment themselves and may involve continuant [snap:Continuant] entities which are in the spatial vicinity of the participants in the experiment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ProcessualEntity -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity">
+        <rdfs:label rdf:datatype="&xsd;string">processual_entity</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#FiatProcessPart"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#Process"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessAggregate"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessBoundary"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualContext"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#TemporalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An occurrent [span:Occurrent] that exists in time by occurring or happening, has temporal parts and always involves and depends on some entity.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the life of an organism, the process of meiosis, the course of a disease, the flight of a bird</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ScatteredSpatiotemporalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ScatteredSpatiotemporalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">scattered_spatiotemporal_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatiotemporal region [span:SpatiotemporalRegion] that has spatial and temporal dimensions and every spatial and temporal point of which is not connected with every other spatial and temporal point of which.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the space and time occupied by the individual games of the World Cup, the space and time occupied by the individual liaisons in a romantic affair</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ScatteredTemporalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ScatteredTemporalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">scattered_temporal_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#TemporalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A temporal region [span:TemporalRegion] every point of which is not mediately or immediately connected with every other point of which.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the time occupied by the individual games of the World Cup, the time occupied by the individual liaisons in a romantic affair</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInstant -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInstant">
+        <rdfs:label rdf:datatype="&xsd;string">spatiotemporal_instant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ConnectedSpatiotemporalRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInterval"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A connected spatiotemporal region [span:ConnectedSpatiotemporalRegion] at a specific moment.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the spatiotemporal region occupied by a single instantaneous temporal slice (part) of a process</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInterval -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInterval">
+        <rdfs:label rdf:datatype="&xsd;string">spatiotemporal_interval</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ConnectedSpatiotemporalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A connected spatiotemporal region [span:ConnectedSpatiotemporalRegion] that endures for more than a single moment of time.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the spatiotemporal region occupied by a process or by a fiat processual part</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">spatiotemporal_region</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ConnectedSpatiotemporalRegion"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ScatteredSpatiotemporalRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#TemporalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: All instances of occurrent [span:Occurrent] are spatiotemporal entities, that is, they enter in the relation of (spatiotemporal) location with spatiotemporal region [span:SpatiotemporalRegion] entities. As a particular case, the exact spatiotemporal location of a spatiotemporal region [span:SpatiotemporalRegion] is this region itself.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: An instance of the spatiotemporal region [span:SpatiotemporalRegion] is a part of spacetime. All parts of spacetime are spatiotemporal region [span:SpatiotemporalRegion] entities and only spatiotemporal region [span:SpatiotemporalRegion] entities are parts of spacetime. In particular, neither spatial region [snap:SpatialRegion] entities nor temporal region [span:TemporalRegion] entities are in BFO parts of spacetime. Spacetime is the entire extent of the spatiotemporal universe, a designated individual, which is thus itself a spatiotemporal region [span:SpatiotemporalRegion]. Spacetime is among occurrents the analogous of space among continuant [snap:Continuant] entities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: Spacetime and spatiotemporal region [span:SpatiotemporalRegion] entities are entities in their own rights which exist independently of any entities which can be located at them. This view of spacetime can be called &quot;absolutist&quot; or &quot;the container view&quot;. In BFO, the class processual context [span:ProcessualContext] allows for a so-called relational view of spacetime, that is to say, a view according to which spatiotemporality is a matter of relative location between entities and not a matter of being tied to spacetime. In BFO, the bridge between these two views is secured through the fact that instances of processual context [span:ProcessualContext] are too spatiotemporal entities.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An occurrent [span:Occurrent] at or in which processual entity [span:ProcessualEntity] entities can be located.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the spatiotemporal region occupied by a human life, the spatiotemporal region occupied by the development of a cancer tumor, the spatiotemporal context occupied by a process of cellular meiosis</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#TemporalInstant -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#TemporalInstant">
+        <rdfs:label rdf:datatype="&xsd;string">temporal_instant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion"/>
+        <owl:disjointWith rdf:resource="http://www.ifomis.org/bfo/1.1/span#TemporalInterval"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A connected temporal region [span:ConnectedTemporalRegion] comprising a single moment of time.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: right now, the moment at which a finger is detached in an industrial accident, the moment at which a child is born, the moment of death</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#TemporalInterval -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#TemporalInterval">
+        <rdfs:label rdf:datatype="&xsd;string">temporal_interval</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: A connected temporal region [span:ConnectedTemporalRegion] lasting for more than a single moment of time.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: any continuous temporal duration during which a process occurs</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#TemporalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#TemporalRegion">
+        <rdfs:label rdf:datatype="&xsd;string">temporal_region</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ScatteredTemporalRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: All instances of occurrent [span:Occurrent] are temporal entities, that is, they enter in the relation of (temporal) location with temporal region [span:TemporalRegion] entities. As a particular case, the exact spatiotemporal location of a temporal region [span:TemporalRegion] is this region itself. Continuant [snap:Continuant] entities are not temporal entities in the technical sense just explained; they are related to time in a different way, not through temporal location but through a relation of existence at a time or during a period of time (see continuant [snap:Continuant].</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: An instance of temporal region [span:TemporalRegion] is a part of time. All parts of time are temporal region [span:TemporalRegion] entities and only temporal region [span:TemporalRegion] entities are parts of time. Time is the entire extent of the temporal universe, a designated individual, which is thus a temporal region itself.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Comment: Time and temporal region [span:TemporalRegion] entities are entities in their own rights which exist independently of any entities which can be located at them. This view of time can be called &quot;absolutist&quot; or &quot;the container view&quot; in analogy to what is traditionally the case with space (see spatial region [snap:SpatialRegion].</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition: An occurrent [span:Occurrent] that is part of time.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Examples: the time it takes to run a marathon, the duration of a surgical procedure, the moment of death</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000002 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000002">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">example to be eventually removed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000103 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000103">
+        <rdf:type rdf:resource="&obo;IAO_0000225"/>
+        <rdfs:label xml:lang="en">failed exploratory term</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The term was used used in an attempt to structure part of the ontology but in retrospect failed to do a good job</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000120 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000120">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">metadata complete</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete.</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000121 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000121">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">organizational term</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">term created to ease viewing/sort terms for development purpose, and will not be included in a release</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000122 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000122">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">ready for release</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking &quot;ready_for_release&quot; should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed &quot;ready_for_release&quot; will also derived from a chain of ancestor classes that are also &quot;ready_for_release.&quot;</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000123 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000123">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">metadata incomplete</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors.</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000124 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000124">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">uncurated</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">Nothing done yet beyond assigning a unique class ID and proposing a preferred term.</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000125 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000125">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">pending final vetting</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the definition editor.</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000224 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000224">
+        <rdf:type rdf:resource="&oboInOwl;Subset"/>
+        <rdfs:label xml:lang="en">core</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">Core is an instance of a grouping of terms from an ontology or ontologies. It is used by the ontology to identify main classes.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000226 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000226">
+        <rdf:type rdf:resource="&obo;IAO_0000225"/>
+        <rdfs:label xml:lang="en">placeholder removed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000227 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000227">
+        <rdf:type rdf:resource="&obo;IAO_0000225"/>
+        <rdfs:label xml:lang="en">terms merged</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">An editor note should explain what were the merged terms and the reason for the merge.</obo:IAO_0000116>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000228 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000228">
+        <rdf:type rdf:resource="&obo;IAO_0000225"/>
+        <rdfs:label xml:lang="en">term imported</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">This is to be used when the original term has been replaced by a term imported from an other ontology. An editor note should indicate what is the URI of the new term to use.</obo:IAO_0000116>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000229 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000229">
+        <rdf:type rdf:resource="&obo;IAO_0000225"/>
+        <rdfs:label xml:lang="en">term split</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split and indicate the URIs of the new terms created.</obo:IAO_0000116>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000230 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000230">
+        <rdf:type rdf:resource="&obo;IAO_0000225"/>
+        <rdfs:label xml:lang="en">other</rdfs:label>
+        <obo:IAO_0000116 xml:lang="en">This is to be used if none of the existing instances cover the reason for obsolescence. An editor note should indicate this new reason.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">We expect to be able to mine these new reasons and add instances as required.</obo:IAO_0000116>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000410 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000410">
+        <rdf:type rdf:resource="&obo;IAO_0000409"/>
+        <rdfs:label rdf:datatype="&xsd;string">universal</rdfs:label>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">A Formal Theory of Substances, Qualities, and Universals, http://ontology.buffalo.edu/bfo/SQU.pdf</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">Hard to give a definition for. Intuitively a &quot;natural kind&quot; rather than a collection of any old things, which a class is able to be, formally. At the meta level, universals are defined as positives, are disjoint with their siblings, have single asserted parents.</obo:IAO_0000116>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000420 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000420">
+        <rdf:type rdf:resource="&obo;IAO_0000409"/>
+        <rdfs:label rdf:datatype="&xsd;string">defined class</rdfs:label>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">&quot;definitions&quot;, in some readings, always are given by necessary and sufficient conditions. So one must be careful (and this is difficult sometimes) to distinguish between defined classes and universal.</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Alan Ruttenberg</obo:IAO_0000117>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000421 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000421">
+        <rdf:type rdf:resource="&obo;IAO_0000409"/>
+        <rdfs:label rdf:datatype="&xsd;string">named class expression</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A named class expression is a logical expression that is given a name. The name can be used in place of the expression.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">named class expressions are used in order to have more concise logical definition but their extensions may not be interesting classes on their own. In languages such as OWL, with no provisions for macros, these show up as actuall classes. Tools may with to not show them as such, and to replace uses of the macros with their expansions</obo:IAO_0000116>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000423 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000423">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">to be replaced with external ontology term</rdfs:label>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">Terms with this status should eventually replaced with a term from another ontology.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000428 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000428">
+        <rdf:type rdf:resource="&obo;IAO_0000078"/>
+        <rdfs:label xml:lang="en">requires discussion</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001901 -->
+
+    <owl:NamedIndividual rdf:about="&obo;RO_0001901">
+        <rdfs:label xml:lang="en">axiom holds for all times</rdfs:label>
+        <obo:IAO_0000115>
+
+## Elucidation
+
+This is used when the statement/axiom is assumed to hold true &apos;eternally&apos;
+
+## How to interpret (informal)
+
+First the &quot;atemporal&quot; FOL is derived from the OWL using the standard
+interpretation. This axiom is temporalized by embedding the axiom
+within a for-all-times quantified sentence. The t argument is added to
+all instantiation predicates and predicates that use this relation.
+
+## Example
+
+    Class: nucleus
+    SubClassOf: part_of some cell
+
+    forall t :
+      forall n :
+        instance_of(n,Nucleus,t)
+         implies
+        exists c :
+          instance_of(c,Cell,t)
+          part_of(n,c,t)
+
+## Notes
+
+This interpretation is *not* the same as an at-all-times relation
+
+</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001902 -->
+
+    <owl:NamedIndividual rdf:about="&obo;RO_0001902">
+        <rdfs:label xml:lang="en">relation has no temporal argument</rdfs:label>
+        <obo:IAO_0000115>
+
+## Elucidation
+
+This is used when the first-order logic form of the relation is
+binary, and takes no temporal argument.
+
+## Example:
+
+    Class: limb
+    SubClassOf: develops_from some lateral-plate-mesoderm
+
+     forall t, t2:
+      forall x :
+        instance_of(x,Limb,t)
+         implies
+        exists y :
+          instance_of(y,LPM,t2)
+          develops_from(x,y)
+
+
+</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <obo:IAO_0000231></obo:IAO_0000231>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;IAO_0000120"/>
+            <rdf:Description rdf:about="&obo;IAO_0000121"/>
+            <rdf:Description rdf:about="&obo;IAO_0000122"/>
+            <rdf:Description rdf:about="&obo;IAO_0000123"/>
+            <rdf:Description rdf:about="&obo;IAO_0000124"/>
+            <rdf:Description rdf:about="&obo;IAO_0000125"/>
+            <rdf:Description rdf:about="&obo;IAO_0000423"/>
+            <rdf:Description rdf:about="&obo;IAO_0000428"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;IAO_0000226"/>
+            <rdf:Description rdf:about="&obo;IAO_0000227"/>
+            <rdf:Description rdf:about="&obo;IAO_0000228"/>
+            <rdf:Description rdf:about="&obo;IAO_0000229"/>
+            <rdf:Description rdf:about="&obo;IAO_0000230"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;IAO_0000224"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

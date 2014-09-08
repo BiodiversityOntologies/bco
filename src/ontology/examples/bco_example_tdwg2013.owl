@@ -1,0 +1,1220 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://bco.googlecode.com/git/src/ontology/bco_example_tdwg2013.owl#"
+     xml:base="http://bco.googlecode.com/git/src/ontology/bco_example_tdwg2013.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://bco.googlecode.com/git/src/ontology/examples/bco_example_tdwg2013.owl">
+        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/examples/bco_example_base_tdwg2013.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000232"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;OBI_0000293"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;OBI_0000299"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000074 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BCO_examples_0000074">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">part of occurent</rdfs:label>
+        <rdfs:comment>This is a temporary replacement for BFO:0000132. </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000075 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BCO_examples_0000075">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has occurent part</rdfs:label>
+        <rdfs:comment>This is a temporary replacement for BFO:0000117.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&obo;BCO_examples_0000074"/>
+        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="&obo;IAO_0000136">
+        <rdfs:domain rdf:resource="&obo;IAO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000299"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000312 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000312"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002233 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002233"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002234 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002234"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000078 -->
+
+    <owl:DatatypeProperty rdf:about="&obo;BCO_examples_0000078">
+        <rdfs:label xml:lang="en">date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000059 -->
+
+    <owl:Class rdf:about="&obo;BCO_0000059"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000073 -->
+
+    <owl:Class rdf:about="&obo;BCO_examples_0000073">
+        <rdfs:label xml:lang="en">photographic image</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <obo:IAO_0000115>A digital or printed photograph.</obo:IAO_0000115>
+        <obo:IAO_0000232>This term is just added as an example. It is not part of the BCO</obo:IAO_0000232>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000079 -->
+
+    <owl:Class rdf:about="&obo;BCO_examples_0000079">
+        <rdfs:label xml:lang="en">taxonomic identification by morphological key</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BCO_examples_0000083"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000081 -->
+
+    <owl:Class rdf:about="&obo;BCO_examples_0000081">
+        <rdfs:label xml:lang="en">taxonomic identification using BLAST</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;bco_0000042"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000082 -->
+
+    <owl:Class rdf:about="&obo;BCO_examples_0000082">
+        <rdfs:label xml:lang="en">taxonomic identification using DNA barcode</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BCO_examples_0000081"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000083 -->
+
+    <owl:Class rdf:about="&obo;BCO_examples_0000083">
+        <rdfs:label xml:lang="en">morphological taxonimic identification process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;bco_0000042"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000084 -->
+
+    <owl:Class rdf:about="&obo;BCO_examples_0000084">
+        <rdfs:label xml:lang="en">taxonomic name</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000089 -->
+
+    <owl:Class rdf:about="&obo;BCO_examples_0000089">
+        <rdfs:label xml:lang="en">DNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000090 -->
+
+    <owl:Class rdf:about="&obo;BCO_examples_0000090">
+        <rdfs:label xml:lang="en">organismal part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0001010 -->
+
+    <owl:Class rdf:about="&obo;CARO_0001010"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000011"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000973 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000973"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0600047 -->
+
+    <owl:Class rdf:about="&obo;OBI_0600047"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000003 -->
+
+    <owl:Class rdf:about="&obo;bco_0000003">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BCO_examples_0000075"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0002234"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0002233"/>
+                <owl:allValuesFrom rdf:resource="&obo;bco_0000044"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0002233"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000044"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000007 -->
+
+    <owl:Class rdf:about="&obo;bco_0000007"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000016 -->
+
+    <owl:Class rdf:about="&obo;bco_0000016"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000022 -->
+
+    <owl:Class rdf:about="&obo;bco_0000022"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000042 -->
+
+    <owl:Class rdf:about="&obo;bco_0000042">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:allValuesFrom rdf:resource="&obo;BCO_examples_0000084"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;BCO_examples_0000084"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bco_0000044 -->
+
+    <owl:Class rdf:about="&obo;bco_0000044"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#Occurrent -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000000 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000000">
+        <rdf:type rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:label xml:lang="en">Morea Biocode project</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">The sampling process that spanned the entire Morea Biocode investigation and involved multiple sampling events over the course of several years.</obo:IAO_0000115>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000001 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000001">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">insect collection 01</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000039"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000039"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000002 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000002">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">insect collection 02</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000040"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000040"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000003 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000003">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">insect collection 03</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2011</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000041"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000041"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000004 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000004">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">insect gut sampling 04</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000000"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000039"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000042"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000005 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000005">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">insect gut sampling 05</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000000"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000040"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000043"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000006 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000006">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">tissue sampling 01</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000039"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000044"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000007 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000007">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">tissue sampling 02</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000040"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000045"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000008 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000008">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">tissue sampling 03</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000041"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000046"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000009 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000009">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">dna isolation 01</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000034"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000044"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000010 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000010">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">dna isolation 02</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000035"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000045"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000011 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000011">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">dna isolation 03</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2011</obo:BCO_examples_0000078>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000036"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000046"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000015 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000015">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">dna isolation 04</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000037"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000042"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000016 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000016">
+        <rdf:type rdf:resource="&obo;bco_0000022"/>
+        <rdfs:label xml:lang="en">dna isolation 05</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000038"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000043"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000017 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000017">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000079"/>
+        <rdfs:label xml:lang="en">identification 01.1</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <rdfs:comment xml:lang="en">keying</rdfs:comment>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000039"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000066"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000067"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000018 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000018">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000079"/>
+        <rdfs:label xml:lang="en">identification 02.1</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000040"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000067"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000019 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000019">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000079"/>
+        <rdfs:label xml:lang="en">identification 03.1</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2011</obo:BCO_examples_0000078>
+        <rdfs:comment xml:lang="en">keying</rdfs:comment>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000041"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000066"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000020 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000020">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000081"/>
+        <rdfs:label xml:lang="en">identification 04.1</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000037"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000093"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000021 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000021">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000081"/>
+        <rdfs:label xml:lang="en">identification 05.1</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000038"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000093"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000022 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000022">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000081"/>
+        <rdfs:label xml:lang="en">identification 04.2</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000037"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000094"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000023 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000023">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000081"/>
+        <rdfs:label xml:lang="en">identification 04.4</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000037"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000096"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000024 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000024">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000081"/>
+        <rdfs:label xml:lang="en">identification 05.2</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000038"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000094"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000025 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000025">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000081"/>
+        <rdfs:label xml:lang="en">identification 05.3</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2011</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000038"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000095"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000026 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000026">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000082"/>
+        <rdfs:label xml:lang="en">identification 01.2</rdfs:label>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000034"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000066"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000027 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000027">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000082"/>
+        <rdfs:label xml:lang="en">identification 02.2</rdfs:label>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000035"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000028 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000028">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000082"/>
+        <rdfs:label xml:lang="en">identification 03.2</rdfs:label>
+        <rdfs:comment xml:lang="en">uses blast to match barcode</rdfs:comment>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000036"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000085"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000029 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000029">
+        <rdf:type rdf:resource="&obo;bco_0000016"/>
+        <rdfs:label xml:lang="en">submission to SI 01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000030 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000030">
+        <rdf:type rdf:resource="&obo;bco_0000016"/>
+        <rdfs:label xml:lang="en">submission to SI 02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000031 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000031">
+        <rdf:type rdf:resource="&obo;bco_0000003"/>
+        <rdfs:label xml:lang="en">insect observation 06</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:RO_0002234 rdf:resource="&obo;BCO_examples_0000071"/>
+        <obo:RO_0002233 rdf:resource="&obo;BCO_examples_0000086"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000032 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000032">
+        <rdf:type rdf:resource="&obo;bco_0000003"/>
+        <rdfs:label xml:lang="en">insect observation 07</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2011</obo:BCO_examples_0000078>
+        <obo:RO_0002234 rdf:resource="&obo;BCO_examples_0000072"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000087"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000033 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000033">
+        <rdf:type rdf:resource="&obo;BCO_0000059"/>
+        <rdfs:label xml:lang="en">Smithsonian Institution</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000034 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000034">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000089"/>
+        <rdfs:label xml:lang="en">DNA sample 01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000035 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000035">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000089"/>
+        <rdfs:label xml:lang="en">DNA sample 02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000036 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000036">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000089"/>
+        <rdfs:label xml:lang="en">DNA sample 03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000037 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000037">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000089"/>
+        <rdfs:label xml:lang="en">DNA sample 04</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000038 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000038">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000089"/>
+        <rdfs:label xml:lang="en">DNA sample 05</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000039 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000039">
+        <rdf:type rdf:resource="&obo;CARO_0001010"/>
+        <rdfs:label xml:lang="en">insect 01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000040 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000040">
+        <rdf:type rdf:resource="&obo;CARO_0001010"/>
+        <rdfs:label xml:lang="en">insect 02</rdfs:label>
+        <obo:OBI_0000312 rdf:resource="&obo;BCO_examples_0000002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000041 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000041">
+        <rdf:type rdf:resource="&obo;CARO_0001010"/>
+        <rdfs:label xml:lang="en">insect 03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000042 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000042">
+        <rdf:type rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <rdfs:label xml:lang="en">insect gut sample 04</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000043 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000043">
+        <rdf:type rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <rdfs:label xml:lang="en">insect gut sample 05</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000044 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000044">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000090"/>
+        <rdfs:label xml:lang="en">tissue sample 01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000045 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000045">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000090"/>
+        <rdfs:label xml:lang="en">tissue sample 02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000046 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000046">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000090"/>
+        <rdfs:label xml:lang="en">tissue sample 03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000047 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000047">
+        <rdf:type rdf:resource="&obo;OBI_0600047"/>
+        <rdfs:label xml:lang="en">sequencing assay 01.1</rdfs:label>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000034"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000052"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000048 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000048">
+        <rdf:type rdf:resource="&obo;OBI_0600047"/>
+        <rdfs:label xml:lang="en">sequencing assay 02.1</rdfs:label>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000035"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000054"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000049 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000049">
+        <rdf:type rdf:resource="&obo;OBI_0600047"/>
+        <rdfs:label xml:lang="en">sequencing assay 03</rdfs:label>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000036"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000050 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000050">
+        <rdf:type rdf:resource="&obo;OBI_0600047"/>
+        <rdfs:label xml:lang="en">sequencing assay 04</rdfs:label>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000037"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000058"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000059"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000060"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000061"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000062"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000051 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000051">
+        <rdf:type rdf:resource="&obo;OBI_0600047"/>
+        <rdfs:label xml:lang="en">sequencing assay 05</rdfs:label>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000038"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000052 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000052">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 01.1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000053 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000053">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 01.2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000054 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000054">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 02.1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000055 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000055">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 02.2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000056 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000056">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 03.1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000057 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000057">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 03.2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000058 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000058">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 04.1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000059 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000059">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 04.2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000060 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000060">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 04.3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000061 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000061">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 04.4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000062 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000062">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 04.5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000063 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000063">
+        <rdf:type rdf:resource="&obo;OBI_0000973"/>
+        <rdfs:label xml:lang="en">sequence 04.6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000064 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000064">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000081"/>
+        <rdfs:label xml:lang="en">identification 04.3</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000037"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000095"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000065 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000065">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000081"/>
+        <rdfs:label xml:lang="en">identification 04.5</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000037"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000097"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000066 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000066">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000084"/>
+        <rdfs:label xml:lang="en">insect taxon 01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000067 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000067">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000084"/>
+        <rdfs:label xml:lang="en">insect taxon 02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000068 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000068">
+        <rdf:type rdf:resource="&obo;OBI_0600047"/>
+        <rdfs:label xml:lang="en">sequencing assay 01.2</rdfs:label>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000034"/>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000053"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000071 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000071">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000073"/>
+        <rdfs:label xml:lang="en">image 01</rdfs:label>
+        <obo:IAO_0000136 rdf:resource="&obo;BCO_examples_0000086"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000072 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000072">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000073"/>
+        <rdfs:label xml:lang="en">image 02</rdfs:label>
+        <obo:IAO_0000136 rdf:resource="&obo;BCO_examples_0000087"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000085 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000085">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000084"/>
+        <rdfs:label xml:lang="en">insect taxon 03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000086 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000086">
+        <rdf:type rdf:resource="&obo;CARO_0001010"/>
+        <rdfs:label xml:lang="en">insect in situ 06</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000087 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000087">
+        <rdf:type rdf:resource="&obo;CARO_0001010"/>
+        <rdfs:label xml:lang="en">insect in situ 07</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000088 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000088">
+        <rdf:type rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:label xml:lang="en">Moorea insect inventory</rdfs:label>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000091 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000091">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000083"/>
+        <rdfs:label xml:lang="en">identification 06.1</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2010</obo:BCO_examples_0000078>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000066"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000071"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000092 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000092">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000083"/>
+        <rdfs:label xml:lang="en">identification 07.1</rdfs:label>
+        <obo:BCO_examples_0000078 rdf:datatype="&xsd;string">2011</obo:BCO_examples_0000078>
+        <obo:OBI_0000299 rdf:resource="&obo;BCO_examples_0000067"/>
+        <obo:OBI_0000293 rdf:resource="&obo;BCO_examples_0000072"/>
+        <obo:BCO_examples_0000074 rdf:resource="&obo;BCO_examples_0000088"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000093 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000093">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000084"/>
+        <rdfs:label xml:lang="en">microbial taxon 01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000094 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000094">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000084"/>
+        <rdfs:label xml:lang="en">microbial taxon 02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000095 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000095">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000084"/>
+        <rdfs:label xml:lang="en">microbial taxon 03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000096 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000096">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000084"/>
+        <rdfs:label xml:lang="en">microbial taxon 04</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_examples_0000097 -->
+
+    <owl:NamedIndividual rdf:about="&obo;BCO_examples_0000097">
+        <rdf:type rdf:resource="&obo;BCO_examples_0000084"/>
+        <rdfs:label xml:lang="en">microbial taxon 05</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,31 @@
+[URI of the OWL(RDF/XML) output file]
+http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl
+
+[Source ontology]
+IAO
+
+[Low level source term URIs]
+http://purl.obolibrary.org/obo/IAO_0000030 #information content entity
+http://purl.obolibrary.org/obo/IAO_0000033 #directive information entity
+http://purl.obolibrary.org/obo/IAO_0000027 #data item
+http://purl.obolibrary.org/obo/IAO_0000136 #is about
+[http://purl.obolibrary.org/obo/IAO_0000310 #document]
+[http://purl.obolibrary.org/obo/IAO_0000311 #publication]
+[http://purl.obolibrary.org/obo/IAO_0000312 #publication about an investigation]
+[http://purl.obolibrary.org/obo/IAO_0000088 #report]
+[http://purl.obolibrary.org/obo/IAO_0000572 #documenting]
+
+
+[Top level source term URIs and target direct superclass URIs]
+http://purl.obolibrary.org/obo/IAO_0000030 #information content entity
+subClassOf http://purl.obolibrary.org/obo/BFO_0000031
+
+[Source term retrieval setting]
+includeNoIntermediates
+includeAllAxioms
+
+[Source annotation URIs]
+includeAllAnnotationProperties
+
+[Source annotation URIs to be excluded]
+
