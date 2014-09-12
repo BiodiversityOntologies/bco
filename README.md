@@ -23,9 +23,8 @@ https://github.com/tucotuco/bco/tree/master/releases
 The latest stable release of the BCO can be downloaded from http://purl.obolibrary.org/obo/bco.owl. 
 
 ### Editors' version
-https://github.com/tucotuco/bco/tree/master/src/ontology
 
-The editors' version of BCO can be downloaded directly from http://bco.googlecode.com/git/src/ontology/bco.owl. This version is subject to change and should be used with caution.
+The editors' version of BCO can be downloaded directly from https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bco.owl. This version is subject to change and should be used with caution.
 
 ### History
 This is a new project started to cover just the BCO. Older versions of the ontology can be viewed at the biocode-commons project at http://bco.googlecode.com/git/src/ontology/bco.owl.
