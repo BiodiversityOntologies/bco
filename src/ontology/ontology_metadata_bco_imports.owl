@@ -23,7 +23,7 @@
 
 
 <rdf:RDF xmlns="&obo;iao/dev/ontology-meta.owl#"
-     xml:base="&obo;iao/dev/ontology-metadata.owl"
+     xml:base="&obo;iao/dev/ontology-meta.owl"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
@@ -41,7 +41,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
-    <owl:Ontology rdf:about="http://bco.googlecode.com/git/src/ontology/ontology_metadata_bco_imports.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ontology_metadata_bco_imports.owl">
         <protege:defaultLanguage rdf:datatype="&xsd;string">en</protege:defaultLanguage>
     </owl:Ontology>
     
@@ -330,6 +330,12 @@ Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.
         <rdfs:label xml:lang="en">data item</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000030"/>
     
 
 

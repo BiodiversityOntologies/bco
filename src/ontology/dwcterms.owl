@@ -21,7 +21,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dcterms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://bco.googlecode.com/git/src/ontology/dwcterms.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl">
         <rdfs:label>Darwin Core as RDF as OWL</rdfs:label>
         <dcterms:modified>2013-10-22</dcterms:modified>
         <rdfs:comment xml:lang="en">This document is an OWL representation of the Darwin Core (DwC) terminology, imported from  DwC as RDF. In this document, DwC classes have been interpreted as classes in the Biological Collections Ontology and DwC properties have been interpreted as data properties. To comment on the OWL interpretation, please create an issue at https://code.google.com/p/bco/issues/list.

@@ -25,7 +25,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://bco.googlecode.com/git/src/ontology/ro_bco_imports.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ro_bco_imports.owl">
         <oboInOwl:hasOBOFormatVersion rdf:datatype="&xsd;string">1.2</oboInOwl:hasOBOFormatVersion>
         <foaf:homepage rdf:datatype="&xsd;anyURI">http://obo-relations.googlecode.com</foaf:homepage>
         <foaf:homepage rdf:datatype="&xsd;anyURI">https://code.google.com/p/obo-relations/w/ROCore</foaf:homepage>
@@ -1263,16 +1263,16 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0002323"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000051"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="&obo;BFO_0000051"/>
             <rdf:Description rdf:about="&obo;RO_0002131"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000051"/>
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -1805,14 +1805,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0002375"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedTarget>inferior epigastric vein tributary_of external iliac vein</owl:annotatedTarget>
         <dc:source>FMA</dc:source>
-        <owl:annotatedProperty rdf:resource="&obo;IAO_0000112"/>
-        <owl:annotatedSource rdf:resource="&obo;RO_0002376"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget>Deschutes River tributary_of Columbia River</owl:annotatedTarget>
-        <dc:source>GAZ</dc:source>
+        <owl:annotatedTarget>inferior epigastric vein tributary_of external iliac vein</owl:annotatedTarget>
         <owl:annotatedProperty rdf:resource="&obo;IAO_0000112"/>
         <owl:annotatedSource rdf:resource="&obo;RO_0002376"/>
     </owl:Axiom>
@@ -1820,6 +1814,12 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <owl:annotatedTarget>drains to</owl:annotatedTarget>
         <dc:source rdf:resource="http://dbpedia.org/ontology/drainsTo"/>
         <owl:annotatedProperty rdf:resource="&obo;IAO_0000118"/>
+        <owl:annotatedSource rdf:resource="&obo;RO_0002376"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <dc:source>GAZ</dc:source>
+        <owl:annotatedTarget>Deschutes River tributary_of Columbia River</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="&obo;IAO_0000112"/>
         <owl:annotatedSource rdf:resource="&obo;RO_0002376"/>
     </owl:Axiom>
     
@@ -1838,8 +1838,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0002375"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <dc:source>GAZ</dc:source>
         <owl:annotatedTarget>Deschutes River distributary_of Little Lava Lake</owl:annotatedTarget>
+        <dc:source>GAZ</dc:source>
         <owl:annotatedProperty rdf:resource="&obo;IAO_0000112"/>
         <owl:annotatedSource rdf:resource="&obo;RO_0002377"/>
     </owl:Axiom>

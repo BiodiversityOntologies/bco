@@ -21,7 +21,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dcam="http://purl.org/dc/dcam/"
      xmlns:dcterms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://bco.googlecode.com/git/src/ontology/dwctype.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl">
         <rdfs:comment xml:lang="en">This file contains terms from the Darwin Core (DwC) type vocabulary, imported from the RDF representation of that vocabulary and interpretted as classes in the Biological Collections Ontology. Some of the type vocabulary terms are replicated in DwC as RDF.</rdfs:comment>
     </owl:Ontology>
     
