@@ -32,11 +32,11 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
         <dc:contributor>Ramona Walls</dc:contributor>
         <dc:contributor>Biocode Commons Ontology Hackathon members</dc:contributor>
         <dc:contributor>John Wieczorek</dc:contributor>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/dwcterms.owl"/>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl"/>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/obi_bco_imports.owl"/>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/ontology_metadata_bco_imports.owl"/>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/ro_bco_imports.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/iao_bco_imports.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/obi_bco_imports.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ontology_metadata_bco_imports.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ro_bco_imports.owl"/>
     </owl:Ontology>
     
 
@@ -591,8 +591,8 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0002234"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000030"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -603,8 +603,8 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
+                <owl:onProperty rdf:resource="&obo;RO_0002234"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000030"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity.</obo:IAO_0000115>

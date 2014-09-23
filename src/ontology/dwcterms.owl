@@ -31,7 +31,7 @@ DwC as RDF contains a list of Darwin Core terms that have the dwcattributes:stat
 </rdfs:comment>
         <dcterms:publisher xml:lang="en-us">Biodiversity Information Standards (TDWG)</dcterms:publisher>
         <dcterms:title xml:lang="en-us">Darwin Core Recommended Terms</dcterms:title>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/dwctype.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl"/>
     </owl:Ontology>
     
 
