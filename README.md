@@ -27,4 +27,4 @@ The latest stable release of the BCO can be downloaded from http://purl.obolibra
 The editors' version of BCO can be downloaded directly from https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bco.owl. This version is subject to change and should be used with caution.
 
 ### History
-This is a new project started to cover just the BCO. Older versions of the ontology can be viewed at the biocode-commons project at http://bco.googlecode.com/git/src/ontology/bco.owl.
+The repository was moved to this location from https://code.google.com/p/bco/ in September 2014. The BCO purl will continue to point to the Google Code repository until the next release, at which point this message will be updated. Much older versions of the ontology can be viewed at the biocode-commons project at http://bco.googlecode.com/git/src/ontology/bco.owl.
