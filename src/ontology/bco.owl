@@ -253,11 +253,11 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <obo:BCO_0000057 xml:lang="en">inventory  type</obo:BCO_0000057>
         <rdfs:comment>not sure if this should be a type of assay or a type of planned process</rdfs:comment>
         <dc:source>https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
         <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
         <obo:IAO_0000115 xml:lang="en">A planned process by which a taxonomic inventory is created.</obo:IAO_0000115>
-        <obo:BCO_0000057 xml:lang="en">inventory  type</obo:BCO_0000057>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </owl:Class>
     
@@ -591,8 +591,8 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0002233"/>
-                <owl:someValuesFrom rdf:resource="&obo;bco_0000044"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000117"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -603,8 +603,8 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
+                <owl:onProperty rdf:resource="&obo;RO_0002233"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000044"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity.</obo:IAO_0000115>
@@ -1094,7 +1094,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
     <!-- http://rs.tdwg.org/dwc/dwctype/Location -->
 
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/dwctype/Location">
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000004"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000029"/>
+        <obo:IAO_0000424 xml:lang="en">The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken.</obo:IAO_0000424>
         <obo:BCO_0000060 xml:lang="en">location of an event</obo:BCO_0000060>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
@@ -1112,6 +1113,12 @@ Needs a better name. Current name is the definition.</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000066"/>
+                <owl:someValuesFrom rdf:resource="http://rs.tdwg.org/dwc/dwctype/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
