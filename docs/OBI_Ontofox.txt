@@ -22,6 +22,7 @@ http://purl.obolibrary.org/obo/OBI_0000112 #specimen role
 http://purl.obolibrary.org/obo/IAO_0000577 #CRID
 IncludeAllChildren
 http://purl.obolibrary.org/obo/BFO_0000008 #temporal region
+http://purl.obolibrary.org/obo/BFO_0000011 #spatiotemporal region
 
 [Top level source term URIs and target direct superclass URIs]
 http://purl.obolibrary.org/obo/OBI_0000245 #organization

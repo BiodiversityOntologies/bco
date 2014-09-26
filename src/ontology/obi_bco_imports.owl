@@ -715,6 +715,17 @@
     </owl:Class>
 
 
+    <owl:Class rdf:about="&obo;BFO_0000011">
+        <rdfs:label xml:lang="en">spatiotemporal region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000003"/>
+        <obo:IAO_0000600 xml:lang="en">A spatiotemporal region is an occurrent entity that is part of spacetime. (axiom label in BFO2 Reference: [095-001])</obo:IAO_0000600>
+        <obo:IAO_0000112 xml:lang="en">the spatiotemporal region occupied by a human life</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the spatiotemporal region occupied by a process of cellular meiosis.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the spatiotemporal region occupied by the development of a cancer tumor</obo:IAO_0000112>
+        <rdfs:isDefinedBy rdf:resource="&obo;bfo.owl"/>
+    </owl:Class>
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
 
     <owl:Class rdf:about="&obo;BFO_0000017">
