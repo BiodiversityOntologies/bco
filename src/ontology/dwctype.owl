@@ -14,13 +14,13 @@
 
 <rdf:RDF xmlns="http://bco.googlecode.com/git/src/ontology/dwctype.owl#"
      xml:base="http://bco.googlecode.com/git/src/ontology/dwctype.owl"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dwcattributes="http://rs.tdwg.org/dwc/terms/attributes/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:dcam="http://purl.org/dc/dcam/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:dwcattributes="http://rs.tdwg.org/dwc/terms/attributes/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl">
         <rdfs:comment xml:lang="en">This file contains terms from the Darwin Core (DwC) type vocabulary, imported from the RDF representation of that vocabulary and interpretted as classes in the Biological Collections Ontology. Some of the type vocabulary terms are replicated in DwC as RDF.</rdfs:comment>
     </owl:Ontology>
@@ -113,11 +113,11 @@
 
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/dwctype/FossilSpecimen">
         <rdfs:label xml:lang="en-us">Fossil Specimen</rdfs:label>
+        <dwcattributes:abcdEquivalence>RecordBasisEnum/FossileSpecimen</dwcattributes:abcdEquivalence>
+        <dcterms:modified>2011-10-16</dcterms:modified>
         <dwcattributes:status>recommended</dwcattributes:status>
         <dcterms:issued>2008-11-19</dcterms:issued>
         <rdfs:comment xml:lang="en-us">A resource describing a fossilized specimen.</rdfs:comment>
-        <dwcattributes:abcdEquivalence>RecordBasisEnum/FossileSpecimen</dwcattributes:abcdEquivalence>
-        <dcterms:modified>2011-10-16</dcterms:modified>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/dwctype/"/>
         <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwctype/FossilSpecimen-2008-11-19"/>
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/dwctype/history/#FossilSpecimen-2011-10-16"/>
@@ -132,8 +132,8 @@
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/dwctype/HumanObservation">
         <rdfs:label xml:lang="en-us">HumanObservation</rdfs:label>
         <dwcattributes:abcdEquivalence>RecordBasisEnum/HumanObservation</dwcattributes:abcdEquivalence>
-        <dcterms:modified>2008-11-19</dcterms:modified>
         <dcterms:issued>2008-11-19</dcterms:issued>
+        <dcterms:modified>2008-11-19</dcterms:modified>
         <rdfs:comment xml:lang="en-us">A resource describing an observation made by one or more people.</rdfs:comment>
         <dwcattributes:status>recommended</dwcattributes:status>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/dwctype/"/>
@@ -148,11 +148,11 @@
 
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/dwctype/LivingSpecimen">
         <rdfs:label xml:lang="en-us">LivingSpecimen</rdfs:label>
-        <dcterms:issued>2008-11-19</dcterms:issued>
-        <rdfs:comment xml:lang="en-us">A resource describing a living specimen.</rdfs:comment>
-        <dwcattributes:status>recommended</dwcattributes:status>
         <dwcattributes:abcdEquivalence>RecordBasisEnum/LivingSpecimen</dwcattributes:abcdEquivalence>
+        <dcterms:issued>2008-11-19</dcterms:issued>
+        <dwcattributes:status>recommended</dwcattributes:status>
         <dcterms:modified>2011-10-16</dcterms:modified>
+        <rdfs:comment xml:lang="en-us">A resource describing a living specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/dwctype/"/>
         <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwctype/LivingSpecimen-2008-11-19"/>
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/dwctype/history/#LivingSpecimen-2011-10-16"/>
@@ -166,11 +166,11 @@
 
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/dwctype/Location">
         <rdfs:label xml:lang="en-us">Location</rdfs:label>
-        <dcterms:issued>2009-01-23</dcterms:issued>
-        <rdfs:comment xml:lang="en-us">A resource describing an instance of the Location class.</rdfs:comment>
         <dwcattributes:status>recommended</dwcattributes:status>
         <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
         <dcterms:modified>2009-04-24</dcterms:modified>
+        <dcterms:issued>2009-01-23</dcterms:issued>
+        <rdfs:comment xml:lang="en-us">In Darwin Core: A resource describing an instance of the Location class. This class can alo map to prov:Location, which is defined as &apos;A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.&apos; However, unlike prov:Location, within BCO and Darwin Core, dwc:Location is generally intended to refer to a geographic location or a location that is part of an organism (e.g., the left nostril). This class also maps to bfo:site, but unlike site, which is an immaterial entity, dwc:Location may refer to a material or immaterial entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/dwctype/"/>
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/dwctype/history/#Location-2009-04-24"/>
         <dcam:memberOf rdf:resource="http://rs.tdwg.org/dwc/terms/DwCType"/>
@@ -182,11 +182,11 @@
 
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/dwctype/MachineObservation">
         <rdfs:label xml:lang="en-us">MachineObservation</rdfs:label>
-        <dwcattributes:status>recommended</dwcattributes:status>
-        <dcterms:modified>2008-11-19</dcterms:modified>
-        <dcterms:issued>2008-11-19</dcterms:issued>
-        <rdfs:comment xml:lang="en-us">A resource describing an observation made by a machine.</rdfs:comment>
         <dwcattributes:abcdEquivalence>RecordBasisEnum/MachineObservation</dwcattributes:abcdEquivalence>
+        <dcterms:issued>2008-11-19</dcterms:issued>
+        <dcterms:modified>2008-11-19</dcterms:modified>
+        <rdfs:comment xml:lang="en-us">A resource describing an observation made by a machine.</rdfs:comment>
+        <dwcattributes:status>recommended</dwcattributes:status>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/dwctype/"/>
         <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwctype/MachineObservation-2008-11-19"/>
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/dwctype/history/#MachineObservation-2011-10-16"/>
@@ -200,10 +200,10 @@
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/dwctype/MaterialSample">
         <rdfs:label xml:lang="en-us">MaterialSample</rdfs:label>
         <dwcattributes:status>recommended</dwcattributes:status>
-        <dcterms:modified>2013-09-26</dcterms:modified>
         <dcterms:issued>2013-03-28</dcterms:issued>
-        <dwcattributes:abcdEquivalence>DataSets/DataSet/Units/Unit</dwcattributes:abcdEquivalence>
+        <dcterms:modified>2013-09-26</dcterms:modified>
         <rdfs:comment xml:lang="en-us">A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed.</rdfs:comment>
+        <dwcattributes:abcdEquivalence>DataSets/DataSet/Units/Unit</dwcattributes:abcdEquivalence>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/dwctype/"/>
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/dwctype/history/#MaterialSample-2013-06-24"/>
         <dcam:memberOf rdf:resource="http://rs.tdwg.org/dwc/terms/DwCType"/>
@@ -216,11 +216,11 @@
 
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist">
         <rdfs:label xml:lang="en-us">NomenclaturalChecklist</rdfs:label>
-        <dcterms:issued>2009-01-23</dcterms:issued>
+        <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
         <dwcattributes:status>recommended</dwcattributes:status>
+        <dcterms:issued>2009-01-23</dcterms:issued>
         <dcterms:modified>2009-01-23</dcterms:modified>
         <rdfs:comment xml:lang="en-us">A resource describing a nomenclatural checklist.</rdfs:comment>
-        <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/dwctype/"/>
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/dwctype/history/#NomenclaturalChecklist-2009-01-23"/>
         <dcam:memberOf rdf:resource="http://rs.tdwg.org/dwc/terms/DwCType"/>
@@ -232,9 +232,9 @@
 
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen">
         <rdfs:label xml:lang="en-us">PreservedSpecimen</rdfs:label>
+        <dcterms:issued>2008-11-19</dcterms:issued>
         <dwcattributes:abcdEquivalence>RecordBasisEnum/PreservedSpecimen</dwcattributes:abcdEquivalence>
         <dwcattributes:status>recommended</dwcattributes:status>
-        <dcterms:issued>2008-11-19</dcterms:issued>
         <dcterms:modified>2011-10-16</dcterms:modified>
         <rdfs:comment xml:lang="en-us">A resource describing a preserved specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/dwctype/"/>
@@ -255,14 +255,14 @@
      -->
 
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/dwctype/">
+        <dcterms:publisher xml:lang="en-us">Biodiversity Information Standards (TDWG)</dcterms:publisher>
         <rdfs:comment>This document contains a list of terms in the Darwin Core Type Vocabulary. For the full normative RDF document of all Darwin Core terms, see dwctermshistory.rdf. To comment on this schema, please create a new issue in http://code.google.com/p/darwincore/issues/</rdfs:comment>
         <dcterms:modified>2013-10-22</dcterms:modified>
-        <dcterms:publisher xml:lang="en-us">Biodiversity Information Standards (TDWG)</dcterms:publisher>
         <dcterms:title xml:lang="en-us">Darwin Core Type Terms</dcterms:title>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
 
