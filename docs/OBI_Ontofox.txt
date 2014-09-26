@@ -34,5 +34,5 @@ includeComputedIntermediates
 [Source annotation URIs]
 includeAllAxiomsRecursively
 
-#As of September 2014, there are differences in relations used by OBI (from BFO) and RO (used in BCO). The BFO relationa have to be removed from this file by hand. Need to remove BFO_0000057, BFO_0000057. Probably okay to leave is bearer of and inheres in for now.
+#As of September 2014, there are differences in relations used by OBI (from BFO) and RO (used in BCO). The BFO relationa have to be removed from this file by hand. Need to remove BFO_0000056, BFO_0000057. Probably okay to leave is bearer of and inheres in for now.
 #Ontofox is currently offline, so the OBI import file is being edited by hand.
