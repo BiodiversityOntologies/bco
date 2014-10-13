@@ -485,18 +485,18 @@ obo:BCO_0000062 rdf:type owl:Class ;
                 
                 rdfs:label "living specimen"@en ;
                 
-                rdfs:subClassOf obo:OBI_0100051 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 obo:IAO_0000115 "A specimen that is alive."@en ;
-                
-                rdfs:comment "Need to import alive from PATO and add logical definition."@en ;
                 
                 obo:IAO_0000112 "a bacterial culture in a culture collection"@en ,
                                 "a tree in an arboretum"@en ,
                                 "an animal in a zoo"@en ,
                                 "germplasm"@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000123 .
+                obo:IAO_0000231 obo:IAO_0000103 .
 
 
 
@@ -1502,9 +1502,22 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 
-<http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> obo:BCO_0000074 obo:BCO_0000062 ;
+<http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> obo:IAO_0000115 "A specimen that is alive."@en ;
                                                 
-                                                obo:IAO_0000114 obo:IAO_0000125 .
+                                                obo:IAO_0000112 "a bacterial culture in a culture collection"@en ,
+                                                                "a germplasm"@en ,
+                                                                "a plant in an arboretum"@en ,
+                                                                "an animal in a zoo"@en ;
+                                                
+                                                obo:BCO_0000060 "living specimen"@en ;
+                                                
+                                                obo:IAO_0000114 obo:IAO_0000123 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Needs a logical definition."@en ;
+  owl:annotatedProperty obo:IAO_0000114 ;
+  owl:annotatedTarget obo:IAO_0000123 ;
+  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/LivingSpecimen>
+] .
 
 
 
