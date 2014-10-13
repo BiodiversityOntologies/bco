@@ -512,7 +512,7 @@ obo:BCO_0000063 rdf:type owl:Class ;
                 
                 obo:IAO_0000115 "A specimen that has been preserved."@en ;
                 
-                rdfs:comment "request a term for preservation in OBI and/or preserved in PATO"@en .
+                obo:IAO_0000231 obo:IAO_0000103 .
 
 
 
@@ -1565,13 +1565,16 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> obo:IAO_0000115 "A specimen that has been preserved."@en ;
                                                    
-                                                   obo:BCO_0000060 "preserved specimen"@en ;
+                                                   obo:IAO_0000112 "a cleared and stained amphibian in glycerine"@en ,
+                                                                   "a dried, pressed plant on a herbarium sheet"@en ,
+                                                                   "a fungus mycelium on a glass slide"@en ,
+                                                                   "a whole bat carcass in 70% ethanol"@en ;
                                                    
-                                                   obo:BCO_0000074 obo:BCO_0000063 ;
+                                                   obo:BCO_0000060 "preserved specimen"@en ;
                                                    
                                                    obo:IAO_0000114 obo:IAO_0000123 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "Has this status because it need a better definition and a logical definition. and a definition source."@en ;
+  rdfs:comment "Needs a logical definition."@en ;
   owl:annotatedProperty obo:IAO_0000114 ;
   owl:annotatedTarget obo:IAO_0000123 ;
   owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen>
