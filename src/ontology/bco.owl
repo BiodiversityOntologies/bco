@@ -1325,6 +1325,26 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 
 
+###  http://rs.tdwg.org/dwc/dwctype/FossilSpecimen
+
+<http://rs.tdwg.org/dwc/dwctype/FossilSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> ;
+                                                
+                                                obo:IAO_0000115 "A preserved specimen that is a fossil."@en ;
+                                                
+                                                obo:IAO_0000112 "a fossil housed in a natural history museum"@en ;
+                                                
+                                                obo:BCO_0000060 "fossil specimen"@en ;
+                                                
+                                                obo:IAO_0000114 obo:IAO_0000123 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Needs a logical definition."@en ;
+  owl:annotatedProperty obo:IAO_0000114 ;
+  owl:annotatedTarget obo:IAO_0000123 ;
+  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/FossilSpecimen>
+] .
+
+
+
 ###  http://rs.tdwg.org/dwc/dwctype/HumanObservation
 
 <http://rs.tdwg.org/dwc/dwctype/HumanObservation> rdfs:subClassOf obo:IAO_0000030 ;
@@ -1376,6 +1396,27 @@ obo:bco_0000046 rdf:type owl:Class ;
   owl:annotatedProperty obo:IAO_0000114 ;
   owl:annotatedTarget obo:IAO_0000123 ;
   owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/MachineObservation>
+] .
+
+
+
+###  http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen
+
+<http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> obo:IAO_0000115 "A specimen that has been preserved."@en ;
+                                                   
+                                                   obo:IAO_0000112 "a cleared and stained amphibian in glycerine"@en ,
+                                                                   "a dried, pressed plant on a herbarium sheet"@en ,
+                                                                   "a fungus mycelium on a glass slide"@en ,
+                                                                   "a whole bat carcass in 70% ethanol"@en ;
+                                                   
+                                                   obo:BCO_0000060 "preserved specimen"@en ;
+                                                   
+                                                   obo:IAO_0000114 obo:IAO_0000123 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Needs a logical definition."@en ;
+  owl:annotatedProperty obo:IAO_0000114 ;
+  owl:annotatedTarget obo:IAO_0000123 ;
+  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen>
 ] .
 
 
@@ -1511,22 +1552,6 @@ obo:BCO_0000073 rdf:type owl:NamedIndividual ;
 
 
 
-<http://rs.tdwg.org/dwc/dwctype/FossilSpecimen> obo:IAO_0000115 "A specimen that is a fossil."@en ;
-                                                
-                                                obo:IAO_0000112 "a fossil housed in a natural history museum"@en ;
-                                                
-                                                obo:BCO_0000060 "fossil specimen"@en ;
-                                                
-                                                obo:IAO_0000114 obo:IAO_0000123 .
-[ rdf:type owl:Axiom ;
-  rdfs:comment "Needs a logical definition."@en ;
-  owl:annotatedProperty obo:IAO_0000114 ;
-  owl:annotatedTarget obo:IAO_0000123 ;
-  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/FossilSpecimen>
-] .
-
-
-
 obo:IAO_0000120 rdfs:label "FossilSpecimen" .
 
 
@@ -1559,25 +1584,6 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 <http://rs.tdwg.org/dwc/terms/Taxon> obo:IAO_0000114 obo:IAO_0000124 .
-
-
-
-<http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> obo:IAO_0000115 "A specimen that has been preserved."@en ;
-                                                   
-                                                   obo:IAO_0000112 "a cleared and stained amphibian in glycerine"@en ,
-                                                                   "a dried, pressed plant on a herbarium sheet"@en ,
-                                                                   "a fungus mycelium on a glass slide"@en ,
-                                                                   "a whole bat carcass in 70% ethanol"@en ;
-                                                   
-                                                   obo:BCO_0000060 "preserved specimen"@en ;
-                                                   
-                                                   obo:IAO_0000114 obo:IAO_0000123 .
-[ rdf:type owl:Axiom ;
-  rdfs:comment "Needs a logical definition."@en ;
-  owl:annotatedProperty obo:IAO_0000114 ;
-  owl:annotatedTarget obo:IAO_0000123 ;
-  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen>
-] .
 
 
 
