@@ -551,12 +551,12 @@ obo:BCO_0000066 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:bco_0000003 ;
                 
-                obo:IAO_0000115 "An observing process in which the entity doing the observing is a machine."@en ;
+                obo:IAO_0000115 "An observing process in which the observing entity consists of one or more machines."@en ;
                 
                 rdfs:comment "May want to work with OBI to define this term in a more general sense for investigations."@en ;
                 
-                obo:IAO_0000112 "a camera trap recording the presense of a jaguar"@en ,
-                                "a sensor continuously recording the surface temperature of a leaf over several hours"@en ;
+                obo:IAO_0000112 "a camera trap recording the presence of a jaguar"@en ,
+                                "a sensor periodically recording the surface temperature of a leaf over several hours"@en ;
                 
                 obo:IAO_0000114 obo:IAO_0000123 .
 
@@ -1360,6 +1360,27 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 
 
+###  http://rs.tdwg.org/dwc/dwctype/MachineObservation
+
+<http://rs.tdwg.org/dwc/dwctype/MachineObservation> rdfs:subClassOf obo:IAO_0000030 ;
+                                                    
+                                                    obo:IAO_0000115 "The output of a machine observation process."@en ;
+                                                    
+                                                    obo:IAO_0000112 "a record from a camera trap documenting the presence of a jaguar"@en ,
+                                                                    "a record from a sensor periodically capturing the surface temperature of a leaf over several hours"@en ;
+                                                    
+                                                    obo:BCO_0000060 "machine observation"@en ;
+                                                    
+                                                    obo:IAO_0000114 obo:IAO_0000123 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Needs a logical definition."@en ;
+  owl:annotatedProperty obo:IAO_0000114 ;
+  owl:annotatedTarget obo:IAO_0000123 ;
+  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/MachineObservation>
+] .
+
+
+
 ###  http://rs.tdwg.org/dwc/terms/Event
 
 <http://rs.tdwg.org/dwc/terms/Event> rdf:type owl:Class ;
@@ -1487,24 +1508,6 @@ obo:BCO_0000073 rdf:type owl:NamedIndividual ;
 
 
 
-obo:IAO_0000120 rdfs:label "FossilSpecimen" .
-
-
-
-obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
-
-
-
-<http://rs.tdwg.org/dwc/terms/Taxon> obo:IAO_0000114 obo:IAO_0000124 .
-
-
-
-<http://rs.tdwg.org/dwc/dwctype/MachineObservation> obo:BCO_0000074 obo:BCO_0000066 ;
-                                                    
-                                                    obo:IAO_0000114 obo:IAO_0000125 .
-
-
-
 <http://rs.tdwg.org/dwc/terms/Occurrence> obo:IAO_0000114 obo:IAO_0000124 .
 
 
@@ -1522,6 +1525,14 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
   owl:annotatedTarget obo:IAO_0000123 ;
   owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/FossilSpecimen>
 ] .
+
+
+
+obo:IAO_0000120 rdfs:label "FossilSpecimen" .
+
+
+
+obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 
@@ -1548,6 +1559,10 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 
+<http://rs.tdwg.org/dwc/terms/Taxon> obo:IAO_0000114 obo:IAO_0000124 .
+
+
+
 <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> obo:IAO_0000115 "A specimen that has been preserved."@en ;
                                                    
                                                    obo:BCO_0000060 "preserved specimen"@en ;
@@ -1564,13 +1579,13 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 
-<http://rs.tdwg.org/dwc/terms/attributes/status> rdfs:label "dwc_terms status"@en .
-
-
-
 <http://rs.tdwg.org/dwc/terms/Identification> obo:IAO_0000114 obo:IAO_0000125 ;
                                               
                                               obo:BCO_0000074 obo:bco_0000042 .
+
+
+
+<http://rs.tdwg.org/dwc/terms/attributes/status> rdfs:label "dwc_terms status"@en .
 
 
 
