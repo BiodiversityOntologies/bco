@@ -532,7 +532,7 @@ obo:BCO_0000065 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:bco_0000003 ;
                 
-                obo:IAO_0000115 "An observing process in which the entity doing the observing is a human being."@en ;
+                obo:IAO_0000115 "An observing process in which the observing entity consists of one or more humans."@en ;
                 
                 rdfs:comment "May be able to use the has agent = has active participant relationship for defining this. May want to work with OBI to define this term in a more general sense for investigations."@en ;
                 
@@ -689,16 +689,16 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BFO_0000015 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000117 ;
-                                  owl:someValuesFrom obo:bco_0000007
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:bco_0000044
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom obo:IAO_0000030
+                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000117 ;
+                                  owl:someValuesFrom obo:bco_0000007
                                 ] ;
                 
                 obo:IAO_0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ,
@@ -1325,6 +1325,29 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 
 
+###  http://rs.tdwg.org/dwc/dwctype/HumanObservation
+
+<http://rs.tdwg.org/dwc/dwctype/HumanObservation> rdfs:subClassOf obo:IAO_0000030 ;
+                                                  
+                                                  obo:IAO_0000112 "a record of an observation in a field notebook" ,
+                                                                  "a record of the presence of species of plant in a plot" ;
+                                                  
+                                                  obo:IAO_0000115 "The output of a human observation process."@en ;
+                                                  
+                                                  obo:IAO_0000112 "a record of the absence of a California Condor at a monitoring site" ;
+                                                  
+                                                  obo:BCO_0000060 "human observation"@en ;
+                                                  
+                                                  obo:IAO_0000114 obo:IAO_0000123 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Needs a logical definition."@en ;
+  owl:annotatedProperty obo:IAO_0000114 ;
+  owl:annotatedTarget obo:IAO_0000123 ;
+  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
+] .
+
+
+
 ###  http://rs.tdwg.org/dwc/dwctype/Location
 
 <http://rs.tdwg.org/dwc/dwctype/Location> rdfs:subClassOf obo:BFO_0000029 ;
@@ -1538,12 +1561,6 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
   owl:annotatedTarget obo:IAO_0000123 ;
   owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen>
 ] .
-
-
-
-<http://rs.tdwg.org/dwc/dwctype/HumanObservation> obo:BCO_0000074 obo:BCO_0000065 ;
-                                                  
-                                                  obo:IAO_0000114 obo:IAO_0000125 .
 
 
 
