@@ -1329,12 +1329,11 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 <http://rs.tdwg.org/dwc/dwctype/HumanObservation> rdfs:subClassOf obo:IAO_0000030 ;
                                                   
-                                                  obo:IAO_0000112 "a record of an observation in a field notebook" ,
-                                                                  "a record of the presence of species of plant in a plot" ;
-                                                  
                                                   obo:IAO_0000115 "The output of a human observation process."@en ;
                                                   
-                                                  obo:IAO_0000112 "a record of the absence of a California Condor at a monitoring site" ;
+                                                  obo:IAO_0000112 "a record of an observation in a field notebook"@en ,
+                                                                  "a record of the absence of a California Condor at a monitoring site"@en ,
+                                                                  "a record of the presence of species of plant in a plot"@en ;
                                                   
                                                   obo:BCO_0000060 "human observation"@en ;
                                                   
