@@ -1329,9 +1329,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 <http://rs.tdwg.org/dwc/dwctype/FossilSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> ;
                                                 
-                                                obo:IAO_0000115 "A preserved specimen that is a fossil."@en ;
+                                                obo:IAO_0000112 "a fossil housed in a natural history museum"^^xsd:string ;
                                                 
-                                                obo:IAO_0000112 "a fossil housed in a natural history museum"@en ;
+                                                obo:IAO_0000115 "A preserved specimen that is a fossil."@en ;
                                                 
                                                 obo:BCO_0000060 "fossil specimen"@en ;
                                                 
@@ -1349,11 +1349,11 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 <http://rs.tdwg.org/dwc/dwctype/HumanObservation> rdfs:subClassOf obo:IAO_0000030 ;
                                                   
-                                                  obo:IAO_0000115 "The output of a human observation process."@en ;
+                                                  obo:IAO_0000112 "a record of an observation in a field notebook"^^xsd:string ,
+                                                                  "a record of the absence of a California Condor at a monitoring site"^^xsd:string ,
+                                                                  "a record of the presence of species of plant in a plot"^^xsd:string ;
                                                   
-                                                  obo:IAO_0000112 "a record of an observation in a field notebook"@en ,
-                                                                  "a record of the absence of a California Condor at a monitoring site"@en ,
-                                                                  "a record of the presence of species of plant in a plot"@en ;
+                                                  obo:IAO_0000115 "The output of a human observation process."@en ;
                                                   
                                                   obo:BCO_0000060 "human observation"@en ;
                                                   
@@ -1383,10 +1383,10 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 <http://rs.tdwg.org/dwc/dwctype/MachineObservation> rdfs:subClassOf obo:IAO_0000030 ;
                                                     
-                                                    obo:IAO_0000115 "The output of a machine observation process."@en ;
+                                                    obo:IAO_0000112 "a record from a camera trap documenting the presence of a jaguar"^^xsd:string ,
+                                                                    "a record from a sensor periodically capturing the surface temperature of a leaf over several hours"^^xsd:string ;
                                                     
-                                                    obo:IAO_0000112 "a record from a camera trap documenting the presence of a jaguar"@en ,
-                                                                    "a record from a sensor periodically capturing the surface temperature of a leaf over several hours"@en ;
+                                                    obo:IAO_0000115 "The output of a machine observation process."@en ;
                                                     
                                                     obo:BCO_0000060 "machine observation"@en ;
                                                     
@@ -1402,12 +1402,12 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen
 
-<http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> obo:IAO_0000115 "A specimen that has been preserved."@en ;
+<http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> obo:IAO_0000112 "a cleared and stained amphibian in glycerine"^^xsd:string ,
+                                                                   "a dried, pressed plant on a herbarium sheet"^^xsd:string ,
+                                                                   "a fungus mycelium on a glass slide"^^xsd:string ,
+                                                                   "a whole bat carcass in 70% ethanol"^^xsd:string ;
                                                    
-                                                   obo:IAO_0000112 "a cleared and stained amphibian in glycerine"@en ,
-                                                                   "a dried, pressed plant on a herbarium sheet"@en ,
-                                                                   "a fungus mycelium on a glass slide"@en ,
-                                                                   "a whole bat carcass in 70% ethanol"@en ;
+                                                   obo:IAO_0000115 "A specimen that has been preserved."@en ;
                                                    
                                                    obo:BCO_0000060 "preserved specimen"@en ;
                                                    
@@ -1560,12 +1560,12 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 
-<http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> obo:IAO_0000115 "A specimen that is alive."@en ;
+<http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> obo:IAO_0000112 "a bacterial culture in a culture collection"^^xsd:string ,
+                                                                "a germplasm"^^xsd:string ,
+                                                                "a plant in an arboretum"^^xsd:string ,
+                                                                "an animal in a zoo"^^xsd:string ;
                                                 
-                                                obo:IAO_0000112 "a bacterial culture in a culture collection"@en ,
-                                                                "a germplasm"@en ,
-                                                                "a plant in an arboretum"@en ,
-                                                                "an animal in a zoo"@en ;
+                                                obo:IAO_0000115 "A specimen that is alive."@en ;
                                                 
                                                 obo:BCO_0000060 "living specimen"@en ;
                                                 
