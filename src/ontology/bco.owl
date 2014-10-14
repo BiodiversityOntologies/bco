@@ -689,16 +689,16 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BFO_0000015 ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002234 ;
+                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:bco_0000044
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000117 ;
                                   owl:someValuesFrom obo:bco_0000007
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
                                 ] ;
                 
                 obo:IAO_0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ,
@@ -1342,7 +1342,9 @@ obo:bco_0000046 rdf:type owl:Class ;
                                                       owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/Location>
                                                     ] ;
                                     
-                                    owl:deprecated "false"^^xsd:boolean .
+                                    owl:deprecated "false"^^xsd:boolean ;
+                                    
+                                    obo:IAO_0000114 obo:IAO_0000428 .
 
 
 
@@ -1452,7 +1454,9 @@ obo:bco_0000046 rdf:type owl:Class ;
                                                 
                                                 obo:IAO_0000115 "A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed."@en ;
                                                 
-                                                obo:BCO_0000060 "material sample"@en .
+                                                obo:BCO_0000060 "material sample"@en ;
+                                                
+                                                obo:IAO_0000114 obo:IAO_0000428 .
 
 
 
@@ -1598,6 +1602,14 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 <http://rs.tdwg.org/dwc/terms/Taxon> obo:IAO_0000114 obo:IAO_0000124 .
+
+
+
+<http://rs.tdwg.org/dwc/dwctype/Taxon> obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+<http://rs.tdwg.org/dwc/dwctype/Occurrence> obo:IAO_0000114 obo:IAO_0000123 .
 
 
 
