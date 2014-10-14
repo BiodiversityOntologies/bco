@@ -693,12 +693,12 @@ obo:bco_0000003 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:bco_0000044
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000117 ;
                                   owl:someValuesFrom obo:bco_0000007
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002234 ;
+                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
                                 ] ;
                 
                 obo:IAO_0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ,
@@ -1329,6 +1329,23 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 
 
+###  http://purl.org/dc/dcmitype/Event
+
+<http://purl.org/dc/dcmitype/Event> owl:equivalentClass [ rdf:type owl:Class ;
+                                                          owl:unionOf ( obo:OBI_0000659
+                                                                        obo:bco_0000003
+                                                                      )
+                                                        ] ;
+                                    
+                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                      owl:onProperty obo:BFO_0000066 ;
+                                                      owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/Location>
+                                                    ] ;
+                                    
+                                    owl:deprecated "false"^^xsd:boolean .
+
+
+
 ###  http://rs.tdwg.org/dwc/dwctype/FossilSpecimen
 
 <http://rs.tdwg.org/dwc/dwctype/FossilSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> ;
@@ -1459,27 +1476,6 @@ obo:bco_0000046 rdf:type owl:Class ;
   owl:annotatedTarget obo:IAO_0000123 ;
   owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen>
 ] .
-
-
-
-###  http://rs.tdwg.org/dwc/terms/Event
-
-<http://rs.tdwg.org/dwc/terms/Event> rdf:type owl:Class ;
-                                     
-                                     owl:equivalentClass [ rdf:type owl:Class ;
-                                                           owl:unionOf ( obo:OBI_0000659
-                                                                         obo:bco_0000003
-                                                                       )
-                                                         ] ;
-                                     
-                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                       owl:onProperty obo:BFO_0000066 ;
-                                                       owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/Location>
-                                                     ] ;
-                                     
-                                     obo:IAO_0000115 ""@en ;
-                                     
-                                     obo:IAO_0000114 obo:IAO_0000125 .
 
 
 
