@@ -90,6 +90,54 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
 #################################################################
 
 
+###  http://bco.googlecode.com/git/src/ontology/dwctype.owl#Occurrence
+
+:Occurrence rdf:type owl:Class ;
+            
+            rdfs:label "Occurrence"@en ;
+            
+            dcterms:issued "2008-11-19"^^xsd:dateTime ;
+            
+            dcterms:modified "2011-10-16"^^xsd:dateTime ;
+            
+            rdfs:comment "A resource describing an instance of the Occurrence class - \"The category of information pertaining to evidence of an occurrence in nature, in a collection, or in a dataset (specimen, observation, etc.).\""@en ;
+            
+            dwcattributes:status "recommended"@en ;
+            
+            rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
+            
+            dcterms:replaces <http://rs.tdwg.org/dwc/dwctype/Occurrence-2009-04-24> ;
+            
+            dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Occurrence-2011-10-16> ;
+            
+            dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> ;
+            
+            dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
+
+
+
+###  http://bco.googlecode.com/git/src/ontology/dwctype.owl#Taxon
+
+:Taxon rdf:type owl:Class ;
+       
+       rdfs:label "Taxon"@en ;
+       
+       dcterms:issued "2009-01-23"^^xsd:dateTime ;
+       
+       dcterms:modified "2009-04-24"^^xsd:dateTime ;
+       
+       rdfs:comment "A resource describing an instance of the Taxon class - \"The category of information pertaining to taxonomic names, taxon name usages, or taxon concepts.\""@en ;
+       
+       dwcattributes:status "recommended"@en ;
+       
+       rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
+       
+       dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Taxon-2009-01-23> ;
+       
+       dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
+
+
+
 ###  http://rs.tdwg.org/dwc/dwctype/FossilSpecimen
 
 <http://rs.tdwg.org/dwc/dwctype/FossilSpecimen> rdf:type owl:Class ;
@@ -300,49 +348,27 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
 
 
 
-###  https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl#Occurrence
+###  https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl#Event
 
-:Occurrence rdf:type owl:Class ;
-            
-            rdfs:label "Occurrence"@en ;
-            
-            dcterms:issued "2008-11-19"^^xsd:dateTime ;
-            
-            dcterms:modified "2011-10-16"^^xsd:dateTime ;
-            
-            rdfs:comment "A resource describing an instance of the Occurrence class - \"The category of information pertaining to evidence of an occurrence in nature, in a collection, or in a dataset (specimen, observation, etc.).\""@en ;
-            
-            dwcattributes:status "recommended"@en ;
-            
-            rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-            
-            dcterms:replaces <http://rs.tdwg.org/dwc/dwctype/Occurrence-2009-04-24> ;
-            
-            dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Occurrence-2011-10-16> ;
-            
-            dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> ;
-            
-            dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
-
-
-
-###  https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl#Taxon
-
-:Taxon rdf:type owl:Class ;
+:Event rdf:type owl:Class ;
        
-       rdfs:label "Taxon"@en ;
+       rdfs:label "Event"@en ;
        
-       dcterms:issued "2009-01-23"^^xsd:dateTime ;
+       dcterms:issued "2000-07-11"^^xsd:dateTime ;
        
-       dcterms:modified "2009-04-24"^^xsd:dateTime ;
+       dcterms:modified "2008-01-14"^^xsd:dateTime ;
        
-       rdfs:comment "A resource describing an instance of the Taxon class - \"The category of information pertaining to taxonomic names, taxon name usages, or taxon concepts.\""@en ;
+       rdfs:comment "A non-persistent, time-based occurrence. For Darwin Core, a resource describing an instance of the Event class - \"The category of information pertaining to an event (an action that occurs at a place and during a period of time).\" Metadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event."@en ;
        
        dwcattributes:status "recommended"@en ;
        
-       rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
+       dwcattributes:decision <http://dublincore.org/usage/decisions/#Decision-2008-01> ;
        
-       dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Taxon-2009-01-23> ;
+       dcterms:replaces <http://dublincore.org/usage/terms/history/#Event-002> ;
+       
+       dcterms:hasVersion <http://dublincore.org/usage/terms/history/#Event-003> ;
+       
+       rdfs:isDefinedBy dcterms:DCMIType ;
        
        dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
 
