@@ -6,10 +6,13 @@
 @prefix dcam: <http://purl.org/dc/dcam/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/> .
 @prefix dwcattributes: <http://rs.tdwg.org/dwc/terms/attributes/> .
-@base <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl> .
+@base <https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwctype.owl> .
 
-<https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl> rdf:type owl:Ontology ;
+<https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwctype.owl> rdf:type owl:Ontology ;
                                                                                  
                                                                                  rdfs:comment "This file contains terms from the Darwin Core (DwC) type vocabulary, imported from the RDF representation of that vocabulary and interpretted as classes in the Biological Collections Ontology. Some of the type vocabulary terms are replicated in DwC as RDF."@en .
 
@@ -90,9 +93,9 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
 #################################################################
 
 
-###  http://bco.googlecode.com/git/src/ontology/dwctype.owl#Occurrence
+###  http://rs.tdwg.org/dwc/dwctype/Occurrence
 
-:Occurrence rdf:type owl:Class ;
+<http://rs.tdwg.org/dwc/dwctype/Occurrence> rdf:type owl:Class ;
             
             rdfs:label "Occurrence"@en ;
             
@@ -116,9 +119,9 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
 
 
 
-###  http://bco.googlecode.com/git/src/ontology/dwctype.owl#Taxon
+###  http://rs.tdwg.org/dwc/dwctype/Taxon
 
-:Taxon rdf:type owl:Class ;
+<http://rs.tdwg.org/dwc/dwctype/Taxon> rdf:type owl:Class ;
        
        rdfs:label "Taxon"@en ;
        
@@ -348,9 +351,9 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
 
 
 
-###  https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl#Event
+### http://purl.org/dc/dcmitype/Event 
 
-:Event rdf:type owl:Class ;
+<http://purl.org/dc/dcmitype/Event> rdf:type owl:Class ;
        
        rdfs:label "Event"@en ;
        

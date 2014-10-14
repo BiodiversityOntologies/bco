@@ -25,7 +25,7 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
                                                         "Robert Guralnick" ,
                                                         "John Deck" ;
                                          
-                                         owl:imports <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl> ,
+                                         owl:imports <https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwctype.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/iao_bco_imports.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/obi_bco_imports.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ontology_metadata_bco_imports.owl> ,
