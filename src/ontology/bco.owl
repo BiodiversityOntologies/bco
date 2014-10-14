@@ -1321,7 +1321,11 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 <http://purl.org/dc/dcam/VocabularyEncodingScheme> rdf:type owl:Class ;
                                                    
-                                                   rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> .
+                                                   rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                                                   
+                                                   owl:deprecated "true"^^xsd:boolean ;
+                                                   
+                                                   obo:IAO_0000231 obo:IAO_0000103 .
 
 
 
