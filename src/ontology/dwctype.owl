@@ -96,11 +96,11 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
                                                 
                                                 rdfs:label "FossilSpecimen"@en ;
                                                 
-                                                dcterms:modified "2011-10-16" ;
+                                                dcterms:issued "2008-11-19"^^xsd:dateTime ;
+                                                
+                                                dcterms:modified "2011-10-16"^^xsd:dateTime ;
                                                 
                                                 dwcattributes:abcdEquivalence "RecordBasisEnum/FossileSpecimen" ;
-                                                
-                                                dcterms:issued "2008-11-19" ;
                                                 
                                                 rdfs:comment "A resource describing a fossilized specimen."@en ;
                                                 
@@ -124,9 +124,9 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
                                                   
                                                   rdfs:label "HumanObservation"@en ;
                                                   
-                                                  dcterms:modified "2008-11-19" ;
+                                                  dcterms:modified "2008-11-19"^^xsd:dateTime ;
                                                   
-                                                  dcterms:issued "2008-11-19" ;
+                                                  dcterms:issued "2008-11-19"^^xsd:dateTime ;
                                                   
                                                   rdfs:comment "A resource describing an observation made by one or more people."@en ;
                                                   
@@ -150,13 +150,13 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
                                                 
                                                 rdfs:label "LivingSpecimen"@en ;
                                                 
-                                                dcterms:modified "2011-10-16" ;
+                                                dcterms:issued "2008-11-19"^^xsd:dateTime ;
                                                 
-                                                dwcattributes:abcdEquivalence "RecordBasisEnum/LivingSpecimen" ;
-                                                
-                                                dcterms:issued "2008-11-19" ;
+                                                dcterms:modified "2011-10-16"^^xsd:dateTime ;
                                                 
                                                 rdfs:comment "A resource describing a living specimen."@en ;
+                                                
+                                                dwcattributes:abcdEquivalence "RecordBasisEnum/LivingSpecimen" ;
                                                 
                                                 dwcattributes:status "recommended"@en ;
                                                 
@@ -178,11 +178,11 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
                                           
                                           rdfs:label "Location"@en ;
                                           
-                                          dcterms:modified "2009-04-24" ;
+                                          dcterms:issued "2009-01-23"^^xsd:dateTime ;
+                                          
+                                          dcterms:modified "2009-04-24"^^xsd:dateTime ;
                                           
                                           dwcattributes:abcdEquivalence "not in ABCD" ;
-                                          
-                                          dcterms:issued "2009-01-23" ;
                                           
                                           rdfs:comment "In Darwin Core: A resource describing an instance of the dcterms:Location class - \"A spatial region or named place. For Darwin Core, a set of terms describing a place, whether named or not.\" This class can also map to prov:Location -  \"A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.\" However, unlike prov:Location, within BCO and Darwin Core, dwc:Location is generally intended to refer to a geographic location or a location that is part of an organism (e.g., the left nostril). This class also maps to bfo:site, but unlike site, which is an immaterial entity, dwc:Location may refer to a material or immaterial entity."@en ;
                                           
@@ -202,11 +202,11 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
                                                     
                                                     rdfs:label "MachineObservation"@en ;
                                                     
+                                                    dcterms:issued "2008-11-19"^^xsd:dateTime ;
+                                                    
+                                                    dcterms:modified "2008-11-19"^^xsd:dateTime ;
+                                                    
                                                     dwcattributes:abcdEquivalence "RecordBasisEnum/MachineObservation" ;
-                                                    
-                                                    dcterms:modified "2008-11-19" ;
-                                                    
-                                                    dcterms:issued "2008-11-19" ;
                                                     
                                                     rdfs:comment "A resource describing an observation made by a machine."@en ;
                                                     
@@ -228,11 +228,11 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
                                                 
                                                 rdfs:label "MaterialSample"@en ;
                                                 
+                                                dcterms:issued "2013-03-28"^^xsd:dateTime ;
+                                                
+                                                dcterms:modified "2013-09-26"^^xsd:dateTime ;
+                                                
                                                 dwcattributes:abcdEquivalence "DataSets/DataSet/Units/Unit" ;
-                                                
-                                                dcterms:issued "2013-03-28" ;
-                                                
-                                                dcterms:modified "2013-09-26" ;
                                                 
                                                 rdfs:comment "A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed."@en ;
                                                 
@@ -254,11 +254,11 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
                                                         
                                                         rdfs:label "NomenclaturalChecklist"@en ;
                                                         
+                                                        dcterms:modified "2009-01-23"^^xsd:dateTime ;
+                                                        
+                                                        dcterms:issued "2009-01-23"^^xsd:dateTime ;
+                                                        
                                                         dwcattributes:abcdEquivalence "not in ABCD" ;
-                                                        
-                                                        dcterms:issued "2009-01-23" ;
-                                                        
-                                                        dcterms:modified "2009-01-23" ;
                                                         
                                                         rdfs:comment "A resource describing a nomenclatural checklist."@en ;
                                                         
@@ -278,9 +278,9 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
                                                    
                                                    rdfs:label "PreservedSpecimen"@en ;
                                                    
-                                                   dcterms:modified "2011-10-16" ;
+                                                   dcterms:issued "2008-11-19"^^xsd:dateTime ;
                                                    
-                                                   dcterms:issued "2008-11-19" ;
+                                                   dcterms:modified "2011-10-16"^^xsd:dateTime ;
                                                    
                                                    rdfs:comment "A resource describing a preserved specimen."@en ;
                                                    
@@ -306,9 +306,9 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
             
             rdfs:label "Occurrence"@en ;
             
-            dcterms:modified "2011-10-16" ;
+            dcterms:issued "2008-11-19"^^xsd:dateTime ;
             
-            dcterms:issued "2008-11-19" ;
+            dcterms:modified "2011-10-16"^^xsd:dateTime ;
             
             rdfs:comment "A resource describing an instance of the Occurrence class - \"The category of information pertaining to evidence of an occurrence in nature, in a collection, or in a dataset (specimen, observation, etc.).\""@en ;
             
@@ -323,6 +323,28 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
             dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> ;
             
             dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
+
+
+
+###  https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl#Taxon
+
+:Taxon rdf:type owl:Class ;
+       
+       rdfs:label "Taxon"@en ;
+       
+       dcterms:issued "2009-01-23"^^xsd:dateTime ;
+       
+       dcterms:modified "2009-04-24"^^xsd:dateTime ;
+       
+       rdfs:comment "A resource describing an instance of the Taxon class - \"The category of information pertaining to taxonomic names, taxon name usages, or taxon concepts.\""@en ;
+       
+       dwcattributes:status "recommended"@en ;
+       
+       rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
+       
+       dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Taxon-2009-01-23> ;
+       
+       dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
 
 
 
