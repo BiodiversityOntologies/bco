@@ -133,9 +133,9 @@ dwctype:FossilSpecimen rdf:type owl:Class ;
                        
                        dcterms:modified "2011-10-16"^^xsd:dateTime ;
                        
-                       dwcattributes:abcdEquivalence "RecordBasisEnum/FossileSpecimen" ;
-                       
                        rdfs:comment "A resource describing a fossilized specimen."@en ;
+                       
+                       dwcattributes:abcdEquivalence "RecordBasisEnum/FossileSpecimen" ;
                        
                        dwcattributes:status "recommended"@en ;
                        
@@ -157,13 +157,13 @@ dwctype:HumanObservation rdf:type owl:Class ;
                          
                          rdfs:label "HumanObservation"@en ;
                          
-                         dcterms:modified "2008-11-19"^^xsd:dateTime ;
-                         
                          dcterms:issued "2008-11-19"^^xsd:dateTime ;
                          
-                         rdfs:comment "A resource describing an observation made by one or more people."@en ;
+                         dcterms:modified "2008-11-19"^^xsd:dateTime ;
                          
                          dwcattributes:abcdEquivalence "RecordBasisEnum/HumanObservation" ;
+                         
+                         rdfs:comment "A resource describing an observation made by one or more people."@en ;
                          
                          dwcattributes:status "recommended"@en ;
                          
@@ -215,7 +215,9 @@ dwctype:Location rdf:type owl:Class ;
                  
                  dcterms:modified "2009-04-24"^^xsd:dateTime ;
                  
-                 rdfs:comment "In Darwin Core: A resource describing an instance of the dcterms:Location class - \"A spatial region or named place. For Darwin Core, a set of terms describing a place, whether named or not.\" This class can also map to prov:Location -  \"A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.\" However, unlike prov:Location, within BCO and Darwin Core, dwc:Location is generally intended to refer to a geographic location or a location that is part of an organism (e.g., the left nostril). This class also maps to bfo:site, but unlike site, which is an immaterial entity, dwc:Location may refer to a material or immaterial entity."@en ;
+                 rdfs:comment """In Darwin Core: A resource describing an instance of the Location class. When and instance of a location refers to a material entity (e.g., my nose, some mountain, a tree), it is assumed that the Location is actually the site occupied by that material entity.
+
+This class can alo map to prov:Location, which is defined as 'A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.' However, unlike prov:Location, within BCO and Darwin Core, dwc:Location is generally intended to refer to a geographic location or a location that is part of an organism (e.g., my left nostril) or other object (e.g., the top of that rock)."""@en ;
                  
                  dwcattributes:abcdEquivalence "not in ABCD" ;
                  
@@ -239,9 +241,9 @@ dwctype:MachineObservation rdf:type owl:Class ;
                            
                            dcterms:issued "2008-11-19"^^xsd:dateTime ;
                            
-                           dwcattributes:abcdEquivalence "RecordBasisEnum/MachineObservation" ;
-                           
                            rdfs:comment "A resource describing an observation made by a machine."@en ;
+                           
+                           dwcattributes:abcdEquivalence "RecordBasisEnum/MachineObservation" ;
                            
                            dwcattributes:status "recommended"@en ;
                            
@@ -265,9 +267,9 @@ dwctype:MaterialSample rdf:type owl:Class ;
                        
                        dcterms:modified "2013-09-26"^^xsd:dateTime ;
                        
-                       dwcattributes:abcdEquivalence "DataSets/DataSet/Units/Unit" ;
-                       
                        rdfs:comment "A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed."@en ;
+                       
+                       dwcattributes:abcdEquivalence "DataSets/DataSet/Units/Unit" ;
                        
                        dwcattributes:status "recommended"@en ;
                        
@@ -287,9 +289,9 @@ dwctype:NomenclaturalChecklist rdf:type owl:Class ;
                                
                                rdfs:label "NomenclaturalChecklist"@en ;
                                
-                               dcterms:modified "2009-01-23"^^xsd:dateTime ;
-                               
                                dcterms:issued "2009-01-23"^^xsd:dateTime ;
+                               
+                               dcterms:modified "2009-01-23"^^xsd:dateTime ;
                                
                                rdfs:comment "A resource describing a nomenclatural checklist."@en ;
                                
@@ -343,9 +345,9 @@ dwctype:PreservedSpecimen rdf:type owl:Class ;
                           
                           dcterms:modified "2011-10-16"^^xsd:dateTime ;
                           
-                          rdfs:comment "A resource describing a preserved specimen."@en ;
-                          
                           dwcattributes:abcdEquivalence "RecordBasisEnum/PreservedSpecimen" ;
+                          
+                          rdfs:comment "A resource describing a preserved specimen."@en ;
                           
                           dwcattributes:status "recommended"@en ;
                           
@@ -394,16 +396,16 @@ Definition from dwc (terms) namespace: The category of information pertaining to
 #################################################################
 
 
-dwctype: dcterms:publisher "Biodiversity Information Standards (TDWG)"@en-us ;
-         
-         rdfs:comment "This document contains a list of terms in the Darwin Core Type Vocabulary. For the full normative RDF document of all Darwin Core terms, see dwctermshistory.rdf. To comment on this schema, please create a new issue in http://code.google.com/p/darwincore/issues/" ;
+dwctype: rdfs:comment "This document contains a list of terms in the Darwin Core Type Vocabulary. For the full normative RDF document of all Darwin Core terms, see dwctermshistory.rdf. To comment on this schema, please create a new issue in http://code.google.com/p/darwincore/issues/" ;
          
          dcterms:modified "2013-10-22" ;
+         
+         dcterms:publisher "Biodiversity Information Standards (TDWG)"@en-us ;
          
          dcterms:title "Darwin Core Type Terms"@en-us .
 
 
 
 
-###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
 
