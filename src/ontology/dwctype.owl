@@ -1,4 +1,5 @@
 @prefix : <http://bco.googlecode.com/git/src/ontology/dwctype.owl#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -6,15 +7,14 @@
 @prefix dcam: <http://purl.org/dc/dcam/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
-@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
 @prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dwcattributes: <http://rs.tdwg.org/dwc/terms/attributes/> .
 @base <https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwctype.owl> .
 
 <https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwctype.owl> rdf:type owl:Ontology ;
-                                                                                 
-                                                                                 rdfs:comment "This file contains terms from the Darwin Core (DwC) type vocabulary, imported from the RDF representation of that vocabulary and interpretted as classes in the Biological Collections Ontology. Some of the type vocabulary terms are replicated in DwC as RDF."@en .
+                                                                                           
+                                                                                           rdfs:comment "This file contains terms from the Darwin Core (DwC) type vocabulary, imported from the RDF representation of that vocabulary and interpretted as classes in the Biological Collections Ontology. Some of the type vocabulary terms are replicated in DwC as RDF."@en .
 
 
 #################################################################
@@ -93,287 +93,295 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
 #################################################################
 
 
-###  http://rs.tdwg.org/dwc/dwctype/Occurrence
+###  http://purl.org/dc/dcmitype/Event
 
-<http://rs.tdwg.org/dwc/dwctype/Occurrence> rdf:type owl:Class ;
-            
-            rdfs:label "Occurrence"@en ;
-            
-            dcterms:issued "2008-11-19"^^xsd:dateTime ;
-            
-            dcterms:modified "2011-10-16"^^xsd:dateTime ;
-            
-            rdfs:comment "A resource describing an instance of the Occurrence class - \"The category of information pertaining to evidence of an occurrence in nature, in a collection, or in a dataset (specimen, observation, etc.).\""@en ;
-            
-            dwcattributes:status "recommended"@en ;
-            
-            rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-            
-            dcterms:replaces <http://rs.tdwg.org/dwc/dwctype/Occurrence-2009-04-24> ;
-            
-            dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Occurrence-2011-10-16> ;
-            
-            dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> ;
-            
-            dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
+dcmitype:Event rdf:type owl:Class ;
+               
+               rdfs:label "Event"@en ;
+               
+               dcterms:issued "2000-07-11"^^xsd:dateTime ;
+               
+               dcterms:modified "2008-01-14"^^xsd:dateTime ;
+               
+               rdfs:comment """Definition from dwctype namespace:  A non-persistent, time-based occurrence. For Darwin Core, a resource describing an instance of the Event class. 
 
+Definition from dwc (terms) namespace: The category of information pertaining to an event (an action that occurs at a place and during a period of time). 
 
-
-###  http://rs.tdwg.org/dwc/dwctype/Taxon
-
-<http://rs.tdwg.org/dwc/dwctype/Taxon> rdf:type owl:Class ;
-       
-       rdfs:label "Taxon"@en ;
-       
-       dcterms:issued "2009-01-23"^^xsd:dateTime ;
-       
-       dcterms:modified "2009-04-24"^^xsd:dateTime ;
-       
-       rdfs:comment "A resource describing an instance of the Taxon class - \"The category of information pertaining to taxonomic names, taxon name usages, or taxon concepts.\""@en ;
-       
-       dwcattributes:status "recommended"@en ;
-       
-       rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-       
-       dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Taxon-2009-01-23> ;
-       
-       dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
+Comment from dwc type namespace: Metadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event."""@en ;
+               
+               dwcattributes:status "recommended"@en ;
+               
+               dwcattributes:decision <http://dublincore.org/usage/decisions/#Decision-2008-01> ;
+               
+               dcterms:replaces <http://dublincore.org/usage/terms/history/#Event-002> ;
+               
+               dcterms:hasVersion <http://dublincore.org/usage/terms/history/#Event-003> ;
+               
+               rdfs:isDefinedBy dcterms:DCMIType ;
+               
+               dcam:memberOf dwc:DwCType .
 
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/FossilSpecimen
 
-<http://rs.tdwg.org/dwc/dwctype/FossilSpecimen> rdf:type owl:Class ;
-                                                
-                                                rdfs:label "FossilSpecimen"@en ;
-                                                
-                                                dcterms:issued "2008-11-19"^^xsd:dateTime ;
-                                                
-                                                dcterms:modified "2011-10-16"^^xsd:dateTime ;
-                                                
-                                                dwcattributes:abcdEquivalence "RecordBasisEnum/FossileSpecimen" ;
-                                                
-                                                rdfs:comment "A resource describing a fossilized specimen."@en ;
-                                                
-                                                dwcattributes:status "recommended"@en ;
-                                                
-                                                rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-                                                
-                                                dcterms:replaces <http://rs.tdwg.org/dwc/dwctype/FossilSpecimen-2008-11-19> ;
-                                                
-                                                dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#FossilSpecimen-2011-10-16> ;
-                                                
-                                                dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> ;
-                                                
-                                                dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
+dwctype:FossilSpecimen rdf:type owl:Class ;
+                       
+                       rdfs:label "FossilSpecimen"@en ;
+                       
+                       dcterms:issued "2008-11-19"^^xsd:dateTime ;
+                       
+                       dcterms:modified "2011-10-16"^^xsd:dateTime ;
+                       
+                       dwcattributes:abcdEquivalence "RecordBasisEnum/FossileSpecimen" ;
+                       
+                       rdfs:comment "A resource describing a fossilized specimen."@en ;
+                       
+                       dwcattributes:status "recommended"@en ;
+                       
+                       rdfs:isDefinedBy dwctype: ;
+                       
+                       dcterms:replaces dwctype:FossilSpecimen-2008-11-19 ;
+                       
+                       dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#FossilSpecimen-2011-10-16> ;
+                       
+                       dcam:memberOf dwc:DwCType ;
+                       
+                       dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
 
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/HumanObservation
 
-<http://rs.tdwg.org/dwc/dwctype/HumanObservation> rdf:type owl:Class ;
-                                                  
-                                                  rdfs:label "HumanObservation"@en ;
-                                                  
-                                                  dcterms:modified "2008-11-19"^^xsd:dateTime ;
-                                                  
-                                                  dcterms:issued "2008-11-19"^^xsd:dateTime ;
-                                                  
-                                                  rdfs:comment "A resource describing an observation made by one or more people."@en ;
-                                                  
-                                                  dwcattributes:abcdEquivalence "RecordBasisEnum/HumanObservation" ;
-                                                  
-                                                  dwcattributes:status "recommended"@en ;
-                                                  
-                                                  rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-                                                  
-                                                  dcterms:replaces <http://rs.tdwg.org/dwc/dwctype/HumanObservation-2008-11-19> ;
-                                                  
-                                                  dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#HumanObservation-2011-10-16> ;
-                                                  
-                                                  dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
+dwctype:HumanObservation rdf:type owl:Class ;
+                         
+                         rdfs:label "HumanObservation"@en ;
+                         
+                         dcterms:modified "2008-11-19"^^xsd:dateTime ;
+                         
+                         dcterms:issued "2008-11-19"^^xsd:dateTime ;
+                         
+                         rdfs:comment "A resource describing an observation made by one or more people."@en ;
+                         
+                         dwcattributes:abcdEquivalence "RecordBasisEnum/HumanObservation" ;
+                         
+                         dwcattributes:status "recommended"@en ;
+                         
+                         rdfs:isDefinedBy dwctype: ;
+                         
+                         dcterms:replaces dwctype:HumanObservation-2008-11-19 ;
+                         
+                         dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#HumanObservation-2011-10-16> ;
+                         
+                         dcam:memberOf dwc:DwCType .
 
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/LivingSpecimen
 
-<http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> rdf:type owl:Class ;
-                                                
-                                                rdfs:label "LivingSpecimen"@en ;
-                                                
-                                                dcterms:issued "2008-11-19"^^xsd:dateTime ;
-                                                
-                                                dcterms:modified "2011-10-16"^^xsd:dateTime ;
-                                                
-                                                rdfs:comment "A resource describing a living specimen."@en ;
-                                                
-                                                dwcattributes:abcdEquivalence "RecordBasisEnum/LivingSpecimen" ;
-                                                
-                                                dwcattributes:status "recommended"@en ;
-                                                
-                                                rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-                                                
-                                                dcterms:replaces <http://rs.tdwg.org/dwc/dwctype/LivingSpecimen-2008-11-19> ;
-                                                
-                                                dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#LivingSpecimen-2011-10-16> ;
-                                                
-                                                dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> ;
-                                                
-                                                dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
+dwctype:LivingSpecimen rdf:type owl:Class ;
+                       
+                       rdfs:label "LivingSpecimen"@en ;
+                       
+                       dcterms:issued "2008-11-19"^^xsd:dateTime ;
+                       
+                       dcterms:modified "2011-10-16"^^xsd:dateTime ;
+                       
+                       dwcattributes:abcdEquivalence "RecordBasisEnum/LivingSpecimen" ;
+                       
+                       rdfs:comment "A resource describing a living specimen."@en ;
+                       
+                       dwcattributes:status "recommended"@en ;
+                       
+                       rdfs:isDefinedBy dwctype: ;
+                       
+                       dcterms:replaces dwctype:LivingSpecimen-2008-11-19 ;
+                       
+                       dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#LivingSpecimen-2011-10-16> ;
+                       
+                       dcam:memberOf dwc:DwCType ;
+                       
+                       dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
 
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/Location
 
-<http://rs.tdwg.org/dwc/dwctype/Location> rdf:type owl:Class ;
-                                          
-                                          rdfs:label "Location"@en ;
-                                          
-                                          dcterms:issued "2009-01-23"^^xsd:dateTime ;
-                                          
-                                          dcterms:modified "2009-04-24"^^xsd:dateTime ;
-                                          
-                                          dwcattributes:abcdEquivalence "not in ABCD" ;
-                                          
-                                          rdfs:comment "In Darwin Core: A resource describing an instance of the dcterms:Location class - \"A spatial region or named place. For Darwin Core, a set of terms describing a place, whether named or not.\" This class can also map to prov:Location -  \"A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.\" However, unlike prov:Location, within BCO and Darwin Core, dwc:Location is generally intended to refer to a geographic location or a location that is part of an organism (e.g., the left nostril). This class also maps to bfo:site, but unlike site, which is an immaterial entity, dwc:Location may refer to a material or immaterial entity."@en ;
-                                          
-                                          dwcattributes:status "recommended"@en ;
-                                          
-                                          rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-                                          
-                                          dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Location-2009-04-24> ;
-                                          
-                                          dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
+dwctype:Location rdf:type owl:Class ;
+                 
+                 rdfs:label "Location"@en ;
+                 
+                 dcterms:issued "2009-01-23"^^xsd:dateTime ;
+                 
+                 dcterms:modified "2009-04-24"^^xsd:dateTime ;
+                 
+                 rdfs:comment "In Darwin Core: A resource describing an instance of the dcterms:Location class - \"A spatial region or named place. For Darwin Core, a set of terms describing a place, whether named or not.\" This class can also map to prov:Location -  \"A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.\" However, unlike prov:Location, within BCO and Darwin Core, dwc:Location is generally intended to refer to a geographic location or a location that is part of an organism (e.g., the left nostril). This class also maps to bfo:site, but unlike site, which is an immaterial entity, dwc:Location may refer to a material or immaterial entity."@en ;
+                 
+                 dwcattributes:abcdEquivalence "not in ABCD" ;
+                 
+                 dwcattributes:status "recommended"@en ;
+                 
+                 rdfs:isDefinedBy dwctype: ;
+                 
+                 dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Location-2009-04-24> ;
+                 
+                 dcam:memberOf dwc:DwCType .
 
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/MachineObservation
 
-<http://rs.tdwg.org/dwc/dwctype/MachineObservation> rdf:type owl:Class ;
-                                                    
-                                                    rdfs:label "MachineObservation"@en ;
-                                                    
-                                                    dcterms:issued "2008-11-19"^^xsd:dateTime ;
-                                                    
-                                                    dcterms:modified "2008-11-19"^^xsd:dateTime ;
-                                                    
-                                                    dwcattributes:abcdEquivalence "RecordBasisEnum/MachineObservation" ;
-                                                    
-                                                    rdfs:comment "A resource describing an observation made by a machine."@en ;
-                                                    
-                                                    dwcattributes:status "recommended"@en ;
-                                                    
-                                                    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-                                                    
-                                                    dcterms:replaces <http://rs.tdwg.org/dwc/dwctype/MachineObservation-2008-11-19> ;
-                                                    
-                                                    dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#MachineObservation-2011-10-16> ;
-                                                    
-                                                    dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
+dwctype:MachineObservation rdf:type owl:Class ;
+                           
+                           rdfs:label "MachineObservation"@en ;
+                           
+                           dcterms:modified "2008-11-19"^^xsd:dateTime ;
+                           
+                           dcterms:issued "2008-11-19"^^xsd:dateTime ;
+                           
+                           dwcattributes:abcdEquivalence "RecordBasisEnum/MachineObservation" ;
+                           
+                           rdfs:comment "A resource describing an observation made by a machine."@en ;
+                           
+                           dwcattributes:status "recommended"@en ;
+                           
+                           rdfs:isDefinedBy dwctype: ;
+                           
+                           dcterms:replaces dwctype:MachineObservation-2008-11-19 ;
+                           
+                           dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#MachineObservation-2011-10-16> ;
+                           
+                           dcam:memberOf dwc:DwCType .
 
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/MaterialSample
 
-<http://rs.tdwg.org/dwc/dwctype/MaterialSample> rdf:type owl:Class ;
-                                                
-                                                rdfs:label "MaterialSample"@en ;
-                                                
-                                                dcterms:issued "2013-03-28"^^xsd:dateTime ;
-                                                
-                                                dcterms:modified "2013-09-26"^^xsd:dateTime ;
-                                                
-                                                dwcattributes:abcdEquivalence "DataSets/DataSet/Units/Unit" ;
-                                                
-                                                rdfs:comment "A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed."@en ;
-                                                
-                                                dwcattributes:status "recommended"@en ;
-                                                
-                                                rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-                                                
-                                                dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#MaterialSample-2013-06-24> ;
-                                                
-                                                dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> ;
-                                                
-                                                dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision_2013-10-09_12> .
+dwctype:MaterialSample rdf:type owl:Class ;
+                       
+                       rdfs:label "MaterialSample"@en ;
+                       
+                       dcterms:issued "2013-03-28"^^xsd:dateTime ;
+                       
+                       dcterms:modified "2013-09-26"^^xsd:dateTime ;
+                       
+                       dwcattributes:abcdEquivalence "DataSets/DataSet/Units/Unit" ;
+                       
+                       rdfs:comment "A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed."@en ;
+                       
+                       dwcattributes:status "recommended"@en ;
+                       
+                       rdfs:isDefinedBy dwctype: ;
+                       
+                       dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#MaterialSample-2013-06-24> ;
+                       
+                       dcam:memberOf dwc:DwCType ;
+                       
+                       dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision_2013-10-09_12> .
 
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist
 
-<http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist> rdf:type owl:Class ;
-                                                        
-                                                        rdfs:label "NomenclaturalChecklist"@en ;
-                                                        
-                                                        dcterms:modified "2009-01-23"^^xsd:dateTime ;
-                                                        
-                                                        dcterms:issued "2009-01-23"^^xsd:dateTime ;
-                                                        
-                                                        dwcattributes:abcdEquivalence "not in ABCD" ;
-                                                        
-                                                        rdfs:comment "A resource describing a nomenclatural checklist."@en ;
-                                                        
-                                                        dwcattributes:status "recommended"@en ;
-                                                        
-                                                        rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-                                                        
-                                                        dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#NomenclaturalChecklist-2009-01-23> ;
-                                                        
-                                                        dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
+dwctype:NomenclaturalChecklist rdf:type owl:Class ;
+                               
+                               rdfs:label "NomenclaturalChecklist"@en ;
+                               
+                               dcterms:modified "2009-01-23"^^xsd:dateTime ;
+                               
+                               dcterms:issued "2009-01-23"^^xsd:dateTime ;
+                               
+                               rdfs:comment "A resource describing a nomenclatural checklist."@en ;
+                               
+                               dwcattributes:abcdEquivalence "not in ABCD" ;
+                               
+                               dwcattributes:status "recommended"@en ;
+                               
+                               rdfs:isDefinedBy dwctype: ;
+                               
+                               dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#NomenclaturalChecklist-2009-01-23> ;
+                               
+                               dcam:memberOf dwc:DwCType .
+
+
+
+###  http://rs.tdwg.org/dwc/dwctype/Occurrence
+
+dwctype:Occurrence rdf:type owl:Class ;
+                   
+                   rdfs:label "Occurrence"@en ;
+                   
+                   dcterms:issued "2008-11-19"^^xsd:dateTime ;
+                   
+                   dcterms:modified "2011-10-16"^^xsd:dateTime ;
+                   
+                   rdfs:comment """Definition from Darwin Core type vocabulary: A resource describing an instance of the Occurrence class. 
+
+Defintion from dwc (terms) namespace: The category of information pertaining to evidence of an occurrence in nature, in a collection, or in a dataset (specimen, observation, etc.)."""@en ;
+                   
+                   dwcattributes:status "recommended"@en ;
+                   
+                   rdfs:isDefinedBy dwctype: ;
+                   
+                   dcterms:replaces dwctype:Occurrence-2009-04-24 ;
+                   
+                   dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Occurrence-2011-10-16> ;
+                   
+                   dcam:memberOf dwc:DwCType ;
+                   
+                   dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
 
 
 
 ###  http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen
 
-<http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> rdf:type owl:Class ;
-                                                   
-                                                   rdfs:label "PreservedSpecimen"@en ;
-                                                   
-                                                   dcterms:issued "2008-11-19"^^xsd:dateTime ;
-                                                   
-                                                   dcterms:modified "2011-10-16"^^xsd:dateTime ;
-                                                   
-                                                   rdfs:comment "A resource describing a preserved specimen."@en ;
-                                                   
-                                                   dwcattributes:abcdEquivalence "RecordBasisEnum/PreservedSpecimen" ;
-                                                   
-                                                   dwcattributes:status "recommended"@en ;
-                                                   
-                                                   rdfs:isDefinedBy <http://rs.tdwg.org/dwc/dwctype/> ;
-                                                   
-                                                   dcterms:replaces <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen-2008-11-19> ;
-                                                   
-                                                   dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#PreservedSpecimen-2011-10-16> ;
-                                                   
-                                                   dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> ;
-                                                   
-                                                   dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
+dwctype:PreservedSpecimen rdf:type owl:Class ;
+                          
+                          rdfs:label "PreservedSpecimen"@en ;
+                          
+                          dcterms:issued "2008-11-19"^^xsd:dateTime ;
+                          
+                          dcterms:modified "2011-10-16"^^xsd:dateTime ;
+                          
+                          rdfs:comment "A resource describing a preserved specimen."@en ;
+                          
+                          dwcattributes:abcdEquivalence "RecordBasisEnum/PreservedSpecimen" ;
+                          
+                          dwcattributes:status "recommended"@en ;
+                          
+                          rdfs:isDefinedBy dwctype: ;
+                          
+                          dcterms:replaces dwctype:PreservedSpecimen-2008-11-19 ;
+                          
+                          dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#PreservedSpecimen-2011-10-16> ;
+                          
+                          dcam:memberOf dwc:DwCType ;
+                          
+                          dwcattributes:decision <http://rs.tdwg.org/dwc/terms/history/decisions/Decision-2011-10-16_6> .
 
 
 
-### http://purl.org/dc/dcmitype/Event 
+###  http://rs.tdwg.org/dwc/dwctype/Taxon
 
-<http://purl.org/dc/dcmitype/Event> rdf:type owl:Class ;
-       
-       rdfs:label "Event"@en ;
-       
-       dcterms:issued "2000-07-11"^^xsd:dateTime ;
-       
-       dcterms:modified "2008-01-14"^^xsd:dateTime ;
-       
-       rdfs:comment "A non-persistent, time-based occurrence. For Darwin Core, a resource describing an instance of the Event class - \"The category of information pertaining to an event (an action that occurs at a place and during a period of time).\" Metadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event."@en ;
-       
-       dwcattributes:status "recommended"@en ;
-       
-       dwcattributes:decision <http://dublincore.org/usage/decisions/#Decision-2008-01> ;
-       
-       dcterms:replaces <http://dublincore.org/usage/terms/history/#Event-002> ;
-       
-       dcterms:hasVersion <http://dublincore.org/usage/terms/history/#Event-003> ;
-       
-       rdfs:isDefinedBy dcterms:DCMIType ;
-       
-       dcam:memberOf <http://rs.tdwg.org/dwc/terms/DwCType> .
+dwctype:Taxon rdf:type owl:Class ;
+              
+              rdfs:label "Taxon"@en ;
+              
+              dcterms:issued "2009-01-23"^^xsd:dateTime ;
+              
+              dcterms:modified "2009-04-24"^^xsd:dateTime ;
+              
+              rdfs:comment """Definition from Darwin Core type vocabulary: A resource describing an instance of the Taxon class. 
+
+Definition from dwc (terms) namespace: The category of information pertaining to taxonomic names, taxon name usages, or taxon concepts."""@en ;
+              
+              dwcattributes:status "recommended"@en ;
+              
+              rdfs:isDefinedBy dwctype: ;
+              
+              dcterms:hasVersion <http://rs.tdwg.org/dwc/dwctype/history/#Taxon-2009-01-23> ;
+              
+              dcam:memberOf dwc:DwCType .
 
 
 
@@ -386,13 +394,13 @@ dwcattributes:status rdf:type owl:AnnotationProperty .
 #################################################################
 
 
-<http://rs.tdwg.org/dwc/dwctype/> dcterms:modified "2013-10-22" ;
-                                  
-                                  dcterms:publisher "Biodiversity Information Standards (TDWG)"@en-us ;
-                                  
-                                  dcterms:title "Darwin Core Type Terms"@en-us ;
-                                  
-                                  rdfs:comment "This document contains a list of terms in the Darwin Core Type Vocabulary. For the full normative RDF document of all Darwin Core terms, see dwctermshistory.rdf. To comment on this schema, please create a new issue in http://code.google.com/p/darwincore/issues/" .
+dwctype: dcterms:publisher "Biodiversity Information Standards (TDWG)"@en-us ;
+         
+         rdfs:comment "This document contains a list of terms in the Darwin Core Type Vocabulary. For the full normative RDF document of all Darwin Core terms, see dwctermshistory.rdf. To comment on this schema, please create a new issue in http://code.google.com/p/darwincore/issues/" ;
+         
+         dcterms:modified "2013-10-22" ;
+         
+         dcterms:title "Darwin Core Type Terms"@en-us .
 
 
 
