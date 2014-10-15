@@ -693,12 +693,12 @@ obo:bco_0000003 rdf:type owl:Class ;
                                   owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:bco_0000044
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000117 ;
                                   owl:someValuesFrom obo:bco_0000007
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002233 ;
+                                  owl:someValuesFrom obo:bco_0000044
                                 ] ;
                 
                 obo:IAO_0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ,
