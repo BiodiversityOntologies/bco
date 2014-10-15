@@ -4276,21 +4276,9 @@ terms:year rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://rs.tdwg.org/dwc/dwctype/LivingSpecimen
-
-<http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> rdfs:subClassOf <http://purl.obolibrary.org/obo/BCO_0000064> .
-
-
-
 ###  http://rs.tdwg.org/dwc/dwctype/MachineObservation
 
 <http://rs.tdwg.org/dwc/dwctype/MachineObservation> rdfs:subClassOf <http://purl.obolibrary.org/obo/BCO_0000064> .
-
-
-
-###  http://rs.tdwg.org/dwc/dwctype/MaterialSample
-
-<http://rs.tdwg.org/dwc/dwctype/MaterialSample> rdfs:subClassOf <http://purl.obolibrary.org/obo/BCO_0000064> .
 
 
 

@@ -572,6 +572,12 @@ obo:BFO_0000027 rdf:type owl:Class ;
 
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000029
+
+obo:BFO_0000029 owl:equivalentClass <http://rs.tdwg.org/dwc/dwctype/Location> .
+
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000030
 
 obo:BFO_0000030 rdf:type owl:Class ;
@@ -624,7 +630,9 @@ obo:OBI_0000659 rdf:type owl:Class .
 
 ###  http://purl.obolibrary.org/obo/OBI_0100051
 
-obo:OBI_0100051 obo:IAO_0000112 "A herbarium or museum specimen."^^xsd:string ,
+obo:OBI_0100051 owl:equivalentClass <http://rs.tdwg.org/dwc/dwctype/MaterialSample> ;
+                
+                obo:IAO_0000112 "A herbarium or museum specimen."^^xsd:string ,
                                 "A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA."^^xsd:string .
 
 
@@ -1414,9 +1422,7 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/Location
 
-<http://rs.tdwg.org/dwc/dwctype/Location> rdfs:subClassOf obo:BFO_0000029 ;
-                                          
-                                          obo:IAO_0000424 "The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken."@en ;
+<http://rs.tdwg.org/dwc/dwctype/Location> obo:IAO_0000424 "The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken."@en ;
                                           
                                           obo:BCO_0000060 "location of an event"@en ;
                                           
@@ -1447,15 +1453,13 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/MaterialSample
 
-<http://rs.tdwg.org/dwc/dwctype/MaterialSample> rdfs:subClassOf obo:OBI_0100051 ;
-                                                
-                                                obo:IAO_0000112 "a tissue taken from an organism for use in a DNA extraction"^^xsd:string ;
+<http://rs.tdwg.org/dwc/dwctype/MaterialSample> obo:IAO_0000112 "a tissue taken from an organism for use in a DNA extraction"^^xsd:string ;
                                                 
                                                 obo:IAO_0000115 "A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed."@en ;
                                                 
                                                 obo:BCO_0000060 "material sample"@en ;
                                                 
-                                                obo:IAO_0000114 obo:IAO_0000428 .
+                                                obo:IAO_0000114 obo:IAO_0000123 .
 
 
 
