@@ -4372,8 +4372,6 @@ terms:MeasurementOrFact rdf:type owl:Class ;
                         
                         rdfs:label "Measurement Or Fact"@en-us ;
                         
-                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BCO_0000064> ;
-                        
                         dwcattributes:status "recommended" ;
                         
                         dcterms:modified "2009-04-24" ;
@@ -4424,8 +4422,6 @@ terms:Occurrence rdf:type owl:Class ;
 terms:ResourceRelationship rdf:type owl:Class ;
                            
                            rdfs:label "Resource Relationship"@en-us ;
-                           
-                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BCO_0000064> ;
                            
                            owl:deprecated "true"^^xsd:boolean ;
                            
