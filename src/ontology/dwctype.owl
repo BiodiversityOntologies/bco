@@ -10,9 +10,9 @@
 @prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dwcattributes: <http://rs.tdwg.org/dwc/terms/attributes/> .
-@base <https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwctype.owl> .
+@base <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl> .
 
-<https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwctype.owl> rdf:type owl:Ontology ;
+<https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl> rdf:type owl:Ontology ;
                                                                                            
                                                                                            rdfs:comment "This file contains terms from the Darwin Core (DwC) type vocabulary, imported from the RDF representation of that vocabulary and interpretted as classes in the Biological Collections Ontology. Some of the type vocabulary terms are replicated in DwC as RDF."@en .
 

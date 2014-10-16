@@ -7,9 +7,9 @@
 @prefix terms: <http://rs.tdwg.org/dwc/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dwcattributes: <http://rs.tdwg.org/dwc/terms/attributes/> .
-@base <https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwcterms.owl> .
+@base <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl> .
 
-<https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwcterms.owl> rdf:type owl:Ontology ;
+<https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl> rdf:type owl:Ontology ;
                                                                                             
                                                                                             rdfs:label "Darwin Core as RDF as OWL" ;
                                                                                             
@@ -25,7 +25,7 @@ DwC as RDF contains a list of Darwin Core terms that have the dwcattributes:stat
                                                                                             
                                                                                             dcterms:title "Darwin Core Recommended Terms"@en-us ;
                                                                                             
-                                                                                            owl:imports <https://raw.githubusercontent.com/tucotuco/bco/feature/dwctypes/src/ontology/dwctype.owl> .
+                                                                                            owl:imports <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl> .
 
 
 #################################################################
