@@ -1,0 +1,174 @@
+@prefix : <http://purl.obolibrary.org/obo/bfo.owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> .
+
+<https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000179
+
+obo:BFO_0000179 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "BFO OWL specification label"@en ;
+                
+                obo:IAO_0000232 "Really of interest to developers only"@en ;
+                
+                obo:IAO_0000115 "Relates an entity in the ontology to the name of the variable that is used to represent it in the code that generates the BFO OWL file from the lispy specification."@en ;
+                
+                rdfs:subPropertyOf rdfs:label .
+
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000180
+
+obo:BFO_0000180 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "BFO CLIF specification label"@en ;
+                
+                obo:IAO_0000119 "Person:Alan Ruttenberg" ;
+                
+                obo:IAO_0000232 "Really of interest to developers only"@en ;
+                
+                obo:IAO_0000115 "Relates an entity in the ontology to the term that is used to represent it in the the CLIF specification of BFO2"@en ;
+                
+                rdfs:subPropertyOf rdfs:label .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+
+obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "example of usage"@en ;
+                
+                rdfs:isDefinedBy obo:iao.owl .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "definition"@en ;
+                
+                rdfs:isDefinedBy obo:iao.owl .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "definition source"@en ;
+                
+                rdfs:isDefinedBy obo:iao.owl .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000232
+
+obo:IAO_0000232 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "curator note"@en ;
+                
+                rdfs:isDefinedBy obo:iao.owl .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000412
+
+obo:IAO_0000412 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "imported from"@en .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000600
+
+obo:IAO_0000600 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "elucidation"@en ;
+                
+                rdfs:isDefinedBy obo:iao.owl .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000602
+
+obo:IAO_0000602 rdf:type owl:AnnotationProperty ;
+                
+                rdfs:label "has associated axiom(fol)"@en ;
+                
+                rdfs:isDefinedBy obo:iao.owl .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000029
+
+obo:BFO_0000029 rdf:type owl:Class ;
+                
+                rdfs:label "site"@en ;
+                
+                rdfs:subClassOf obo:BFO_0000041 ;
+                
+                obo:BFO_0000180 "Site" ;
+                
+                obo:IAO_0000602 "(forall (x) (if (Site x) (ImmaterialEntity x))) // axiom label in BFO2 CLIF: [034-002] " ;
+                
+                obo:IAO_0000112 "a rabbit hole"@en ;
+                
+                obo:IAO_0000600 "b is a site means: b is a three-dimensional immaterial entity that is (partially or wholly) bounded by a material entity or it is a three-dimensional immaterial part thereof. (axiom label in BFO2 Reference: [034-002])"@en ;
+                
+                obo:BFO_0000179 "site" ;
+                
+                obo:IAO_0000112 "Manhattan Canyon)"@en ,
+                                "a hole in the interior of a portion of cheese"@en ,
+                                "an air traffic control region defined in the airspace above an airport"@en ,
+                                "the Grand Canyon"@en ,
+                                "the Piazza San Marco"@en ,
+                                "the cockpit of an aircraft"@en ,
+                                "the hold of a ship"@en ,
+                                "the interior of a kangaroo pouch"@en ,
+                                "the interior of the trunk of your car"@en ,
+                                "the interior of your bedroom"@en ,
+                                "the interior of your office"@en ,
+                                "the interior of your refrigerator"@en ,
+                                "the lumen of your gut"@en ,
+                                "your left nostril (a fiat part – the opening – of your left nasal cavity)"@en ;
+                
+                obo:IAO_0000412 obo:bfo.owl ;
+                
+                rdfs:isDefinedBy obo:bfo.owl .
+
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000041
+
+obo:BFO_0000041 rdf:type owl:Class .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+

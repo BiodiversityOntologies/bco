@@ -1,0 +1,20 @@
+[URI of the OWL(RDF/XML) output file]
+http://bco.googlecode.com/git/src/ontology/bfo_bco_imports.owl
+
+[Source ontology]
+BFO
+
+[Low level source term URIs]
+http://purl.obolibrary.org/obo/BFO_0000029 #site
+
+[Top level source term URIs and target direct superclass URIs]
+http://purl.obolibrary.org/obo/BFO_0000029 #site
+subClassOf http://purl.obolibrary.org/obo/BFO_0000041
+
+[Source term retrieval setting]
+includeNoIntermediates
+
+[Source annotation URIs]
+includeAllAxioms
+
+[Source annotation URIs to be excluded]
