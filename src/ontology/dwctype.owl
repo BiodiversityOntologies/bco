@@ -13,8 +13,8 @@
 @base <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl> .
 
 <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwctype.owl> rdf:type owl:Ontology ;
-                                                                                           
-                                                                                           rdfs:comment "This file contains terms from the Darwin Core (DwC) type vocabulary, imported from the RDF representation of that vocabulary and interpretted as classes in the Biological Collections Ontology. Some of the type vocabulary terms are replicated in DwC as RDF."@en .
+                                                                                 
+                                                                                 rdfs:comment "This file contains terms from the Darwin Core (DwC) type vocabulary, imported from the RDF representation of that vocabulary and interpretted as classes in the Biological Collections Ontology. Some of the type vocabulary terms are replicated in DwC as RDF."@en .
 
 
 #################################################################
@@ -267,9 +267,11 @@ dwctype:MaterialSample rdf:type owl:Class ;
                        
                        dcterms:modified "2013-09-26"^^xsd:dateTime ;
                        
-                       rdfs:comment "A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed."@en ;
-                       
                        dwcattributes:abcdEquivalence "DataSets/DataSet/Units/Unit" ;
+                       
+                       rdfs:comment """Definition from dwctype namespace: A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed.
+
+Comment from BCO: The use of 'sampling event' in this case is intended to mean the same thing as specimen collection from OBI."""@en ;
                        
                        dwcattributes:status "recommended"@en ;
                        
