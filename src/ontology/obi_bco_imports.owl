@@ -249,6 +249,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000602 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000602"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0001847 -->
 
     <owl:AnnotationProperty rdf:about="&obo;OBI_0001847">
@@ -452,34 +458,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000056 -->
-
-    <owl:ObjectProperty rdf:about="&obo;BFO_0000056">
-        <rdfs:label xml:lang="en">participates in</rdfs:label>
-        <obo:IAO_0000111 xml:lang="en">participates in</obo:IAO_0000111>
-        <obo:IAO_0000118 xml:lang="en">participates_in</obo:IAO_0000118>
-        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000057 -->
-
-    <owl:ObjectProperty rdf:about="&obo;BFO_0000057">
-        <rdfs:label xml:lang="en">has participant</rdfs:label>
-        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
-        <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
-        <rdfs:range rdf:resource="&obo;BFO_0000002"/>
-        <owl:inverseOf rdf:resource="&obo;BFO_0000056"/>
-        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000055"/>
-            <rdf:Description rdf:about="&obo;BFO_0000052"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000058 -->
 
     <owl:ObjectProperty rdf:about="&obo;BFO_0000058">
@@ -569,7 +547,6 @@
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000111 xml:lang="en">has_specified_input</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">see is_input_of example_of_usage</obo:IAO_0000112>
-        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000057"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
         <rdfs:domain rdf:resource="&obo;OBI_0000011"/>
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
@@ -587,7 +564,6 @@
         <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000111 xml:lang="en">has_specified_output</obo:IAO_0000111>
-        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000057"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
         <rdfs:domain rdf:resource="&obo;OBI_0000011"/>
         <owl:inverseOf rdf:resource="&obo;OBI_0000312"/>
@@ -604,7 +580,6 @@
         <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000111 xml:lang="en">is_specified_output_of</obo:IAO_0000111>
-        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000056"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
         <rdfs:range rdf:resource="&obo;OBI_0000011"/>
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
@@ -656,42 +631,6 @@
      -->
 
     
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
-
-    <owl:Class rdf:about="&obo;BFO_0000029">
-        <rdfs:label xml:lang="en">site</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000141"/>
-        <obo:IAO_0000602>(forall (x) (if (Site x) (ImmaterialEntity x))) // axiom label in BFO2 CLIF: [034-002] </obo:IAO_0000602>
-        <obo:IAO_0000112 xml:lang="en">Manhattan Canyon)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">a hole in the interior of a portion of cheese</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">a rabbit hole</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">an air traffic control region defined in the airspace above an airport</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the Grand Canyon</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the Piazza San Marco</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the cockpit of an aircraft</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the hold of a ship</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the interior of a kangaroo pouch</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the interior of the trunk of your car</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the interior of your bedroom</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the interior of your office</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the interior of your refrigerator</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the lumen of your gut</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">your left nostril (a fiat part – the opening – of your left nasal cavity)</obo:IAO_0000112>
-        <rdfs:isDefinedBy rdf:resource="&obo;bfo.owl"/>
-    </owl:Class>
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
-
-    <owl:Class rdf:about="&obo;BFO_0000141">
-        <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000004"/>
-
-        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: Immaterial entities are divided into two subgroups:boundaries and sites, which bound, or are demarcated in relation, to material entities, and which can thus change location, shape and size and as their material hosts move or change shape or size (for example: your nasal passage; the hold of a ship; the boundary of Wales (which moves with the rotation of the Earth) [38, 7, 10</obo:IAO_0000116>
-        <rdfs:isDefinedBy rdf:resource="&obo;bfo.owl"/>
-    </owl:Class> 
-
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
@@ -835,6 +774,32 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000029">
+        <rdfs:label xml:lang="en">site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000141"/>
+        <obo:IAO_0000602>(forall (x) (if (Site x) (ImmaterialEntity x))) // axiom label in BFO2 CLIF: [034-002] </obo:IAO_0000602>
+        <obo:IAO_0000112 xml:lang="en">Manhattan Canyon)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">a hole in the interior of a portion of cheese</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">a rabbit hole</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">an air traffic control region defined in the airspace above an airport</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the Grand Canyon</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the Piazza San Marco</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the cockpit of an aircraft</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the hold of a ship</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the interior of a kangaroo pouch</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the interior of the trunk of your car</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the interior of your bedroom</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the interior of your office</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the interior of your refrigerator</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the lumen of your gut</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">your left nostril (a fiat part – the opening – of your left nasal cavity)</obo:IAO_0000112>
+        <rdfs:isDefinedBy rdf:resource="&obo;bfo.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
 
     <owl:Class rdf:about="&obo;BFO_0000031">
@@ -858,6 +823,17 @@
         <obo:IAO_0000116 xml:lang="en">Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology.</obo:IAO_0000116>
         <obo:IAO_0000111 xml:lang="en">material entity</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000141">
+        <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000004"/>
+        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: Immaterial entities are divided into two subgroups:boundaries and sites, which bound, or are demarcated in relation, to material entities, and which can thus change location, shape and size and as their material hosts move or change shape or size (for example: your nasal passage; the hold of a ship; the boundary of Wales (which moves with the rotation of the Earth) [38, 7, 10</obo:IAO_0000116>
+        <rdfs:isDefinedBy rdf:resource="&obo;bfo.owl"/>
     </owl:Class>
     
 
@@ -1150,14 +1126,14 @@
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0001938"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0001933"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000070"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000070"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0001938"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0001933"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116 xml:lang="en">2/2/2009 is_specified_output of some assay?</obo:IAO_0000116>
@@ -1252,12 +1228,12 @@
         <obo:IAO_0000111 xml:lang="en">CRID</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">IAO call, 20101124: 12345 is not a CRID symbol. To be a CRID symbol you need to have some information about the registry within which the CRID is recorded.</obo:IAO_0000116>
         <obo:IAO_0000119 xml:lang="en">Original proposal from Bjoern, discussions at IAO calls</obo:IAO_0000119>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Bill Hogan</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0000112 xml:lang="en">PubMed identifier “PMID:12345”</obo:IAO_0000112>
         <obo:IAO_0000118>centrally registered identifier</obo:IAO_0000118>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Bill Hogan</obo:IAO_0000117>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
     </owl:Class>
