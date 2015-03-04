@@ -20,7 +20,7 @@ http://purl.obolibrary.org/obo/OBI_0000659 #specimen collection
 http://purl.obolibrary.org/obo/OBI_0100051 #specimen
 http://purl.obolibrary.org/obo/OBI_0000112 #specimen role
 http://purl.obolibrary.org/obo/IAO_0000577 #CRID
-IncludeAllChildren
+includeAllChildren
 http://purl.obolibrary.org/obo/BFO_0000008 #temporal region
 http://purl.obolibrary.org/obo/BFO_0000011 #spatiotemporal region
 
