@@ -1,0 +1,1036 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix j.0: <http://purl.obolibrary.org/obo/> .
+@prefix j.1: <http://rs.tdwg.org/dwc/terms/> .
+@prefix j.2: <urn:> .
+@prefix j.3: <http://rs.tdwg.org/dwc/dwctype/> .
+@prefix ark: <http://ezid.cdlib.org/id/ark:> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://purl.obolibrary.org/obo/bco/sample.owl> rdf:type owl:Ontology ;
+                                         
+                                         owl:imports 
+                                                     <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bco.owl> .
+
+<ark:/21547/dv205e501b7ba55e448d53b76c934ca4a34>
+    j.0:OBI_0000312 <ark:/21547/dz2aa6bce6b9598d2d1f08add0f36f03a24> ;
+    j.0:RO_0001025 <ark:/21547/eC22640668559ddc5507d956817dd39cc7e> ;
+    j.1:materialSampleID "HER_86" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv206ee498aae97bb3b51449d0b52c7ca9a>
+    j.0:OBI_0000312 <ark:/21547/dz275678a5d571daffdec966e3fedccf0bd> ;
+    j.0:RO_0001025 <ark:/21547/eC2a008ac76f48711cbc57b6ef0533c9a66> ;
+    j.1:materialSampleID "LIZ_747" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2110853f224e7e90bf9f993722446eef1>
+    j.0:OBI_0000312 <ark:/21547/dz28f02da2adfa8c052ad6264beaaacdf49> ;
+    j.0:RO_0001025 <ark:/21547/eC25770c72e0e0cdc69428cc26db6bdafa9> ;
+    j.1:materialSampleID "LIZ_750" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv219b2711e11132f91cd3067b5e7ddb13d>
+    j.0:OBI_0000312 <ark:/21547/dz2228cdcfb2deddd6d0b1db925de5c7bf4> ;
+    j.0:RO_0001025 <ark:/21547/eC227067134278de9438837d3f5f0a46a7d> ;
+    j.1:materialSampleID "LIZ_748" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv232cde85187f624bc2359d9909db7098e>
+    j.0:OBI_0000312 <ark:/21547/dz2035d6794c9947060b70824f8daf118ec> ;
+    j.0:RO_0001025 <ark:/21547/eC25e4ffc288c0255e08c709ebf541ee95e> ;
+    j.1:materialSampleID "LIZ_745" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv248e388eeef5b08efb724e715c0209b20>
+    j.0:OBI_0000312 <ark:/21547/dz2ea9edb85105793b69da35c5b51063c94> ;
+    j.0:RO_0001025 <ark:/21547/eC2945a4aea5ae02d46fbecc214807372fd> ;
+    j.1:materialSampleID "HER_96" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2503488ffb61626e0958250113d7ce691>
+    j.0:OBI_0000312 <ark:/21547/dz282fa617ff06438b22044dc94687911f7> ;
+    j.0:RO_0001025 <ark:/21547/eC2a8f09b93b5c449441d520b27cd24edd8> ;
+    j.1:materialSampleID "HER_88" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv255d002a56c7b8b08df5f3166b6faef0c>
+    j.0:OBI_0000312 <ark:/21547/dz26fd82dc7b7ba5bdbcdc32b6424c1f1f8> ;
+    j.0:RO_0001025 <ark:/21547/eC25587fbfc0c6a793a347c6621c7315444> ;
+    j.1:materialSampleID "HER_97" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv25d7bd95b46ed38acd8d3d38603b49709>
+    j.0:OBI_0000312 <ark:/21547/dz2c48a3af1ac9c350f4130ab4a7747cd08> ;
+    j.0:RO_0001025 <ark:/21547/eC2bc40a9047c1a40227df17e9cf7130b84> ;
+    j.1:materialSampleID "HER_99" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv26587f121aa8f1354cd515d83f83d6ee2>
+    j.0:OBI_0000312 <ark:/21547/dz2293acb4cdc9307f2a255a78866657fe9> ;
+    j.0:RO_0001025 <ark:/21547/eC2dae874a08d0a0d65e30489aaf4b81fcf> ;
+    j.1:materialSampleID "LIZ_754" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv273c588fdfdfa9f08e3a5da0bddb35d7e>
+    j.0:OBI_0000312 <ark:/21547/dz26a8c4f0eb0bca1f42127faee8dab43cc> ;
+    j.0:RO_0001025 <ark:/21547/eC22497852da17ce6b6d533e6f36ab7ec50> ;
+    j.1:materialSampleID "HER_95" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv28118f3fa730dda487915c2cff3ef80a0>
+    j.0:OBI_0000312 <ark:/21547/dz249a57436437c6b3a48f92b98a3c13d0d> ;
+    j.0:RO_0001025 <ark:/21547/eC2abf46545aba6cf415aa3a370b7702864> ;
+    j.1:materialSampleID "LIZ_749" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv28dcde11dd04af290e02c589e53370fa6>
+    j.0:OBI_0000312 <ark:/21547/dz2b3d2658dbf9c56d40b5359f70cbbbd34> ;
+    j.0:RO_0001025 <ark:/21547/eC227ba1cff1ce0fc96d5580db413bfbb18> ;
+    j.1:materialSampleID "LIZ_753" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv290f8b9dd62e75ffd1c3f6b55e9a97485>
+    j.0:OBI_0000312 <ark:/21547/dz2350d428faf90898483dc42a61845b4a0> ;
+    j.0:RO_0001025 <ark:/21547/eC230c139578dc71a569f03c79e81354a43> ;
+    j.1:materialSampleID "HER_93" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv297f02ab150808297d0aaf91d42fd800e>
+    j.0:OBI_0000312 <ark:/21547/dz27d1868c2dc058fab1999e7352dea226a> ;
+    j.0:RO_0001025 <ark:/21547/eC2f18cf6310c4e1e6b7a5dac3c3552a902> ;
+    j.1:materialSampleID "HER_94" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2a65935ecebd0dcd4d07df465f4ef26bb>
+    j.0:OBI_0000312 <ark:/21547/dz248a952a916ce4908cd87f8231bd1679d> ;
+    j.0:RO_0001025 <ark:/21547/eC29350c27cd7be1a9ab50b747a0a5bf4f0> ;
+    j.1:materialSampleID "HER_100" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2b21119f99522ad54c5c04328b1739491>
+    j.0:OBI_0000312 <ark:/21547/dz248ab8604e60f1b2078a39c6e04f2418e> ;
+    j.0:RO_0001025 <ark:/21547/eC2d402d51e00324f686ad059ee3fd49e9e> ;
+    j.1:materialSampleID "HER_98" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2c29a90e3a57e097006b3e5d7cbd41aa9>
+    j.0:OBI_0000312 <ark:/21547/dz259d3e69f8e2ae96ad9c13aabca11a012> ;
+    j.0:RO_0001025 <ark:/21547/eC292cdd04e1d3941903e4e4274925f9580> ;
+    j.1:materialSampleID "LIZ_746" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2c314bf740e14a3f3eb12842054dc0c7e>
+    j.0:OBI_0000312 <ark:/21547/dz23d805255979fbb7a56c9aa0bd7996fc5> ;
+    j.0:RO_0001025 <ark:/21547/eC21635d1d83261da43b57c9f870b24f1b0> ;
+    j.1:materialSampleID "HER_101" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2ce672cdc84035fae9d916605713b8dcf>
+    j.0:OBI_0000312 <ark:/21547/dz28a1d939dec893b3a643121d1fe3b61a8> ;
+    j.0:RO_0001025 <ark:/21547/eC29d95899cca923c994238e632e36b8dac> ;
+    j.1:materialSampleID "HER_92" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2d7fe8397146bb5c15f1be22cbed53714>
+    j.0:OBI_0000312 <ark:/21547/dz2b8392e8a2f96394c2a783e2631572666> ;
+    j.0:RO_0001025 <ark:/21547/eC25808465f3a0eaf49718b464135aef795> ;
+    j.1:materialSampleID "LIZ_752" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2dfad396926eb86a5ff3c25aa6c6e6ba1>
+    j.0:OBI_0000312 <ark:/21547/dz22a6cfc11ca92c608330b1b428405120a> ;
+    j.0:RO_0001025 <ark:/21547/eC200b0e4d7ae34b5a9f78421b52ba42448> ;
+    j.1:materialSampleID "HER_89" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2ed006ebbde44b2a3efdca9028e05a76c>
+    j.0:OBI_0000312 <ark:/21547/dz2661116e451f86bcefcc4d43c924ac17b> ;
+    j.0:RO_0001025 <ark:/21547/eC2f461925bd41d2140b0f45cb18f84f450> ;
+    j.1:materialSampleID "HER_90" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dv2fcce46ee94b7753f5eff8f0b1e229ab0>
+    j.0:OBI_0000312 <ark:/21547/dz2266f3908e95d62ee5df5b5526f5ae01a> ;
+    j.0:RO_0001025 <ark:/21547/eC27fc3c56c04aea570f33fc3beed34849a> ;
+    j.1:materialSampleID "HER_85" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypeDestructive "muscle" .
+
+<ark:/21547/dw2HER_100>
+    j.0:OBI_0000312 <ark:/21547/eA2f0297774e9a88955493f1af17b1cd7c0> ;
+    j.1:materialSampleID "HER_100" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_101>
+    j.0:OBI_0000312 <ark:/21547/eA2ffe21166eb00af63aaaf0a02ee61ca8f> ;
+    j.1:materialSampleID "HER_101" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_85>
+    j.0:OBI_0000312 <ark:/21547/eA2475f73d341a58b2e20f366ebc89aea9e> ;
+    j.1:materialSampleID "HER_85" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_86>
+    j.0:OBI_0000312 <ark:/21547/eA296802696d4d2525212231fd4acf116b4> ;
+    j.1:materialSampleID "HER_86" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_88>
+    j.0:OBI_0000312 <ark:/21547/eA2be80ba9f6e62f39d6d9691c6474720c7> ;
+    j.1:materialSampleID "HER_88" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_89>
+    j.0:OBI_0000312 <ark:/21547/eA2a99e91c267bf131c5139abd6cd8c9a89> ;
+    j.1:materialSampleID "HER_89" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_90>
+    j.0:OBI_0000312 <ark:/21547/eA2e1502f2c5cd08fb374187a3acfd7f88f> ;
+    j.1:materialSampleID "HER_90" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_92>
+    j.0:OBI_0000312 <ark:/21547/eA2decd55c51ca24a7978dbb9cd243a533b> ;
+    j.1:materialSampleID "HER_92" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_93>
+    j.0:OBI_0000312 <ark:/21547/eA28470bfc5b17f97114ab13b10abb22441> ;
+    j.1:materialSampleID "HER_93" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_94>
+    j.0:OBI_0000312 <ark:/21547/eA27966ffc702b6e26678a11deb0f6ed115> ;
+    j.1:materialSampleID "HER_94" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_95>
+    j.0:OBI_0000312 <ark:/21547/eA29f78ad8185b2d296113a468a43af2eeb> ;
+    j.1:materialSampleID "HER_95" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_96>
+    j.0:OBI_0000312 <ark:/21547/eA27dc8886807a01ffec85dd3247024af82> ;
+    j.1:materialSampleID "HER_96" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_97>
+    j.0:OBI_0000312 <ark:/21547/eA2313433e6ee63085a49e9f1f34db840f8> ;
+    j.1:materialSampleID "HER_97" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_98>
+    j.0:OBI_0000312 <ark:/21547/eA2d87817e07cd5c6fdf5a6e30049c4384f> ;
+    j.1:materialSampleID "HER_98" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2HER_99>
+    j.0:OBI_0000312 <ark:/21547/eA2dfb453204b33d74a55b8dbcdec3ecf3e> ;
+    j.1:materialSampleID "HER_99" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_745>
+    j.0:OBI_0000312 <ark:/21547/eA2ee4d0484b39b2e9858c4b2116281fb31> ;
+    j.1:materialSampleID "LIZ_745" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_746>
+    j.0:OBI_0000312 <ark:/21547/eA2d137728376c92d25037f70cacfaf2738> ;
+    j.1:materialSampleID "LIZ_746" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_747>
+    j.0:OBI_0000312 <ark:/21547/eA2de54879ce04a5ae1993ea0b237e92473> ;
+    j.1:materialSampleID "LIZ_747" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_748>
+    j.0:OBI_0000312 <ark:/21547/eA2c312823a0a58e806f9e7c385c6860030> ;
+    j.1:materialSampleID "LIZ_748" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_749>
+    j.0:OBI_0000312 <ark:/21547/eA2455b13476b676db486929852be084e3c> ;
+    j.1:materialSampleID "LIZ_749" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_750>
+    j.0:OBI_0000312 <ark:/21547/eA2738bbc5be7b41d2c9151790e427bdae8> ;
+    j.1:materialSampleID "LIZ_750" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_752>
+    j.0:OBI_0000312 <ark:/21547/eA224b5b7e027c107a71aeccd00f92f945c> ;
+    j.1:materialSampleID "LIZ_752" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_753>
+    j.0:OBI_0000312 <ark:/21547/eA22adc47cb2dd6f7f66fd416d442fad938> ;
+    j.1:materialSampleID "LIZ_753" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dw2LIZ_754>
+    j.0:OBI_0000312 <ark:/21547/eA271930d44b7d6e7b29c70d97effe4211a> ;
+    j.1:materialSampleID "LIZ_754" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> ;
+    j.2:geneticTissueTypePreserved "muscle" .
+
+<ark:/21547/dx2UQ:Fish:1>
+    j.0:OBI_0000295 <ark:/21547/dz23d805255979fbb7a56c9aa0bd7996fc5>, <ark:/21547/dz248a952a916ce4908cd87f8231bd1679d>, <ark:/21547/eA2f0297774e9a88955493f1af17b1cd7c0>, <ark:/21547/eA2ffe21166eb00af63aaaf0a02ee61ca8f> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:1" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:10>
+    j.0:OBI_0000295 <ark:/21547/dz248ab8604e60f1b2078a39c6e04f2418e>, <ark:/21547/eA2d87817e07cd5c6fdf5a6e30049c4384f> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:10" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:11>
+    j.0:OBI_0000295 <ark:/21547/dz2c48a3af1ac9c350f4130ab4a7747cd08>, <ark:/21547/eA2dfb453204b33d74a55b8dbcdec3ecf3e> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:11" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:12>
+    j.0:OBI_0000295 <ark:/21547/dz2035d6794c9947060b70824f8daf118ec>, <ark:/21547/eA2ee4d0484b39b2e9858c4b2116281fb31> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:12" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:13>
+    j.0:OBI_0000295 <ark:/21547/dz259d3e69f8e2ae96ad9c13aabca11a012>, <ark:/21547/eA2d137728376c92d25037f70cacfaf2738> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:13" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:14>
+    j.0:OBI_0000295 <ark:/21547/dz275678a5d571daffdec966e3fedccf0bd>, <ark:/21547/eA2de54879ce04a5ae1993ea0b237e92473> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:14" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:15>
+    j.0:OBI_0000295 <ark:/21547/dz2228cdcfb2deddd6d0b1db925de5c7bf4>, <ark:/21547/eA2c312823a0a58e806f9e7c385c6860030> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:15" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:16>
+    j.0:OBI_0000295 <ark:/21547/dz249a57436437c6b3a48f92b98a3c13d0d>, <ark:/21547/eA2455b13476b676db486929852be084e3c> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:16" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:17>
+    j.0:OBI_0000295 <ark:/21547/dz28f02da2adfa8c052ad6264beaaacdf49>, <ark:/21547/eA2738bbc5be7b41d2c9151790e427bdae8> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:17" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:18>
+    j.0:OBI_0000295 <ark:/21547/dz2b8392e8a2f96394c2a783e2631572666>, <ark:/21547/eA224b5b7e027c107a71aeccd00f92f945c> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:18" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:19>
+    j.0:OBI_0000295 <ark:/21547/dz2b3d2658dbf9c56d40b5359f70cbbbd34>, <ark:/21547/eA22adc47cb2dd6f7f66fd416d442fad938> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:19" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:2>
+    j.0:OBI_0000295 <ark:/21547/dz2266f3908e95d62ee5df5b5526f5ae01a>, <ark:/21547/dz22a6cfc11ca92c608330b1b428405120a>, <ark:/21547/dz282fa617ff06438b22044dc94687911f7>, <ark:/21547/dz2aa6bce6b9598d2d1f08add0f36f03a24>, <ark:/21547/eA2475f73d341a58b2e20f366ebc89aea9e>, <ark:/21547/eA296802696d4d2525212231fd4acf116b4>, <ark:/21547/eA2a99e91c267bf131c5139abd6cd8c9a89>, <ark:/21547/eA2be80ba9f6e62f39d6d9691c6474720c7> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:20>
+    j.0:OBI_0000295 <ark:/21547/dz2293acb4cdc9307f2a255a78866657fe9>, <ark:/21547/eA271930d44b7d6e7b29c70d97effe4211a> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:20" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:3>
+    j.0:OBI_0000295 <ark:/21547/dz2661116e451f86bcefcc4d43c924ac17b>, <ark:/21547/eA2e1502f2c5cd08fb374187a3acfd7f88f> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:3" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:4>
+    j.0:OBI_0000295 <ark:/21547/dz28a1d939dec893b3a643121d1fe3b61a8>, <ark:/21547/eA2decd55c51ca24a7978dbb9cd243a533b> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:4" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:5>
+    j.0:OBI_0000295 <ark:/21547/dz2350d428faf90898483dc42a61845b4a0>, <ark:/21547/eA28470bfc5b17f97114ab13b10abb22441> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:5" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:6>
+    j.0:OBI_0000295 <ark:/21547/dz27d1868c2dc058fab1999e7352dea226a>, <ark:/21547/eA27966ffc702b6e26678a11deb0f6ed115> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:6" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:7>
+    j.0:OBI_0000295 <ark:/21547/dz26a8c4f0eb0bca1f42127faee8dab43cc>, <ark:/21547/eA29f78ad8185b2d296113a468a43af2eeb> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:7" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:8>
+    j.0:OBI_0000295 <ark:/21547/dz2ea9edb85105793b69da35c5b51063c94>, <ark:/21547/eA27dc8886807a01ffec85dd3247024af82> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:8" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dx2UQ:Fish:9>
+    j.0:OBI_0000295 <ark:/21547/dz26fd82dc7b7ba5bdbcdc32b6424c1f1f8>, <ark:/21547/eA2313433e6ee63085a49e9f1f34db840f8> ;
+    j.0:RO_0001025 <ark:/21547/eE2UQ-Riginos> ;
+    j.1:occurrenceID "UQ:Fish:9" ;
+    a <http://purl.obolibrary.org/obo/OBI_0100051> .
+
+<ark:/21547/dy2d0e78ed6468ae8761d830d2a8252a31b>
+    j.0:OBI_0000293 <ark:/21547/dx2UQ:Fish:1>, <ark:/21547/dx2UQ:Fish:10>, <ark:/21547/dx2UQ:Fish:11>, <ark:/21547/dx2UQ:Fish:2>, <ark:/21547/dx2UQ:Fish:3>, <ark:/21547/dx2UQ:Fish:4>, <ark:/21547/dx2UQ:Fish:5>, <ark:/21547/dx2UQ:Fish:6>, <ark:/21547/dx2UQ:Fish:7>, <ark:/21547/dx2UQ:Fish:8>, <ark:/21547/dx2UQ:Fish:9> ;
+    j.0:OBI_0000299 <ark:/21547/eD218175dc0968834e1a8333634bb9d5929> ;
+    a <http://purl.obolibrary.org/obo/bco_0000042> ;
+    j.2:basisOfIdentification "Morphology" ;
+    j.2:dayIdentified "17" ;
+    j.2:identifiedBy "Riginos/Treml" ;
+    j.2:monthIdentified "11" ;
+    j.2:yearIdentified "2008" .
+
+<ark:/21547/dy2eb0c4dda2ba00d36da9ce30fa42ed50a>
+    j.0:OBI_0000293 <ark:/21547/dx2UQ:Fish:12>, <ark:/21547/dx2UQ:Fish:13>, <ark:/21547/dx2UQ:Fish:14>, <ark:/21547/dx2UQ:Fish:15>, <ark:/21547/dx2UQ:Fish:16>, <ark:/21547/dx2UQ:Fish:17>, <ark:/21547/dx2UQ:Fish:18>, <ark:/21547/dx2UQ:Fish:19>, <ark:/21547/dx2UQ:Fish:20> ;
+    j.0:OBI_0000299 <ark:/21547/eD218175dc0968834e1a8333634bb9d5929> ;
+    a <http://purl.obolibrary.org/obo/bco_0000042> ;
+    j.2:basisOfIdentification "Morphology" ;
+    j.2:dayIdentified "13" ;
+    j.2:identifiedBy "Treml/Liggins" ;
+    j.2:monthIdentified "4" ;
+    j.2:yearIdentified "2009" .
+
+<ark:/21547/dz2035d6794c9947060b70824f8daf118ec>
+    j.1:materialSampleID "LIZ_745" ;
+    j.1:occurrenceID "UQ:Fish:12" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2228cdcfb2deddd6d0b1db925de5c7bf4>
+    j.1:materialSampleID "LIZ_748" ;
+    j.1:occurrenceID "UQ:Fish:15" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2266f3908e95d62ee5df5b5526f5ae01a>
+    j.1:materialSampleID "HER_85" ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2293acb4cdc9307f2a255a78866657fe9>
+    j.1:materialSampleID "LIZ_754" ;
+    j.1:occurrenceID "UQ:Fish:20" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz22a6cfc11ca92c608330b1b428405120a>
+    j.1:materialSampleID "HER_89" ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2350d428faf90898483dc42a61845b4a0>
+    j.1:materialSampleID "HER_93" ;
+    j.1:occurrenceID "UQ:Fish:5" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz23d805255979fbb7a56c9aa0bd7996fc5>
+    j.1:materialSampleID "HER_101" ;
+    j.1:occurrenceID "UQ:Fish:1" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz248a952a916ce4908cd87f8231bd1679d>
+    j.1:materialSampleID "HER_100" ;
+    j.1:occurrenceID "UQ:Fish:1" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz248ab8604e60f1b2078a39c6e04f2418e>
+    j.1:materialSampleID "HER_98" ;
+    j.1:occurrenceID "UQ:Fish:10" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz249a57436437c6b3a48f92b98a3c13d0d>
+    j.1:materialSampleID "LIZ_749" ;
+    j.1:occurrenceID "UQ:Fish:16" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz259d3e69f8e2ae96ad9c13aabca11a012>
+    j.1:materialSampleID "LIZ_746" ;
+    j.1:occurrenceID "UQ:Fish:13" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2661116e451f86bcefcc4d43c924ac17b>
+    j.1:materialSampleID "HER_90" ;
+    j.1:occurrenceID "UQ:Fish:3" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz26a8c4f0eb0bca1f42127faee8dab43cc>
+    j.1:materialSampleID "HER_95" ;
+    j.1:occurrenceID "UQ:Fish:7" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz26fd82dc7b7ba5bdbcdc32b6424c1f1f8>
+    j.1:materialSampleID "HER_97" ;
+    j.1:occurrenceID "UQ:Fish:9" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz275678a5d571daffdec966e3fedccf0bd>
+    j.1:materialSampleID "LIZ_747" ;
+    j.1:occurrenceID "UQ:Fish:14" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz27d1868c2dc058fab1999e7352dea226a>
+    j.1:materialSampleID "HER_94" ;
+    j.1:occurrenceID "UQ:Fish:6" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz282fa617ff06438b22044dc94687911f7>
+    j.1:materialSampleID "HER_88" ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz28a1d939dec893b3a643121d1fe3b61a8>
+    j.1:materialSampleID "HER_92" ;
+    j.1:occurrenceID "UQ:Fish:4" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz28f02da2adfa8c052ad6264beaaacdf49>
+    j.1:materialSampleID "LIZ_750" ;
+    j.1:occurrenceID "UQ:Fish:17" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2aa6bce6b9598d2d1f08add0f36f03a24>
+    j.1:materialSampleID "HER_86" ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2b3d2658dbf9c56d40b5359f70cbbbd34>
+    j.1:materialSampleID "LIZ_753" ;
+    j.1:occurrenceID "UQ:Fish:19" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2b8392e8a2f96394c2a783e2631572666>
+    j.1:materialSampleID "LIZ_752" ;
+    j.1:occurrenceID "UQ:Fish:18" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2c48a3af1ac9c350f4130ab4a7747cd08>
+    j.1:materialSampleID "HER_99" ;
+    j.1:occurrenceID "UQ:Fish:11" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/dz2ea9edb85105793b69da35c5b51063c94>
+    j.1:materialSampleID "HER_96" ;
+    j.1:occurrenceID "UQ:Fish:8" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/eA224b5b7e027c107a71aeccd00f92f945c>
+    j.1:materialSampleID "LIZ_752" ;
+    j.1:occurrenceID "UQ:Fish:18" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA22adc47cb2dd6f7f66fd416d442fad938>
+    j.1:materialSampleID "LIZ_753" ;
+    j.1:occurrenceID "UQ:Fish:19" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2313433e6ee63085a49e9f1f34db840f8>
+    j.1:materialSampleID "HER_97" ;
+    j.1:occurrenceID "UQ:Fish:9" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2455b13476b676db486929852be084e3c>
+    j.1:materialSampleID "LIZ_749" ;
+    j.1:occurrenceID "UQ:Fish:16" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2475f73d341a58b2e20f366ebc89aea9e>
+    j.1:materialSampleID "HER_85" ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA271930d44b7d6e7b29c70d97effe4211a>
+    j.1:materialSampleID "LIZ_754" ;
+    j.1:occurrenceID "UQ:Fish:20" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2738bbc5be7b41d2c9151790e427bdae8>
+    j.1:materialSampleID "LIZ_750" ;
+    j.1:occurrenceID "UQ:Fish:17" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA27966ffc702b6e26678a11deb0f6ed115>
+    j.1:materialSampleID "HER_94" ;
+    j.1:occurrenceID "UQ:Fish:6" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA27dc8886807a01ffec85dd3247024af82>
+    j.1:materialSampleID "HER_96" ;
+    j.1:occurrenceID "UQ:Fish:8" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA28470bfc5b17f97114ab13b10abb22441>
+    j.1:materialSampleID "HER_93" ;
+    j.1:occurrenceID "UQ:Fish:5" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA296802696d4d2525212231fd4acf116b4>
+    j.1:materialSampleID "HER_86" ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA29f78ad8185b2d296113a468a43af2eeb>
+    j.1:materialSampleID "HER_95" ;
+    j.1:occurrenceID "UQ:Fish:7" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2a99e91c267bf131c5139abd6cd8c9a89>
+    j.1:materialSampleID "HER_89" ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2be80ba9f6e62f39d6d9691c6474720c7>
+    j.1:materialSampleID "HER_88" ;
+    j.1:occurrenceID "UQ:Fish:2" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2c312823a0a58e806f9e7c385c6860030>
+    j.1:materialSampleID "LIZ_748" ;
+    j.1:occurrenceID "UQ:Fish:15" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2d137728376c92d25037f70cacfaf2738>
+    j.1:materialSampleID "LIZ_746" ;
+    j.1:occurrenceID "UQ:Fish:13" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2d87817e07cd5c6fdf5a6e30049c4384f>
+    j.1:materialSampleID "HER_98" ;
+    j.1:occurrenceID "UQ:Fish:10" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2de54879ce04a5ae1993ea0b237e92473>
+    j.1:materialSampleID "LIZ_747" ;
+    j.1:occurrenceID "UQ:Fish:14" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2decd55c51ca24a7978dbb9cd243a533b>
+    j.1:materialSampleID "HER_92" ;
+    j.1:occurrenceID "UQ:Fish:4" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2dfb453204b33d74a55b8dbcdec3ecf3e>
+    j.1:materialSampleID "HER_99" ;
+    j.1:occurrenceID "UQ:Fish:11" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2e1502f2c5cd08fb374187a3acfd7f88f>
+    j.1:materialSampleID "HER_90" ;
+    j.1:occurrenceID "UQ:Fish:3" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2ee4d0484b39b2e9858c4b2116281fb31>
+    j.1:materialSampleID "LIZ_745" ;
+    j.1:occurrenceID "UQ:Fish:12" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2f0297774e9a88955493f1af17b1cd7c0>
+    j.1:materialSampleID "HER_100" ;
+    j.1:occurrenceID "UQ:Fish:1" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eA2ffe21166eb00af63aaaf0a02ee61ca8f>
+    j.1:materialSampleID "HER_101" ;
+    j.1:occurrenceID "UQ:Fish:1" ;
+    j.1:preservative "95% EtOH then frozen" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> ;
+    j.2:tissueType "muscle" .
+
+<ark:/21547/eB21e741f595b5100f0cef4b3803ed93f56>
+    j.0:OBI_0000299 <ark:/21547/dx2UQ:Fish:1>, <ark:/21547/dx2UQ:Fish:10>, <ark:/21547/dx2UQ:Fish:11>, <ark:/21547/dx2UQ:Fish:2>, <ark:/21547/dx2UQ:Fish:3>, <ark:/21547/dx2UQ:Fish:4>, <ark:/21547/dx2UQ:Fish:5>, <ark:/21547/dx2UQ:Fish:6>, <ark:/21547/dx2UQ:Fish:7>, <ark:/21547/dx2UQ:Fish:8>, <ark:/21547/dx2UQ:Fish:9> ;
+    j.1:coordinateUncertaintyInMeters "0" ;
+    j.1:country "Australia" ;
+    j.1:decimalLatitude "-23.445300" ;
+    j.1:decimalLongitude "151.925500" ;
+    j.1:locality "Heron Island" ;
+    j.1:maximumDepthInMeters "3" ;
+    j.1:minimumDepthInMeters "3" ;
+    j.1:stateProvince "Queensland" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/eB2f87d0e4929b746f28164bd14c7f4c17e>
+    j.0:OBI_0000299 <ark:/21547/dx2UQ:Fish:12>, <ark:/21547/dx2UQ:Fish:13>, <ark:/21547/dx2UQ:Fish:14>, <ark:/21547/dx2UQ:Fish:15>, <ark:/21547/dx2UQ:Fish:16>, <ark:/21547/dx2UQ:Fish:17>, <ark:/21547/dx2UQ:Fish:18>, <ark:/21547/dx2UQ:Fish:19>, <ark:/21547/dx2UQ:Fish:20> ;
+    j.1:coordinateUncertaintyInMeters "0" ;
+    j.1:country "Australia" ;
+    j.1:decimalLatitude "-14.6764166666667" ;
+    j.1:decimalLongitude "145.446966666667" ;
+    j.1:locality "Lizard Island" ;
+    j.1:maximumDepthInMeters "3" ;
+    j.1:minimumDepthInMeters "3" ;
+    j.1:stateProvince "Queensland" ;
+    a <http://purl.obolibrary.org/obo/OBI_0000659> .
+
+<ark:/21547/eC200b0e4d7ae34b5a9f78421b52ba42448>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A06" .
+
+<ark:/21547/eC21635d1d83261da43b57c9f870b24f1b0>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A02" .
+
+<ark:/21547/eC22497852da17ce6b6d533e6f36ab7ec50>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A11" .
+
+<ark:/21547/eC22640668559ddc5507d956817dd39cc7e>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A04" .
+
+<ark:/21547/eC227067134278de9438837d3f5f0a46a7d>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B07" .
+
+<ark:/21547/eC227ba1cff1ce0fc96d5580db413bfbb18>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B11" .
+
+<ark:/21547/eC230c139578dc71a569f03c79e81354a43>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A09" .
+
+<ark:/21547/eC25587fbfc0c6a793a347c6621c7315444>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B01" .
+
+<ark:/21547/eC25770c72e0e0cdc69428cc26db6bdafa9>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B09" .
+
+<ark:/21547/eC25808465f3a0eaf49718b464135aef795>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B10" .
+
+<ark:/21547/eC25e4ffc288c0255e08c709ebf541ee95e>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B04" .
+
+<ark:/21547/eC27fc3c56c04aea570f33fc3beed34849a>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A03" .
+
+<ark:/21547/eC292cdd04e1d3941903e4e4274925f9580>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B05" .
+
+<ark:/21547/eC29350c27cd7be1a9ab50b747a0a5bf4f0>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A01" .
+
+<ark:/21547/eC2945a4aea5ae02d46fbecc214807372fd>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A12" .
+
+<ark:/21547/eC29d95899cca923c994238e632e36b8dac>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A08" .
+
+<ark:/21547/eC2a008ac76f48711cbc57b6ef0533c9a66>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B06" .
+
+<ark:/21547/eC2a8f09b93b5c449441d520b27cd24edd8>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A05" .
+
+<ark:/21547/eC2abf46545aba6cf415aa3a370b7702864>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B08" .
+
+<ark:/21547/eC2bc40a9047c1a40227df17e9cf7130b84>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B03" .
+
+<ark:/21547/eC2d402d51e00324f686ad059ee3fd49e9e>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B02" .
+
+<ark:/21547/eC2dae874a08d0a0d65e30489aaf4b81fcf>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "B12" .
+
+<ark:/21547/eC2f18cf6310c4e1e6b7a5dac3c3552a902>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A10" .
+
+<ark:/21547/eC2f461925bd41d2140b0f45cb18f84f450>
+    a <http://purl.obolibrary.org/obo/OBI_0400076> ;
+    j.2:plate "plate1" ;
+    j.2:well "A07" .
+
+<ark:/21547/eD218175dc0968834e1a8333634bb9d5929>
+    a <http://rs.tdwg.org/dwc/dwctype/Taxon> ;
+    j.2:genus "Apogon" ;
+    j.2:species "doederleini" .
+
+<ark:/21547/eE2UQ-Riginos>
+    a <http://purl.obolibrary.org/obo/OBI_0000245> ;
+    j.2:ownerInstitutionCode "UQ-Riginos" .
+
+<http://purl.obolibrary.org/obo/OBI_0000245>
+    a rdfs:Class .
+
+<http://purl.obolibrary.org/obo/OBI_0000293>
+    a rdf:Property .
+
+<http://purl.obolibrary.org/obo/OBI_0000295>
+    a rdf:Property .
+
+<http://purl.obolibrary.org/obo/OBI_0000299>
+    a rdf:Property .
+
+<http://purl.obolibrary.org/obo/OBI_0000312>
+    a rdf:Property .
+
+<http://purl.obolibrary.org/obo/OBI_0000659>
+    a rdfs:Class .
+
+<http://purl.obolibrary.org/obo/OBI_0100051>
+    a rdfs:Class .
+
+<http://purl.obolibrary.org/obo/OBI_0400076>
+    a rdfs:Class .
+
+<http://purl.obolibrary.org/obo/RO_0001025>
+    a rdf:Property .
+
+<http://purl.obolibrary.org/obo/bco_0000042>
+    a rdfs:Class .
+
+<http://rs.tdwg.org/dwc/dwctype/Taxon>
+    a rdfs:Class .
+
+<http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters> .
+
+<http://rs.tdwg.org/dwc/terms/country>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/country> .
+
+<http://rs.tdwg.org/dwc/terms/decimalLatitude>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/decimalLatitude> .
+
+<http://rs.tdwg.org/dwc/terms/decimalLongitude>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/decimalLongitude> .
+
+<http://rs.tdwg.org/dwc/terms/locality>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/locality> .
+
+<http://rs.tdwg.org/dwc/terms/materialSampleID>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/materialSampleID> .
+
+<http://rs.tdwg.org/dwc/terms/maximumDepthInMeters>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/maximumDepthInMeters> .
+
+<http://rs.tdwg.org/dwc/terms/minimumDepthInMeters>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/minimumDepthInMeters> .
+
+<http://rs.tdwg.org/dwc/terms/occurrenceID>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/occurrenceID> .
+
+<http://rs.tdwg.org/dwc/terms/preservative>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/preservative> .
+
+<http://rs.tdwg.org/dwc/terms/stateProvince>
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/stateProvince> .
+
+<urn:basisOfIdentification>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:basisOfIdentification> .
+
+<urn:dayIdentified>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:dayIdentified> .
+
+<urn:geneticTissueTypeDestructive>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:geneticTissueTypeDestructive> .
+
+<urn:geneticTissueTypePreserved>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:geneticTissueTypePreserved> .
+
+<urn:genus>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:genus> .
+
+<urn:identifiedBy>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:identifiedBy> .
+
+<urn:monthIdentified>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:monthIdentified> .
+
+<urn:ownerInstitutionCode>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:ownerInstitutionCode> .
+
+<urn:plate>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:plate> .
+
+<urn:species>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:species> .
+
+<urn:tissueType>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:tissueType> .
+
+<urn:well>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:well> .
+
+<urn:yearIdentified>
+    a rdf:Property ;
+    rdfs:isDefinedBy <urn:yearIdentified> .
+
