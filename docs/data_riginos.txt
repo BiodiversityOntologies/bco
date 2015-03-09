@@ -213,7 +213,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:2" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ282fa617ff06438b22044dc94687911f7> , <ark:/21547/JJ22a6cfc11ca92c608330b1b428405120a> , <ark:/21547/JJ2be80ba9f6e62f39d6d9691c6474720c7> , <ark:/21547/JJ2266f3908e95d62ee5df5b5526f5ae01a> , <ark:/21547/JJ2475f73d341a58b2e20f366ebc89aea9e> , <ark:/21547/JJ2aa6bce6b9598d2d1f08add0f36f03a24> , <ark:/21547/JJ2a99e91c267bf131c5139abd6cd8c9a89> , <ark:/21547/JJ296802696d4d2525212231fd4acf116b4> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2266f3908e95d62ee5df5b5526f5ae01a>
         a       <bco:materialSamplingProcess> ;
@@ -249,9 +249,9 @@
                 "95% EtOH then frozen" ;
         <urn:tissueType>  "muscle" .
 
-<ark:/21547/JM2UQ- Riginos>
+<ark:/21547/JM2UQ-Riginos>
         a                           <obi:organization> ;
-        <urn:ownerInstitutionCode>  "UQ- Riginos" .
+        <urn:ownerInstitutionCode>  "UQ-Riginos" .
 
 <ark:/21547/JJ296802696d4d2525212231fd4acf116b4>
         a                 <bco:materialSamplingProcess> ;
@@ -286,7 +286,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:16" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ249a57436437c6b3a48f92b98a3c13d0d> , <ark:/21547/JJ2455b13476b676db486929852be084e3c> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2455b13476b676db486929852be084e3c>
         a                 <bco:materialSamplingProcess> ;
@@ -426,7 +426,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:11" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ2dfb453204b33d74a55b8dbcdec3ecf3e> , <ark:/21547/JJ2c48a3af1ac9c350f4130ab4a7747cd08> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2c48a3af1ac9c350f4130ab4a7747cd08>
         a       <bco:materialSamplingProcess> ;
@@ -453,7 +453,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:5" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ28470bfc5b17f97114ab13b10abb22441> , <ark:/21547/JJ2350d428faf90898483dc42a61845b4a0> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2350d428faf90898483dc42a61845b4a0>
         a       <bco:materialSamplingProcess> ;
@@ -467,7 +467,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:19" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ22adc47cb2dd6f7f66fd416d442fad938> , <ark:/21547/JJ2b3d2658dbf9c56d40b5359f70cbbbd34> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ22adc47cb2dd6f7f66fd416d442fad938>
         a                 <bco:materialSamplingProcess> ;
@@ -593,7 +593,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:14" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ275678a5d571daffdec966e3fedccf0bd> , <ark:/21547/JJ2de54879ce04a5ae1993ea0b237e92473> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ275678a5d571daffdec966e3fedccf0bd>
         a       <bco:materialSamplingProcess> ;
@@ -666,7 +666,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:8" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ27dc8886807a01ffec85dd3247024af82> , <ark:/21547/JJ2ea9edb85105793b69da35c5b51063c94> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2ea9edb85105793b69da35c5b51063c94>
         a       <bco:materialSamplingProcess> ;
@@ -705,49 +705,49 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:3" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ2e1502f2c5cd08fb374187a3acfd7f88f> , <ark:/21547/JJ2661116e451f86bcefcc4d43c924ac17b> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH2UQ:Fish:1>
         a                            <bco:materialSample> ;
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:1" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ2ffe21166eb00af63aaaf0a02ee61ca8f> , <ark:/21547/JJ23d805255979fbb7a56c9aa0bd7996fc5> , <ark:/21547/JJ248a952a916ce4908cd87f8231bd1679d> , <ark:/21547/JJ2f0297774e9a88955493f1af17b1cd7c0> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH2UQ:Fish:6>
         a                            <bco:materialSample> ;
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:6" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ27d1868c2dc058fab1999e7352dea226a> , <ark:/21547/JJ27966ffc702b6e26678a11deb0f6ed115> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH2UQ:Fish:10>
         a                            <bco:materialSample> ;
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:10" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ2d87817e07cd5c6fdf5a6e30049c4384f> , <ark:/21547/JJ248ab8604e60f1b2078a39c6e04f2418e> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH2UQ:Fish:4>
         a                            <bco:materialSample> ;
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:4" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ2decd55c51ca24a7978dbb9cd243a533b> , <ark:/21547/JJ28a1d939dec893b3a643121d1fe3b61a8> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH2UQ:Fish:9>
         a                            <bco:materialSample> ;
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:9" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ26fd82dc7b7ba5bdbcdc32b6424c1f1f8> , <ark:/21547/JJ2313433e6ee63085a49e9f1f34db840f8> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH2UQ:Fish:7>
         a                            <bco:materialSample> ;
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:7" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ29f78ad8185b2d296113a468a43af2eeb> , <ark:/21547/JJ26a8c4f0eb0bca1f42127faee8dab43cc> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2b8392e8a2f96394c2a783e2631572666>
         a       <bco:materialSamplingProcess> ;
@@ -842,7 +842,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:17" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ28f02da2adfa8c052ad6264beaaacdf49> , <ark:/21547/JJ2738bbc5be7b41d2c9151790e427bdae8> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2738bbc5be7b41d2c9151790e427bdae8>
         a                 <bco:materialSamplingProcess> ;
@@ -910,7 +910,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:12" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ2035d6794c9947060b70824f8daf118ec> , <ark:/21547/JJ2ee4d0484b39b2e9858c4b2116281fb31> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2ee4d0484b39b2e9858c4b2116281fb31>
         a                 <bco:materialSamplingProcess> ;
@@ -1003,7 +1003,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:20" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ271930d44b7d6e7b29c70d97effe4211a> , <ark:/21547/JJ2293acb4cdc9307f2a255a78866657fe9> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JJ2228cdcfb2deddd6d0b1db925de5c7bf4>
         a       <bco:materialSamplingProcess> ;
@@ -1079,7 +1079,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:15" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ2c312823a0a58e806f9e7c385c6860030> , <ark:/21547/JJ2228cdcfb2deddd6d0b1db925de5c7bf4> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH2LIZ_753>
         a                             <bco:materialSample> ;
@@ -1151,7 +1151,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:18" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ224b5b7e027c107a71aeccd00f92f945c> , <ark:/21547/JJ2b8392e8a2f96394c2a783e2631572666> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH290f8b9dd62e75ffd1c3f6b55e9a97485>
         a                             <bco:materialSample> ;
@@ -1182,7 +1182,7 @@
         <http://rs.tdwg.org/dwc/terms/occurrenceID>
                 "UQ:Fish:13" ;
         <obi:is_specified_input_of>  <ark:/21547/JJ2d137728376c92d25037f70cacfaf2738> , <ark:/21547/JJ259d3e69f8e2ae96ad9c13aabca11a012> ;
-        <obi:located_in>             <ark:/21547/JM2UQ- Riginos> .
+        <obi:located_in>             <ark:/21547/JM2UQ-Riginos> .
 
 <ark:/21547/JH2HER_95>
         a                             <bco:materialSample> ;

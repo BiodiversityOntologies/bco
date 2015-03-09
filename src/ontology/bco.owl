@@ -166,6 +166,12 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty .
 
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000117
+
+obo:BFO_0000117 rdf:type owl:ObjectProperty .
+
+
+
 ###  http://purl.obolibrary.org/obo/OBI_0000293
 
 obo:OBI_0000293 rdfs:subPropertyOf obo:RO_0002233 .
@@ -699,16 +705,16 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BFO_0000015 ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002234 ;
+                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000117 ;
                                   owl:someValuesFrom obo:bco_0000007
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:bco_0000044
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
                                 ] ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
@@ -1266,12 +1272,13 @@ obo:bco_0000044 rdf:type owl:Class ;
                                                          )
                                     ] ;
                 
+                obo:IAO_0000112 "A bird observed during a transect walk." ;
+                
                 obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
                 obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en ,
-                                "A bird observed during a transect walk." ,
                                 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ,
                                 "A tree is forest plot that is measured for diameter at breast height (DBH)." ;
                 
@@ -1338,28 +1345,11 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 
 
-###  http://purl.org/dc/dcmitype/Event
-
-<http://purl.org/dc/dcmitype/Event> owl:equivalentClass [ rdf:type owl:Class ;
-                                                          owl:unionOf ( obo:OBI_0000659
-                                                                        obo:bco_0000003
-                                                                      )
-                                                        ] ;
-                                    
-                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                      owl:onProperty obo:BFO_0000066 ;
-                                                      owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/Location>
-                                                    ] ;
-                                    
-                                    owl:deprecated "false"^^xsd:boolean ;
-                                    
-                                    obo:IAO_0000114 obo:IAO_0000428 .
-
-
-
 ###  http://rs.tdwg.org/dwc/dwctype/FossilSpecimen
 
-<http://rs.tdwg.org/dwc/dwctype/FossilSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> ;
+<http://rs.tdwg.org/dwc/dwctype/FossilSpecimen> rdf:type owl:Class ;
+                                                
+                                                rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> ;
                                                 
                                                 obo:IAO_0000112 "a fossil housed in a natural history museum"^^xsd:string ;
                                                 
@@ -1379,7 +1369,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/HumanObservation
 
-<http://rs.tdwg.org/dwc/dwctype/HumanObservation> rdfs:subClassOf obo:IAO_0000030 ;
+<http://rs.tdwg.org/dwc/dwctype/HumanObservation> rdf:type owl:Class ;
+                                                  
+                                                  rdfs:subClassOf obo:IAO_0000030 ;
                                                   
                                                   obo:IAO_0000112 "a record of an observation in a field notebook"^^xsd:string ,
                                                                   "a record of the absence of a California Condor at a monitoring site"^^xsd:string ,
@@ -1401,7 +1393,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/LivingSpecimen
 
-<http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/MaterialSample> ;
+<http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> rdf:type owl:Class ;
+                                                
+                                                rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/MaterialSample> ;
                                                 
                                                 obo:IAO_0000112 "a bacterial culture in a culture collection"^^xsd:string ,
                                                                 "a germplasm"^^xsd:string ,
@@ -1424,7 +1418,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/Location
 
-<http://rs.tdwg.org/dwc/dwctype/Location> obo:IAO_0000424 "The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken."@en ;
+<http://rs.tdwg.org/dwc/dwctype/Location> rdf:type owl:Class ;
+                                          
+                                          obo:IAO_0000424 "The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken."@en ;
                                           
                                           obo:BCO_0000060 "location of an event"@en ;
                                           
@@ -1434,7 +1430,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/MachineObservation
 
-<http://rs.tdwg.org/dwc/dwctype/MachineObservation> rdfs:subClassOf obo:IAO_0000030 ;
+<http://rs.tdwg.org/dwc/dwctype/MachineObservation> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf obo:IAO_0000030 ;
                                                     
                                                     obo:IAO_0000112 "a record from a camera trap documenting the presence of a jaguar"^^xsd:string ,
                                                                     "a record from a sensor periodically capturing the surface temperature of a leaf over several hours"^^xsd:string ;
@@ -1455,7 +1453,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/MaterialSample
 
-<http://rs.tdwg.org/dwc/dwctype/MaterialSample> obo:IAO_0000112 "a tissue taken from an organism for use in a DNA extraction"^^xsd:string ;
+<http://rs.tdwg.org/dwc/dwctype/MaterialSample> rdf:type owl:Class ;
+                                                
+                                                obo:IAO_0000112 "a tissue taken from an organism for use in a DNA extraction"^^xsd:string ;
                                                 
                                                 obo:IAO_0000115 "A resource describing the physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed."@en ;
                                                 
@@ -1467,7 +1467,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen
 
-<http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/MaterialSample> ;
+<http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:subClassOf <http://rs.tdwg.org/dwc/dwctype/MaterialSample> ;
                                                    
                                                    obo:IAO_0000112 "a cleared and stained amphibian in glycerine"^^xsd:string ,
                                                                    "a dried, pressed plant on a herbarium sheet"^^xsd:string ,
@@ -1485,6 +1487,21 @@ obo:bco_0000046 rdf:type owl:Class ;
   owl:annotatedTarget obo:IAO_0000123 ;
   owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen>
 ] .
+
+
+
+###  http://rs.tdwg.org/dwc/terms/Event
+
+<http://rs.tdwg.org/dwc/terms/Event> owl:equivalentClass [ rdf:type owl:Class ;
+                                                           owl:unionOf ( obo:OBI_0000659
+                                                                         obo:bco_0000003
+                                                                       )
+                                                         ] ;
+                                     
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty obo:BFO_0000066 ;
+                                                       owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/Location>
+                                                     ] .
 
 
 
@@ -1621,6 +1638,12 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 <http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist> obo:IAO_0000114 obo:IAO_0000124 .
+
+
+
+<http://purl.org/dc/dcmitype/Event> owl:deprecated "false"^^xsd:boolean ;
+                                    
+                                    obo:IAO_0000114 obo:IAO_0000428 .
 
 
 
