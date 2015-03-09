@@ -25,12 +25,12 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
                                                         "Biocode Commons Ontology Hackathon members" ,
                                                         "John Wieczorek" ;
                                          
-                                         owl:imports <http://purl.obolibrary.org/obo/ro/core.owl> ,
+                                         owl:imports <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
+                                                     <http://purl.obolibrary.org/obo/ro/core.owl> ,
                                                      <http://purl.obolibrary.org/obo/ro/subsets/ro-eco.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/iao_bco_imports.owl> ,
-                                                     <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/obi_bco_imports.owl> ,
-                                                     <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ontology_metadata_bco_imports.owl> .
+                                                     <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/obi_bco_imports.owl> .
 
 
 #################################################################
@@ -718,16 +718,16 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BFO_0000015 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:someValuesFrom obo:bco_0000007
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:bco_0000044
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000050 ;
-                                  owl:someValuesFrom obo:bco_0000007
+                                  owl:onProperty obo:RO_0002234 ;
+                                  owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
                                 ] ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
