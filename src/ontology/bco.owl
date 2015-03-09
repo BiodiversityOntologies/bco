@@ -25,11 +25,11 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
                                                         "Biocode Commons Ontology Hackathon members" ,
                                                         "John Wieczorek" ;
                                          
-                                         owl:imports <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl> ,
+                                         owl:imports <http://purl.obolibrary.org/obo/ro/subsets/ro-eco.owl> ,
+                                                     <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/iao_bco_imports.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/obi_bco_imports.owl> ,
-                                                     <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ontology_metadata_bco_imports.owl> ,
-                                                     <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ro_bco_imports.owl> .
+                                                     <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ontology_metadata_bco_imports.owl> .
 
 
 #################################################################
@@ -166,9 +166,9 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty .
 
 
 
-###  http://purl.obolibrary.org/obo/BFO_0000117
+###  http://purl.obolibrary.org/obo/BFO_0000066
 
-obo:BFO_0000117 rdf:type owl:ObjectProperty .
+obo:BFO_0000066 rdf:type owl:ObjectProperty .
 
 
 
@@ -219,6 +219,12 @@ obo:RO_0002233 rdf:type owl:ObjectProperty .
 ###  http://purl.obolibrary.org/obo/RO_0002234
 
 obo:RO_0002234 rdf:type owl:ObjectProperty .
+
+
+
+###  http://purl.obolibrary.org/obo/RO_0002352
+
+obo:RO_0002352 rdf:type owl:ObjectProperty .
 
 
 
@@ -568,6 +574,12 @@ obo:BCO_0000066 rdf:type owl:Class ;
 
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000015
+
+obo:BFO_0000015 rdf:type owl:Class .
+
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000027
 
 obo:BFO_0000027 rdf:type owl:Class ;
@@ -709,12 +721,12 @@ obo:bco_0000003 rdf:type owl:Class ;
                                   owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000117 ;
-                                  owl:someValuesFrom obo:bco_0000007
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:bco_0000044
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:someValuesFrom obo:bco_0000007
                                 ] ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
