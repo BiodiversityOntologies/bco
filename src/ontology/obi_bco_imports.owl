@@ -773,25 +773,33 @@ obo:OBI_0001938 rdf:type owl:ObjectProperty ;
 
 ###  http://purl.obolibrary.org/obo/RO_0002233
 
-obo:RO_0002233 rdf:type owl:ObjectProperty .
+obo:RO_0002233 rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "has input" .
 
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002234
 
-obo:RO_0002234 rdf:type owl:ObjectProperty .
+obo:RO_0002234 rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "has output" .
 
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002352
 
-obo:RO_0002352 rdf:type owl:ObjectProperty .
+obo:RO_0002352 rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "is input of" .
 
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002353
 
-obo:RO_0002353 rdf:type owl:ObjectProperty .
+obo:RO_0002353 rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "is output of" .
 
 
 
@@ -1338,11 +1346,11 @@ obo:IAO_0000104 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000033 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:IAO_0000005
+                                  owl:someValuesFrom obo:IAO_0000007
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:IAO_0000007
+                                  owl:someValuesFrom obo:IAO_0000005
                                 ] ;
                 
                 obo:IAO_0000116 "2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was \" a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan\". It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term."@en ;
@@ -1374,15 +1382,13 @@ obo:IAO_0000109 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:IAO_0000027 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:OBI_0001938 ;
-                                  owl:someValuesFrom obo:OBI_0001933
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000312 ;
                                   owl:someValuesFrom obo:OBI_0000070
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0001938 ;
+                                  owl:someValuesFrom obo:OBI_0001933
                                 ] ;
-                
-                obo:IAO_0000116 "2/2/2009 is_specified_output of some assay?"@en ;
                 
                 obo:IAO_0000115 "A data item that is a recording of the output of an assay."@en ;
                 
@@ -1393,6 +1399,8 @@ obo:IAO_0000109 rdf:type owl:Class ;
                 obo:IAO_0000111 "measurement data item"@en ;
                 
                 obo:IAO_0000118 "measurement datum" ;
+                
+                obo:IAO_0000116 "2/2/2009 is_specified_output of some assay?"@en ;
                 
                 obo:IAO_0000119 "group:OBI"@en ;
                 
@@ -1530,12 +1538,12 @@ obo:OBI_0000067 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BFO_0000023 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000054 ;
-                                  owl:allValuesFrom obo:OBI_0000070
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000052 ;
                                   owl:someValuesFrom obo:BFO_0000040
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000054 ;
+                                  owl:allValuesFrom obo:OBI_0000070
                                 ] ;
                 
                 obo:IAO_0000232 "Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term."^^xsd:string ;
@@ -1678,12 +1686,12 @@ obo:OBI_0000185 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000070 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:OBI_0000299 ;
-                                  owl:someValuesFrom obo:IAO_0000101
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000417 ;
                                   owl:someValuesFrom obo:OBI_0000441
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:IAO_0000101
                                 ] ;
                 
                 obo:IAO_0000115 "An imaging assay is an assay to produce a picture of an entity. definition_source: OBI."@en ;
