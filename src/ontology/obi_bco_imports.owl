@@ -1390,19 +1390,18 @@ obo:IAO_0000109 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:OBI_0001933
                                 ] ;
                 
+                obo:IAO_0000116 "2/2/2009 is_specified_output of some assay?"@en ;
+                
                 obo:IAO_0000115 "A data item that is a recording of the output of an assay."@en ;
                 
                 obo:IAO_0000112 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}."@en ;
                 
-                obo:IAO_0000119 "OBI_0000305"@en ;
+                obo:IAO_0000119 "OBI_0000305"@en ,
+                                "group:OBI"@en ;
                 
                 obo:IAO_0000111 "measurement data item"@en ;
                 
                 obo:IAO_0000118 "measurement datum" ;
-                
-                obo:IAO_0000116 "2/2/2009 is_specified_output of some assay?"@en ;
-                
-                obo:IAO_0000119 "group:OBI"@en ;
                 
                 obo:IAO_0000117 "person:Chris Stoeckert"@en ;
                 
@@ -1581,6 +1580,17 @@ obo:OBI_0000070 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:intersectionOf ( obo:BFO_0000040
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:BFO_0000087 ;
+                                                                              owl:someValuesFrom obo:OBI_0000067
+                                                                            ]
+                                                                          )
+                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000055 ;
                                   owl:someValuesFrom obo:OBI_0000067
                                 ] ,
@@ -1598,17 +1608,6 @@ obo:OBI_0000070 rdf:type owl:Class ;
                                                                                                                         ]
                                                                                                                       )
                                                                                                  ]
-                                                                            ]
-                                                                          )
-                                                     ]
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:OBI_0000293 ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:intersectionOf ( obo:BFO_0000040
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty obo:BFO_0000087 ;
-                                                                              owl:someValuesFrom obo:OBI_0000067
                                                                             ]
                                                                           )
                                                      ]
