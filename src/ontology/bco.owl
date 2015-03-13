@@ -727,16 +727,16 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BFO_0000015 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000050 ;
-                                  owl:someValuesFrom obo:bco_0000007
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002234 ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:unionOf ( <http://rs.tdwg.org/dwc/terms/HumanObservation>
                                                                      <http://rs.tdwg.org/dwc/terms/MachineObservation>
                                                                    )
                                                      ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:someValuesFrom obo:bco_0000007
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
@@ -1298,12 +1298,13 @@ obo:bco_0000044 rdf:type owl:Class ;
                                                          )
                                     ] ;
                 
+                obo:IAO_0000112 "A bird observed during a transect walk." ;
+                
                 obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
                 obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en ,
-                                "A bird observed during a transect walk." ,
                                 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ,
                                 "A tree is forest plot that is measured for diameter at breast height (DBH)." ;
                 
@@ -1392,30 +1393,6 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 
 
-###  http://rs.tdwg.org/dwc/dwctype/HumanObservation
-
-<http://rs.tdwg.org/dwc/dwctype/HumanObservation> rdf:type owl:Class ;
-                                                  
-                                                  rdfs:subClassOf obo:IAO_0000030 ;
-                                                  
-                                                  obo:IAO_0000112 "a record of an observation in a field notebook"^^xsd:string ,
-                                                                  "a record of the absence of a California Condor at a monitoring site"^^xsd:string ,
-                                                                  "a record of the presence of species of plant in a plot"^^xsd:string ;
-                                                  
-                                                  obo:IAO_0000115 "The output of a human observation process."@en ;
-                                                  
-                                                  obo:BCO_0000060 "human observation"@en ;
-                                                  
-                                                  obo:IAO_0000114 obo:IAO_0000123 .
-[ rdf:type owl:Axiom ;
-  rdfs:comment "Needs a logical definition."@en ;
-  owl:annotatedProperty obo:IAO_0000114 ;
-  owl:annotatedTarget obo:IAO_0000123 ;
-  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/HumanObservation>
-] .
-
-
-
 ###  http://rs.tdwg.org/dwc/dwctype/LivingSpecimen
 
 <http://rs.tdwg.org/dwc/dwctype/LivingSpecimen> rdf:type owl:Class ;
@@ -1450,29 +1427,6 @@ obo:bco_0000046 rdf:type owl:Class ;
                                           obo:BCO_0000060 "location of an event"@en ;
                                           
                                           obo:IAO_0000114 obo:IAO_0000123 .
-
-
-
-###  http://rs.tdwg.org/dwc/dwctype/MachineObservation
-
-<http://rs.tdwg.org/dwc/dwctype/MachineObservation> rdf:type owl:Class ;
-                                                    
-                                                    rdfs:subClassOf obo:IAO_0000030 ;
-                                                    
-                                                    obo:IAO_0000112 "a record from a camera trap documenting the presence of a jaguar"^^xsd:string ,
-                                                                    "a record from a sensor periodically capturing the surface temperature of a leaf over several hours"^^xsd:string ;
-                                                    
-                                                    obo:IAO_0000115 "The output of a machine observation process."@en ;
-                                                    
-                                                    obo:BCO_0000060 "machine observation"@en ;
-                                                    
-                                                    obo:IAO_0000114 obo:IAO_0000123 .
-[ rdf:type owl:Axiom ;
-  rdfs:comment "Needs a logical definition."@en ;
-  owl:annotatedProperty obo:IAO_0000114 ;
-  owl:annotatedTarget obo:IAO_0000123 ;
-  owl:annotatedSource <http://rs.tdwg.org/dwc/dwctype/MachineObservation>
-] .
 
 
 
