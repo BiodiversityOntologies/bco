@@ -517,40 +517,6 @@ obo:BFO_0000055 rdf:type owl:ObjectProperty ;
 
 
 
-###  http://purl.obolibrary.org/obo/BFO_0000058
-
-obo:BFO_0000058 rdf:type owl:ObjectProperty ;
-                
-                rdfs:label "is concretized as"@en ;
-                
-                obo:IAO_0000111 "is concretized as"@en ;
-                
-                rdfs:range obo:BFO_0000020 ;
-                
-                rdfs:domain obo:BFO_0000031 ;
-                
-                obo:IAO_0000412 obo:obi.owl .
-
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000059
-
-obo:BFO_0000059 rdf:type owl:ObjectProperty ;
-                
-                rdfs:label "concretizes"@en ;
-                
-                obo:IAO_0000111 "concretizes"@en ;
-                
-                rdfs:domain obo:BFO_0000020 ;
-                
-                rdfs:range obo:BFO_0000031 ;
-                
-                owl:inverseOf obo:BFO_0000058 ;
-                
-                obo:IAO_0000412 obo:obi.owl .
-
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000070
 
 obo:BFO_0000070 rdf:type owl:ObjectProperty ;
@@ -1219,17 +1185,6 @@ obo:IAO_0000030 rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:IAO_0000136 ;
                                   owl:someValuesFrom obo:BFO_0000001
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000058 ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:intersectionOf ( obo:IAO_0000015
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty obo:BFO_0000052 ;
-                                                                              owl:someValuesFrom obo:IAO_0000178
-                                                                            ]
-                                                                          )
-                                                     ]
                                 ] ;
                 
                 obo:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
@@ -1346,11 +1301,11 @@ obo:IAO_0000104 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000033 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:IAO_0000007
+                                  owl:someValuesFrom obo:IAO_0000005
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:IAO_0000005
+                                  owl:someValuesFrom obo:IAO_0000007
                                 ] ;
                 
                 obo:IAO_0000116 "2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was \" a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan\". It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term."@en ;
@@ -1396,12 +1351,13 @@ obo:IAO_0000109 rdf:type owl:Class ;
                 
                 obo:IAO_0000112 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}."@en ;
                 
-                obo:IAO_0000119 "OBI_0000305"@en ,
-                                "group:OBI"@en ;
+                obo:IAO_0000119 "OBI_0000305"@en ;
                 
                 obo:IAO_0000111 "measurement data item"@en ;
                 
                 obo:IAO_0000118 "measurement datum" ;
+                
+                obo:IAO_0000119 "group:OBI"@en ;
                 
                 obo:IAO_0000117 "person:Chris Stoeckert"@en ;
                 
@@ -1416,18 +1372,6 @@ obo:IAO_0000109 rdf:type owl:Class ;
 obo:IAO_0000178 rdf:type owl:Class ;
                 
                 rdfs:label "material information bearer"@en ;
-                
-                owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:intersectionOf ( obo:BFO_0000040
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:BFO_0000053 ;
-                                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty obo:BFO_0000059 ;
-                                                                                  owl:someValuesFrom obo:IAO_0000030
-                                                                                ]
-                                                           ]
-                                                         )
-                                    ] ;
                 
                 rdfs:subClassOf obo:BFO_0000040 ;
                 
@@ -1496,14 +1440,6 @@ obo:IAO_0000310 rdf:type owl:Class ;
 obo:OBI_0000011 rdf:type owl:Class ;
                 
                 rdfs:label "planned process"@en ;
-                
-                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                      owl:onProperty obo:BFO_0000055 ;
-                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                           owl:onProperty obo:BFO_0000059 ;
-                                                           owl:someValuesFrom obo:IAO_0000104
-                                                         ]
-                                    ] ;
                 
                 rdfs:subClassOf obo:BFO_0000003 ;
                 
@@ -1591,10 +1527,6 @@ obo:OBI_0000070 rdf:type owl:Class ;
                                                      ]
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000055 ;
-                                  owl:someValuesFrom obo:OBI_0000067
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000299 ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( obo:IAO_0000030
@@ -1611,6 +1543,10 @@ obo:OBI_0000070 rdf:type owl:Class ;
                                                                             ]
                                                                           )
                                                      ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000055 ;
+                                  owl:someValuesFrom obo:OBI_0000067
                                 ] ;
                 
                 obo:IAO_0000112 "Assay the wavelength of light emitted by excited Neon atoms. Count of geese flying over a house."^^xsd:string ;
@@ -1801,12 +1737,12 @@ obo:OBI_0000659 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:OBI_0000299 ;
-                                  owl:someValuesFrom obo:OBI_0100051
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000293 ;
                                   owl:someValuesFrom obo:BFO_0000040
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:OBI_0100051
                                 ] ;
                 
                 obo:IAO_0000232 "5/31/2012: This process is not necessarily an acquisition, as specimens may be collected from materials already in posession"^^xsd:string ,
@@ -1862,14 +1798,6 @@ obo:OBI_0000684 rdf:type owl:Class ;
 obo:OBI_0000811 rdf:type owl:Class ;
                 
                 rdfs:label "primary structure of DNA macromolecule"^^xsd:string ;
-                
-                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                      owl:onProperty obo:BFO_0000058 ;
-                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                           owl:onProperty obo:BFO_0000052 ;
-                                                           owl:someValuesFrom obo:CHEBI_16991
-                                                         ]
-                                    ] ;
                 
                 rdfs:subClassOf obo:BFO_0000031 ;
                 
