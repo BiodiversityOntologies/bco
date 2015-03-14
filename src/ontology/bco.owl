@@ -642,6 +642,22 @@ obo:CARO_0001010 rdf:type owl:Class ;
 
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000030
+
+obo:IAO_0000030 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0000058 ;
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:intersectionOf ( obo:IAO_0000015
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:BFO_0000052 ;
+                                                                              owl:someValuesFrom obo:IAO_0000178
+                                                                            ]
+                                                                          )
+                                                     ]
+                                ] .
+
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000178
 
 obo:IAO_0000178 owl:equivalentClass [ rdf:type owl:Class ;
@@ -662,6 +678,14 @@ obo:IAO_0000178 owl:equivalentClass [ rdf:type owl:Class ;
 
 obo:OBI_0000011 rdf:type owl:Class ;
                 
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:BFO_0000055 ;
+                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:RO_0000059 ;
+                                                           owl:someValuesFrom obo:IAO_0000104
+                                                         ]
+                                    ] ;
+                
                 rdfs:subClassOf obo:BFO_0000015 .
 
 
@@ -677,6 +701,18 @@ obo:OBI_0000245 rdf:type owl:Class .
 obo:OBI_0000659 rdf:type owl:Class ;
                 
                 obo:BCO_0000060 "specimen collection process" .
+
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000811
+
+obo:OBI_0000811 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:RO_0000058 ;
+                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:BFO_0000052 ;
+                                                           owl:someValuesFrom obo:CHEBI_16991
+                                                         ]
+                                    ] .
 
 
 
@@ -757,12 +793,12 @@ obo:bco_0000003 rdf:type owl:Class ;
                                                      ]
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:bco_0000044
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000050 ;
                                   owl:someValuesFrom obo:bco_0000007
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002233 ;
+                                  owl:someValuesFrom obo:bco_0000044
                                 ] ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
