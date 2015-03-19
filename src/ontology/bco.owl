@@ -25,7 +25,8 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
                                                         "Biocode Commons Ontology Hackathon members" ,
                                                         "John Wieczorek" ;
                                          
-                                         owl:imports <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
+                                         owl:imports obo:bfo.owl ,
+                                                     <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
                                                      <http://purl.obolibrary.org/obo/ro/core.owl> ,
                                                      <http://purl.obolibrary.org/obo/ro/subsets/ro-eco.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl> ,
@@ -793,12 +794,12 @@ obo:bco_0000003 rdf:type owl:Class ;
                                                      ]
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000050 ;
-                                  owl:someValuesFrom obo:bco_0000007
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:bco_0000044
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:someValuesFrom obo:bco_0000007
                                 ] ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
@@ -1356,13 +1357,12 @@ obo:bco_0000044 rdf:type owl:Class ;
                                                          )
                                     ] ;
                 
-                obo:IAO_0000112 "A bird observed during a transect walk." ;
-                
                 obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
                 obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en ,
+                                "A bird observed during a transect walk." ,
                                 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ,
                                 "A tree is forest plot that is measured for diameter at breast height (DBH)." ;
                 
