@@ -783,30 +783,24 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:label "observing process"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000015 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:unionOf ( <http://rs.tdwg.org/dwc/terms/HumanObservation>
-                                                                     <http://rs.tdwg.org/dwc/terms/MachineObservation>
-                                                                   )
-                                                     ]
-                                ] ,
+                rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:bco_0000044
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000050 ;
-                                  owl:someValuesFrom obo:bco_0000007
+                                  owl:onProperty obo:RO_0002234 ;
+                                  owl:someValuesFrom obo:IAO_0000027
                                 ] ;
+                
+                obo:IAO_0000116 "We are having conversation with OBI developers about how this term relates to OBI:assay (). Is it equivalent, broader, narrower? What does it mean to be the input to an observation." ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
-                obo:IAO_0000112 "Seeing three pelicans flying overhead on Christmas day." ,
-                                "Observing butterflies during a transect walk." ,
+                obo:IAO_0000112 "Observing and recording the presence or absence of butterflies during a transect walk." ,
+                                "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." ,
                                 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ;
                 
                 rdfs:comment "The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
