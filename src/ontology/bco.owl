@@ -1455,9 +1455,21 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 
 
+###  http://rs.tdwg.org/dwc/terms/FossilSpecimen
+
+<http://rs.tdwg.org/dwc/terms/FossilSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> .
+
+
+
 ###  http://rs.tdwg.org/dwc/terms/HumanObservation
 
 <http://rs.tdwg.org/dwc/terms/HumanObservation> rdfs:subClassOf obo:IAO_0000030 .
+
+
+
+###  http://rs.tdwg.org/dwc/terms/LivingSpecimen
+
+<http://rs.tdwg.org/dwc/terms/LivingSpecimen> rdfs:subClassOf obo:OBI_0100051 .
 
 
 
@@ -1481,6 +1493,12 @@ obo:bco_0000046 rdf:type owl:Class ;
                                                  owl:deprecated "true"^^xsd:boolean ;
                                                  
                                                  obo:IAO_0000231 "This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here."@en .
+
+
+
+###  http://rs.tdwg.org/dwc/terms/PreservedSpecimen
+
+<http://rs.tdwg.org/dwc/terms/PreservedSpecimen> rdfs:subClassOf obo:OBI_0100051 .
 
 
 
