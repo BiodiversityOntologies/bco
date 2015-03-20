@@ -1586,6 +1586,10 @@ obo:BCO_0000073 rdf:type owl:NamedIndividual ;
 #################################################################
 
 
+<http://rs.tdwg.org/dwc/terms/Occurrence> obo:IAO_0000116 "This Darwin Core class should not be used when annotating data with BCO.  It is not mapped to BCO classes because its meaning is too ambiguous." .
+
+
+
 obo:IAO_0000120 rdfs:label "FossilSpecimen" .
 
 
