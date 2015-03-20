@@ -28,7 +28,6 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
                                          owl:imports obo:bfo.owl ,
                                                      <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
                                                      <http://purl.obolibrary.org/obo/ro/core.owl> ,
-                                                     <http://purl.obolibrary.org/obo/ro/subsets/ro-eco.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/dwcterms.owl> ,
                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/obi_bco_imports.owl> .
 
