@@ -1300,6 +1300,8 @@ obo:bco_0000042 rdf:type owl:Class ;
                 
                 rdfs:label "taxonomic identification process"@en ;
                 
+                owl:equivalentClass <http://rs.tdwg.org/dwc/terms/Identification> ;
+                
                 rdfs:subClassOf obo:OBI_0000011 ;
                 
                 obo:IAO_0000112 "Using BLAST to identify the taxa present in an environmental (metagenomic) sample." ,
@@ -1445,36 +1447,57 @@ obo:bco_0000046 rdf:type owl:Class ;
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                        owl:onProperty obo:BFO_0000066 ;
                                                        owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/Location>
-                                                     ] .
+                                                     ] ;
+                                     
+                                     obo:BCO_0000060 "event"@en .
 
 
 
 ###  http://rs.tdwg.org/dwc/terms/FossilSpecimen
 
-<http://rs.tdwg.org/dwc/terms/FossilSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> .
+<http://rs.tdwg.org/dwc/terms/FossilSpecimen> rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
+                                              
+                                              obo:BCO_0000060 "fossil specimen"@en .
 
 
 
 ###  http://rs.tdwg.org/dwc/terms/HumanObservation
 
-<http://rs.tdwg.org/dwc/terms/HumanObservation> rdfs:subClassOf obo:IAO_0000030 .
+<http://rs.tdwg.org/dwc/terms/HumanObservation> rdfs:subClassOf obo:IAO_0000027 ;
+                                                
+                                                obo:BCO_0000060 "human observation"@en .
+
+
+
+###  http://rs.tdwg.org/dwc/terms/Identification
+
+<http://rs.tdwg.org/dwc/terms/Identification> obo:BCO_0000060 "identification"@en ;
+                                              
+                                              obo:IAO_0000114 obo:IAO_0000125 ;
+                                              
+                                              obo:BCO_0000074 obo:bco_0000042 .
 
 
 
 ###  http://rs.tdwg.org/dwc/terms/LivingSpecimen
 
-<http://rs.tdwg.org/dwc/terms/LivingSpecimen> rdfs:subClassOf obo:OBI_0100051 .
+<http://rs.tdwg.org/dwc/terms/LivingSpecimen> rdfs:subClassOf obo:OBI_0100051 ;
+                                              
+                                              obo:BCO_0000060 "living specimen"@en .
 
 
 
 ###  http://rs.tdwg.org/dwc/terms/MachineObservation
 
-<http://rs.tdwg.org/dwc/terms/MachineObservation> rdfs:subClassOf obo:IAO_0000030 .
+<http://rs.tdwg.org/dwc/terms/MachineObservation> rdfs:subClassOf obo:IAO_0000027 ;
+                                                  
+                                                  obo:BCO_0000060 "machine observation"@en .
 
 
 
 ###  http://rs.tdwg.org/dwc/terms/MaterialSample
 
+<http://rs.tdwg.org/dwc/terms/MaterialSample> obo:BCO_0000060 "specimen"@en .
 
 
 
@@ -1492,7 +1515,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/terms/PreservedSpecimen
 
-<http://rs.tdwg.org/dwc/terms/PreservedSpecimen> rdfs:subClassOf obo:OBI_0100051 .
+<http://rs.tdwg.org/dwc/terms/PreservedSpecimen> rdfs:subClassOf obo:OBI_0100051 ;
+                                                 
+                                                 obo:BCO_0000060 "preserved specimen"@en .
 
 
 
@@ -1586,7 +1611,9 @@ obo:BCO_0000073 rdf:type owl:NamedIndividual ;
 #################################################################
 
 
-<http://rs.tdwg.org/dwc/terms/Occurrence> obo:IAO_0000116 "This Darwin Core class should not be used when annotating data with BCO.  It is not mapped to BCO classes because its meaning is too ambiguous." .
+<http://rs.tdwg.org/dwc/terms/Occurrence> obo:IAO_0000116 "This Darwin Core class should not be used when annotating data with BCO.  It is not mapped to BCO classes because its meaning is too ambiguous." ;
+                                          
+                                          obo:BCO_0000060 "occurrence" .
 
 
 
@@ -1598,7 +1625,17 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 
-<http://rs.tdwg.org/dwc/terms/GeologicalContext> obo:IAO_0000114 obo:IAO_0000124 .
+<http://rs.tdwg.org/dwc/terms/GeologicalContext> obo:BCO_0000060 "geological context"@en ;
+                                                 
+                                                 obo:IAO_0000114 obo:IAO_0000124 .
+
+
+
+<http://rs.tdwg.org/dwc/terms/Taxon> obo:BCO_0000060 "taxon"@en .
+
+
+
+<http://rs.tdwg.org/dwc/terms/Organism> obo:BCO_0000060 "organism"@en .
 
 
 
@@ -1607,12 +1644,6 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 
 <http://rs.tdwg.org/dwc/dwctype/Occurrence> obo:IAO_0000114 obo:IAO_0000123 .
-
-
-
-<http://rs.tdwg.org/dwc/terms/Identification> obo:IAO_0000114 obo:IAO_0000125 ;
-                                              
-                                              obo:BCO_0000074 obo:bco_0000042 .
 
 
 
