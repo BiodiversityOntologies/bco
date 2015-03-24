@@ -2099,6 +2099,42 @@ pro parte</dwcattributes:abcdEquivalence>
     
 
 
+    <!-- http://rs.tdwg.org/dwc/terms/organismQuantity -->
+
+    <owl:DatatypeProperty rdf:about="&terms;organismQuantity">
+        <rdfs:label xml:lang="en-us">Organism Quantity</rdfs:label>
+        <dwcattributes:status>recommended</dwcattributes:status>
+        <dcterms:issued>2014-11-07</dcterms:issued>
+        <dcterms:modified>2015-03-19</dcterms:modified>
+        <rdfs:comment xml:lang="en-us">A number or enumeration value for the quantity of organisms.</rdfs:comment>
+        <dcterms:description xml:lang="en-us">An organismQuantity must have a corresponding organismQuantityType, e.g., "27" for organismQuantity with "individuals" for organismQuantityType; "12.5" for organismQuantity with "%biomass" for organismQuantityType; "r" for organismQuantity with "BraunBlanquetScale" for organismQuantityType.</dcterms:description>
+        <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <dwcattributes:organizedInClass rdf:resource="&terms;Occurrence"/>
+        <dcterms:hasVersion rdf:resource="&terms;history/#organismQuantity-2014-12-23"/>
+        <dwcattributes:decision rdf:resource="&terms;history/decisions/Decision-2015-03-19_18"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/organismQuantityType -->
+
+    <owl:DatatypeProperty rdf:about="&terms;organismQuantityType">
+        <rdfs:label xml:lang="en-us">Organism Quantity Type</rdfs:label>
+        <dwcattributes:status>recommended</dwcattributes:status>
+        <dcterms:issued>2014-11-07</dcterms:issued>
+        <dcterms:modified>2015-03-19</dcterms:modified>
+        <rdfs:comment xml:lang="en-us">The type of quantification system used for the quantity of organisms.</rdfs:comment>
+        <dcterms:description xml:lang="en-us">An organismQuantityType must have a corresponding organismQuantity, e.g., "27" for organismQuantity with "individuals" for organismQuantityType; "12.5" for organismQuantity with "%biomass" for organismQuantityType; "r" for organismQuantity with "BraunBlanquetScale" for organismQuantityType.</dcterms:description>
+        <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <dwcattributes:organizedInClass rdf:resource="&terms;Occurrence"/>
+        <dcterms:hasVersion rdf:resource="&terms;history/#organismQuantityType-2014-12-23"/>
+        <dwcattributes:decision rdf:resource="&terms;history/decisions/Decision-2015-03-19_18"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/organismRemarks -->
 
     <owl:DatatypeProperty rdf:about="&terms;organismRemarks">
@@ -2397,6 +2433,42 @@ pro parte</dwcattributes:abcdEquivalence>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <dwcattributes:organizedInClass rdf:resource="&terms;Occurrence"/>
         <dcterms:hasVersion rdf:resource="&terms;history/#reproductiveCondition-2009-04-24"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/sampleSizeValue -->
+
+    <owl:DatatypeProperty rdf:about="&terms;sampleSizeValue">
+        <rdfs:label xml:lang="en-us">Sample Size Value</rdfs:label>
+        <dwcattributes:status>recommended</dwcattributes:status>
+        <dcterms:issued>2014-11-07</dcterms:issued>
+        <dcterms:modified>2015-03-19</dcterms:modified>
+        <rdfs:comment xml:lang="en-us">A numeric value for a measurement of the size (time duration, length, area, or volume) of a sample in a sampling event.</rdfs:comment>
+        <dcterms:description xml:lang="en-us">A sampleSizeValue must have a corresponding sampleSizeUnit. Example: "5" for sampleSizeValue with "metre" for sampleSizeUnit.</dcterms:description>
+        <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <dwcattributes:organizedInClass rdf:resource="&terms;Event"/>
+        <dcterms:hasVersion rdf:resource="&terms;history/#sampleSizeValue-2014-12-23"/>
+        <dwcattributes:decision rdf:resource="&terms;history/decisions/Decision-2015-03-19_18"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/sampleSizeUnit -->
+
+    <owl:DatatypeProperty rdf:about="&terms;sampleSizeUnit">
+        <rdfs:label xml:lang="en-us">Sample Size Unit</rdfs:label>
+        <dwcattributes:status>recommended</dwcattributes:status>
+        <dcterms:issued>2014-11-07</dcterms:issued>
+        <dcterms:modified>2015-03-19</dcterms:modified>
+        <rdfs:comment xml:lang="en-us">The unit of measurement of the size (time duration, length, area, or volume) of a sample in a sampling event.</rdfs:comment>
+        <dcterms:description xml:lang="en-us">A sampleSizeUnit must have a corresponding sampleSizeValue, e.g., "5" for sampleSizeValue with "metre" for sampleSizeUnit. Examples: "minute", "hour", "day", "metre", "square metre", "cubic metre". Recommended best practice is to use a controlled vocabulary such as the Ontology of Units of Measure http://www.wurvoc.org/vocabularies/om-1.8/ of SI units, derived units, or other non-SI units accepted for use within the SI (e.g., minute, hour, day, litre).</dcterms:description>
+        <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <dwcattributes:organizedInClass rdf:resource="&terms;Event"/>
+        <dcterms:hasVersion rdf:resource="&terms;history/#sampleSizeUnit-2014-12-23"/>
+        <dwcattributes:decision rdf:resource="&terms;history/decisions/Decision-2015-03-19_18"/>
     </owl:DatatypeProperty>
     
 
