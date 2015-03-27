@@ -19,7 +19,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="&obo;bco/releases/2013-10-01/iao_bco_imports.owl">
+    <owl:Ontology rdf:about="&obo;bco/iao_bco_imports.owl">
         <owl:versionIRI rdf:resource="&obo;bco/releases/2013-10-01/iao_bco_imports.owl"/>
     </owl:Ontology>
     
