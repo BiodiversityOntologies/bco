@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1401129287336" name="http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl" uri="iao_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1401129287336" name="http://bco.googlecode.com/git/src/ontology/obi_bco_imports.owl" uri="obi_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1401129287336" name="http://purl.obolibrary.org/obo/bco.owl" uri="bco.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1401129287336" name="http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="bco-non-classified.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1401129287336" name="http://purl.obolibrary.org/obo/iao/dev/ontology-meta.owl" uri="ontology_metadata_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1401129287336" name="http://purl.obolibrary.org/obo/ro.owl" uri="ro_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427492101447" name="http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl" uri="iao_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427492101447" name="http://bco.googlecode.com/git/src/ontology/obi_bco_imports.owl" uri="obi_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427492101447" name="http://purl.obolibrary.org/obo/bco.owl" uri="bco.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427492101447" name="http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="bco-non-classified.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427492101447" name="http://purl.obolibrary.org/obo/iao/dev/ontology-meta.owl" uri="ontology_metadata_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427492101447" name="http://purl.obolibrary.org/obo/ro.owl" uri="ro_bco_imports.owl"/>
     </group>
 </catalog>
