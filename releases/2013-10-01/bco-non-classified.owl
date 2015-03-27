@@ -32,10 +32,10 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
         <dc:creator>Barry Smith</dc:creator>
         <dc:creator>Biocode Commons Ontology Hackathon members</dc:creator>
         <dc:creator>Ramona Walls</dc:creator>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl"/>
         <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/obi_bco_imports.owl"/>
         <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/ontology_metadata_bco_imports.owl"/>
         <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/ro_bco_imports.owl"/>
+        <owl:imports rdf:resource="&obo;bco/iao_bco_imports.owl"/>
         <owl:versionIRI rdf:resource="&obo;bco/releases/2013-10-01/bco-non-classified.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
@@ -57,6 +57,17 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
 
     <owl:AnnotationProperty rdf:about="&obo;BCO_0000057">
         <rdfs:label xml:lang="en">taxonomic inventory metadata preferred name</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BCO_0000058 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;BCO_0000058">
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+        <obo:IAO_0000115>The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of.</obo:IAO_0000115>
+        <rdfs:comment>This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, the BFO relation was replaced by has role at some time, which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace this relation.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
     </owl:AnnotationProperty>
     
 
@@ -294,7 +305,6 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
         <obo:IAO_0000115>The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of.</obo:IAO_0000115>
         <rdfs:comment>This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, the BFO relation was replaced by has role at some time, which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace this relation.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0000053"/>
-        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
         <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
     </owl:ObjectProperty>
     
@@ -435,12 +445,12 @@ time: atemporal</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">unfolds_in</obo:IAO_0000118>
         <owl:inverseOf rdf:resource="&obo;BFO_0000067"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000066"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000066"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
             <rdf:Description rdf:about="&obo;BFO_0000066"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -798,16 +808,16 @@ range: material entity
         <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0002323"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000051"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="&obo;BFO_0000051"/>
             <rdf:Description rdf:about="&obo;RO_0002131"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000051"/>
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -1488,8 +1498,20 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000036"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000016"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1502,18 +1524,6 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:allValuesFrom rdf:resource="&obo;bco_0000036"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;bco_0000036"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;bco_0000016"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A planned process that includes selecting a material entity for study, physically extracting the material entity, and submitting the material entity to some institution for preservation or study.</obo:IAO_0000115>
@@ -1559,13 +1569,13 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
@@ -1897,6 +1907,30 @@ Needs a better name. Current name is the definition.</rdfs:comment>
         <rdfs:label rdf:datatype="&xsd;string">Obsolete Class</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Object -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Object"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Role -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
     
 
 
