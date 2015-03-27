@@ -628,7 +628,7 @@ obo:CARO_0001010 rdf:type owl:Class ;
                  
                  rdfs:label "organism or virus or viroid"^^xsd:string ;
                  
-                 rdfs:subClassOf obo:BFO_0000030 ;
+                 rdfs:subClassOf obo:BFO_0000040 ;
                  
                  obo:IAO_creation_date "9/18/11"^^xsd:string ;
                  
@@ -785,12 +785,12 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:bco_0000044
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002234 ;
                                   owl:someValuesFrom obo:IAO_0000027
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002233 ;
+                                  owl:someValuesFrom obo:bco_0000044
                                 ] ;
                 
                 obo:IAO_0000116 "We are having conversation with OBI developers about how this term relates to OBI:assay (). Is it equivalent, broader, narrower? What does it mean to be the input to an observation." ;
