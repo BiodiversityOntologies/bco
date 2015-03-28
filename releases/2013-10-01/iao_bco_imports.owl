@@ -11,8 +11,8 @@
 ]>
 
 
-<rdf:RDF xmlns="&obo;bco/iao_bco_imports.owl#"
-     xml:base="&obo;bco/iao_bco_imports.owl"
+<rdf:RDF xmlns="http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl#"
+     xml:base="http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
