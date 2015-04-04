@@ -61,6 +61,17 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BCO_0000058 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;BCO_0000058">
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+        <obo:IAO_0000115>The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of.</obo:IAO_0000115>
+        <rdfs:comment>This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, the BFO relation was replaced by has role at some time, which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace this relation.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BCO_0000060 -->
 
     <owl:AnnotationProperty rdf:about="&obo;BCO_0000060">
@@ -294,7 +305,6 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
         <obo:IAO_0000115>The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of.</obo:IAO_0000115>
         <rdfs:comment>This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, the BFO relation was replaced by has role at some time, which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace this relation.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0000053"/>
-        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
         <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
     </owl:ObjectProperty>
     
@@ -383,23 +393,23 @@ time: atemporal</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="&obo;BFO_0000062">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label xml:lang="en">preceded by</rdfs:label>
-        <obo:IAO_0000116 xml:lang="en">An example is: translation preceded_by transcription; aging preceded_by development (not however death preceded_by aging). Where derives_from links classes of continuants, preceded_by links classes of processes. Clearly, however, these two relations are not independent of each other. Thus if cells of type C1 derive_from cells of type C, then any cell division involving an instance of C1 in a given lineage is preceded_by cellular processes involving an instance of C.    The assertion P preceded_by P1 tells us something about Ps in general: that is, it tells us something about what happened earlier, given what we know about what happened later. Thus it does not provide information pointing in the opposite direction, concerning instances of P1 in general; that is, that each is such as to be succeeded by some instance of P. Note that an assertion to the effect that P preceded_by P1 is rather weak; it tells us little about the relations between the underlying instances in virtue of which the preceded_by relation obtains. Typically we will be interested in stronger relations, for example in the relation immediately_preceded_by, or in relations which combine preceded_by with a condition to the effect that the corresponding instances of P and P1 share participants, or that their participants are connected by relations of derivation, or (as a first step along the road to a treatment of causality) that the one process in some way affects (for example, initiates or regulates) the other.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Intended meaning:
 domain: occurrent
 range: occurrent
 time: atemporal</obo:IAO_0000116>
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:preceded_by</dc:source>
+        <obo:IAO_0000116 xml:lang="en">An example is: translation preceded_by transcription; aging preceded_by development (not however death preceded_by aging). Where derives_from links classes of continuants, preceded_by links classes of processes. Clearly, however, these two relations are not independent of each other. Thus if cells of type C1 derive_from cells of type C, then any cell division involving an instance of C1 in a given lineage is preceded_by cellular processes involving an instance of C.    The assertion P preceded_by P1 tells us something about Ps in general: that is, it tells us something about what happened earlier, given what we know about what happened later. Thus it does not provide information pointing in the opposite direction, concerning instances of P1 in general; that is, that each is such as to be succeeded by some instance of P. Note that an assertion to the effect that P preceded_by P1 is rather weak; it tells us little about the relations between the underlying instances in virtue of which the preceded_by relation obtains. Typically we will be interested in stronger relations, for example in the relation immediately_preceded_by, or in relations which combine preceded_by with a condition to the effect that the corresponding instances of P and P1 share participants, or that their participants are connected by relations of derivation, or (as a first step along the road to a treatment of causality) that the one process in some way affects (for example, initiates or regulates) the other.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">is preceded by</obo:IAO_0000118>
         <obo:IAO_0000111 xml:lang="en">preceded by</obo:IAO_0000111>
         <obo:IAO_0000118 xml:lang="en">preceded_by</obo:IAO_0000118>
         <owl:inverseOf rdf:resource="&obo;BFO_0000063"/>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0002086"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;RO_0002092"/>
+            <rdf:Description rdf:about="&obo;RO_0002091"/>
             <rdf:Description rdf:about="&obo;BFO_0000062"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;RO_0002091"/>
+            <rdf:Description rdf:about="&obo;RO_0002092"/>
             <rdf:Description rdf:about="&obo;BFO_0000062"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
@@ -435,12 +445,12 @@ time: atemporal</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">unfolds_in</obo:IAO_0000118>
         <owl:inverseOf rdf:resource="&obo;BFO_0000067"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000066"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000066"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
             <rdf:Description rdf:about="&obo;BFO_0000066"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -798,7 +808,7 @@ range: material entity
         <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0002323"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000051"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -806,7 +816,7 @@ range: material entity
             <rdf:Description rdf:about="&obo;RO_0002131"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000051"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
@@ -1489,13 +1499,13 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000021"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;bco_0000021"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1559,13 +1569,13 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
+                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
