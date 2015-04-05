@@ -25,13 +25,10 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
                                                         "Ramona Walls" ,
                                                         "John Deck" ;
                                          
-                                         owl:imports <http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl> ,
-                                                     <http://purl.obolibrary.org/obo/bco/dwcterms.owl> ,
-                                                     <http://purl.obolibrary.org/obo/bco/obi_bco_imports.owl> ;
-                                         
-                                         owl:versionIRI <http://purl.obolibrary.org/obo/bco/src/ontology/bco.owl> ;
-                                         
-                                         owl:imports <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
+                                         owl:imports <http://purl.obolibrary.org/obo/bco/dwcterms.owl> ,
+                                                     <http://purl.obolibrary.org/obo/bco/obi_bco_imports.owl> ,
+                                                     <http://purl.obolibrary.org/obo/bco/src/ontology/bfo_bco_imports.owl> ,
+                                                     <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
                                                      <http://purl.obolibrary.org/obo/ro/core.owl> .
 
 
