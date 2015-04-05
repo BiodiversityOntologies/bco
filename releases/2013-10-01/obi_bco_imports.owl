@@ -12,8 +12,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://bco.googlecode.com/git/src/ontology/obi_bco_imports.owl#"
-     xml:base="http://bco.googlecode.com/git/src/ontology/obi_bco_imports.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/bco/obi_bco_imports.owl#"
+     xml:base="http://purl.obolibrary.org/obo/bco/obi_bco_imports.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
