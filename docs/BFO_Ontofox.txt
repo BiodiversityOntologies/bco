@@ -1,5 +1,5 @@
 [URI of the OWL(RDF/XML) output file]
-http://bco.googlecode.com/git/src/ontology/bfo_bco_imports.owl
+http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl
 
 [Source ontology]
 BFO
@@ -17,10 +17,10 @@ subClassOf http://purl.obolibrary.org/obo/BFO_0000004 #independent continuant
 
 
 [Source term retrieval setting]
-includeNoIntermediates
+includeComputedIntermediates
 
 [Source annotation URIs]
-includeAllAxioms
+includeAllAnnotationProperties
 
 [Source annotation URIs to be excluded]
 http://purl.obolibrary.org/obo/BFO_0000179 #BFO OWL specification label
