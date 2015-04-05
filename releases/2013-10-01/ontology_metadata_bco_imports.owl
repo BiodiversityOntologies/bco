@@ -2,19 +2,19 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
-    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
     <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
-    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
     <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
+    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
-    <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
@@ -24,24 +24,24 @@
 
 <rdf:RDF xmlns="&obo;iao/dev/ontology-meta.owl#"
      xml:base="&obo;iao/dev/ontology-meta.owl"
-     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
-     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
-     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
-     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
-    <owl:Ontology rdf:about="http://bco.googlecode.com/git/releases/2013-10-01/ontology_metadata_bco_imports.owl">
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
+     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#">
+    <owl:Ontology rdf:about="&obo;bco/ontology_metadata_bco_imports.owl">
         <protege:defaultLanguage rdf:datatype="&xsd;string">en</protege:defaultLanguage>
         <owl:versionIRI rdf:resource="&obo;bco/releases/2013-10-01/ontology_metadata_bco_imports.owl"/>
     </owl:Ontology>
@@ -305,8 +305,8 @@ Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.
 
     <owl:AnnotationProperty rdf:about="&obo;IAO_0100001">
         <rdfs:label xml:lang="en">term replaced by</rdfs:label>
-        <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
         <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">Use on obsolete terms, relating the term to another term that can be used as a substitute</obo:IAO_0000115>
         <obo:IAO_0000111 xml:lang="en">term replaced by</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -347,15 +347,15 @@ Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000124"/>
-                    <rdf:Description rdf:about="&obo;IAO_0000423"/>
-                    <rdf:Description rdf:about="&obo;IAO_0000125"/>
                     <rdf:Description rdf:about="&obo;IAO_0000122"/>
                     <rdf:Description rdf:about="&obo;IAO_0000123"/>
-                    <rdf:Description rdf:about="&obo;IAO_0000428"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000002"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000124"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000125"/>
                     <rdf:Description rdf:about="&obo;IAO_0000120"/>
                     <rdf:Description rdf:about="&obo;IAO_0000121"/>
-                    <rdf:Description rdf:about="&obo;IAO_0000002"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000428"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000423"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -389,12 +389,12 @@ Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000103"/>
                     <rdf:Description rdf:about="&obo;IAO_0000230"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000229"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000226"/>
                     <rdf:Description rdf:about="&obo;IAO_0000227"/>
                     <rdf:Description rdf:about="&obo;IAO_0000228"/>
-                    <rdf:Description rdf:about="&obo;IAO_0000226"/>
-                    <rdf:Description rdf:about="&obo;IAO_0000103"/>
-                    <rdf:Description rdf:about="&obo;IAO_0000229"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -416,8 +416,8 @@ Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000410"/>
                     <rdf:Description rdf:about="&obo;IAO_0000420"/>
+                    <rdf:Description rdf:about="&obo;IAO_0000410"/>
                     <rdf:Description rdf:about="&obo;IAO_0000421"/>
                 </owl:oneOf>
             </owl:Class>
@@ -715,12 +715,6 @@ Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;IAO_0000224"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&obo;IAO_0000226"/>
             <rdf:Description rdf:about="&obo;IAO_0000227"/>
             <rdf:Description rdf:about="&obo;IAO_0000228"/>
@@ -728,9 +722,15 @@ Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.
             <rdf:Description rdf:about="&obo;IAO_0000230"/>
         </owl:distinctMembers>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;IAO_0000224"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
 
