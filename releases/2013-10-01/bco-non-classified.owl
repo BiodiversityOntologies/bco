@@ -32,11 +32,11 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
         <dc:creator>Ramona Walls</dc:creator>
         <dc:creator>Biocode Commons Ontology Hackathon members</dc:creator>
         <dc:creator>John Wieczorek</dc:creator>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/obi_bco_imports.owl"/>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/ontology_metadata_bco_imports.owl"/>
-        <owl:imports rdf:resource="http://bco.googlecode.com/git/src/ontology/ro_bco_imports.owl"/>
         <owl:versionIRI rdf:resource="&obo;bco/releases/2013-10-01/bco-non-classified.owl"/>
         <owl:imports rdf:resource="&obo;bco/releases/2013-10-01/iao_bco_imports.owl"/>
+        <owl:imports rdf:resource="&obo;bco/releases/2013-10-01/obi_bco_imports.owl"/>
+        <owl:imports rdf:resource="&obo;bco/releases/2013-10-01/ontology_metadata_bco_imports.owl"/>
+        <owl:imports rdf:resource="&obo;bco/releases/2013-10-01/ro_bco_imports.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
     
@@ -445,12 +445,12 @@ time: atemporal</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">unfolds_in</obo:IAO_0000118>
         <owl:inverseOf rdf:resource="&obo;BFO_0000067"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000066"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000066"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
             <rdf:Description rdf:about="&obo;BFO_0000066"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -808,16 +808,16 @@ range: material entity
         <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
         <rdfs:subPropertyOf rdf:resource="&obo;RO_0002323"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="&obo;BFO_0000051"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="&obo;BFO_0000051"/>
             <rdf:Description rdf:about="&obo;RO_0002131"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -1498,6 +1498,18 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:allValuesFrom rdf:resource="&obo;bco_0000036"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;bco_0000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="&obo;bco_0000007"/>
             </owl:Restriction>
@@ -1512,18 +1524,6 @@ Deprecated because we do not need this term. Can use OBI:evidence role. Not clea
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="&obo;bco_0000016"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;bco_0000021"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:allValuesFrom rdf:resource="&obo;bco_0000036"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:creator>Biocode Commons Ontology Hackathon</dc:creator>
