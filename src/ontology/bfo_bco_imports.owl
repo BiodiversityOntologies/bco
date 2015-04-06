@@ -5,9 +5,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> .
+@base <http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl> .
 
-<https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> rdf:type owl:Ontology .
+<http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl> rdf:type owl:Ontology .
 
 
 #################################################################
