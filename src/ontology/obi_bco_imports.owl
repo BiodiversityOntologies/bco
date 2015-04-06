@@ -8,91 +8,92 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
-@base <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/obi_bco_imports.owl> .
+@base <http://purl.obolibrary.org/obo/bco/obi_bco_imports.owl> .
 
-<https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/obi_bco_imports.owl> rdf:type owl:Ontology ;
-                                                                                         
-                                                                                         dc:date "2009-07-31"^^xsd:date ;
-                                                                                         
-                                                                                         owl:versionInfo "2014-12-03"^^xsd:string ;
-                                                                                         
-                                                                                         rdfs:comment "Please cite the OBI consortium http://purl.obolibrary.org/obo/obi where traditional citation is called for. However it is adequate that individual terms be attributed simply by use of the identifying PURL for the term, in projects that refer to them."^^xsd:string ;
-                                                                                         
-                                                                                         protege:defaultLanguage "en"^^xsd:string ;
-                                                                                         
-                                                                                         dc:contributor "Advisors for this project come from the IFOMIS group, Saarbruecken and from the Co-ODE group in Manchester"@en ;
-                                                                                         
-                                                                                         obo:IAO_0000116 "This file was generated on March 9, 2015 from http://purl.obolibrary.org/obo/obi/2014-12-03/obi.owl using ontofox with the import file OBI-ontofox.txt " ;
-                                                                                         
-                                                                                         dc:creator "Alan Ruttenberg"@en ,
-                                                                                                    "Allyson Lister"@en ;
-                                                                                         
-                                                                                         dc:subject "An ontology for the annotation of biomedical and functional genomics experiments."@en ;
-                                                                                         
-                                                                                         dc:creator "Barry Smith"@en ,
-                                                                                                    "Bill Bug"@en ,
-                                                                                                    "Bjoern Peters"@en ,
-                                                                                                    "Carlo Torniai"@en ,
-                                                                                                    "Chris Mungall"@en ,
-                                                                                                    "Chris Stoeckert"@en ,
-                                                                                                    "Chris Taylor"@en ,
-                                                                                                    "Christian Bolling"@en ,
-                                                                                                    "Cristian Cocos"@en ,
-                                                                                                    "Daniel Rubin"@en ,
-                                                                                                    "Daniel Schober"@en ,
-                                                                                                    "Dawn Field"@en ,
-                                                                                                    "Dirk Derom"@en ,
-                                                                                                    "Elisabetta Manduchi"@en ,
-                                                                                                    "Eric Deutsch"@en ,
-                                                                                                    "Frank Gibson"@en ,
-                                                                                                    "Gilberto Fragoso"@en ,
-                                                                                                    "Helen C. Causton"@en ,
-                                                                                                    "Helen Parkinson"@en ,
-                                                                                                    "Holger Stenzhorn"@en ,
-                                                                                                    "James A. Overton"@en ,
-                                                                                                    "James Malone"@en ,
-                                                                                                    "Jay Greenbaum"@en ,
-                                                                                                    "Jeffrey Grethe"@en ,
-                                                                                                    "Jennifer Fostel"@en ,
-                                                                                                    "Jessica Turner"@en ,
-                                                                                                    "Jie Zheng"@en ,
-                                                                                                    "Joe White"@en ,
-                                                                                                    "John Westbrook"@en ,
-                                                                                                    "Kevin Clancy"@en ,
-                                                                                                    "Larisa Soldatova"@en ,
-                                                                                                    "Lawrence Hunter"@en ,
-                                                                                                    "Liju Fan"@en ,
-                                                                                                    "Luisa Montecchi"@en ,
-                                                                                                    "Matthew Brush"@en ,
-                                                                                                    "Matthew Pocock"@en ,
-                                                                                                    "Melanie Courtot"@en ,
-                                                                                                    "Melissa Haendel"@en ,
-                                                                                                    "Mervi Heiskanen"@en ,
-                                                                                                    "Monnie McGee"@en ,
-                                                                                                    "Norman Morrison"@en ;
-                                                                                         
-                                                                                         dc:format "OWL-DL"@en ;
-                                                                                         
-                                                                                         dc:title "Ontology for Biomedical Investigation"@en ;
-                                                                                         
-                                                                                         dc:creator "Philip Lord"@en ,
-                                                                                                    "Philippe Rocca-Serra"@en ,
-                                                                                                    "Pierre Grenon"@en ,
-                                                                                                    "Richard Bruskiewich"@en ,
-                                                                                                    "Richard Scheuermann"@en ,
-                                                                                                    "Robert Stevens"@en ,
-                                                                                                    "Ryan R. Brinkman"@en ,
-                                                                                                    "Stefan Wiemann"@en ,
-                                                                                                    "Susanna-Assunta Sansone"@en ,
-                                                                                                    "Tanya Gray"@en ;
-                                                                                         
-                                                                                         dc:description "The Ontology for Biomedical Investigations (OBI) is build in a collaborative, international effort and will serve as a resource for annotating biomedical investigations, including the study design, protocols and instrumentation used, the data generated and the types of analysis performed on the data. This ontology arose from the Functional Genomics Investigation Ontology (FuGO) and will contain both terms that are common to all biomedical investigations, including functional genomics investigations and those that are more domain specific."@en ;
-                                                                                         
-                                                                                         dc:creator "Tina Hernandez-Boussard"@en ,
-                                                                                                    "Trish Whetzel"@en ,
-                                                                                                    "Yongqun He"@en ;
-                                                                                         
-                                                                                         dc:license <http://creativecommons.org/licenses/by/3.0/> .
+<http://purl.obolibrary.org/obo/bco/obi_bco_imports.owl> rdf:type owl:Ontology ;
+                                                         
+                                                         dc:date "2009-07-31"^^xsd:date ;
+                                                         
+                                                         owl:versionInfo "2014-12-03"^^xsd:string ;
+                                                         
+                                                         rdfs:comment "Please cite the OBI consortium http://purl.obolibrary.org/obo/obi where traditional citation is called for. However it is adequate that individual terms be attributed simply by use of the identifying PURL for the term, in projects that refer to them."^^xsd:string ;
+                                                         
+                                                         protege:defaultLanguage "en"^^xsd:string ;
+                                                         
+                                                         dc:contributor "Advisors for this project come from the IFOMIS group, Saarbruecken and from the Co-ODE group in Manchester"@en ;
+                                                         
+                                                         dc:creator "Alan Ruttenberg"@en ;
+                                                         
+                                                         obo:IAO_0000116 "This file was generated on March 9, 2015 from http://purl.obolibrary.org/obo/obi/2014-12-03/obi.owl using ontofox with the import file OBI-ontofox.txt " ;
+                                                         
+                                                         dc:creator "Allyson Lister"@en ;
+                                                         
+                                                         dc:subject "An ontology for the annotation of biomedical and functional genomics experiments."@en ;
+                                                         
+                                                         dc:creator "Barry Smith"@en ,
+                                                                    "Bill Bug"@en ,
+                                                                    "Bjoern Peters"@en ,
+                                                                    "Carlo Torniai"@en ,
+                                                                    "Chris Mungall"@en ,
+                                                                    "Chris Stoeckert"@en ,
+                                                                    "Chris Taylor"@en ,
+                                                                    "Christian Bolling"@en ,
+                                                                    "Cristian Cocos"@en ,
+                                                                    "Daniel Rubin"@en ,
+                                                                    "Daniel Schober"@en ,
+                                                                    "Dawn Field"@en ,
+                                                                    "Dirk Derom"@en ,
+                                                                    "Elisabetta Manduchi"@en ,
+                                                                    "Eric Deutsch"@en ,
+                                                                    "Frank Gibson"@en ,
+                                                                    "Gilberto Fragoso"@en ,
+                                                                    "Helen C. Causton"@en ,
+                                                                    "Helen Parkinson"@en ,
+                                                                    "Holger Stenzhorn"@en ,
+                                                                    "James A. Overton"@en ,
+                                                                    "James Malone"@en ,
+                                                                    "Jay Greenbaum"@en ,
+                                                                    "Jeffrey Grethe"@en ,
+                                                                    "Jennifer Fostel"@en ,
+                                                                    "Jessica Turner"@en ,
+                                                                    "Jie Zheng"@en ,
+                                                                    "Joe White"@en ,
+                                                                    "John Westbrook"@en ,
+                                                                    "Kevin Clancy"@en ,
+                                                                    "Larisa Soldatova"@en ,
+                                                                    "Lawrence Hunter"@en ,
+                                                                    "Liju Fan"@en ,
+                                                                    "Luisa Montecchi"@en ,
+                                                                    "Matthew Brush"@en ,
+                                                                    "Matthew Pocock"@en ,
+                                                                    "Melanie Courtot"@en ,
+                                                                    "Melissa Haendel"@en ,
+                                                                    "Mervi Heiskanen"@en ,
+                                                                    "Monnie McGee"@en ,
+                                                                    "Norman Morrison"@en ;
+                                                         
+                                                         dc:format "OWL-DL"@en ;
+                                                         
+                                                         dc:title "Ontology for Biomedical Investigation"@en ;
+                                                         
+                                                         dc:creator "Philip Lord"@en ,
+                                                                    "Philippe Rocca-Serra"@en ,
+                                                                    "Pierre Grenon"@en ,
+                                                                    "Richard Bruskiewich"@en ,
+                                                                    "Richard Scheuermann"@en ,
+                                                                    "Robert Stevens"@en ,
+                                                                    "Ryan R. Brinkman"@en ,
+                                                                    "Stefan Wiemann"@en ,
+                                                                    "Susanna-Assunta Sansone"@en ,
+                                                                    "Tanya Gray"@en ;
+                                                         
+                                                         dc:description "The Ontology for Biomedical Investigations (OBI) is build in a collaborative, international effort and will serve as a resource for annotating biomedical investigations, including the study design, protocols and instrumentation used, the data generated and the types of analysis performed on the data. This ontology arose from the Functional Genomics Investigation Ontology (FuGO) and will contain both terms that are common to all biomedical investigations, including functional genomics investigations and those that are more domain specific."@en ;
+                                                         
+                                                         dc:creator "Tina Hernandez-Boussard"@en ,
+                                                                    "Trish Whetzel"@en ,
+                                                                    "Yongqun He"@en ;
+                                                         
+                                                         dc:license <http://creativecommons.org/licenses/by/3.0/> .
 
 
 #################################################################
@@ -1302,11 +1303,11 @@ obo:IAO_0000104 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000033 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:IAO_0000007
+                                  owl:someValuesFrom obo:IAO_0000005
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:IAO_0000005
+                                  owl:someValuesFrom obo:IAO_0000007
                                 ] ;
                 
                 obo:IAO_0000116 "2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was \" a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan\". It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term."@en ;
@@ -1338,12 +1339,12 @@ obo:IAO_0000109 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:IAO_0000027 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:OBI_0001938 ;
-                                  owl:someValuesFrom obo:OBI_0001933
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000312 ;
                                   owl:someValuesFrom obo:OBI_0000070
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0001938 ;
+                                  owl:someValuesFrom obo:OBI_0001933
                                 ] ;
                 
                 obo:IAO_0000118 "measurement datum" ;
@@ -1473,12 +1474,12 @@ obo:OBI_0000067 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BFO_0000023 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000054 ;
-                                  owl:allValuesFrom obo:OBI_0000070
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000052 ;
                                   owl:someValuesFrom obo:BFO_0000040
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000054 ;
+                                  owl:allValuesFrom obo:OBI_0000070
                                 ] ;
                 
                 obo:IAO_0000232 "Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term."^^xsd:string ;
@@ -1621,12 +1622,12 @@ obo:OBI_0000185 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000070 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:OBI_0000417 ;
-                                  owl:someValuesFrom obo:OBI_0000441
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000299 ;
                                   owl:someValuesFrom obo:IAO_0000101
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000417 ;
+                                  owl:someValuesFrom obo:OBI_0000441
                                 ] ;
                 
                 obo:IAO_0000115 "An imaging assay is an assay to produce a picture of an entity. definition_source: OBI."@en ;
