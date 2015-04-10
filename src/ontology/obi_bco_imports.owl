@@ -22,11 +22,8 @@
                                                          
                                                          dc:contributor "Advisors for this project come from the IFOMIS group, Saarbruecken and from the Co-ODE group in Manchester"@en ;
                                                          
-                                                         dc:creator "Alan Ruttenberg"@en ;
-                                                         
-                                                         obo:IAO_0000116 "This file was generated on March 9, 2015 from http://purl.obolibrary.org/obo/obi/2014-12-03/obi.owl using ontofox with the import file OBI-ontofox.txt " ;
-                                                         
-                                                         dc:creator "Allyson Lister"@en ;
+                                                         dc:creator "Alan Ruttenberg"@en ,
+                                                                    "Allyson Lister"@en ;
                                                          
                                                          dc:subject "An ontology for the annotation of biomedical and functional genomics experiments."@en ;
                                                          
@@ -80,8 +77,11 @@
                                                                     "Philippe Rocca-Serra"@en ,
                                                                     "Pierre Grenon"@en ,
                                                                     "Richard Bruskiewich"@en ,
-                                                                    "Richard Scheuermann"@en ,
-                                                                    "Robert Stevens"@en ,
+                                                                    "Richard Scheuermann"@en ;
+                                                         
+                                                         obo:IAO_0000116 "This file was generated on March 9, 2015 from http://purl.obolibrary.org/obo/obi/2014-12-03/obi.owl using ontofox with the import file OBI-ontofox.txt " ;
+                                                         
+                                                         dc:creator "Robert Stevens"@en ,
                                                                     "Ryan R. Brinkman"@en ,
                                                                     "Stefan Wiemann"@en ,
                                                                     "Susanna-Assunta Sansone"@en ,
@@ -172,11 +172,11 @@ obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
                            "definition" ,
                            "definition"@en ;
                 
-                obo:IAO_0000111 "definition" ;
-                
                 obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
                 
                 obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                
+                obo:IAO_0000111 "definition" ;
                 
                 obo:IAO_0000115 "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ,
                                 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
@@ -301,15 +301,14 @@ obo:OBI_0001847 rdf:type owl:AnnotationProperty ;
                 
                 rdfs:label "ISA alternative term"@en ;
                 
+                obo:IAO_0000115 "An alternative term used by the ISA tools project (http://isa-tools.org)." ;
+                
                 obo:IAO_0000119 "ISA tools project (http://isa-tools.org)" ;
                 
-                obo:IAO_0000117 "Person: Philippe Rocca-Serra" ;
+                obo:IAO_0000117 "Person: Alejandra Gonzalez-Beltran" ,
+                                "Person: Philippe Rocca-Serra" ;
                 
                 obo:IAO_0000111 "ISA alternative term"@en ;
-                
-                obo:IAO_0000117 "Person: Alejandra Gonzalez-Beltran" ;
-                
-                obo:IAO_0000115 "An alternative term used by the ISA tools project (http://isa-tools.org)." ;
                 
                 rdfs:subPropertyOf obo:IAO_0000118 ;
                 
@@ -719,11 +718,11 @@ obo:OBI_0001938 rdf:type owl:ObjectProperty ;
                 
                 rdfs:label "has value specification" ;
                 
-                obo:IAO_0000117 "PERSON: James A. Overton" ;
-                
                 obo:IAO_0000115 "A relation between an information content entity and a value specification that specifies its value." ;
                 
                 obo:IAO_0000119 "OBI" ;
+                
+                obo:IAO_0000117 "PERSON: James A. Overton" ;
                 
                 obo:IAO_0000111 "has value specification" ;
                 
@@ -1213,15 +1212,15 @@ obo:IAO_0000033 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:IAO_0000030 ;
                 
-                obo:IAO_0000116 "8/6/2009 Alan Ruttenberg: Changed label from \"information entity about a realizable\" after discussions at ICBO"@en ;
+                obo:IAO_0000116 "8/6/2009 Alan Ruttenberg: Changed label from \"information entity about a realizable\" after discussions at ICBO"@en ,
+                                "Philly2013 - AR: What differentiates a directive information entity from an information concretization is that it can have concretizations that are either qualities or realizable entities. The concretizations that are realizable entities are created when an individual chooses to take up the direction, i.e. has the intention to (try to) realize it." ;
                 
                 obo:IAO_0000115 "An information content entity whose concretizations indicate to their bearer how to realize them in a process."@en ;
                 
                 obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
                                 "PERSON: Bjoern Peters"@en ;
                 
-                obo:IAO_0000116 "Philly2013 - AR: What differentiates a directive information entity from an information concretization is that it can have concretizations that are either qualities or realizable entities. The concretizations that are realizable entities are created when an individual chooses to take up the direction, i.e. has the intention to (try to) realize it." ,
-                                "Werner pushed back on calling it realizable information entity as it isn't realizable. However this name isn't right either. An example would be a recipe. The realizable entity would be a plan, but the information entity isn't about the plan, it, once concretized, *is* the plan. -Alan"@en ;
+                obo:IAO_0000116 "Werner pushed back on calling it realizable information entity as it isn't realizable. However this name isn't right either. An example would be a recipe. The realizable entity would be a plan, but the information entity isn't about the plan, it, once concretized, *is* the plan. -Alan"@en ;
                 
                 obo:IAO_0000111 "directive information entity"@en ;
                 
@@ -1238,15 +1237,15 @@ obo:IAO_0000078 rdf:type owl:Class ;
                 rdfs:label "curation status specification"@en ;
                 
                 owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:oneOf ( obo:IAO_0000122
-                                                  obo:IAO_0000123
-                                                  obo:IAO_0000002
-                                                  obo:IAO_0000124
+                                      owl:oneOf ( obo:IAO_0000124
                                                   obo:IAO_0000125
-                                                  obo:IAO_0000120
-                                                  obo:IAO_0000121
-                                                  obo:IAO_0000428
                                                   obo:IAO_0000423
+                                                  obo:IAO_0000122
+                                                  obo:IAO_0000123
+                                                  obo:IAO_0000120
+                                                  obo:IAO_0000428
+                                                  obo:IAO_0000121
+                                                  obo:IAO_0000002
                                                 )
                                     ] ;
                 
@@ -1303,11 +1302,11 @@ obo:IAO_0000104 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000033 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:IAO_0000005
+                                  owl:someValuesFrom obo:IAO_0000007
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:IAO_0000007
+                                  owl:someValuesFrom obo:IAO_0000005
                                 ] ;
                 
                 obo:IAO_0000116 "2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was \" a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan\". It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term."@en ;
@@ -1347,8 +1346,6 @@ obo:IAO_0000109 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:OBI_0001933
                                 ] ;
                 
-                obo:IAO_0000118 "measurement datum" ;
-                
                 obo:IAO_0000116 "2/2/2009 is_specified_output of some assay?"@en ;
                 
                 obo:IAO_0000115 "A data item that is a recording of the output of an assay."@en ;
@@ -1359,6 +1356,8 @@ obo:IAO_0000109 rdf:type owl:Class ;
                                 "group:OBI"@en ;
                 
                 obo:IAO_0000111 "measurement data item"@en ;
+                
+                obo:IAO_0000118 "measurement datum" ;
                 
                 obo:IAO_0000117 "person:Chris Stoeckert"@en ;
                 
@@ -1442,8 +1441,6 @@ obo:OBI_0000011 rdf:type owl:Class ;
                 
                 rdfs:label "planned process"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000003 ;
-                
                 obo:IAO_0000116 "'Plan' includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn't have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)"^^xsd:string ;
                 
                 obo:IAO_0000232 "6/11/9: Edited at workshop. Used to include: is initiated by an agent"^^xsd:string ;
@@ -1474,12 +1471,12 @@ obo:OBI_0000067 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BFO_0000023 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000052 ;
-                                  owl:someValuesFrom obo:BFO_0000040
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000054 ;
                                   owl:allValuesFrom obo:OBI_0000070
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000052 ;
+                                  owl:someValuesFrom obo:BFO_0000040
                                 ] ;
                 
                 obo:IAO_0000232 "Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term."^^xsd:string ;
@@ -1528,10 +1525,6 @@ obo:OBI_0000070 rdf:type owl:Class ;
                                                      ]
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000055 ;
-                                  owl:someValuesFrom obo:OBI_0000067
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000299 ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
                                                        owl:intersectionOf ( obo:IAO_0000030
@@ -1548,6 +1541,10 @@ obo:OBI_0000070 rdf:type owl:Class ;
                                                                             ]
                                                                           )
                                                      ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000055 ;
+                                  owl:someValuesFrom obo:OBI_0000067
                                 ] ;
                 
                 obo:IAO_0000112 "Assay the wavelength of light emitted by excited Neon atoms. Count of geese flying over a house."^^xsd:string ;
@@ -1622,12 +1619,12 @@ obo:OBI_0000185 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000070 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:OBI_0000299 ;
-                                  owl:someValuesFrom obo:IAO_0000101
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000417 ;
                                   owl:someValuesFrom obo:OBI_0000441
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:IAO_0000101
                                 ] ;
                 
                 obo:IAO_0000115 "An imaging assay is an assay to produce a picture of an entity. definition_source: OBI."@en ;
@@ -1705,9 +1702,9 @@ obo:OBI_0000441 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:IAO_0000005 ;
                 
-                obo:IAO_0000117 "PPPB branch"^^xsd:string ;
-                
                 obo:IAO_0000119 "PPPB branch"^^xsd:string ;
+                
+                obo:IAO_0000117 "PPPB branch"^^xsd:string ;
                 
                 obo:IAO_0000112 "the objective to determine the weight of a mouse."^^xsd:string ;
                 
@@ -1738,12 +1735,12 @@ obo:OBI_0000659 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:OBI_0000299 ;
-                                  owl:someValuesFrom obo:OBI_0100051
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000293 ;
                                   owl:someValuesFrom obo:BFO_0000040
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:OBI_0100051
                                 ] ;
                 
                 obo:IAO_0000232 "5/31/2012: This process is not necessarily an acquisition, as specimens may be collected from materials already in posession"^^xsd:string ,
@@ -1757,11 +1754,10 @@ obo:OBI_0000659 rdf:type owl:Class ;
                 
                 obo:IAO_0000111 "specimen collection process"^^xsd:string ;
                 
-                obo:IAO_0000116 "Philly2013: A specimen collection can have as part a material entity acquisition, such as ordering from a bank. The distinction is that specimen collection necessarily involves the creation of a specimen role. However ordering cell lines cells from ATCC for use in an investigation is NOT a specimen collection, because the cell lines already have a specimen role." ;
+                obo:IAO_0000116 "Philly2013: The specimen_role for the specimen is created during the specimen collection process." ,
+                                "Philly2013: A specimen collection can have as part a material entity acquisition, such as ordering from a bank. The distinction is that specimen collection necessarily involves the creation of a specimen role. However ordering cell lines cells from ATCC for use in an investigation is NOT a specimen collection, because the cell lines already have a specimen role." ;
                 
                 obo:IAO_0000118 "specimen collection" ;
-                
-                obo:IAO_0000116 "Philly2013: The specimen_role for the specimen is created during the specimen collection process." ;
                 
                 obo:IAO_0000112 "drawing blood from a patient for analysis, collecting a piece of a plant for depositing in a herbarium, buying meat from a butcher in order to measure its protein content in an investigation" ;
                 
@@ -1781,9 +1777,9 @@ obo:OBI_0000684 rdf:type owl:Class ;
                 
                 obo:IAO_0000115 "A objective specification to obtain a material entity for potential use as an input during an investigation."^^xsd:string ;
                 
-                obo:IAO_0000117 "Bjoern Peters"^^xsd:string ;
-                
                 obo:IAO_0000119 "Bjoern Peters"^^xsd:string ;
+                
+                obo:IAO_0000117 "Bjoern Peters"^^xsd:string ;
                 
                 obo:IAO_0000112 "The objective to collect bits of excrement in the rainforest. The objective to obtain a blood sample from a patient."^^xsd:string ;
                 
@@ -1877,15 +1873,15 @@ obo:OBI_0001933 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:IAO_0000030 ;
                 
-                obo:IAO_0000116 "This term is currently a descendant of 'information content entity', which requires that it 'is about' something. A value specification of '20g' for a measurement data item of the mass of a particular mouse 'is about' the mass of that mouse. However there are cases where a value specification is not clearly about any particular. In the future we may change 'value specification' to remove the 'is about' requirement." ;
-                
-                obo:IAO_0000111 "value specification" ;
-                
                 obo:IAO_0000115 "An information content entity that specifies a value within a classification scheme or on a quantitative scale." ;
                 
                 obo:IAO_0000117 "PERSON:Bjoern Peters" ;
                 
+                obo:IAO_0000111 "value specification" ;
+                
                 obo:IAO_0000112 "The value of 'positive' in a classification scheme of \"positive or negative\"; the value of '20g' on the quantitative scale of mass." ;
+                
+                obo:IAO_0000116 "This term is currently a descendant of 'information content entity', which requires that it 'is about' something. A value specification of '20g' for a measurement data item of the mass of a particular mouse 'is about' the mass of that mouse. However there are cases where a value specification is not clearly about any particular. In the future we may change 'value specification' to remove the 'is about' requirement." ;
                 
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 
@@ -2157,5 +2153,5 @@ obi:obi.owl rdf:type owl:NamedIndividual .
 
 
 
-###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
 

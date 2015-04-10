@@ -62,6 +62,7 @@ includeAllAxiomsRecursively
 #
 #Also need to add a stanza for BFO:site and BFO:immaterial entity. Needs to be added by hand, because otherwise you get a lot of relational and annotational baggage that we don’t want. Copy and paste the text from the file bfo_site_by_hand.txt into obi_bco_imports.owl after updating import file but before editing to remove the BFO relations.
 #
+#need to add a line for planned process subclass of bfo:process
 #If we import CRID and all its children, we get a lot of axioms pertaining to BFO:participates in. These should be fixed when OBI does a new release. Because we don’t need these terms just yet, we will wait to import them. See lines below
 #http://purl.obolibrary.org/obo/IAO_0000577 #CRID
 #includeAllChildren
