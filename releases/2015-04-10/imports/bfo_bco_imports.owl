@@ -9,7 +9,7 @@
 
 <http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl> rdf:type owl:Ontology ;
                                                          
-                                                         owl:versionIRI <http://purl.obolibrary.org/obo/bco/releases/2015-04-10/imports/bfo_bco_imports.owl> .
+                                                         owl:versionIRI <http://purl.obolibrary.org/obo/bco/releases/2015-04-10/bfo_bco_imports.owl> .
 
 
 #################################################################
