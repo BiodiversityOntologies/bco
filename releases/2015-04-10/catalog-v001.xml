@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/releases/2015/10/obi_bco_imports.owl" uri="http://purl.obolibrary.org/obo/bco/releases/2015-04-10/obi_bco_imports.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1428732515599" name="http://purl.obolibrary.org/obo/bco.owl" uri="bco.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1428732515599" name="http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="bco-non-classified.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1428732515599" name="http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl" uri="bfo_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1428732515599" name="http://purl.obolibrary.org/obo/obi.owl" uri="obi_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1428732515599" name="http://rs.tdwg.org/dwc/rdf/dwcterms.rdf" uri="dwcterms.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1428733431468" name="http://purl.obolibrary.org/obo/bco.owl" uri="bco.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1428733431468" name="http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="bco-non-classified.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1428733431468" name="http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl" uri="bfo_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1428733431468" name="http://purl.obolibrary.org/obo/obi.owl" uri="obi_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1428733431468" name="http://rs.tdwg.org/dwc/rdf/dwcterms.rdf" uri="dwcterms.owl"/>
     </group>
 </catalog>
