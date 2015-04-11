@@ -32,7 +32,7 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
         <dc:contributor>Ramona Walls</dc:contributor>
         <dc:contributor>John Deck</dc:contributor>
         <dc:contributor>Robert Guralnick</dc:contributor>
-        <owl:versionIRI rdf:resource="&obo;bco/2015-04-10/bco-non-classified.owl"/>
+        <owl:versionIRI rdf:resource="&obo;bco/releases/2015-04-10/bco-non-classified.owl"/>
         <owl:imports rdf:resource="&obo;bco/releases/2015-04-10/bfo_bco_imports.owl"/>
         <owl:imports rdf:resource="&obo;bco/releases/2015-04-10/dwcterms.owl"/>
         <owl:imports rdf:resource="&obo;bco/releases/2015/10/obi_bco_imports.owl"/>
@@ -290,11 +290,11 @@ The Biological Collections Ontology (BCO) is licensed under a Creative Commons z
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
-        <obo:BCO_0000057 xml:lang="en">inventory  type</obo:BCO_0000057>
         <rdfs:comment>not sure if this should be a type of assay or a type of planned process</rdfs:comment>
         <dc:source>https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0</dc:source>
         <dc:creator>Taxonomic Inventory Metadata Workshop</dc:creator>
         <obo:IAO_0000115 xml:lang="en">A planned process by which a taxonomic inventory is created.</obo:IAO_0000115>
+        <obo:BCO_0000057 xml:lang="en">inventory  type</obo:BCO_0000057>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </owl:Class>
     
