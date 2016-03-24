@@ -85,9 +85,7 @@ obo:IAO_creation_date rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/OBI_0000293
 
-obo:OBI_0000293 rdf:type owl:AnnotationProperty ;
-                
-                rdfs:subPropertyOf obo:RO_0002233 .
+obo:OBI_0000293 rdf:type owl:AnnotationProperty .
 
 
 
@@ -183,6 +181,12 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty .
 ###  http://purl.obolibrary.org/obo/BFO_0000066
 
 obo:BFO_0000066 rdf:type owl:ObjectProperty .
+
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000293
+
+obo:OBI_0000293 rdfs:subPropertyOf obo:RO_0002233 .
 
 
 
@@ -343,7 +347,7 @@ obo:BCO_0000052 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BCO_0000047 ;
                 
-                obo:IAO_0000115 "A taxonomic inventory process in whic the search is restricted within a larger defined geographic area, but where effort isn't even or complete across the defined region.  That is, a planned search restricted to a larger, defined geographic area, but effort isn't evenly distributed throughout the area, nor expected to be a complete and comprehensive accounting of taxa of interest across the defined region.  Temporal duration is typically longer than restricted search, lasting hours to all day." ;
+                obo:IAO_0000115 "A taxonomic inventory process in which the search is restricted within a larger defined geographic area, but where effort isn't even or complete across the defined region.  That is, a planned search restricted to a larger, defined geographic area, but effort isn't evenly distributed throughout the area, nor expected to be a complete and comprehensive accounting of taxa of interest across the defined region.  Temporal duration is typically longer than restricted search, lasting hours to all day." ;
                 
                 obo:IAO_0000112 "Individual Christmas Bird Count by some team.  Organized field trip to a State Park." ;
                 
@@ -391,7 +395,7 @@ obo:BCO_0000054 rdf:type owl:Class ;
                 
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
                 
-                obo:IAO_0000115 "A taxonomic inventory process that is typically highly restricted in geospatial extent that involves either the physical extracton of some evidence of the presence of the taxa of interest, such as scat, fur, other material samples or information artifacts such as photographs or sound recordings."@en ;
+                obo:IAO_0000115 "A taxonomic inventory process that is typically highly restricted in geospatial extent that involves either the physical extraction of some evidence of the presence of the taxa of interest, such as scat, fur, other material samples or information artifacts such as photographs or sound recordings."@en ;
                 
                 rdfs:comment "Can be highly targeted and or baited (pheromone trap), or general (pitfall). Trap events can either be \"triggered\" but of long-term deployment, or rigorously temporally specified (left out overnight). "@en ;
                 
@@ -791,12 +795,12 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:bco_0000044
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002234 ;
                                   owl:someValuesFrom obo:IAO_0000027
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002233 ;
+                                  owl:someValuesFrom obo:bco_0000044
                                 ] ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
