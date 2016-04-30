@@ -741,15 +741,19 @@ obo:bco_0000000 rdf:type owl:Class ;
                 
                 rdfs:label "evidence role"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000023 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 
-                rdfs:comment "It might be better to request this term in OBI or IAO." ;
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 obo:IAO_0000115 "A role that is borne by some entity as a result of the entity providing evidence to support an assertion." ;
                 
+                rdfs:comment "Will be replaced by an external ontology class." ;
+                
                 obo:IAO_0000112 "A museum specimen that serves as evidence for a taxonomic identification process bears an evidence role." ;
                 
-                obo:IAO_0000114 obo:IAO_0000124 .
+                obo:IAO_0000114 obo:IAO_0000124 ;
+                
+                obo:IAO_0000231 obo:IAO_0000423 .
 
 
 
@@ -795,12 +799,12 @@ obo:bco_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom obo:IAO_0000027
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:bco_0000044
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002234 ;
+                                  owl:someValuesFrom obo:IAO_0000027
                                 ] ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
@@ -846,7 +850,9 @@ obo:bco_0000005 rdf:type owl:Class ;
                 
                 rdfs:label "printed report"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000030 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
@@ -855,7 +861,9 @@ obo:bco_0000005 rdf:type owl:Class ;
                 obo:IAO_0000112 "a book"@en ,
                                 "a field notebook"@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000124 .
+                obo:IAO_0000114 obo:IAO_0000124 ;
+                
+                obo:IAO_0000231 obo:IAO_0000423 .
 
 
 
@@ -876,13 +884,17 @@ obo:bco_0000006 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:bco_0000005 ;
                 
+                owl:deprecated "true"^^xsd:boolean ;
+                
                 obo:IAO_0000112 "A field notebook." ;
                 
                 obo:IAO_0000115 "A printed report that records the outcome of some observing process."@en ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
-                obo:IAO_0000114 obo:IAO_0000124 .
+                obo:IAO_0000114 obo:IAO_0000124 ;
+                
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000067> .
 
 
 
@@ -892,11 +904,9 @@ obo:bco_0000007 rdf:type owl:Class ;
                 
                 rdfs:label "selecting process"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000015 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:BFO_0000040
-                                ] ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
@@ -908,7 +918,7 @@ obo:bco_0000007 rdf:type owl:Class ;
                 
                 obo:IAO_0000112 "deciding which branch to collect for a herbarium specimen"@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000423 .
+                obo:IAO_0000231 obo:IAO_0000423 .
 
 
 
@@ -941,11 +951,9 @@ obo:bco_0000021 rdf:type owl:Class ;
                 
                 rdfs:label "physical extraction process"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000015 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:BFO_0000040
-                                ] ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 obo:IAO_0000112 "removing a fish from the ocean with a net" ,
                                 "removing dna from cells" ;
@@ -958,7 +966,7 @@ obo:bco_0000021 rdf:type owl:Class ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
-                obo:IAO_0000114 obo:IAO_0000428 .
+                obo:IAO_0000231 obo:IAO_0000423 .
 
 
 
@@ -1611,6 +1619,15 @@ obo:BCO_0000072 rdf:type owl:NamedIndividual ;
 obo:BCO_0000073 rdf:type owl:NamedIndividual ;
                 
                 rdfs:label "specimen collection process Y"@en .
+
+
+
+###  http://purl.obolibrary.org/obo/bco.owl/BCO_0000067
+
+<http://purl.obolibrary.org/obo/bco.owl/BCO_0000067> rdf:type obo:IAO_0000078 ,
+                                                              owl:NamedIndividual ;
+                                                     
+                                                     rdfs:label "incorrect identifier format, replaced"@en .
 
 
 
