@@ -263,17 +263,17 @@ obo:BCO_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:bco_0000044
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002234 ;
                                   owl:someValuesFrom obo:IAO_0000027
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002233 ;
+                                  owl:someValuesFrom obo:BCO_0000044
                                 ] ;
                 
-                obo:IAO_0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ;
+                obo:IAO_0000116 "This class replaces class bco_0000003, which was made obsolete because of identifier format." ;
                 
-                obo:IAO_0000116 "This is the same class as the obsolete class bco_0000003, but with the correct identifier format." ;
+                obo:IAO_0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
@@ -288,6 +288,185 @@ obo:BCO_0000003 rdf:type owl:Class ;
                 rdfs:comment "The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
                 
                 obo:BCO_0000057 "sighting"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000125 .
+
+
+
+###  http://purl.obolibrary.org/obo/BCO_0000016
+
+obo:BCO_0000016 rdf:type owl:Class ;
+                
+                rdfs:label "submitting process"@en ;
+                
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002233 ;
+                                  owl:someValuesFrom obo:BFO_0000040
+                                ] ;
+                
+                obo:IAO_0000116 "false"^^xsd:boolean ;
+                
+                dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000115 "A planned process whereby a person submits a material sample to an organization." ;
+                
+                obo:IAO_0000112 "a curator submitting a herbarium speciman to a museum"@en ,
+                                "a researcher submitting a water sample to a laboratory storage collection"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+###  http://purl.obolibrary.org/obo/BCO_0000025
+
+obo:BCO_0000025 rdf:type owl:Class ;
+                
+                rdfs:label "locality description"@en ;
+                
+                rdfs:subClassOf obo:IAO_0000030 ;
+                
+                obo:IAO_0000115 "An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured."@en ;
+                
+                rdfs:comment "Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site."@en ;
+                
+                obo:IAO_0000116 "This term replaces the obsolete class bco_0000025, but with the correct identifier format." ;
+                
+                dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+###  http://purl.obolibrary.org/obo/BCO_0000031
+
+obo:BCO_0000031 rdf:type owl:Class ;
+                
+                rdfs:label "museum collection"@en ;
+                
+                rdfs:subClassOf obo:BFO_0000027 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:OBI_0100051
+                                ] ;
+                
+                obo:IAO_0000116 "This term replaced bco_0000031, which was made obsolete because of incorrect identifier format." ;
+                
+                dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000115 "An object aggregate that has as member part a material sample that is located in museum as a result of a process of curation."@en ;
+                
+                rdfs:comment "Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection."@en ;
+                
+                obo:IAO_0000112 "The herbarium collection at the New York Botanical Garden." ,
+                                "the painting collection at the Louvre Museum"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+###  http://purl.obolibrary.org/obo/BCO_0000032
+
+obo:BCO_0000032 rdf:type owl:Class ;
+                
+                rdfs:label "organismal museum collection"@en ;
+                
+                rdfs:subClassOf obo:BCO_0000031 ;
+                
+                obo:IAO_0000115 "A museum collection that has as member part a material sample that was derived from an organism."@en ;
+                
+                obo:IAO_0000116 "This term replaced bco_0000032, which was made obsolete because of incorrect identifier format." ;
+                
+                dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000112 "the insect collection at the Smithsonian Institution"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+###  http://purl.obolibrary.org/obo/BCO_0000042
+
+obo:BCO_0000042 rdf:type owl:Class ;
+                
+                rdfs:label "taxonomic identification process"@en ;
+                
+                owl:equivalentClass <http://rs.tdwg.org/dwc/terms/Identification> ;
+                
+                rdfs:subClassOf obo:OBI_0000011 ;
+                
+                obo:IAO_0000115 "A process by which a material sample is associated with a taxon or taxa." ;
+                
+                obo:IAO_0000112 "Using BLAST to identify the taxa present in an environmental (metagenomic) sample." ,
+                                "Using a key to identify a plant in the field." ;
+                
+                obo:IAO_0000116 "This term replaces bco_0000042, which was made obsolete because of incorrect identifier format." ;
+                
+                obo:IAO_0000112 "Associating a museum specimen with a specific taxonomic concept based on its characters." ;
+                
+                dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000112 "Using DNA barcoding to identify a plant species." ;
+                
+                obo:IAO_0000114 obo:IAO_0000125 .
+
+
+
+###  http://purl.obolibrary.org/obo/BCO_0000044
+
+obo:BCO_0000044 rdf:type owl:Class ;
+                
+                rdfs:label "material target of observation"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( obo:BFO_0000040
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:BCO_0000058 ;
+                                                             owl:someValuesFrom obo:BCO_0000046
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en ,
+                                "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ,
+                                "A bird observed during a transect walk." ;
+                
+                obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
+                
+                obo:IAO_0000112 "A tree is forest plot that is measured for diameter at breast height (DBH)." ;
+                
+                dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000116 "This term replaces bco_0000044, which was made obsolete because of incorrect identifier format." ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+###  http://purl.obolibrary.org/obo/BCO_0000046
+
+obo:BCO_0000046 rdf:type owl:Class ;
+                
+                rdfs:label "material target of observation role"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( obo:BFO_0000023
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:BFO_0000054 ;
+                                                             owl:someValuesFrom obo:BCO_0000003
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                rdfs:subClassOf obo:BFO_0000023 ;
+                
+                obo:IAO_0000116 "This term replaced bco_0000046, which was made obsolete because of incorrect identifier format." ;
+                
+                obo:IAO_0000115 "A role that is borne by some material entity and is realized by the material entity being the input of an observing process." ;
+                
+                dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000112 "the role borne by a bird during a Christmas Bird Count"@en ;
                 
                 obo:IAO_0000114 obo:IAO_0000125 .
 
@@ -505,7 +684,7 @@ obo:BCO_0000059 rdf:type owl:Class ;
                 rdfs:subClassOf obo:OBI_0000245 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:bco_0000031
+                                  owl:someValuesFrom obo:BCO_0000031
                                 ] ;
                 
                 obo:IAO_0000115 "An institution that cares for (conserves) a collection of artifacts and other objects of scientific, artistic, cultural, or historical importance." ;
@@ -949,22 +1128,22 @@ obo:bco_0000007 rdf:type owl:Class ;
 
 obo:bco_0000016 rdf:type owl:Class ;
                 
-                rdfs:label "submitting process"@en ;
+                rdfs:label "obsolete submitting process"@en ;
                 
-                rdfs:subClassOf obo:OBI_0000011 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:BFO_0000040
-                                ] ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 obo:IAO_0000115 "A planned process whereby a person submits a material sample to an organization." ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
+                obo:IAO_0000116 "This term was made obsolete because it had the incorrect identifier format. It has been replaced by BCO_0000016." ;
+                
                 obo:IAO_0000112 "a curator submitting a herbarium speciman to a museum"@en ,
                                 "a researcher submitting a water sample to a laboratory storage collection"@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000428 .
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> .
 
 
 
@@ -983,9 +1162,9 @@ obo:bco_0000021 rdf:type owl:Class ;
                 
                 rdfs:comment "Considered acquisition in OBI, but that is about taking possession. Physical extraction may involve taking pocession, but it may also just involve extraction of something that is already posessed (e.g. of dna from cells). " ;
                 
-                obo:IAO_0000112 "picking leaves from a plant" ;
-                
                 obo:IAO_0000115 "A process that involves removing a material entity from its original site to another site." ;
+                
+                obo:IAO_0000112 "picking leaves from a plant" ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
@@ -1054,9 +1233,13 @@ obo:bco_0000024 rdf:type owl:Class ;
 
 obo:bco_0000025 rdf:type owl:Class ;
                 
-                rdfs:label "locality description"@en ;
+                rdfs:label "obsolete locality description"@en ;
                 
-                rdfs:subClassOf obo:IAO_0000030 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
+                
+                obo:IAO_0000116 "This term was deprecated because it has the wrong ID format. It is replaced by BCO_0000025." ;
                 
                 obo:IAO_0000115 "An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured."@en ;
                 
@@ -1064,7 +1247,7 @@ obo:bco_0000025 rdf:type owl:Class ;
                 
                 rdfs:comment "Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site."@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000428 .
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> .
 
 
 
@@ -1168,13 +1351,11 @@ At the GSC14 hackathon in 09/2012, we decided to deprecate this term."""@en ;
 
 obo:bco_0000031 rdf:type owl:Class ;
                 
-                rdfs:label "museum collection"@en ;
+                rdfs:label "obsolete museum collection"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000027 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom obo:OBI_0100051
-                                ] ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
@@ -1184,9 +1365,13 @@ obo:bco_0000031 rdf:type owl:Class ;
                 
                 rdfs:comment "Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection."@en ;
                 
+                obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It has been replaced by BCO_0000031." ;
+                
                 obo:IAO_0000112 "the painting collection at the Louvre Museum"@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000428 .
+                obo:IAO_0000114 obo:IAO_0000428 ;
+                
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> .
 
 
 
@@ -1194,17 +1379,23 @@ obo:bco_0000031 rdf:type owl:Class ;
 
 obo:bco_0000032 rdf:type owl:Class ;
                 
-                rdfs:label "organismal museum collection"@en ;
+                rdfs:label "obsolete organismal museum collection"@en ;
                 
-                rdfs:subClassOf obo:bco_0000031 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 obo:IAO_0000115 "A museum collection that has as member part a material sample that was derived from an organism."@en ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
+                obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000031." ;
+                
                 obo:IAO_0000112 "the insect collection at the Smithsonian Institution"@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000428 .
+                obo:IAO_0000114 obo:IAO_0000428 ;
+                
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> .
 
 
 
@@ -1340,23 +1531,23 @@ obo:bco_0000039 rdf:type owl:Class ;
 
 obo:bco_0000042 rdf:type owl:Class ;
                 
-                rdfs:label "taxonomic identification process"@en ;
+                rdfs:label "obsolete taxonomic identification process"@en ;
                 
-                owl:equivalentClass <http://rs.tdwg.org/dwc/terms/Identification> ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 
-                rdfs:subClassOf obo:OBI_0000011 ;
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 obo:IAO_0000112 "Using DNA barcoding to identify a plant species." ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
+                obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000042." ;
+                
                 obo:IAO_0000115 "A process by which a material sample is associated with a taxon or taxa." ;
                 
                 obo:IAO_0000112 "Using BLAST to identify the taxa present in an environmental (metagenomic) sample." ,
                                 "Using a key to identify a plant in the field." ,
-                                "Associating a museum specimen with a specific taxonomic concept based on its characters." ;
-                
-                obo:IAO_0000114 obo:IAO_0000125 .
+                                "Associating a museum specimen with a specific taxonomic concept based on its characters." .
 
 
 
@@ -1366,7 +1557,11 @@ obo:bco_0000043 rdf:type owl:Class ;
                 
                 rdfs:label "process that yields a material representation of a material entity"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000015 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
+                
+                obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It should be replaced by an external ontology term." ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
@@ -1376,7 +1571,7 @@ obo:bco_0000043 rdf:type owl:Class ;
 
 Needs a better name. Current name is the definition."""@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000423 .
+                obo:IAO_0000231 obo:IAO_0000423 .
 
 
 
@@ -1384,16 +1579,11 @@ Needs a better name. Current name is the definition."""@en ;
 
 obo:bco_0000044 rdf:type owl:Class ;
                 
-                rdfs:label "material target of observation"@en ;
+                rdfs:label "obsolete material target of observation"@en ;
                 
-                owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:intersectionOf ( obo:BFO_0000040
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:BCO_0000058 ;
-                                                             owl:someValuesFrom obo:bco_0000046
-                                                           ]
-                                                         )
-                                    ] ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en ;
                 
@@ -1403,10 +1593,12 @@ obo:bco_0000044 rdf:type owl:Class ;
                 
                 obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
                 
+                obo:IAO_0000116 "This term was made obsolete because of incorrected identifier format. It is replaced by BCO_0000044." ;
+                
                 obo:IAO_0000112 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ,
                                 "A tree is forest plot that is measured for diameter at breast height (DBH)." ;
                 
-                obo:IAO_0000114 obo:IAO_0000428 .
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> .
 
 
 
@@ -1416,7 +1608,9 @@ obo:bco_0000045 rdf:type owl:Class ;
                 
                 rdfs:label "process that yields an information artifact that is a representation of a material entity"@en ;
                 
-                rdfs:subClassOf obo:BFO_0000015 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
@@ -1426,7 +1620,9 @@ Needs a better name. Current name is the definition.""" ;
                 
                 obo:IAO_0000232 "Some instances of term could possibly be replaced by OBI:image acquisition. Maybe request another OBI term for audio recording acquisition."@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000423 .
+                obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It should be replaced by an external ontology term." ;
+                
+                obo:IAO_0000231 obo:IAO_0000423 .
 
 
 
@@ -1434,26 +1630,21 @@ Needs a better name. Current name is the definition.""" ;
 
 obo:bco_0000046 rdf:type owl:Class ;
                 
-                rdfs:label "material target of observation role"@en ;
+                rdfs:label "obsolete material target of observation role"@en ;
                 
-                owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:intersectionOf ( obo:BFO_0000023
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:BFO_0000054 ;
-                                                             owl:someValuesFrom obo:BCO_0000003
-                                                           ]
-                                                         )
-                                    ] ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 
-                rdfs:subClassOf obo:BFO_0000023 ;
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000046." ;
                 
                 obo:IAO_0000115 "A role that is borne by some material entity and is realized by the material entity being the input of an observing process." ;
                 
                 obo:IAO_0000112 "the role borne by a bird during a Christmas Bird Count"@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000125 .
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> .
 
 
 
@@ -1518,9 +1709,9 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 <http://rs.tdwg.org/dwc/terms/Identification> obo:BCO_0000060 "identification"@en ;
                                               
-                                              obo:IAO_0000114 obo:IAO_0000125 ;
+                                              obo:BCO_0000074 obo:BCO_0000042 ;
                                               
-                                              obo:BCO_0000074 obo:bco_0000042 .
+                                              obo:IAO_0000114 obo:IAO_0000125 .
 
 
 
@@ -1689,13 +1880,13 @@ obo:BCO_0000073 rdf:type owl:NamedIndividual ;
 
 
 
-<http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist> obo:IAO_0000114 obo:IAO_0000124 .
-
-
-
 <http://purl.org/dc/dcmitype/Event> owl:deprecated "false"^^xsd:boolean ;
                                     
                                     obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+<http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist> obo:IAO_0000114 obo:IAO_0000124 .
 
 
 
