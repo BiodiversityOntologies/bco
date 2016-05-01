@@ -524,7 +524,7 @@ obo:BCO_0000048 rdf:type owl:Class ;
                                 "The butterflies of Great Britain" ,
                                 "\"The Flora of North America\"" ;
                 
-                obo:IAO_0000115 "An information content entity that is a list of taxa recorded in some geospatially defined area over some stated time period using some method involving some actor."@en ;
+                obo:IAO_0000115 "An information content entity that is a list of names ascribed to biological entities recorded over some defined spatial and temporal scope following a described sampling protocol and sampling effort and addressing a specified organismal scope."@en ;
                 
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
                 
