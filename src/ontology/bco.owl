@@ -255,6 +255,44 @@ obo:RO_0002353 rdf:type owl:ObjectProperty .
 #################################################################
 
 
+###  http://purl.obolibrary.org/obo/BCO_0000003
+
+obo:BCO_0000003 rdf:type owl:Class ;
+                
+                rdfs:label "observing process"@en ;
+                
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002233 ;
+                                  owl:someValuesFrom obo:bco_0000044
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002234 ;
+                                  owl:someValuesFrom obo:IAO_0000027
+                                ] ;
+                
+                obo:IAO_0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ;
+                
+                obo:IAO_0000116 "This is the same class as the obsolete class bco_0000003, but with the correct identifier format." ;
+                
+                dc:creator "Biocode Commons Ontology Hackathon" ;
+                
+                obo:IAO_0000112 "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." ;
+                
+                obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
+                
+                obo:IAO_0000116 "We are having conversation with OBI developers about how this term relates to OBI:assay (). Is it equivalent, broader, narrower? What does it mean to be the input to an observation." ;
+                
+                obo:IAO_0000112 "Observing and recording the presence or absence of butterflies during a transect walk." ;
+                
+                rdfs:comment "The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
+                
+                obo:BCO_0000057 "sighting"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000125 .
+
+
+
 ###  http://purl.obolibrary.org/obo/BCO_0000047
 
 obo:BCO_0000047 rdf:type owl:Class ;
@@ -272,8 +310,6 @@ obo:BCO_0000047 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ;
                 
-                obo:BCO_0000057 "inventory  type"@en ;
-                
                 rdfs:comment "not sure if this should be a type of assay or a type of planned process" ;
                 
                 dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0" ;
@@ -281,6 +317,8 @@ obo:BCO_0000047 rdf:type owl:Class ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
                 
                 obo:IAO_0000115 "A planned process by which a taxonomic inventory is created."@en ;
+                
+                obo:BCO_0000057 "inventory  type"@en ;
                 
                 obo:IAO_0000114 obo:IAO_0000124 .
 
@@ -558,7 +596,7 @@ obo:BCO_0000065 rdf:type owl:Class ;
                 
                 rdfs:label "human observation process"@en ;
                 
-                rdfs:subClassOf obo:bco_0000003 ,
+                rdfs:subClassOf obo:BCO_0000003 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002234 ;
                                   owl:someValuesFrom <http://rs.tdwg.org/dwc/terms/HumanObservation>
@@ -581,7 +619,7 @@ obo:BCO_0000066 rdf:type owl:Class ;
                 
                 rdfs:label "machine observation process"@en ;
                 
-                rdfs:subClassOf obo:bco_0000003 ,
+                rdfs:subClassOf obo:BCO_0000003 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002234 ;
                                   owl:someValuesFrom <http://rs.tdwg.org/dwc/terms/MachineObservation>
@@ -795,34 +833,28 @@ obo:bco_0000002 rdf:type owl:Class ;
 
 obo:bco_0000003 rdf:type owl:Class ;
                 
-                rdfs:label "observing process"@en ;
+                rdfs:label "obsolete observing process"@en ;
                 
-                rdfs:subClassOf obo:OBI_0000011 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002233 ;
-                                  owl:someValuesFrom obo:bco_0000044
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom obo:IAO_0000027
-                                ] ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
                 
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
                 
                 obo:IAO_0000112 "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." ;
                 
-                obo:IAO_0000116 "We are having conversation with OBI developers about how this term relates to OBI:assay (). Is it equivalent, broader, narrower? What does it mean to be the input to an observation." ;
+                rdfs:comment "The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
+                
+                obo:IAO_0000116 "This class was made obsolete because of the incorrect identifier format. It has been replaced by BCO_0000003." ;
                 
                 obo:IAO_0000112 "Observing and recording the presence or absence of butterflies during a transect walk." ,
                                 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." ;
                 
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 
-                rdfs:comment "The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
-                
                 obo:BCO_0000057 "sighting"@en ;
                 
-                obo:IAO_0000114 obo:IAO_0000125 .
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> .
 
 
 
@@ -872,15 +904,6 @@ obo:bco_0000005 rdf:type owl:Class ;
 obo:bco_0000006 rdf:type owl:Class ;
                 
                 rdfs:label "printed observational report"@en ;
-                
-                owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:intersectionOf ( obo:bco_0000005
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:RO_0002353 ;
-                                                             owl:someValuesFrom obo:bco_0000003
-                                                           ]
-                                                         )
-                                    ] ;
                 
                 rdfs:subClassOf obo:bco_0000005 ;
                 
@@ -1417,7 +1440,7 @@ obo:bco_0000046 rdf:type owl:Class ;
                                       owl:intersectionOf ( obo:BFO_0000023
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty obo:BFO_0000054 ;
-                                                             owl:someValuesFrom obo:bco_0000003
+                                                             owl:someValuesFrom obo:BCO_0000003
                                                            ]
                                                          )
                                     ] ;
@@ -1461,8 +1484,8 @@ obo:bco_0000046 rdf:type owl:Class ;
 ###  http://rs.tdwg.org/dwc/terms/Event
 
 <http://rs.tdwg.org/dwc/terms/Event> owl:equivalentClass [ rdf:type owl:Class ;
-                                                           owl:unionOf ( obo:OBI_0000659
-                                                                         obo:bco_0000003
+                                                           owl:unionOf ( obo:BCO_0000003
+                                                                         obo:OBI_0000659
                                                                        )
                                                          ] ;
                                      
