@@ -272,6 +272,8 @@ obo:BCO_0000047 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ;
                 
+                obo:BCO_0000057 "inventory  type"@en ;
+                
                 rdfs:comment "not sure if this should be a type of assay or a type of planned process" ;
                 
                 dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0" ;
@@ -279,8 +281,6 @@ obo:BCO_0000047 rdf:type owl:Class ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
                 
                 obo:IAO_0000115 "A planned process by which a taxonomic inventory is created."@en ;
-                
-                obo:BCO_0000057 "inventory  type"@en ;
                 
                 obo:IAO_0000114 obo:IAO_0000124 .
 
@@ -894,7 +894,7 @@ obo:bco_0000006 rdf:type owl:Class ;
                 
                 obo:IAO_0000114 obo:IAO_0000124 ;
                 
-                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000067> .
+                obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> .
 
 
 
@@ -1622,9 +1622,9 @@ obo:BCO_0000073 rdf:type owl:NamedIndividual ;
 
 
 
-###  http://purl.obolibrary.org/obo/bco.owl/BCO_0000067
+###  http://purl.obolibrary.org/obo/bco.owl/BCO_0000075
 
-<http://purl.obolibrary.org/obo/bco.owl/BCO_0000067> rdf:type obo:IAO_0000078 ,
+<http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> rdf:type obo:IAO_0000078 ,
                                                               owl:NamedIndividual ;
                                                      
                                                      rdfs:label "incorrect identifier format, replaced"@en .
