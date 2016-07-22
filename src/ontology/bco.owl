@@ -71,6 +71,12 @@ obo:IAO_0000231 rdf:type owl:AnnotationProperty .
 
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000424
+
+obo:IAO_0000424 rdf:type owl:AnnotationProperty .
+
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000589
 
 obo:IAO_0000589 rdf:type owl:AnnotationProperty .
@@ -219,6 +225,18 @@ obo:OBI_0000312 rdf:type owl:ObjectProperty ;
 ###  http://purl.obolibrary.org/obo/RO_0000053
 
 obo:RO_0000053 rdf:type owl:ObjectProperty .
+
+
+
+###  http://purl.obolibrary.org/obo/RO_0000058
+
+obo:RO_0000058 rdf:type owl:ObjectProperty .
+
+
+
+###  http://purl.obolibrary.org/obo/RO_0000059
+
+obo:RO_0000059 rdf:type owl:ObjectProperty .
 
 
 
@@ -489,6 +507,8 @@ obo:BCO_0000047 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ;
                 
+                obo:BCO_0000057 "inventory  type"@en ;
+                
                 rdfs:comment "not sure if this should be a type of assay or a type of planned process" ;
                 
                 dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0" ;
@@ -496,8 +516,6 @@ obo:BCO_0000047 rdf:type owl:Class ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
                 
                 obo:IAO_0000115 "A planned process by which a taxonomic inventory is created."@en ;
-                
-                obo:BCO_0000057 "inventory  type"@en ;
                 
                 obo:IAO_0000114 obo:IAO_0000124 .
 
@@ -637,7 +655,7 @@ obo:BCO_0000055 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:BCO_0000047 ;
                 
-                obo:IAO_0000115 "A taxonomic inventory in which taxon occurrences are recorded as a co-variates of another study, or by happenstance, and later compiled as a taxonomic inventory." ;
+                obo:IAO_0000115 "A taxonomic inventory process in which taxon occurrences are recorded as a co-variates of another study, or by happenstance, and later compiled as a taxonomic inventory." ;
                 
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
                 
