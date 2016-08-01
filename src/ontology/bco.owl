@@ -281,12 +281,12 @@ obo:BCO_0000003 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:OBI_0000011 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002234 ;
-                                  owl:someValuesFrom obo:IAO_0000027
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002233 ;
                                   owl:someValuesFrom obo:BCO_0000044
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002234 ;
+                                  owl:someValuesFrom obo:IAO_0000027
                                 ] ;
                 
                 obo:IAO_0000116 "This class replaces class bco_0000003, which was made obsolete because of identifier format." ;
@@ -538,11 +538,14 @@ obo:BCO_0000048 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:IAO_0000030 ;
                 
-                obo:IAO_0000112 "The plants of Yosemite National Park" ,
-                                "The butterflies of Great Britain" ,
-                                "\"The Flora of North America\"" ;
+                obo:IAO_0000115 "A list of names ascribed to biological entities of specified organismal scope recorded over some defined spatial and temporal scope following a described sampling protocol and sampling effort, potentially including values indicating abundance or biomass of the biological entities"@en ;
                 
-                obo:IAO_0000115 "An information content entity that is a list of names ascribed to biological entities recorded over some defined spatial and temporal scope following a described sampling protocol and sampling effort and addressing a specified organismal scope."@en ;
+                obo:IAO_0000112 "The plants of Yosemite National Park" ;
+                
+                rdfs:comment "The biological entities are almost always species and the organismal scope typically a taxon but potentially also an ecologically or functionally defined grouping (e.g. ‘water birds’ or ‘trees’) or other operational unit (e.g. genes). The list would typically contain multiple entities, but may be as short as a single entity or, if a sampling effort focused on a certain taxon yielded no results, even contain none." ;
+                
+                obo:IAO_0000112 "The butterflies of Great Britain" ,
+                                "\"The Flora of North America\"" ;
                 
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
                 
