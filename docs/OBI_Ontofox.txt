@@ -32,15 +32,8 @@ http://purl.obolibrary.org/obo/BFO_0000040 #material entity
 subClassOf http://purl.obolibrary.org/obo/BFO_0000004 #independent continuant
 http://purl.obolibrary.org/obo/BFO_0000031 #generically dependent continuant
 subClassOf http://purl.obolibrary.org/obo/BFO_0000002 #continuant
-http://purl.obolibrary.org/obo/OBI_0000295 #is_specified_input_of
-subPropertyOf http://purl.obolibrary.org/obo/RO_0002352 #is input of
-http://purl.obolibrary.org/obo/OBI_0000293 #has_specified_input
-subPropertyOf http://purl.obolibrary.org/obo/RO_0002233 #has input
-http://purl.obolibrary.org/obo/OBI_0000299 #has_specified_output
-subPropertyOf http://purl.obolibrary.org/obo/RO_0002234 #has output
-http://purl.obolibrary.org/obo/OBI_0000312 #is_specified_output_of
-subPropertyOf http://purl.obolibrary.org/obo/RO_0002353 #is output of
-
+http://purl.obolibrary.org/obo/OBI_0000011 #planned process
+subClassOf http://purl.obolibrary.org/obo/BFO_0000015 #process
 
 
 [Source term retrieval setting]
@@ -49,20 +42,9 @@ includeComputedIntermediates
 [Source annotation URIs]
 includeAllAxiomsRecursively
 
-#As of September 2014, there are differences in relations used by OBI (from BFO) and RO (used in BCO). The BFO relations have to be removed from this file by hand. Need to remove BFO_0000056, BFO_0000057. Okay to leave is bearer of and inheres in from BFO/OBI for now as we are not using them directly and OBI does.
-#As of March, OBI is still old BFO properties, so we will have to continue this until they do a new release.
-#Need to remove concretizes and is concretized as,because they conflict with RO relations. Here are the steps to do it manually:
-#1. remove inverse relation between BFO:concretizes and BFO:is concretized as
-#2. delete BFO:concretizes and BFO:is concretized as in obi-bco-imports
-#3. save obi-bco-imports and commit
-#4. wait
-#5. re-open bco
-#6. update logical definitions of information content entity and primary structure of DNA macromolecule to use RO:is concretized as instead of BFO (will need to copy from OBI)
-#7. update logical definitions of material information bearer and planned process to use RO:concretizes instead of BFO (will need to copy from OBI)
-#
+
 #Also need to add a stanza for BFO:site and BFO:immaterial entity. Needs to be added by hand, because otherwise you get a lot of relational and annotational baggage that we don’t want. Copy and paste the text from the file bfo_site_by_hand.txt into obi_bco_imports.owl after updating import file but before editing to remove the BFO relations.
-#
-#need to add a line for planned process subclass of bfo:process
+
 #If we import CRID and all its children, we get a lot of axioms pertaining to BFO:participates in. These should be fixed when OBI does a new release. Because we don’t need these terms just yet, we will wait to import them. See lines below
 #http://purl.obolibrary.org/obo/IAO_0000577 #CRID
 #includeAllChildren
