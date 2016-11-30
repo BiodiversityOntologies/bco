@@ -461,7 +461,8 @@ obo:BCO_0000066 rdf:type owl:Class ;
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000015
-obo:BFO_0000015 rdf:type owl:Class .
+obo:BFO_0000015 rdf:type owl:Class ;
+                owl:equivalentClass <http://rs.tdwg.org/dwc/terms/Event> .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000027
@@ -937,15 +938,6 @@ obo:bco_0000046 rdf:type owl:Class ;
 
 ###  http://rs.tdwg.org/dwc/terms/Event
 <http://rs.tdwg.org/dwc/terms/Event> rdf:type owl:Class ;
-                                     owl:equivalentClass [ rdf:type owl:Class ;
-                                                           owl:unionOf ( obo:BCO_0000003
-                                                                         obo:OBI_0000659
-                                                                       )
-                                                         ] ;
-                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                       owl:onProperty obo:BFO_0000066 ;
-                                                       owl:someValuesFrom <http://rs.tdwg.org/dwc/dwctype/Location>
-                                                     ] ;
                                      obo:BCO_0000060 "event"@en .
 
 
