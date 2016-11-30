@@ -110,6 +110,7 @@ obo:BCO_0000068 rdf:type owl:ObjectProperty ;
                 owl:propertyChainAxiom ( obo:OBI_0000295
                                          obo:RO_0002234
                                        ) ;
+                obo:IAO_0000116 "This property used an old version of the has input relation, so it has been deprecated."^^rdfs:Literal ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
                 rdfs:label "is derived into by planned process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
