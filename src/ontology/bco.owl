@@ -92,24 +92,16 @@ obo:BCO_0000058 rdf:type owl:ObjectProperty ;
 ###  http://purl.obolibrary.org/obo/BCO_0000067
 obo:BCO_0000067 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
-                owl:inverseOf obo:BCO_0000068 ;
                 rdf:type owl:TransitiveProperty ;
-                rdfs:domain obo:BFO_0000040 ;
-                rdfs:range obo:BFO_0000040 ;
-                owl:propertyChainAxiom ( obo:OBI_0000312
-                                         obo:RO_0002233
-                                       ) ;
-                obo:IAO_0000114 obo:IAO_0000423 ;
-                rdfs:label "derives from by planned process"@en .
+                obo:IAO_0000231 obo:IAO_0000423 ;
+                rdfs:label "derives from by planned process"@en ;
+                owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000068
 obo:BCO_0000068 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdf:type owl:TransitiveProperty ;
-                owl:propertyChainAxiom ( obo:OBI_0000295
-                                         obo:RO_0002234
-                                       ) ;
                 obo:IAO_0000116 "This property used an old version of the has input relation, so it has been deprecated."^^rdfs:Literal ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
                 rdfs:label "is derived into by planned process"@en ;
