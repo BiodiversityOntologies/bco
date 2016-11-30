@@ -157,7 +157,7 @@ obo:BCO_0000003 rdf:type owl:Class ;
                 obo:IAO_0000116 "This class replaces class bco_0000003, which was made obsolete because of identifier format." ,
                                 "We are having conversation with OBI developers about how this term relates to OBI:assay (). Is it equivalent, broader, narrower? What does it mean to be the input to an observation." ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
-                rdfs:comment "The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
+                rdfs:comment "An observing process is distinguished from a specimen collecting process in by having an information content entity as an output rather than a specimen. The information artifact may be written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, which is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
                 rdfs:label "observing process"@en .
 
 
