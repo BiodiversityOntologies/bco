@@ -941,6 +941,26 @@ obo:bco_0000046 a owl:Class ;
 	rdfs:label "obsolete material target of observation role"@en ;
 	owl:deprecated "true"^^xsd:boolean .
 # 
+# http://purl.obolibrary.org/obo/bco.owl/BCO_0000080
+
+<http://purl.obolibrary.org/obo/bco.owl/BCO_0000080> a owl:Class ;
+	rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
+	obo:IAO_0000112 "A set of gastropod and bivalve shells found in shell midden from an archaeological site in Alaska." ;
+	obo:IAO_0000115 "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some animal." ;
+	obo:IAO_0000119 "Rob Guralnick" ;
+	rdfs:comment "Zooarchaeological specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture." ;
+	rdfs:label "zooarcheological specimen"@en .
+# 
+# http://purl.obolibrary.org/obo/bco.owl/BCO_0000081
+
+<http://purl.obolibrary.org/obo/bco.owl/BCO_0000081> a owl:Class ;
+	rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
+	obo:IAO_0000112 "Preserved seeds found in a storage jar at an archeological site." ;
+	obo:IAO_0000115 "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some plant." ;
+	obo:IAO_0000119 "Rob Guralnick" ;
+	rdfs:comment "Archaeologicalbotanical specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture." ;
+	rdfs:label "archeobotanical specimen"@en .
+# 
 # http://purl.org/dc/dcam/VocabularyEncodingScheme
 
 <http://purl.org/dc/dcam/VocabularyEncodingScheme> a owl:Class ;
