@@ -8,7 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 obo:bco.owl a owl:Ontology ;
-	owl:imports <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> , <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <http://purl.obolibrary.org/obo/bco/releases/2015-04-10/dwcterms.owl> , <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> , <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ;
+	owl:imports <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> , <http://purl.obolibrary.org/obo/bco/dwcterms.owl> , <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> , <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ;
 	dc:contributor "Robert Guralnick" ;
 	dc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
 	dc:contributor "Biocode Commons Ontology Hackathon members" , "John Wieczorek" , "John Deck" ;
@@ -143,6 +143,23 @@ obo:RO_0000058 a owl:ObjectProperty .
 
 obo:RO_0000059 a owl:ObjectProperty .
 # 
+# http://purl.obolibrary.org/obo/bco.owl/0000085
+
+<http://purl.obolibrary.org/obo/bco.owl/0000085> a owl:ObjectProperty ;
+	rdfs:domain <http://purl.obolibrary.org/obo/bco.owl/0000084> ;
+	rdfs:range <http://rs.tdwg.org/dwc/terms/Taxon> ;
+	rdfs:comment "This relation is used specifically to link a taxonomic association to a taxon and is used with the of organism relation." ;
+	rdfs:label "to taxon"@en .
+# 
+# http://purl.obolibrary.org/obo/bco.owl/0000086
+
+<http://purl.obolibrary.org/obo/bco.owl/0000086> a owl:ObjectProperty ;
+	rdfs:subPropertyOf obo:IAO_0000136 ;
+	rdfs:domain <http://purl.obolibrary.org/obo/bco.owl/0000084> ;
+	rdfs:range <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> ;
+	rdfs:comment "This relation specifically links a taxonomic association to an organismal entity and is used together with the to taxon relation." ;
+	rdfs:label "of organism"@en .
+# 
 # 
 # 
 # #################################################################
@@ -238,8 +255,8 @@ obo:BCO_0000042 a owl:Class ;
 	rdfs:subClassOf obo:OBI_0000011 ;
 	obo:IAO_0000112 "Associating a museum specimen with a specific taxonomic concept based on its characters." , "Using BLAST to identify the taxa present in an environmental (metagenomic) sample." , "Using DNA barcoding to identify a plant species." , "Using a key to identify a plant in the field." ;
 	obo:IAO_0000114 obo:IAO_0000125 ;
-	obo:IAO_0000115 "A process by which a material sample is associated with a taxon or taxa." ;
-	obo:IAO_0000116 "This term replaces bco_0000042, which was made obsolete because of incorrect identifier format." ;
+	obo:IAO_0000115 "A planned process by which an organismal entity is associated with a taxon or taxa." ;
+	obo:IAO_0000116 "Need to add a relation for has specified output some taxonomic association." , "This term replaces bco_0000042, which was made obsolete because of incorrect identifier format." ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:label "taxonomic identification process"@en .
 # 
@@ -961,6 +978,19 @@ obo:bco_0000046 a owl:Class ;
 	rdfs:comment "Archaeologicalbotanical specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture." ;
 	rdfs:label "archeobotanical specimen"@en .
 # 
+# http://purl.obolibrary.org/obo/bco.owl/0000084
+
+<http://purl.obolibrary.org/obo/bco.owl/0000084> a owl:Class ;
+	rdfs:subClassOf obo:IAO_0000027 , _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty obo:IAO_0000136 ;
+	owl:someValuesFrom <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> .
+
+<http://purl.obolibrary.org/obo/bco.owl/0000084> obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
+	obo:IAO_0000119 "PPO hackathon Sep. 2016." ;
+	rdfs:label "taxonomic association"@en .
+# 
 # http://purl.org/dc/dcam/VocabularyEncodingScheme
 
 <http://purl.org/dc/dcam/VocabularyEncodingScheme> a owl:Class ;
@@ -1036,6 +1066,10 @@ obo:bco_0000046 a owl:Class ;
 	obo:IAO_0000231 "This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here."@en ;
 	owl:deprecated "true"^^xsd:boolean .
 # 
+# http://rs.tdwg.org/dwc/terms/Taxon
+
+<http://rs.tdwg.org/dwc/terms/Taxon> obo:BCO_0000060 "taxon"@en .
+# 
 # http://www.geneontology.org/formats/oboInOwl#ObsoleteClass
 
 <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> a owl:Class ;
@@ -1086,7 +1120,7 @@ obo:BCO_0000073 a owl:NamedIndividual ;
 	rdfs:label "incorrect identifier format, replaced"@en .
 # 
 
-_:genid20 obo:IAO_0000231 "" .
+_:genid21 obo:IAO_0000231 "" .
 # 
 # 
 # #################################################################
@@ -1125,9 +1159,6 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 # 
 
 <http://rs.tdwg.org/dwc/terms/Organism> obo:BCO_0000060 "organism"@en .
-# 
-
-<http://rs.tdwg.org/dwc/terms/Taxon> obo:BCO_0000060 "taxon"@en .
 # 
 
 <http://rs.tdwg.org/dwc/terms/attributes/status> rdfs:label "dwc_terms status"@en .
