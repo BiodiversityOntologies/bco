@@ -8,7 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 obo:bco.owl a owl:Ontology ;
-	owl:imports <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <http://purl.obolibrary.org/obo/bco/releases/2015-04-10/dwcterms.owl> , <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> , <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ;
+	owl:imports <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> , <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <http://purl.obolibrary.org/obo/bco/releases/2015-04-10/dwcterms.owl> , <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> , <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ;
 	dc:contributor "Robert Guralnick" ;
 	dc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
 	dc:contributor "Biocode Commons Ontology Hackathon members" , "John Wieczorek" , "John Deck" ;
@@ -816,14 +816,14 @@ obo:bco_0000033 a owl:Class ;
 # http://purl.obolibrary.org/obo/bco_0000034
 
 obo:bco_0000034 a owl:Class ;
-	rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+	rdfs:subClassOf obo:bco_0000042 ;
 	obo:IAO_0000115 "A material entity that derives from an organism or virus or viroid."@en ;
 	rdfs:comment """This class is understood to mean: A material entity that is either an organism, a part of an organism, a collection of organisms, or a fossil.
 
 The relation 'organismal entity derives from organism' was in the original diagram. Subclasses of organismal entity include organism, and It is not clear if it is valid to that an organism derives from an organism (is the derives from relation reflexive?).
 
 At the GSC14 hackathon in 09/2012, we decided to deprecate this term."""@en ;
-	rdfs:label "organismal entity"@en ;
+	rdfs:label "obsolete organismal entity"@en ;
 	owl:deprecated "true"^^xsd:boolean .
 # 
 # http://purl.obolibrary.org/obo/bco_0000035
