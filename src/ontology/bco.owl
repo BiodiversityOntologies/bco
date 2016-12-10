@@ -8,7 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 obo:bco.owl a owl:Ontology ;
-	owl:imports <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <http://purl.obolibrary.org/obo/bco/releases/2015-04-10/dwcterms.owl> , <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> , <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ;
+	owl:imports <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> , <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <http://purl.obolibrary.org/obo/bco/releases/2015-04-10/dwcterms.owl> , <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> , <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ;
 	dc:contributor "Robert Guralnick" ;
 	dc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
 	dc:contributor "Biocode Commons Ontology Hackathon members" , "John Wieczorek" , "John Deck" ;
