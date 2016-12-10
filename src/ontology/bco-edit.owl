@@ -160,6 +160,25 @@ obo:RO_0000059 a owl:ObjectProperty .
 	rdfs:comment "This relation specifically links a taxonomic association to an organismal entity and is used together with the to taxon relation." ;
 	rdfs:label "of organism"@en .
 # 
+# http://purl.obolibrary.org/obo/bco.owl/0000087
+
+<http://purl.obolibrary.org/obo/bco.owl/0000087> a owl:ObjectProperty ;
+	owl:propertyChainAxiom _:genid2 .
+
+_:genid2 a rdf:List ;
+	rdf:first _:genid3 .
+
+_:genid3 owl:inverseOf <http://purl.obolibrary.org/obo/bco.owl/0000086> .
+
+_:genid2 rdf:rest _:genid1 .
+
+_:genid1 a rdf:List ;
+	rdf:first <http://purl.obolibrary.org/obo/bco.owl/0000085> ;
+	rdf:rest rdf:nil .
+
+<http://purl.obolibrary.org/obo/bco.owl/0000087> rdfs:comment "A shortcut relation to an organsimal entity to a taxon or taxa." ;
+	rdfs:label "associated to taxon"@en .
+# 
 # 
 # 
 # #################################################################
@@ -172,15 +191,15 @@ obo:RO_0000059 a owl:ObjectProperty .
 # http://purl.obolibrary.org/obo/BCO_0000003
 
 obo:BCO_0000003 a owl:Class ;
-	rdfs:subClassOf obo:OBI_0000011 , _:genid1 .
+	rdfs:subClassOf obo:OBI_0000011 , _:genid4 .
 
-_:genid1 a owl:Restriction ;
+_:genid4 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000293 ;
 	owl:someValuesFrom obo:BFO_0000040 .
 
-obo:BCO_0000003 rdfs:subClassOf _:genid2 .
+obo:BCO_0000003 rdfs:subClassOf _:genid5 .
 
-_:genid2 a owl:Restriction ;
+_:genid5 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000299 ;
 	owl:someValuesFrom obo:IAO_0000030 .
 
@@ -196,9 +215,9 @@ obo:BCO_0000003 obo:BCO_0000057 "sighting"@en ;
 # http://purl.obolibrary.org/obo/BCO_0000016
 
 obo:BCO_0000016 a owl:Class ;
-	rdfs:subClassOf obo:OBI_0000011 , _:genid3 .
+	rdfs:subClassOf obo:OBI_0000011 , _:genid6 .
 
-_:genid3 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000299 ;
 	owl:someValuesFrom obo:BFO_0000040 .
 
@@ -223,9 +242,9 @@ obo:BCO_0000025 a owl:Class ;
 # http://purl.obolibrary.org/obo/BCO_0000031
 
 obo:BCO_0000031 a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000027 , _:genid4 .
+	rdfs:subClassOf obo:BFO_0000027 , _:genid7 .
 
-_:genid4 a owl:Restriction ;
+_:genid7 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000051 ;
 	owl:someValuesFrom obo:OBI_0100051 .
 
@@ -273,24 +292,24 @@ obo:BCO_0000044 a owl:Class ;
 # http://purl.obolibrary.org/obo/BCO_0000046
 
 obo:BCO_0000046 a owl:Class ;
-	owl:equivalentClass _:genid5 .
+	owl:equivalentClass _:genid8 .
 
-_:genid5 owl:intersectionOf _:genid8 .
+_:genid8 owl:intersectionOf _:genid11 .
 
-_:genid8 a rdf:List ;
+_:genid11 a rdf:List ;
 	rdf:first obo:BFO_0000023 ;
-	rdf:rest _:genid6 .
+	rdf:rest _:genid9 .
 
-_:genid6 a rdf:List ;
-	rdf:first _:genid7 .
+_:genid9 a rdf:List ;
+	rdf:first _:genid10 .
 
-_:genid7 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000054 ;
 	owl:someValuesFrom obo:BCO_0000003 .
 
-_:genid6 rdf:rest rdf:nil .
+_:genid9 rdf:rest rdf:nil .
 
-_:genid5 a owl:Class .
+_:genid8 a owl:Class .
 
 obo:BCO_0000046 rdfs:subClassOf obo:BFO_0000023 ;
 	obo:IAO_0000112 "the role borne by a bird during a Christmas Bird Count"@en ;
@@ -303,24 +322,24 @@ obo:BCO_0000046 rdfs:subClassOf obo:BFO_0000023 ;
 # http://purl.obolibrary.org/obo/BCO_0000047
 
 obo:BCO_0000047 a owl:Class ;
-	owl:equivalentClass _:genid9 .
+	owl:equivalentClass _:genid12 .
 
-_:genid9 owl:intersectionOf _:genid12 .
+_:genid12 owl:intersectionOf _:genid15 .
 
-_:genid12 a rdf:List ;
+_:genid15 a rdf:List ;
 	rdf:first obo:OBI_0000011 ;
-	rdf:rest _:genid10 .
+	rdf:rest _:genid13 .
 
-_:genid10 a rdf:List ;
-	rdf:first _:genid11 .
+_:genid13 a rdf:List ;
+	rdf:first _:genid14 .
 
-_:genid11 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000299 ;
 	owl:someValuesFrom obo:BCO_0000048 .
 
-_:genid10 rdf:rest rdf:nil .
+_:genid13 rdf:rest rdf:nil .
 
-_:genid9 a owl:Class .
+_:genid12 a owl:Class .
 
 obo:BCO_0000047 rdfs:subClassOf obo:OBI_0000011 ;
 	obo:BCO_0000057 "inventory  type"@en ;
@@ -334,24 +353,24 @@ obo:BCO_0000047 rdfs:subClassOf obo:OBI_0000011 ;
 # http://purl.obolibrary.org/obo/BCO_0000048
 
 obo:BCO_0000048 a owl:Class ;
-	owl:equivalentClass _:genid13 .
+	owl:equivalentClass _:genid16 .
 
-_:genid13 owl:intersectionOf _:genid16 .
+_:genid16 owl:intersectionOf _:genid19 .
 
-_:genid16 a rdf:List ;
+_:genid19 a rdf:List ;
 	rdf:first obo:IAO_0000030 ;
-	rdf:rest _:genid14 .
+	rdf:rest _:genid17 .
 
-_:genid14 a rdf:List ;
-	rdf:first _:genid15 .
+_:genid17 a rdf:List ;
+	rdf:first _:genid18 .
 
-_:genid15 a owl:Restriction ;
+_:genid18 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000312 ;
 	owl:someValuesFrom obo:BCO_0000047 .
 
-_:genid14 rdf:rest rdf:nil .
+_:genid17 rdf:rest rdf:nil .
 
-_:genid13 a owl:Class .
+_:genid16 a owl:Class .
 
 obo:BCO_0000048 rdfs:subClassOf obo:IAO_0000030 ;
 	obo:IAO_0000112 "\"The Flora of North America\"" , "The butterflies of Great Britain" , "The plants of Yosemite National Park" ;
@@ -440,9 +459,9 @@ obo:BCO_0000056 a owl:Class ;
 # http://purl.obolibrary.org/obo/BCO_0000059
 
 obo:BCO_0000059 a owl:Class ;
-	rdfs:subClassOf obo:OBI_0000245 , _:genid17 .
+	rdfs:subClassOf obo:OBI_0000245 , _:genid20 .
 
-_:genid17 a owl:Restriction ;
+_:genid20 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000051 ;
 	owl:someValuesFrom obo:BCO_0000031 .
 
@@ -554,13 +573,13 @@ obo:IAO_0000178 a owl:Class .
 # http://purl.obolibrary.org/obo/OBI_0000011
 
 obo:OBI_0000011 a owl:Class ;
-	owl:equivalentClass _:genid18 .
+	owl:equivalentClass _:genid21 .
 
-_:genid18 a owl:Restriction ;
+_:genid21 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000055 ;
-	owl:someValuesFrom _:genid19 .
+	owl:someValuesFrom _:genid22 .
 
-_:genid19 a owl:Restriction ;
+_:genid22 a owl:Restriction ;
 	owl:onProperty obo:RO_0000059 ;
 	owl:someValuesFrom obo:IAO_0000104 .
 
@@ -981,10 +1000,10 @@ obo:bco_0000046 a owl:Class ;
 # http://purl.obolibrary.org/obo/bco.owl/0000084
 
 <http://purl.obolibrary.org/obo/bco.owl/0000084> a owl:Class ;
-	rdfs:subClassOf obo:IAO_0000027 , _:genid20 .
+	rdfs:subClassOf obo:IAO_0000027 , _:genid23 .
 
-_:genid20 a owl:Restriction ;
-	owl:onProperty obo:IAO_0000136 ;
+_:genid23 a owl:Restriction ;
+	owl:onProperty <http://purl.obolibrary.org/obo/bco.owl/0000086> ;
 	owl:someValuesFrom <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> .
 
 <http://purl.obolibrary.org/obo/bco.owl/0000084> obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
@@ -1120,7 +1139,7 @@ obo:BCO_0000073 a owl:NamedIndividual ;
 	rdfs:label "incorrect identifier format, replaced"@en .
 # 
 
-_:genid21 obo:IAO_0000231 "" .
+_:genid24 obo:IAO_0000231 "" .
 # 
 # 
 # #################################################################
