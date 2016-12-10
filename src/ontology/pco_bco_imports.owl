@@ -220,11 +220,6 @@ obo:PCO_0000002 rdf:type owl:Class ;
                 rdfs:label "ecological community"@en .
 
 
-###  http://www.ifomis.org/bfo/1.1/snap#DependentContinuant
-snap:DependentContinuant rdf:type owl:Class ;
-                         rdfs:label "dependent_continuant"^^xsd:string .
-
-
 ###  http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart
 snap:FiatObjectPart rdf:type owl:Class ;
                     rdfs:label "fiat_object_part"^^xsd:string .
@@ -232,22 +227,11 @@ snap:FiatObjectPart rdf:type owl:Class ;
 
 ###  http://www.ifomis.org/bfo/1.1/snap#MaterialEntity
 snap:MaterialEntity rdf:type owl:Class ;
-                    owl:equivalentClass [ rdf:type owl:Class ;
-                                          owl:unionOf ( snap:FiatObjectPart
-                                                        snap:Object
-                                                        snap:ObjectAggregate
-                                                      )
-                                        ] ;
                     rdfs:subClassOf owl:Thing ;
                     obo:IAO_0000412 obo:pco.owl ;
                     rdfs:comment "Definition: An independent continuant [snap:IndependentContinuant] that is spatially extended whose identity is independent of that of other entities and can be maintained through time. Note: Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology."^^xsd:string ,
                                  "Examples: collection of random bacteria, a chair, dorsal surface of the body"^^xsd:string ;
                     rdfs:label "material_entity"^^xsd:string .
-
-
-###  http://www.ifomis.org/bfo/1.1/snap#Object
-snap:Object rdf:type owl:Class ;
-            rdfs:label "object"^^xsd:string .
 
 
 ###  http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate
@@ -258,26 +242,6 @@ snap:ObjectAggregate rdf:type owl:Class ;
                                   "Examples: a heap of stones, a group of commuters on the subway, a collection of random bacteria, a flock of geese, the patients in a hospital"^^xsd:string ,
                                   "Synonyms: substance aggregate"^^xsd:string ;
                      rdfs:label "object_aggregate"^^xsd:string .
-
-
-###  http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary
-snap:ObjectBoundary rdf:type owl:Class ;
-                    rdfs:label "object_boundary"^^xsd:string .
-
-
-###  http://www.ifomis.org/bfo/1.1/snap#Site
-snap:Site rdf:type owl:Class ;
-          rdfs:label "site"^^xsd:string .
-
-
-###  http://www.ifomis.org/bfo/1.1/snap#SpatialRegion
-snap:SpatialRegion rdf:type owl:Class ;
-                   rdfs:label "spatial_region"^^xsd:string .
-
-
-###  http://www.ifomis.org/bfo/1.1/span#Occurrent
-span:Occurrent rdf:type owl:Class ;
-               rdfs:label "occurrent"^^xsd:string .
 
 
 #################################################################
