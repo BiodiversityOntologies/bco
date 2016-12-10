@@ -16,7 +16,6 @@ PCO\
 http://purl.obolibrary.org/obo/PCO_0000002 #ecological community\
 http://purl.obolibrary.org/obo/PCO_0000001 #population\
 http://purl.obolibrary.org/obo/PCO_0000000 #collection of organisms\
-http://purl.obolibrary.org/obo/PCO_0000018 #collection of organisms of the same species\
 http://purl.obolibrary.org/obo/CARO_0001010 #organism or virus or viroid\
 http://purl.obolibrary.org/obo/CARO_0010004 #organism\
 \
@@ -25,10 +24,12 @@ http://purl.obolibrary.org/obo/PCO_0000000 #collection of organisms\
 subClassOf  http://www.ifomis.org/bfo/1.1/snap%23ObjectAggregate #object_aggregate\
 \
 [Source term retrieval setting]\
-includeAllIntermediates\
+includeComputedIntermediates\
 \
 [Source annotation URIs]\
 includeAllAxioms\
 \
 [Source annotation URIs to be excluded]\
-}
+\
+#This file does not generate exactly what we need and some hand edits are needed.\
+#Remove \'93species as collection of organisms\'94}

@@ -1,0 +1,305 @@
+@prefix : <http://ontofox.hegroup.org/6ptqef4p.owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix snap: <http://www.ifomis.org/bfo/1.1/snap#> .
+@prefix span: <http://www.ifomis.org/bfo/1.1/span#> .
+@base <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> .
+
+<https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000111
+obo:IAO_0000111 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "editor preferred term"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)"@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "editor preferred term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "example"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A phrase describing how a class name should be used. May also include other kinds of examples that facilitate immediate understanding of a class semantics, such as widely known prototypical subclasses or instances of the class. Although essential for high level terms, examples for low level terms (e.g., Affymetrix HU133 array) are not"@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "example of usage"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000114
+obo:IAO_0000114 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has curation status"@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Bill Bug"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                obo:IAO_0000119 "OBI_0000281"@en ;
+                rdfs:label "has curation status"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "definition"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "definition"@en ,
+                           "definition"^^xsd:string .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "editor note"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obfoundry.org/obo/obi>"@en ;
+                rdfs:label "editor note"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000117
+obo:IAO_0000117 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "term editor"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people"@en ;
+                obo:IAO_0000116 "20110707, MC: label update to term editor and definition modified accordingly. See http://code.google.com/p/information-artifact-ontology/issues/detail?id=115."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "term editor"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000118
+obo:IAO_0000118 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "alternative term"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An alternative name for a class or property which means the same thing as the preferred name (semantically equivalent)"@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "alternative term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "definition source"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w"^^xsd:string ,
+                                "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "definition source"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000412
+obo:IAO_0000412 rdf:type owl:AnnotationProperty ;
+                rdfs:label "imported from"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000589
+obo:IAO_0000589 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "OBO foundry unique label"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An alternative name for a class or property which is unique across the OBO Foundry."@en ;
+                obo:IAO_0000116 "The intended usage of that property is as follow: OBO foundry unique labels are automatically generated based on regular expressions provided by each ontology, so that SO could specify unique label = 'sequence ' + [label], etc. , MA could specify 'mouse + [label]' etc. Upon importing terms, ontology developers can choose to use the 'OBO foundry unique label' for an imported term or not. The same applies to tools ."^^xsd:string ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Bjoern Peters"@en ,
+                                "PERSON:Chris Mungall"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                obo:IAO_0000119 "GROUP:OBO Foundry <http://obofoundry.org/>"@en ;
+                rdfs:label "OBO foundry unique label"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_created_by
+obo:IAO_created_by rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_creation_date
+obo:IAO_creation_date rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/RO_0002350
+obo:RO_0002350 rdf:type owl:ObjectProperty ;
+               rdfs:label "member of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002351
+obo:RO_0002351 rdf:type owl:ObjectProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:label "has member"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/CARO_0001010
+obo:CARO_0001010 rdf:type owl:Class ;
+                 rdfs:subClassOf snap:MaterialEntity ;
+                 obo:IAO_0000115 "Material anatomical entity that is a member of an individual species or is a viral or viroid particle."^^xsd:string ;
+                 obo:IAO_0000412 obo:pco.owl ;
+                 obo:IAO_0000589 "organism or virus"@en ;
+                 obo:IAO_created_by "Melissa Haendel"^^xsd:string ;
+                 obo:IAO_creation_date "9/18/11"^^xsd:string ;
+                 rdfs:label "organism or virus or viroid"^^xsd:string .
+
+
+###  http://purl.obolibrary.org/obo/CARO_0010004
+obo:CARO_0010004 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:CARO_0001010 ;
+                 obo:IAO_0000115 "An individual member of a clade."^^xsd:string ;
+                 obo:IAO_0000412 obo:pco.owl ;
+                 obo:IAO_0000589 "organism"@en ;
+                 obo:IAO_created_by "mah"^^xsd:string ;
+                 obo:IAO_creation_date "7.16.2011"^^xsd:string ;
+                 rdfs:comment "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. "^^xsd:string ;
+                 rdfs:label "organism"^^xsd:string .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000078
+obo:IAO_0000078 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000000
+obo:PCO_0000000 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( snap:ObjectAggregate
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom obo:CARO_0001010
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass obo:CARO_0001010
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                obo:IAO_0000112 "Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family." ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A material entity that consists of two or more organisms, viruses, or viroids."@en ;
+                obo:IAO_0000118 "group of organism" ,
+                                "organism collection" ;
+                obo:IAO_0000412 obo:pco.owl ;
+                rdfs:comment "May be of the same or different species." ;
+                rdfs:label "collection of organisms"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000001
+obo:PCO_0000001 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000000 ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A collection of organisms, all of the same species, that live in the same place."@en ;
+                obo:IAO_0000116 "Still uncertain if this should include every organism of a species living in an area or any subset of them. For now make this a general term (unspecified) and then subclasses can be more specific."@en ;
+                obo:IAO_0000119 "ISBN:0878932739" ;
+                obo:IAO_0000412 obo:pco.owl ;
+                rdfs:comment "It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population. Classes for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across ontologies and only one term used."@en ;
+                rdfs:label "population"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000002
+obo:PCO_0000002 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000000 ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A collection of organisms of at least two different species, living in a particular area."@en ;
+                obo:IAO_0000118 "multispecies community"@en ;
+                obo:IAO_0000119 "ISBN:0865423504" ;
+                obo:IAO_0000412 obo:pco.owl ;
+                rdfs:comment "Ecological community is defined broadly here. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). The work community, as it often used to describe a group of humans living together, is a type of population (PCO_0000001)."@en ;
+                rdfs:label "ecological community"@en .
+
+
+###  http://www.ifomis.org/bfo/1.1/snap#DependentContinuant
+snap:DependentContinuant rdf:type owl:Class ;
+                         rdfs:label "dependent_continuant"^^xsd:string .
+
+
+###  http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart
+snap:FiatObjectPart rdf:type owl:Class ;
+                    rdfs:label "fiat_object_part"^^xsd:string .
+
+
+###  http://www.ifomis.org/bfo/1.1/snap#MaterialEntity
+snap:MaterialEntity rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Class ;
+                                          owl:unionOf ( snap:FiatObjectPart
+                                                        snap:Object
+                                                        snap:ObjectAggregate
+                                                      )
+                                        ] ;
+                    rdfs:subClassOf owl:Thing ;
+                    obo:IAO_0000412 obo:pco.owl ;
+                    rdfs:comment "Definition: An independent continuant [snap:IndependentContinuant] that is spatially extended whose identity is independent of that of other entities and can be maintained through time. Note: Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology."^^xsd:string ,
+                                 "Examples: collection of random bacteria, a chair, dorsal surface of the body"^^xsd:string ;
+                    rdfs:label "material_entity"^^xsd:string .
+
+
+###  http://www.ifomis.org/bfo/1.1/snap#Object
+snap:Object rdf:type owl:Class ;
+            rdfs:label "object"^^xsd:string .
+
+
+###  http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate
+snap:ObjectAggregate rdf:type owl:Class ;
+                     rdfs:subClassOf snap:MaterialEntity ;
+                     obo:IAO_0000412 obo:pco.owl ;
+                     rdfs:comment "Definition: A material entity [snap:MaterialEntity] that is a mereological sum of separate object [snap:Object] entities and possesses non-connected boundaries."^^xsd:string ,
+                                  "Examples: a heap of stones, a group of commuters on the subway, a collection of random bacteria, a flock of geese, the patients in a hospital"^^xsd:string ,
+                                  "Synonyms: substance aggregate"^^xsd:string ;
+                     rdfs:label "object_aggregate"^^xsd:string .
+
+
+###  http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary
+snap:ObjectBoundary rdf:type owl:Class ;
+                    rdfs:label "object_boundary"^^xsd:string .
+
+
+###  http://www.ifomis.org/bfo/1.1/snap#Site
+snap:Site rdf:type owl:Class ;
+          rdfs:label "site"^^xsd:string .
+
+
+###  http://www.ifomis.org/bfo/1.1/snap#SpatialRegion
+snap:SpatialRegion rdf:type owl:Class ;
+                   rdfs:label "spatial_region"^^xsd:string .
+
+
+###  http://www.ifomis.org/bfo/1.1/span#Occurrent
+span:Occurrent rdf:type owl:Class ;
+               rdfs:label "occurrent"^^xsd:string .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000120
+obo:IAO_0000120 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                rdfs:label "metadata complete"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000122
+obo:IAO_0000122 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                rdfs:label "ready for release"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000125
+obo:IAO_0000125 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                rdfs:label "pending final vetting"@en .
+
+
+###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
