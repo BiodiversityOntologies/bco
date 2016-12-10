@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 [URI of the OWL(RDF/XML) output file]\
+\
+\
+[Source ontology]\
+PCO\
+\
+[Low level source term URIs]\
+http://purl.obolibrary.org/obo/PCO_0000002 #ecological community\
+http://purl.obolibrary.org/obo/PCO_0000001 #population\
+http://purl.obolibrary.org/obo/PCO_0000000 #collection of organisms\
+http://purl.obolibrary.org/obo/PCO_0000018 #collection of organisms of the same species\
+http://purl.obolibrary.org/obo/CARO_0001010 #organism or virus or viroid\
+http://purl.obolibrary.org/obo/CARO_0010004 #organism\
+\
+[Top level source term URIs and target direct superclass URIs]\
+http://purl.obolibrary.org/obo/PCO_0000000 #collection of organisms\
+subClassOf  http://www.ifomis.org/bfo/1.1/snap%23ObjectAggregate #object_aggregate\
+\
+[Source term retrieval setting]\
+includeAllIntermediates\
+\
+[Source annotation URIs]\
+includeAllAxioms\
+\
+[Source annotation URIs to be excluded]\
+}
