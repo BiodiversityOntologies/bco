@@ -1,4 +1,4 @@
-@prefix : <http://purl.obolibrary.org/obo/bco.owl#> .
+@prefix : <http://purl.obolibrary.org/obo/bco.owl/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -145,38 +145,38 @@ obo:RO_0000059 a owl:ObjectProperty .
 # 
 # http://purl.obolibrary.org/obo/bco.owl/0000085
 
-<http://purl.obolibrary.org/obo/bco.owl/0000085> a owl:ObjectProperty ;
-	rdfs:domain <http://purl.obolibrary.org/obo/bco.owl/0000084> ;
+:0000085 a owl:ObjectProperty ;
+	rdfs:domain :0000084 ;
 	rdfs:range <http://rs.tdwg.org/dwc/terms/Taxon> ;
 	rdfs:comment "This relation is used specifically to link a taxonomic association to a taxon and is used with the of organism relation." ;
 	rdfs:label "to taxon"@en .
 # 
 # http://purl.obolibrary.org/obo/bco.owl/0000086
 
-<http://purl.obolibrary.org/obo/bco.owl/0000086> a owl:ObjectProperty ;
+:0000086 a owl:ObjectProperty ;
 	rdfs:subPropertyOf obo:IAO_0000136 ;
-	rdfs:domain <http://purl.obolibrary.org/obo/bco.owl/0000084> ;
+	rdfs:domain :0000084 ;
 	rdfs:range <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> ;
 	rdfs:comment "This relation specifically links a taxonomic association to an organismal entity and is used together with the to taxon relation." ;
 	rdfs:label "of organism"@en .
 # 
 # http://purl.obolibrary.org/obo/bco.owl/0000087
 
-<http://purl.obolibrary.org/obo/bco.owl/0000087> a owl:ObjectProperty ;
+:0000087 a owl:ObjectProperty ;
 	owl:propertyChainAxiom _:genid2 .
 
 _:genid2 a rdf:List ;
 	rdf:first _:genid3 .
 
-_:genid3 owl:inverseOf <http://purl.obolibrary.org/obo/bco.owl/0000086> .
+_:genid3 owl:inverseOf :0000086 .
 
 _:genid2 rdf:rest _:genid1 .
 
 _:genid1 a rdf:List ;
-	rdf:first <http://purl.obolibrary.org/obo/bco.owl/0000085> ;
+	rdf:first :0000085 ;
 	rdf:rest rdf:nil .
 
-<http://purl.obolibrary.org/obo/bco.owl/0000087> rdfs:comment "A shortcut relation to an organsimal entity to a taxon or taxa." ;
+:0000087 rdfs:comment "A shortcut relation to an organsimal entity to a taxon or taxa." ;
 	rdfs:label "associated to taxon"@en .
 # 
 # 
@@ -639,7 +639,7 @@ obo:bco_0000003 a owl:Class ;
 	obo:IAO_0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." , "Observing and recording the presence or absence of butterflies during a transect walk." , "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." ;
 	obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
 	obo:IAO_0000116 "This class was made obsolete because of the incorrect identifier format. It has been replaced by BCO_0000003." ;
-	obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> ;
+	obo:IAO_0000231 :BCO_0000075 ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:comment "The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
 	rdfs:label "obsolete observing process"@en ;
@@ -674,7 +674,7 @@ obo:bco_0000006 a owl:Class ;
 	obo:IAO_0000112 "A field notebook." ;
 	obo:IAO_0000114 obo:IAO_0000124 ;
 	obo:IAO_0000115 "A printed report that records the outcome of some observing process."@en ;
-	obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> ;
+	obo:IAO_0000231 :BCO_0000075 ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:label "printed observational report"@en ;
 	owl:deprecated "true"^^xsd:boolean .
@@ -698,7 +698,7 @@ obo:bco_0000016 a owl:Class ;
 	obo:IAO_0000112 "a curator submitting a herbarium speciman to a museum"@en , "a researcher submitting a water sample to a laboratory storage collection"@en ;
 	obo:IAO_0000115 "A planned process whereby a person submits a material sample to an organization." ;
 	obo:IAO_0000116 "This term was made obsolete because it had the incorrect identifier format. It has been replaced by BCO_0000016." ;
-	obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> ;
+	obo:IAO_0000231 :BCO_0000075 ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:label "obsolete submitting process"@en ;
 	owl:deprecated "true"^^xsd:boolean .
@@ -752,7 +752,7 @@ obo:bco_0000025 a owl:Class ;
 	rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
 	obo:IAO_0000115 "An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured."@en ;
 	obo:IAO_0000116 "This term was deprecated because it has the wrong ID format. It is replaced by BCO_0000025." ;
-	obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> ;
+	obo:IAO_0000231 :BCO_0000075 ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:comment "Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site."@en ;
 	rdfs:label "obsolete locality description"@en ;
@@ -821,7 +821,7 @@ obo:bco_0000031 a owl:Class ;
 	obo:IAO_0000114 obo:IAO_0000428 ;
 	obo:IAO_0000115 "An object aggregate that has as member part a material sample that is located in museum as a result of a process of curation."@en ;
 	obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It has been replaced by BCO_0000031." ;
-	obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> ;
+	obo:IAO_0000231 :BCO_0000075 ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:comment "Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection."@en ;
 	rdfs:label "obsolete museum collection"@en ;
@@ -835,7 +835,7 @@ obo:bco_0000032 a owl:Class ;
 	obo:IAO_0000114 obo:IAO_0000428 ;
 	obo:IAO_0000115 "A museum collection that has as member part a material sample that was derived from an organism."@en ;
 	obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000031." ;
-	obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> ;
+	obo:IAO_0000231 :BCO_0000075 ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:label "obsolete organismal museum collection"@en ;
 	owl:deprecated "true"^^xsd:boolean .
@@ -946,7 +946,7 @@ obo:bco_0000044 a owl:Class ;
 	obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en , "A bird observed during a transect walk." , "A tree is forest plot that is measured for diameter at breast height (DBH)." , "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ;
 	obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
 	obo:IAO_0000116 "This term was made obsolete because of incorrected identifier format. It is replaced by BCO_0000044." ;
-	obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> ;
+	obo:IAO_0000231 :BCO_0000075 ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:label "obsolete material target of observation"@en ;
 	owl:deprecated "true"^^xsd:boolean .
@@ -972,14 +972,14 @@ obo:bco_0000046 a owl:Class ;
 	obo:IAO_0000112 "the role borne by a bird during a Christmas Bird Count"@en ;
 	obo:IAO_0000115 "A role that is borne by some material entity and is realized by the material entity being the input of an observing process." ;
 	obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000046." ;
-	obo:IAO_0000231 <http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> ;
+	obo:IAO_0000231 :BCO_0000075 ;
 	dc:creator "Biocode Commons Ontology Hackathon" ;
 	rdfs:label "obsolete material target of observation role"@en ;
 	owl:deprecated "true"^^xsd:boolean .
 # 
 # http://purl.obolibrary.org/obo/bco.owl/BCO_0000080
 
-<http://purl.obolibrary.org/obo/bco.owl/BCO_0000080> a owl:Class ;
+:BCO_0000080 a owl:Class ;
 	rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
 	obo:IAO_0000112 "A set of gastropod and bivalve shells found in shell midden from an archaeological site in Alaska." ;
 	obo:IAO_0000115 "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some animal." ;
@@ -989,7 +989,7 @@ obo:bco_0000046 a owl:Class ;
 # 
 # http://purl.obolibrary.org/obo/bco.owl/BCO_0000081
 
-<http://purl.obolibrary.org/obo/bco.owl/BCO_0000081> a owl:Class ;
+:BCO_0000081 a owl:Class ;
 	rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
 	obo:IAO_0000112 "Preserved seeds found in a storage jar at an archeological site." ;
 	obo:IAO_0000115 "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some plant." ;
@@ -999,14 +999,14 @@ obo:bco_0000046 a owl:Class ;
 # 
 # http://purl.obolibrary.org/obo/bco.owl/0000084
 
-<http://purl.obolibrary.org/obo/bco.owl/0000084> a owl:Class ;
+:0000084 a owl:Class ;
 	rdfs:subClassOf obo:IAO_0000027 , _:genid23 .
 
 _:genid23 a owl:Restriction ;
-	owl:onProperty <http://purl.obolibrary.org/obo/bco.owl/0000086> ;
+	owl:onProperty :0000086 ;
 	owl:someValuesFrom <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> .
 
-<http://purl.obolibrary.org/obo/bco.owl/0000084> obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
+:0000084 obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
 	obo:IAO_0000119 "PPO hackathon Sep. 2016." ;
 	rdfs:label "taxonomic association"@en .
 # 
@@ -1072,6 +1072,11 @@ _:genid23 a owl:Restriction ;
 	obo:IAO_0000231 "This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here."@en ;
 	owl:deprecated "true"^^xsd:boolean .
 # 
+# http://rs.tdwg.org/dwc/terms/Organism
+
+<http://rs.tdwg.org/dwc/terms/Organism> rdfs:subClassOf <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> ;
+	obo:BCO_0000060 "organism"@en .
+# 
 # http://rs.tdwg.org/dwc/terms/PreservedSpecimen
 
 <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> a owl:Class ;
@@ -1087,7 +1092,8 @@ _:genid23 a owl:Restriction ;
 # 
 # http://rs.tdwg.org/dwc/terms/Taxon
 
-<http://rs.tdwg.org/dwc/terms/Taxon> obo:BCO_0000060 "taxon"@en .
+<http://rs.tdwg.org/dwc/terms/Taxon> rdfs:subClassOf obo:PCO_0000000 ;
+	obo:BCO_0000060 "taxon"@en .
 # 
 # http://www.geneontology.org/formats/oboInOwl#ObsoleteClass
 
@@ -1135,7 +1141,7 @@ obo:BCO_0000073 a owl:NamedIndividual ;
 # 
 # http://purl.obolibrary.org/obo/bco.owl/BCO_0000075
 
-<http://purl.obolibrary.org/obo/bco.owl/BCO_0000075> a owl:NamedIndividual , obo:IAO_0000078 ;
+:BCO_0000075 a owl:NamedIndividual , obo:IAO_0000078 ;
 	rdfs:label "incorrect identifier format, replaced"@en .
 # 
 
@@ -1175,9 +1181,6 @@ obo:OBI_0000112 obo:IAO_0000118 "material sample"@en .
 
 <http://rs.tdwg.org/dwc/terms/Occurrence> obo:IAO_0000116 "This Darwin Core class should not be used when annotating data with BCO.  It is not mapped to BCO classes because its meaning is too ambiguous." ;
 	obo:BCO_0000060 "occurrence" .
-# 
-
-<http://rs.tdwg.org/dwc/terms/Organism> obo:BCO_0000060 "organism"@en .
 # 
 
 <http://rs.tdwg.org/dwc/terms/attributes/status> rdfs:label "dwc_terms status"@en .
