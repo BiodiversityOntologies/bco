@@ -163,6 +163,7 @@ obo:RO_0000059 a owl:ObjectProperty .
 # http://purl.obolibrary.org/obo/bco.owl/0000087
 
 :0000087 a owl:ObjectProperty ;
+	rdfs:subPropertyOf obo:RO_0002350 ;
 	owl:propertyChainAxiom _:genid2 .
 
 _:genid2 a rdf:List ;
@@ -177,7 +178,7 @@ _:genid1 a rdf:List ;
 	rdf:rest rdf:nil .
 
 :0000087 rdfs:comment "A shortcut relation to an organsimal entity to a taxon or taxa." ;
-	rdfs:label "associated to taxon"@en .
+	rdfs:label "member of taxon"@en .
 # 
 # 
 # 
@@ -1003,12 +1004,18 @@ obo:bco_0000046 a owl:Class ;
 	rdfs:subClassOf obo:IAO_0000027 , _:genid23 .
 
 _:genid23 a owl:Restriction ;
+	owl:onProperty :0000085 ;
+	owl:someValuesFrom <http://rs.tdwg.org/dwc/terms/Taxon> .
+
+:0000084 rdfs:subClassOf _:genid24 .
+
+_:genid24 a owl:Restriction ;
 	owl:onProperty :0000086 ;
 	owl:someValuesFrom <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> .
 
 :0000084 obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
 	obo:IAO_0000119 "PPO hackathon Sep. 2016." ;
-	rdfs:label "taxonomic association"@en .
+	rdfs:label "identification association"@en .
 # 
 # http://purl.org/dc/dcam/VocabularyEncodingScheme
 
@@ -1145,7 +1152,7 @@ obo:BCO_0000073 a owl:NamedIndividual ;
 	rdfs:label "incorrect identifier format, replaced"@en .
 # 
 
-_:genid24 obo:IAO_0000231 "" .
+_:genid25 obo:IAO_0000231 "" .
 # 
 # 
 # #################################################################
