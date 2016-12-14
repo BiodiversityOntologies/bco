@@ -10,7 +10,7 @@
 @prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
 
 <http://purl.obolibrary.org/obo/bco/imports/obi_bco_imports.owl> a owl:Ontology ;
-	owl:versionIRI <http://purl.obolibrary.org/obo/bco/2016-12-14/imports/obi_bco_import.owl> ;
+	owl:versionIRI <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/obi_bco_import.owl> ;
 	dc:creator "Pierre Grenon"@en , "Bjoern Peters"@en , "Matthew Pocock"@en , "Liju Fan"@en , "Christian Bolling"@en , "Chris Taylor"@en , "Chris Stoeckert"@en ;
 	rdfs:comment "Please cite the OBI consortium http://purl.obolibrary.org/obo/obi where traditional citation is called for. However it is adequate that individual terms be attributed simply by use of the identifying PURL for the term, in projects that refer to them."^^xsd:string ;
 	dc:creator "Tina Hernandez-Boussard"@en , "Jessica Turner"@en , "Allyson Lister"@en , "Yongqun He"@en , "Jie Zheng"@en , "Tanya Gray"@en ;
@@ -856,9 +856,9 @@ obo:OBI_0000070 rdfs:subClassOf _:genid25 .
 
 _:genid25 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000293 ;
-	owl:someValuesFrom _:genid112 .
+	owl:someValuesFrom _:genid43 .
 
-_:genid112 owl:intersectionOf _:genid29 .
+_:genid43 owl:intersectionOf _:genid29 .
 
 _:genid29 a rdf:List ;
 	rdf:first obo:BFO_0000040 ;
@@ -873,7 +873,7 @@ _:genid28 a owl:Restriction ;
 
 _:genid27 rdf:rest rdf:nil .
 
-_:genid112 a owl:Class .
+_:genid43 a owl:Class .
 
 obo:OBI_0000070 rdfs:subClassOf _:genid30 .
 
@@ -892,9 +892,9 @@ _:genid32 a rdf:List ;
 
 _:genid33 a owl:Restriction ;
 	owl:onProperty obo:IAO_0000136 ;
-	owl:someValuesFrom _:genid113 .
+	owl:someValuesFrom _:genid44 .
 
-_:genid113 owl:intersectionOf _:genid29 ;
+_:genid44 owl:intersectionOf _:genid29 ;
 	a owl:Class .
 
 _:genid32 rdf:rest rdf:nil .
