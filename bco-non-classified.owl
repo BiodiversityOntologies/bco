@@ -15,7 +15,7 @@
 
 <http://purl.obolibrary.org/obo/bco/bco-non-classified.owl> a owl:Ontology ;
 	owl:versionIRI <http://purl.obolibrary.org/obo/bco/2016-12-14/bco-non-classified.owl> ;
-	owl:imports <http://purl.obolibrary.org/obo/bco/2016-12-14/imports/dwcterms.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <http://purl.obolibrary.org/obo/bco/2016-12-14/imports/pco_bco_import.owl> , <http://purl.obolibrary.org/obo/bco/2016-12-14/imports/obi_bco_import.owl> , <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> , <http://purl.obolibrary.org/obo/bco/2016-12-14/imports/bfo_bco_imports.owl> ;
+	owl:imports <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/obi_bco_imports.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/pco_bco_imports.owl> , <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/bfo_bco_imports.owl> , <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/dwcterms.owl> , <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ;
 	dc:contributor "Robert Guralnick" ;
 	dc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
 	dc:contributor "Biocode Commons Ontology Hackathon members" , "John Wieczorek" , "John Deck" ;
@@ -646,6 +646,14 @@ obo:OBI_0000659 a owl:Class ;
 obo:OBI_0100051 owl:equivalentClass <http://rs.tdwg.org/dwc/terms/MaterialSample> ;
 	obo:IAO_0000112 "A herbarium or museum specimen."^^xsd:string , "A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA."^^xsd:string .
 # 
+# http://purl.obolibrary.org/obo/PCO_0000000
+
+obo:PCO_0000000 a owl:Class .
+# 
+# http://purl.obolibrary.org/obo/PCO_0000031
+
+obo:PCO_0000031 a owl:Class .
+# 
 # http://purl.obolibrary.org/obo/bco_0000000
 
 obo:bco_0000000 a owl:Class ;
@@ -1108,7 +1116,8 @@ obo:bco_0000046 a owl:Class ;
 # 
 # http://rs.tdwg.org/dwc/terms/Organism
 
-<http://rs.tdwg.org/dwc/terms/Organism> rdfs:subClassOf obo:PCO_0000031 ;
+<http://rs.tdwg.org/dwc/terms/Organism> a owl:Class ;
+	rdfs:subClassOf obo:PCO_0000031 ;
 	obo:BCO_0000060 "organism"@en .
 # 
 # http://rs.tdwg.org/dwc/terms/PreservedSpecimen
@@ -1126,7 +1135,8 @@ obo:bco_0000046 a owl:Class ;
 # 
 # http://rs.tdwg.org/dwc/terms/Taxon
 
-<http://rs.tdwg.org/dwc/terms/Taxon> rdfs:subClassOf obo:PCO_0000000 ;
+<http://rs.tdwg.org/dwc/terms/Taxon> a owl:Class ;
+	rdfs:subClassOf obo:PCO_0000000 ;
 	obo:BCO_0000060 "taxon"@en .
 # 
 # http://www.geneontology.org/formats/oboInOwl#ObsoleteClass

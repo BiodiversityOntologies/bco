@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/bfo_bco_imports.owl" uri="http://purl.obolibrary.org/obo/bco/imports/bfo_bco_imports.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/pco_bco_imports.owl" uri="http://purl.obolibrary.org/obo/bco/imports/pco_bco_imports.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/dwcterms.owl" uri="http://purl.obolibrary.org/obo/bco/imports/dwcterms.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/obi_bco_imports.owl" uri="http://purl.obolibrary.org/obo/bco/imports/obi_bco_imports.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/2016-12-14/imports/obi_bco_import.owl" uri="http://purl.obolibrary.org/obo/bco/imports/obi_bco_imports.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/2016-12-14/imports/dwcterms.owl" uri="http://purl.obolibrary.org/obo/bco/imports/dwcterms.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/2016-12-14/imports/pco_bco_import.owl" uri="http://purl.obolibrary.org/obo/bco/imports/pco_bco_imports.owl"/>
