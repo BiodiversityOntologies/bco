@@ -10,7 +10,7 @@
 @prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
 
 <http://purl.obolibrary.org/obo/bco/imports/obi_bco_imports.owl> a owl:Ontology ;
-	owl:versionIRI <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/obi_bco_import.owl> ;
+	owl:versionIRI <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/obi_bco_imports.owl> ;
 	dc:creator "Pierre Grenon"@en , "Bjoern Peters"@en , "Matthew Pocock"@en , "Liju Fan"@en , "Christian Bolling"@en , "Chris Taylor"@en , "Chris Stoeckert"@en ;
 	rdfs:comment "Please cite the OBI consortium http://purl.obolibrary.org/obo/obi where traditional citation is called for. However it is adequate that individual terms be attributed simply by use of the identifying PURL for the term, in projects that refer to them."^^xsd:string ;
 	dc:creator "Tina Hernandez-Boussard"@en , "Jessica Turner"@en , "Allyson Lister"@en , "Yongqun He"@en , "Jie Zheng"@en , "Tanya Gray"@en ;
@@ -856,9 +856,9 @@ obo:OBI_0000070 rdfs:subClassOf _:genid25 .
 
 _:genid25 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000293 ;
-	owl:someValuesFrom _:genid43 .
+	owl:someValuesFrom _:genid127 .
 
-_:genid43 owl:intersectionOf _:genid29 .
+_:genid127 owl:intersectionOf _:genid29 .
 
 _:genid29 a rdf:List ;
 	rdf:first obo:BFO_0000040 ;
@@ -873,7 +873,7 @@ _:genid28 a owl:Restriction ;
 
 _:genid27 rdf:rest rdf:nil .
 
-_:genid43 a owl:Class .
+_:genid127 a owl:Class .
 
 obo:OBI_0000070 rdfs:subClassOf _:genid30 .
 
@@ -892,9 +892,9 @@ _:genid32 a rdf:List ;
 
 _:genid33 a owl:Restriction ;
 	owl:onProperty obo:IAO_0000136 ;
-	owl:someValuesFrom _:genid44 .
+	owl:someValuesFrom _:genid128 .
 
-_:genid44 owl:intersectionOf _:genid29 ;
+_:genid128 owl:intersectionOf _:genid29 ;
 	a owl:Class .
 
 _:genid32 rdf:rest rdf:nil .
@@ -1018,32 +1018,40 @@ obo:OBI_0000441 a owl:Class ;
 obo:OBI_0000659 a owl:Class ;
 	owl:equivalentClass _:genid42 .
 
-_:genid42 owl:intersectionOf _:genid45 .
+_:genid42 owl:intersectionOf _:genid47 .
 
-_:genid45 a rdf:List ;
+_:genid47 a rdf:List ;
 	rdf:first obo:OBI_0000011 ;
 	rdf:rest _:genid43 .
 
 _:genid43 a rdf:List ;
 	rdf:first _:genid44 .
 
-_:genid44 a owl:Restriction ;
-	owl:onProperty obo:OBI_0000417 ;
-	owl:someValuesFrom obo:OBI_0000684 .
+_:genid44 owl:intersectionOf _:genid46 .
+
+_:genid46 a rdf:List ;
+	rdf:first obo:BFO_0000040 ;
+	rdf:rest _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first _:genid28 ;
+	rdf:rest rdf:nil .
+
+_:genid44 a owl:Class .
 
 _:genid43 rdf:rest rdf:nil .
 
 _:genid42 a owl:Class .
 
-obo:OBI_0000659 rdfs:subClassOf obo:OBI_0000011 , _:genid46 .
+obo:OBI_0000659 rdfs:subClassOf obo:OBI_0000011 , _:genid48 .
 
-_:genid46 a owl:Restriction ;
+_:genid48 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000293 ;
 	owl:someValuesFrom obo:BFO_0000040 .
 
-obo:OBI_0000659 rdfs:subClassOf _:genid47 .
+obo:OBI_0000659 rdfs:subClassOf _:genid49 .
 
-_:genid47 a owl:Restriction ;
+_:genid49 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000299 ;
 	owl:someValuesFrom obo:OBI_0100051 .
 
@@ -1098,9 +1106,9 @@ obo:OBI_0000973 a owl:Class ;
 # http://purl.obolibrary.org/obo/OBI_0001573
 
 obo:OBI_0001573 a owl:Class ;
-	rdfs:subClassOf obo:OBI_0000973 , _:genid48 .
+	rdfs:subClassOf obo:OBI_0000973 , _:genid50 .
 
-_:genid48 a owl:Restriction ;
+_:genid50 a owl:Restriction ;
 	owl:onProperty obo:IAO_0000136 ;
 	owl:someValuesFrom obo:OBI_0000811 .
 
@@ -1130,24 +1138,24 @@ obo:OBI_0001933 a owl:Class ;
 # http://purl.obolibrary.org/obo/OBI_0100051
 
 obo:OBI_0100051 a owl:Class ;
-	owl:equivalentClass _:genid49 .
+	owl:equivalentClass _:genid51 .
 
-_:genid49 owl:intersectionOf _:genid52 .
+_:genid51 owl:intersectionOf _:genid54 .
+
+_:genid54 a rdf:List ;
+	rdf:first obo:BFO_0000040 ;
+	rdf:rest _:genid52 .
 
 _:genid52 a rdf:List ;
-	rdf:first obo:BFO_0000040 ;
-	rdf:rest _:genid50 .
+	rdf:first _:genid53 .
 
-_:genid50 a rdf:List ;
-	rdf:first _:genid51 .
-
-_:genid51 a owl:Restriction ;
+_:genid53 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000087 ;
 	owl:someValuesFrom obo:OBI_0000112 .
 
-_:genid50 rdf:rest rdf:nil .
+_:genid52 rdf:rest rdf:nil .
 
-_:genid49 a owl:Class .
+_:genid51 a owl:Class .
 
 obo:OBI_0100051 rdfs:subClassOf obo:BFO_0000040 ;
 	obo:IAO_0000111 "specimen"@en ;
@@ -1163,68 +1171,68 @@ obo:OBI_0100051 rdfs:subClassOf obo:BFO_0000040 ;
 # http://purl.obolibrary.org/obo/OBI_0600047
 
 obo:OBI_0600047 a owl:Class ;
-	owl:equivalentClass _:genid53 .
+	owl:equivalentClass _:genid55 .
 
-_:genid53 owl:intersectionOf _:genid56 .
+_:genid55 owl:intersectionOf _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first _:genid59 .
+
+_:genid59 a owl:Restriction ;
+	owl:onProperty obo:OBI_0000299 ;
+	owl:someValuesFrom obo:OBI_0000973 .
+
+_:genid58 rdf:rest _:genid56 .
 
 _:genid56 a rdf:List ;
 	rdf:first _:genid57 .
 
 _:genid57 a owl:Restriction ;
-	owl:onProperty obo:OBI_0000299 ;
-	owl:someValuesFrom obo:OBI_0000973 .
-
-_:genid56 rdf:rest _:genid54 .
-
-_:genid54 a rdf:List ;
-	rdf:first _:genid55 .
-
-_:genid55 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000417 ;
 	owl:someValuesFrom obo:OBI_0000441 .
 
-_:genid54 rdf:rest rdf:nil .
+_:genid56 rdf:rest rdf:nil .
 
-_:genid53 a owl:Class .
+_:genid55 a owl:Class .
 
-obo:OBI_0600047 rdfs:subClassOf obo:OBI_0000070 , _:genid58 .
+obo:OBI_0600047 rdfs:subClassOf obo:OBI_0000070 , _:genid60 .
 
-_:genid58 a owl:Restriction ;
+_:genid60 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000293 ;
-	owl:someValuesFrom _:genid59 .
+	owl:someValuesFrom _:genid61 .
 
-_:genid59 owl:intersectionOf _:genid62 .
+_:genid61 owl:intersectionOf _:genid64 .
+
+_:genid64 a rdf:List ;
+	rdf:first _:genid65 .
+
+_:genid65 a owl:Class ;
+	owl:unionOf _:genid68 .
+
+_:genid68 a rdf:List ;
+	rdf:first obo:CHEBI_16991 ;
+	rdf:rest _:genid67 .
+
+_:genid67 a rdf:List ;
+	rdf:first obo:CHEBI_33697 ;
+	rdf:rest _:genid66 .
+
+_:genid66 a rdf:List ;
+	rdf:first obo:PR_000000001 ;
+	rdf:rest rdf:nil .
+
+_:genid64 rdf:rest _:genid62 .
 
 _:genid62 a rdf:List ;
 	rdf:first _:genid63 .
 
-_:genid63 a owl:Class ;
-	owl:unionOf _:genid66 .
-
-_:genid66 a rdf:List ;
-	rdf:first obo:CHEBI_16991 ;
-	rdf:rest _:genid65 .
-
-_:genid65 a rdf:List ;
-	rdf:first obo:CHEBI_33697 ;
-	rdf:rest _:genid64 .
-
-_:genid64 a rdf:List ;
-	rdf:first obo:PR_000000001 ;
-	rdf:rest rdf:nil .
-
-_:genid62 rdf:rest _:genid60 .
-
-_:genid60 a rdf:List ;
-	rdf:first _:genid61 .
-
-_:genid61 a owl:Restriction ;
+_:genid63 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000087 ;
 	owl:someValuesFrom obo:OBI_0000067 .
 
-_:genid60 rdf:rest rdf:nil .
+_:genid62 rdf:rest rdf:nil .
 
-_:genid59 a owl:Class .
+_:genid61 a owl:Class .
 
 obo:OBI_0600047 obo:IAO_0000111 "sequencing assay"@en ;
 	obo:IAO_0000112 "The use of the Sanger method of DNA sequencing to determine the order of the nucleotides in a DNA template"@en ;

@@ -10,7 +10,7 @@
 @prefix ncbitaxon: <http://purl.obolibrary.org/obo/ncbitaxon#> .
 
 <http://purl.obolibrary.org/obo/bco/imports/pco_bco_imports.owl> a owl:Ontology ;
-	owl:versionIRI <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/pco_bco_import.owl> ;
+	owl:versionIRI <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/pco_bco_imports.owl> ;
 	dc:source <http://purl.obolibrary.org/obo/pco/releases/2016-08-01/pco.owl> .
 # 
 # 
