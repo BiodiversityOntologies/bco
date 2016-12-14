@@ -9,8 +9,7 @@
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @prefix ncbitaxon: <http://purl.obolibrary.org/obo/ncbitaxon#> .
 
-<http://purl.obolibrary.org/obo/bco/pco_bco_import.owl> a owl:Ontology ;
-	owl:versionIRI <http://purl.obolibrary.org/obo/bco/2016-12-14/pco_bco_import.owl> ;
+<https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> a owl:Ontology ;
 	dc:source <http://purl.obolibrary.org/obo/pco/releases/2016-08-01/pco.owl> .
 # 
 # 

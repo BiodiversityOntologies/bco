@@ -2,28 +2,28 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl" uri="https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://bco.googlecode.com/git/src/ontology/bco_example_tdwg2013.owl" uri="src/ontology/examples/bco_example_tdwg2013.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl" uri="deprecated/iao_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://purl.obolibrary.org/obo/bco.owl" uri="releases/2014-05-27/bco.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="releases/2014-05-27/bco-non-classified.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl" uri="releases/2015-04-10/bfo_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://purl.obolibrary.org/obo/bco/iao_bco_imports.owl" uri="releases/2013-10-01/iao_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://purl.obolibrary.org/obo/bco/obi_bco_imports.owl" uri="releases/2013-10-01/obi_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://purl.obolibrary.org/obo/iao/dev/ontology-meta.owl" uri="releases/2013-10-01/ontology_metadata_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://purl.obolibrary.org/obo/obi.owl" uri="releases/2015-04-10/obi_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://purl.obolibrary.org/obo/ro.owl" uri="releases/2013-10-01/ro_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://rs.tdwg.org/dwc/rdf/dwcterms.rdf" uri="releases/2015-04-10/dwcterms.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="http://rs.tdwg.org/dwc/terms/" uri="src/ontology/dwcterms.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl" uri="src/ontology/obi_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ro_bco_imports.owl/" uri="src/ontology/ro_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="releases/2013-10-01/bco.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="releases/2015-04-10/bco.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="src/ontology/examples/bco_example_base_tdwg2013.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="src/ontology/examples/bco_test_16feb2014.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="src/ontology/deprecated/bco_taxonomic_inventory.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="releases/2013-10-01/bco-non-classified.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="releases/2015-04-10/bco-non-classified.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://purl.obolibrary.org/obo/iao/dev/ontology-meta.owl" uri="deprecated/ontology_metadata_bco_imports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481740693441" name="shadowed:http://rs.tdwg.org/dwc/rdf/dwcterms.rdf" uri="src/ontology/dwcterms.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://bco.googlecode.com/git/src/ontology/bco_example_tdwg2013.owl" uri="src/ontology/examples/bco_example_tdwg2013.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://bco.googlecode.com/git/src/ontology/iao_bco_imports.owl" uri="deprecated/iao_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://purl.obolibrary.org/obo/bco.owl" uri="releases/2014-05-27/bco.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="releases/2014-05-27/bco-non-classified.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://purl.obolibrary.org/obo/bco/bfo_bco_imports.owl" uri="releases/2015-04-10/bfo_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://purl.obolibrary.org/obo/bco/iao_bco_imports.owl" uri="releases/2013-10-01/iao_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://purl.obolibrary.org/obo/bco/obi_bco_imports.owl" uri="releases/2013-10-01/obi_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://purl.obolibrary.org/obo/iao/dev/ontology-meta.owl" uri="releases/2013-10-01/ontology_metadata_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://purl.obolibrary.org/obo/obi.owl" uri="releases/2015-04-10/obi_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://purl.obolibrary.org/obo/ro.owl" uri="releases/2013-10-01/ro_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://rs.tdwg.org/dwc/rdf/dwcterms.rdf" uri="releases/2015-04-10/dwcterms.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="http://rs.tdwg.org/dwc/terms/" uri="src/ontology/dwcterms.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl" uri="src/ontology/obi_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/ro_bco_imports.owl/" uri="src/ontology/ro_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="releases/2013-10-01/bco.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="releases/2015-04-10/bco.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="src/ontology/examples/bco_example_base_tdwg2013.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="src/ontology/examples/bco_test_16feb2014.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://purl.obolibrary.org/obo/bco.owl" uri="src/ontology/deprecated/bco_taxonomic_inventory.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="releases/2013-10-01/bco-non-classified.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://purl.obolibrary.org/obo/bco/bco-non-classified.owl" uri="releases/2015-04-10/bco-non-classified.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://purl.obolibrary.org/obo/iao/dev/ontology-meta.owl" uri="deprecated/ontology_metadata_bco_imports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481741468307" name="shadowed:http://rs.tdwg.org/dwc/rdf/dwcterms.rdf" uri="src/ontology/dwcterms.owl"/>
     </group>
 </catalog>
