@@ -146,6 +146,7 @@ obo:RO_0000059 a owl:ObjectProperty .
 # http://purl.obolibrary.org/obo/bco.owl/0000085
 
 :0000085 a owl:ObjectProperty ;
+	rdfs:subPropertyOf obo:IAO_0000136 ;
 	rdfs:domain :0000084 ;
 	rdfs:range <http://rs.tdwg.org/dwc/terms/Taxon> ;
 	rdfs:comment "This relation is used specifically to link a taxonomic association to a taxon and is used with the of organism relation." ;
@@ -156,8 +157,8 @@ obo:RO_0000059 a owl:ObjectProperty .
 :0000086 a owl:ObjectProperty ;
 	rdfs:subPropertyOf obo:IAO_0000136 ;
 	rdfs:domain :0000084 ;
-	rdfs:range <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> ;
-	rdfs:comment "This relation specifically links a taxonomic association to an organismal entity and is used together with the to taxon relation." ;
+	rdfs:range obo:PCO_0000031 ;
+	rdfs:comment "This relation specifically links an identification association to an organismal entity and is used together with the to taxon relation." ;
 	rdfs:label "of organism"@en .
 # 
 # http://purl.obolibrary.org/obo/bco.owl/0000087
@@ -283,7 +284,26 @@ obo:BCO_0000042 a owl:Class ;
 # http://purl.obolibrary.org/obo/BCO_0000044
 
 obo:BCO_0000044 a owl:Class ;
-	obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en , "A bird observed during a transect walk." , "A tree is forest plot that is measured for diameter at breast height (DBH)." , "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ;
+	owl:equivalentClass _:genid8 .
+
+_:genid8 owl:intersectionOf _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first obo:BFO_0000040 ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first _:genid10 .
+
+_:genid10 a owl:Restriction ;
+	owl:onProperty obo:BCO_0000058 ;
+	owl:someValuesFrom obo:BCO_0000046 .
+
+_:genid9 rdf:rest rdf:nil .
+
+_:genid8 a owl:Class .
+
+obo:BCO_0000044 obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en , "A bird observed during a transect walk." , "A tree is forest plot that is measured for diameter at breast height (DBH)." , "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ;
 	obo:IAO_0000114 obo:IAO_0000428 ;
 	obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
 	obo:IAO_0000116 "This term replaces bco_0000044, which was made obsolete because of incorrect identifier format." ;
@@ -293,24 +313,24 @@ obo:BCO_0000044 a owl:Class ;
 # http://purl.obolibrary.org/obo/BCO_0000046
 
 obo:BCO_0000046 a owl:Class ;
-	owl:equivalentClass _:genid8 .
+	owl:equivalentClass _:genid12 .
 
-_:genid8 owl:intersectionOf _:genid11 .
+_:genid12 owl:intersectionOf _:genid15 .
 
-_:genid11 a rdf:List ;
+_:genid15 a rdf:List ;
 	rdf:first obo:BFO_0000023 ;
-	rdf:rest _:genid9 .
+	rdf:rest _:genid13 .
 
-_:genid9 a rdf:List ;
-	rdf:first _:genid10 .
+_:genid13 a rdf:List ;
+	rdf:first _:genid14 .
 
-_:genid10 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000054 ;
 	owl:someValuesFrom obo:BCO_0000003 .
 
-_:genid9 rdf:rest rdf:nil .
+_:genid13 rdf:rest rdf:nil .
 
-_:genid8 a owl:Class .
+_:genid12 a owl:Class .
 
 obo:BCO_0000046 rdfs:subClassOf obo:BFO_0000023 ;
 	obo:IAO_0000112 "the role borne by a bird during a Christmas Bird Count"@en ;
@@ -323,24 +343,24 @@ obo:BCO_0000046 rdfs:subClassOf obo:BFO_0000023 ;
 # http://purl.obolibrary.org/obo/BCO_0000047
 
 obo:BCO_0000047 a owl:Class ;
-	owl:equivalentClass _:genid12 .
+	owl:equivalentClass _:genid16 .
 
-_:genid12 owl:intersectionOf _:genid15 .
+_:genid16 owl:intersectionOf _:genid19 .
 
-_:genid15 a rdf:List ;
+_:genid19 a rdf:List ;
 	rdf:first obo:OBI_0000011 ;
-	rdf:rest _:genid13 .
+	rdf:rest _:genid17 .
 
-_:genid13 a rdf:List ;
-	rdf:first _:genid14 .
+_:genid17 a rdf:List ;
+	rdf:first _:genid18 .
 
-_:genid14 a owl:Restriction ;
+_:genid18 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000299 ;
 	owl:someValuesFrom obo:BCO_0000048 .
 
-_:genid13 rdf:rest rdf:nil .
+_:genid17 rdf:rest rdf:nil .
 
-_:genid12 a owl:Class .
+_:genid16 a owl:Class .
 
 obo:BCO_0000047 rdfs:subClassOf obo:OBI_0000011 ;
 	obo:BCO_0000057 "inventory  type"@en ;
@@ -354,24 +374,24 @@ obo:BCO_0000047 rdfs:subClassOf obo:OBI_0000011 ;
 # http://purl.obolibrary.org/obo/BCO_0000048
 
 obo:BCO_0000048 a owl:Class ;
-	owl:equivalentClass _:genid16 .
+	owl:equivalentClass _:genid20 .
 
-_:genid16 owl:intersectionOf _:genid19 .
+_:genid20 owl:intersectionOf _:genid23 .
 
-_:genid19 a rdf:List ;
+_:genid23 a rdf:List ;
 	rdf:first obo:IAO_0000030 ;
-	rdf:rest _:genid17 .
+	rdf:rest _:genid21 .
 
-_:genid17 a rdf:List ;
-	rdf:first _:genid18 .
+_:genid21 a rdf:List ;
+	rdf:first _:genid22 .
 
-_:genid18 a owl:Restriction ;
+_:genid22 a owl:Restriction ;
 	owl:onProperty obo:OBI_0000312 ;
 	owl:someValuesFrom obo:BCO_0000047 .
 
-_:genid17 rdf:rest rdf:nil .
+_:genid21 rdf:rest rdf:nil .
 
-_:genid16 a owl:Class .
+_:genid20 a owl:Class .
 
 obo:BCO_0000048 rdfs:subClassOf obo:IAO_0000030 ;
 	obo:IAO_0000112 "\"The Flora of North America\"" , "The butterflies of Great Britain" , "The plants of Yosemite National Park" ;
@@ -460,9 +480,9 @@ obo:BCO_0000056 a owl:Class ;
 # http://purl.obolibrary.org/obo/BCO_0000059
 
 obo:BCO_0000059 a owl:Class ;
-	rdfs:subClassOf obo:OBI_0000245 , _:genid20 .
+	rdfs:subClassOf obo:OBI_0000245 , _:genid24 .
 
-_:genid20 a owl:Restriction ;
+_:genid24 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000051 ;
 	owl:someValuesFrom obo:BCO_0000031 .
 
@@ -574,13 +594,13 @@ obo:IAO_0000178 a owl:Class .
 # http://purl.obolibrary.org/obo/OBI_0000011
 
 obo:OBI_0000011 a owl:Class ;
-	owl:equivalentClass _:genid21 .
+	owl:equivalentClass _:genid25 .
 
-_:genid21 a owl:Restriction ;
+_:genid25 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000055 ;
-	owl:someValuesFrom _:genid22 .
+	owl:someValuesFrom _:genid26 .
 
-_:genid22 a owl:Restriction ;
+_:genid26 a owl:Restriction ;
 	owl:onProperty obo:RO_0000059 ;
 	owl:someValuesFrom obo:IAO_0000104 .
 
@@ -1001,17 +1021,17 @@ obo:bco_0000046 a owl:Class ;
 # http://purl.obolibrary.org/obo/bco.owl/0000084
 
 :0000084 a owl:Class ;
-	rdfs:subClassOf obo:IAO_0000027 , _:genid23 .
+	rdfs:subClassOf obo:IAO_0000027 , _:genid27 .
 
-_:genid23 a owl:Restriction ;
+_:genid27 a owl:Restriction ;
 	owl:onProperty :0000085 ;
 	owl:someValuesFrom <http://rs.tdwg.org/dwc/terms/Taxon> .
 
-:0000084 rdfs:subClassOf _:genid24 .
+:0000084 rdfs:subClassOf _:genid28 .
 
-_:genid24 a owl:Restriction ;
+_:genid28 a owl:Restriction ;
 	owl:onProperty :0000086 ;
-	owl:someValuesFrom <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> .
+	owl:someValuesFrom obo:PCO_0000031 .
 
 :0000084 obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
 	obo:IAO_0000119 "PPO hackathon Sep. 2016." ;
@@ -1081,7 +1101,7 @@ _:genid24 a owl:Restriction ;
 # 
 # http://rs.tdwg.org/dwc/terms/Organism
 
-<http://rs.tdwg.org/dwc/terms/Organism> rdfs:subClassOf <http://purl.obolibrary.org/obo/pco.owl/PCO_0000030> ;
+<http://rs.tdwg.org/dwc/terms/Organism> rdfs:subClassOf obo:PCO_0000031 ;
 	obo:BCO_0000060 "organism"@en .
 # 
 # http://rs.tdwg.org/dwc/terms/PreservedSpecimen
@@ -1152,7 +1172,7 @@ obo:BCO_0000073 a owl:NamedIndividual ;
 	rdfs:label "incorrect identifier format, replaced"@en .
 # 
 
-_:genid25 obo:IAO_0000231 "" .
+_:genid29 obo:IAO_0000231 "" .
 # 
 # 
 # #################################################################
