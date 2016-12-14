@@ -1035,7 +1035,7 @@ _:genid28 a owl:Restriction ;
 
 :0000084 obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
 	obo:IAO_0000119 "PPO hackathon Sep. 2016." ;
-	rdfs:label "identification association"@en .
+	rdfs:label "identification assertion"@en .
 # 
 # http://purl.org/dc/dcam/VocabularyEncodingScheme
 
