@@ -117,6 +117,44 @@ obo:BCO_0000068 a owl:ObjectProperty ;
 	rdfs:label "is derived into by planned process"@en ;
 	owl:deprecated "true"^^xsd:boolean .
 # 
+# http://purl.obolibrary.org/obo/BCO_0000085
+
+obo:BCO_0000085 a owl:ObjectProperty ;
+	rdfs:subPropertyOf obo:IAO_0000136 ;
+	rdfs:domain obo:BCO_0000084 ;
+	rdfs:range <http://rs.tdwg.org/dwc/terms/Taxon> ;
+	rdfs:comment "This relation is used specifically to link a taxonomic association to a taxon and is used with the of organism relation." ;
+	rdfs:label "to taxon"@en .
+# 
+# http://purl.obolibrary.org/obo/BCO_0000086
+
+obo:BCO_0000086 a owl:ObjectProperty ;
+	rdfs:subPropertyOf obo:IAO_0000136 ;
+	rdfs:domain obo:BCO_0000084 ;
+	rdfs:range obo:PCO_0000031 ;
+	rdfs:comment "This relation specifically links an identification association to an organismal entity and is used together with the to taxon relation." ;
+	rdfs:label "of organism"@en .
+# 
+# http://purl.obolibrary.org/obo/BCO_0000087
+
+obo:BCO_0000087 a owl:ObjectProperty ;
+	rdfs:subPropertyOf obo:BFO_0000050 ;
+	owl:propertyChainAxiom _:genid2 .
+
+_:genid2 a rdf:List ;
+	rdf:first _:genid3 .
+
+_:genid3 owl:inverseOf obo:BCO_0000086 .
+
+_:genid2 rdf:rest _:genid1 .
+
+_:genid1 a rdf:List ;
+	rdf:first obo:BCO_0000085 ;
+	rdf:rest rdf:nil .
+
+obo:BCO_0000087 rdfs:comment "A shortcut relation to an organsimal entity to a taxon or taxa." ;
+	rdfs:label "member of taxon"@en .
+# 
 # http://purl.obolibrary.org/obo/BFO_0000051
 
 obo:BFO_0000051 a owl:ObjectProperty .
@@ -149,44 +187,6 @@ obo:RO_0000058 a owl:ObjectProperty .
 # http://purl.obolibrary.org/obo/RO_0000059
 
 obo:RO_0000059 a owl:ObjectProperty .
-# 
-# http://purl.obolibrary.org/obo/bco.owl/0000085
-
-<http://purl.obolibrary.org/obo/bco.owl/0000085> a owl:ObjectProperty ;
-	rdfs:subPropertyOf obo:IAO_0000136 ;
-	rdfs:domain <http://purl.obolibrary.org/obo/bco.owl/0000084> ;
-	rdfs:range <http://rs.tdwg.org/dwc/terms/Taxon> ;
-	rdfs:comment "This relation is used specifically to link a taxonomic association to a taxon and is used with the of organism relation." ;
-	rdfs:label "to taxon"@en .
-# 
-# http://purl.obolibrary.org/obo/bco.owl/0000086
-
-<http://purl.obolibrary.org/obo/bco.owl/0000086> a owl:ObjectProperty ;
-	rdfs:subPropertyOf obo:IAO_0000136 ;
-	rdfs:domain <http://purl.obolibrary.org/obo/bco.owl/0000084> ;
-	rdfs:range obo:PCO_0000031 ;
-	rdfs:comment "This relation specifically links an identification association to an organismal entity and is used together with the to taxon relation." ;
-	rdfs:label "of organism"@en .
-# 
-# http://purl.obolibrary.org/obo/bco.owl/0000087
-
-<http://purl.obolibrary.org/obo/bco.owl/0000087> a owl:ObjectProperty ;
-	rdfs:subPropertyOf obo:BFO_0000050 ;
-	owl:propertyChainAxiom _:genid2 .
-
-_:genid2 a rdf:List ;
-	rdf:first _:genid3 .
-
-_:genid3 owl:inverseOf <http://purl.obolibrary.org/obo/bco.owl/0000086> .
-
-_:genid2 rdf:rest _:genid1 .
-
-_:genid1 a rdf:List ;
-	rdf:first <http://purl.obolibrary.org/obo/bco.owl/0000085> ;
-	rdf:rest rdf:nil .
-
-<http://purl.obolibrary.org/obo/bco.owl/0000087> rdfs:comment "A shortcut relation to an organsimal entity to a taxon or taxa." ;
-	rdfs:label "member of taxon"@en .
 # 
 # 
 # 
@@ -557,6 +557,25 @@ obo:BCO_0000066 a owl:Class ;
 	rdfs:comment "May want to work with OBI to define this term in a more general sense for investigations."@en ;
 	rdfs:label "machine observation process"@en .
 # 
+# http://purl.obolibrary.org/obo/BCO_0000084
+
+obo:BCO_0000084 a owl:Class ;
+	rdfs:subClassOf obo:IAO_0000027 , _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty obo:BCO_0000085 ;
+	owl:someValuesFrom <http://rs.tdwg.org/dwc/terms/Taxon> .
+
+obo:BCO_0000084 rdfs:subClassOf _:genid26 .
+
+_:genid26 a owl:Restriction ;
+	owl:onProperty obo:BCO_0000086 ;
+	owl:someValuesFrom obo:PCO_0000031 .
+
+obo:BCO_0000084 obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
+	obo:IAO_0000119 "PPO hackathon Sep. 2016." ;
+	rdfs:label "identification assertion"@en .
+# 
 # http://purl.obolibrary.org/obo/BFO_0000015
 
 obo:BFO_0000015 a owl:Class ;
@@ -601,13 +620,13 @@ obo:IAO_0000178 a owl:Class .
 # http://purl.obolibrary.org/obo/OBI_0000011
 
 obo:OBI_0000011 a owl:Class ;
-	owl:equivalentClass _:genid25 .
+	owl:equivalentClass _:genid27 .
 
-_:genid25 a owl:Restriction ;
+_:genid27 a owl:Restriction ;
 	owl:onProperty obo:BFO_0000055 ;
-	owl:someValuesFrom _:genid26 .
+	owl:someValuesFrom _:genid28 .
 
-_:genid26 a owl:Restriction ;
+_:genid28 a owl:Restriction ;
 	owl:onProperty obo:RO_0000059 ;
 	owl:someValuesFrom obo:IAO_0000104 .
 
@@ -1024,25 +1043,6 @@ obo:bco_0000046 a owl:Class ;
 	obo:IAO_0000119 "Rob Guralnick" ;
 	rdfs:comment "Archaeologicalbotanical specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture." ;
 	rdfs:label "archeobotanical specimen"@en .
-# 
-# http://purl.obolibrary.org/obo/bco.owl/0000084
-
-<http://purl.obolibrary.org/obo/bco.owl/0000084> a owl:Class ;
-	rdfs:subClassOf obo:IAO_0000027 , _:genid27 .
-
-_:genid27 a owl:Restriction ;
-	owl:onProperty <http://purl.obolibrary.org/obo/bco.owl/0000085> ;
-	owl:someValuesFrom <http://rs.tdwg.org/dwc/terms/Taxon> .
-
-<http://purl.obolibrary.org/obo/bco.owl/0000084> rdfs:subClassOf _:genid28 .
-
-_:genid28 a owl:Restriction ;
-	owl:onProperty <http://purl.obolibrary.org/obo/bco.owl/0000086> ;
-	owl:someValuesFrom obo:PCO_0000031 .
-
-<http://purl.obolibrary.org/obo/bco.owl/0000084> obo:IAO_0000115 "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." ;
-	obo:IAO_0000119 "PPO hackathon Sep. 2016." ;
-	rdfs:label "identification assertion"@en .
 # 
 # http://purl.org/dc/dcam/VocabularyEncodingScheme
 
