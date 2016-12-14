@@ -163,7 +163,7 @@ obo:RO_0000059 a owl:ObjectProperty .
 # http://purl.obolibrary.org/obo/bco.owl/0000087
 
 :0000087 a owl:ObjectProperty ;
-	rdfs:subPropertyOf obo:RO_0002350 ;
+	rdfs:subPropertyOf obo:BFO_0000050 ;
 	owl:propertyChainAxiom _:genid2 .
 
 _:genid2 a rdf:List ;
