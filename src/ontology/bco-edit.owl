@@ -312,7 +312,7 @@ obo:BCO_0000046 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/BCO_0000047
 obo:BCO_0000047 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( obo:OBI_0000011
+                owl:equivalentClass [ owl:intersectionOf ( obo:BCO_0000003
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty obo:OBI_0000299 ;
                                                              owl:someValuesFrom obo:BCO_0000048
@@ -320,7 +320,6 @@ obo:BCO_0000047 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf obo:OBI_0000011 ;
                 obo:BCO_0000057 "inventory  type"@en ;
                 obo:IAO_0000114 obo:IAO_0000124 ;
                 obo:IAO_0000115 "A planned process by which a taxonomic inventory is created."@en ;
