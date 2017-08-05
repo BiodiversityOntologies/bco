@@ -325,9 +325,15 @@ obo:BCO_0000047 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000124 ;
                 obo:IAO_0000115 "A planned process by which a taxonomic inventory is created."@en ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
-                dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0" ;
                 rdfs:comment "not sure if this should be a type of assay or a type of planned process" ;
                 rdfs:label "taxonomic inventory process"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BCO_0000047 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "A planned process by which a taxonomic inventory is created."@en ;
+   obo:IAO_0000119 "http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000048
@@ -360,8 +366,14 @@ obo:BCO_0000051 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "A taxonomic inventory process that is restricted to plots, transects, or points, in which a person or group of people is comprehensively covering the entire area, usually with a well-described survey time or pace. The search is restricted to a defined and human-scale geospatial area (usually traversable within a time course of less than a day) within which there is an expectation of a comprehensive accounting of the taxonomic items of interest." ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
-                dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0"@en ;
                 rdfs:label "restricted search taxonomic inventory process"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BCO_0000051 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "A taxonomic inventory process that is restricted to plots, transects, or points, in which a person or group of people is comprehensively covering the entire area, usually with a well-described survey time or pace. The search is restricted to a defined and human-scale geospatial area (usually traversable within a time course of less than a day) within which there is an expectation of a comprehensive accounting of the taxonomic items of interest." ;
+   obo:IAO_0000119 "http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000052
@@ -372,8 +384,14 @@ obo:BCO_0000052 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "A taxonomic inventory process in which the search is restricted within a larger defined geographic area, but where effort isn't even or complete across the region, and thus not a comprehensive accounting of taxa of interest. Temporal duration is typically longer than restricted searches, lasting hours to several days." ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
-                dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0"@en ;
                 rdfs:label "open search taxonomic inventory process"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BCO_0000052 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "A taxonomic inventory process in which the search is restricted within a larger defined geographic area, but where effort isn't even or complete across the region, and thus not a comprehensive accounting of taxa of interest. Temporal duration is typically longer than restricted searches, lasting hours to several days." ;
+   obo:IAO_0000119 "http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000053
@@ -384,9 +402,15 @@ obo:BCO_0000053 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "A taxonomic inventory process that is a more casual reporting of occurrences of taxa of interest, still intended to be a comprehensive accounting of the taxa of interest, but with no pre-specified investment of effort nor planned trajectory for discovery, thus of often idiosyncratic length or spatial scope." ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
-                dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0"@en ;
                 rdfs:comment "This is more typically used to report multiple sightings, where the motivation is to record presence and abundance, rather than for individual anecdotal occurrences that are noteworthy."@en ;
                 rdfs:label "opportunistic search taxonomic inventory process"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BCO_0000053 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "A taxonomic inventory process that is a more casual reporting of occurrences of taxa of interest, still intended to be a comprehensive accounting of the taxa of interest, but with no pre-specified investment of effort nor planned trajectory for discovery, thus of often idiosyncratic length or spatial scope." ;
+   obo:IAO_0000119 "http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000054
@@ -399,9 +423,15 @@ obo:BCO_0000054 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "A taxonomic inventory process that is typically restricted in geospatial extent that involves either the physical extraction of some evidence of the presence of the taxa of interest, such as a whole organisms, scat, fur, other material samples or information artifacts such as photographs or sound recordings"@en ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
-                dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0"@en ;
                 rdfs:comment "Can be highly targeted and or baited (pheromone trap), or general (pitfall). Trap events can either be \"triggered\" but of long-term deployment, or rigorously temporally specified (left out overnight). "@en ;
                 rdfs:label "trap or sample taxonomic inventory process"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BCO_0000054 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "A taxonomic inventory process that is typically restricted in geospatial extent that involves either the physical extraction of some evidence of the presence of the taxa of interest, such as a whole organisms, scat, fur, other material samples or information artifacts such as photographs or sound recordings"@en ;
+   obo:IAO_0000119 "http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000055
@@ -412,8 +442,14 @@ obo:BCO_0000055 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
                 obo:IAO_0000115 "A taxonomic inventory process in which taxon occurrences are recorded as co-variates of another study, or by happenstance, and later compiled as a taxonomic inventory." ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
-                dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0"@en ;
                 rdfs:label "adventitious taxonomic inventory process"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BCO_0000055 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "A taxonomic inventory process in which taxon occurrences are recorded as co-variates of another study, or by happenstance, and later compiled as a taxonomic inventory." ;
+   obo:IAO_0000119 "http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000056
@@ -424,9 +460,15 @@ obo:BCO_0000056 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000124 ;
                 obo:IAO_0000115 "A taxonomic inventory process in which a list of taxa of interest is assembled from various combinations of existing taxonomic inventories, rather than generated de novo from observations or samples."@en ;
                 dc:creator "Taxonomic Inventory Metadata Workshop" ;
-                dc:source "https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0"@en ;
                 rdfs:comment "A compiliation taxonomic inventory process is typically required to document the occurences of taxa of interest over large geospatial areas, or to derive the most comprehensive accounting of presence and absence of taxa of interest in a larger region."@en ;
                 rdfs:label "compilation taxonomic inventory process"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BCO_0000056 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "A taxonomic inventory process in which a list of taxa of interest is assembled from various combinations of existing taxonomic inventories, rather than generated de novo from observations or samples."@en ;
+   obo:IAO_0000119 "http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000059
