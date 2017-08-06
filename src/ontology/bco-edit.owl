@@ -86,8 +86,10 @@ dc:source rdf:type owl:AnnotationProperty .
 ###  http://purl.obolibrary.org/obo/BCO_0000058
 obo:BCO_0000058 rdf:type owl:ObjectProperty ;
                 obo:IAO_0000115 "The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of." ;
+                obo:IAO_0000231 obo:IAO_0000423 ;
                 rdfs:comment "This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, the BFO relation was replaced by has role at some time, which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace this relation." ;
-                rdfs:label "has role"@en .
+                rdfs:label "obsolete has role"@en ;
+                owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000067
@@ -274,12 +276,13 @@ obo:BCO_0000042 rdf:type owl:Class ;
 obo:BCO_0000044 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
                                                            [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:BCO_0000058 ;
+                                                             owl:onProperty obo:BFO_0000087 ;
                                                              owl:someValuesFrom obo:BCO_0000046
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
+                rdfs:subClassOf obo:BFO_0000040 ;
                 obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en ,
                                 "A bird observed during a transect walk." ,
                                 "A tree is forest plot that is measured for diameter at breast height (DBH)." ,
