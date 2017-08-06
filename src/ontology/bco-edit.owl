@@ -87,7 +87,9 @@ dc:source rdf:type owl:AnnotationProperty .
 obo:BCO_0000058 rdf:type owl:ObjectProperty ;
                 obo:IAO_0000115 "The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of." ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
-                rdfs:comment "This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, the BFO relation was replaced by has role at some time, which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace this relation." ;
+                rdfs:comment """This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, BFO:0000087 was replaced by 'has role at some time', which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace 'has role' in both BCO and OBI.
+
+There are currently two versions of 'has role', the old one from BFO (which is used in OBI's definition of specimen) and the RO version.  For consistency with OBI, we have used the BFO relation in BCO, but this should be resolved at a higher level.""" ;
                 rdfs:label "obsolete has role"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
