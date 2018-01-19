@@ -14,7 +14,7 @@ The Biological Collections Ontology (BCO) is a the OBO Foundry library. The goal
 
 The BCO covers distinctions between individuals, organisms, voucher specimens, lots, samples, the relations between these entities, and the processes governing the creation and use of "samples". Also within scope are properties including collector, location, time, storage environment, containers, institution, and collection identifiers. 
 
-##Links
+## Links
 Please join the BCO Google Groups mailing list: bco-discuss@googlegroups.com. You can browse the list at https://groups.google.com/forum/?fromgroups#!forum/bco-discuss.
 
 ### Stable release versions
