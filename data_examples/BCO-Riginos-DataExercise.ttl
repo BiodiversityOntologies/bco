@@ -447,7 +447,7 @@
 <ark:/21547/dy2d0e78ed6468ae8761d830d2a8252a31b>
     j.0:OBI_0000293 <ark:/21547/dx2UQ:Fish:1>, <ark:/21547/dx2UQ:Fish:10>, <ark:/21547/dx2UQ:Fish:11>, <ark:/21547/dx2UQ:Fish:2>, <ark:/21547/dx2UQ:Fish:3>, <ark:/21547/dx2UQ:Fish:4>, <ark:/21547/dx2UQ:Fish:5>, <ark:/21547/dx2UQ:Fish:6>, <ark:/21547/dx2UQ:Fish:7>, <ark:/21547/dx2UQ:Fish:8>, <ark:/21547/dx2UQ:Fish:9> ;
     j.0:OBI_0000299 <ark:/21547/eD218175dc0968834e1a8333634bb9d5929> ;
-    a <http://purl.obolibrary.org/obo/bco_0000042> ;
+    a <http://purl.obolibrary.org/obo/BCO_0000042> ;
     j.2:basisOfIdentification "Morphology" ;
     j.2:dayIdentified "17" ;
     j.2:identifiedBy "Riginos/Treml" ;
@@ -457,7 +457,7 @@
 <ark:/21547/dy2eb0c4dda2ba00d36da9ce30fa42ed50a>
     j.0:OBI_0000293 <ark:/21547/dx2UQ:Fish:12>, <ark:/21547/dx2UQ:Fish:13>, <ark:/21547/dx2UQ:Fish:14>, <ark:/21547/dx2UQ:Fish:15>, <ark:/21547/dx2UQ:Fish:16>, <ark:/21547/dx2UQ:Fish:17>, <ark:/21547/dx2UQ:Fish:18>, <ark:/21547/dx2UQ:Fish:19>, <ark:/21547/dx2UQ:Fish:20> ;
     j.0:OBI_0000299 <ark:/21547/eD218175dc0968834e1a8333634bb9d5929> ;
-    a <http://purl.obolibrary.org/obo/bco_0000042> ;
+    a <http://purl.obolibrary.org/obo/BCO_0000042> ;
     j.2:basisOfIdentification "Morphology" ;
     j.2:dayIdentified "13" ;
     j.2:identifiedBy "Treml/Liggins" ;
@@ -932,7 +932,7 @@
 <http://purl.obolibrary.org/obo/RO_0001025>
     a rdf:Property .
 
-<http://purl.obolibrary.org/obo/bco_0000042>
+<http://purl.obolibrary.org/obo/BCO_0000042>
     a rdfs:Class .
 
 <http://rs.tdwg.org/dwc/dwctype/Taxon>
