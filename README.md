@@ -27,5 +27,3 @@ Older releases are availabe via their purls using the form http://purl.obolibrar
 
 The editors' version of BCO can be downloaded directly from https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/bco-edit.owl. This version is subject to change and should be used with caution.
 
-### History
-The repository was moved to this location from https://code.google.com/p/bco/ in September 2014. Much older versions of the ontology can be viewed at the biocode-commons project at http://bco.googlecode.com/git/src/ontology/bco.owl.
