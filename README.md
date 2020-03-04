@@ -1,13 +1,13 @@
 Biological Collections Ontology
 ===
 
-Read about the Biological Collections Ontology in our PLOS ONE article at
+A slightly outdated 12 minute overview of the BCO is available on YouTube at https://www.youtube.com/watch?v=j37IH9PIeaA.
 
-http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0089606 PloSONE article
+## How to cite the BCO
+If you are using the ontology, please cite its IRI (https://purl.obolibrary.org/obo/bco.owl). 
 
-A slightly outdated 12 minute overview of the BCO is available on YouTube at 
+Please cite the original PLOS ONE paper: https://doi.org/10.1371/journal.pone.0089606 or the more recent book chapter: http://ebooks.iospress.nl/volumearticle/49542
 
-https://www.youtube.com/watch?v=j37IH9PIeaA
 
 ## Scope
 The Biological Collections Ontology (BCO) is a the OBO Foundry library. The goal of the BCO is to support the interoperability of biodiversity data, including data on museum collections, environmental/metagenomic samples, and ecological surveys.
