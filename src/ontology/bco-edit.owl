@@ -21,7 +21,7 @@
                                                          "John Wieczorek" ,
                                                          "Ramona Walls" ,
                                                          "Robert Guralnick" ;
-                                          dc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                                          <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> ;
                                           rdfs:comment """This is the editor's version of the ontology. Use with caution. For the live version of the ontology, use http://purl.obolibrary.org/obo/bco.owl.
 
 The Biological Collections Ontology was originally created at the Biocode Commons Hackathon at GSC14. Older versions can be viewed at http://code.google.com/p/biocode-commons/source/browse/#svn%2Ftrunk%2Fontologies%2Fbiocollections.  Some of the classes in this ontology may be replaced by existing or newly requested terms from OBI or other ontologies."""^^xsd:string ;
