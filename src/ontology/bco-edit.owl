@@ -497,7 +497,7 @@ obo:BCO_0000061 rdf:type owl:Class ;
                 obo:IAO_0000112 "a fossil housed in a natural history museum"@en ;
                 obo:IAO_0000115 "A specimen that is derived from a fossil."@en ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
-                rdfs:label "fossil specimen"@en ;
+                rdfs:label "obsolete fossil specimen"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -510,7 +510,7 @@ obo:BCO_0000062 rdf:type owl:Class ;
                                 "germplasm"@en ;
                 obo:IAO_0000115 "A specimen that is alive."@en ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
-                rdfs:label "living specimen"@en ;
+                rdfs:label "obsolete living specimen"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -519,7 +519,7 @@ obo:BCO_0000063 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000115 "A specimen that has been preserved."@en ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
-                rdfs:label "preserved specimen"@en ;
+                rdfs:label "obsolete preserved specimen"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -527,7 +527,7 @@ obo:BCO_0000063 rdf:type owl:Class ;
 obo:BCO_0000064 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
-                rdfs:label "darwin core class"@en ;
+                rdfs:label "obsolete darwin core class"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -644,11 +644,10 @@ obo:OBI_0100051 owl:equivalentClass <http://rs.tdwg.org/dwc/terms/MaterialSample
 obo:bco_0000000 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000112 "A museum specimen that serves as evidence for a taxonomic identification process bears an evidence role." ;
-                obo:IAO_0000114 obo:IAO_0000124 ;
                 obo:IAO_0000115 "A role that is borne by some entity as a result of the entity providing evidence to support an assertion." ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
                 rdfs:comment "Will be replaced by an external ontology class." ;
-                rdfs:label "evidence role"@en ;
+                rdfs:label "obsolete evidence role"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -659,7 +658,7 @@ obo:bco_0000001 rdf:type owl:Class ;
                 rdfs:comment """Could add relation that persistant evidence role is specifically dependent on a museum material samples.
 
 Deprecated because we do not need this term. Can use OBI:evidence role. Not clear what it means for an evidence role to persist through time."""@en ;
-                rdfs:label "persistent evidence role"@en ;
+                rdfs:label "obsolete persistent evidence role"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -668,7 +667,7 @@ obo:bco_0000002 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000227 ;
                 rdfs:comment "This term is now redundant and is merged with material sampling process  http://purl.obolibrary.org/obo/bco_0000022." ;
-                rdfs:label "collecting process"@en ;
+                rdfs:label "obsolete collecting process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -694,7 +693,7 @@ obo:bco_0000004 rdf:type owl:Class ;
                 obo:IAO_0000115 "A process of existing in a particular spatio-temporal region."@en ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "This term was originally developed at the Semantics of Biodiversity workshop in 5/2012. It is no longer needed for the BCO." ;
-                rdfs:label "being there process"@en ;
+                rdfs:label "obsolete being there process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -707,7 +706,7 @@ obo:bco_0000005 rdf:type owl:Class ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "IAO has the term document, which is defined as \"A collection of information content entities intended to be understood together as a whole\" and has as examples journal article, patent application, laboratory notebook, and book.  IAO also has a term for report, but it is not defined. With this term, we want to describe the physical object that corresponds to some information content entity, together with the information content contained in the document or report. This class may be less important for modeling collection data, but could be important for efforts to get hand written (specifically dependent) reports into an electronic (generically dependent) report, and monitoring that process." ;
-                rdfs:label "printed report"@en ;
+                rdfs:label "obsolete printed report"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -719,7 +718,7 @@ obo:bco_0000006 rdf:type owl:Class ;
                 obo:IAO_0000115 "A printed report that records the outcome of some observing process."@en ;
                 obo:IAO_0000231 :BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
-                rdfs:label "printed observational report"@en ;
+                rdfs:label "obolete printed observational report"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -732,7 +731,7 @@ obo:bco_0000007 rdf:type owl:Class ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "The criteria for selection may be specified in a protocol or may be ad hoc. Should be replaced by OBI:selection, but first OBI needs to fix the definition."@en ;
-                rdfs:label "selecting process"@en ;
+                rdfs:label "obsolete selecting process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -759,7 +758,7 @@ obo:bco_0000021 rdf:type owl:Class ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "Considered acquisition in OBI, but that is about taking possession. Physical extraction may involve taking pocession, but it may also just involve extraction of something that is already posessed (e.g. of dna from cells). " ;
-                rdfs:label "physical extraction process"@en ;
+                rdfs:label "obsolete physical extraction process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -773,7 +772,7 @@ obo:bco_0000022 rdf:type owl:Class ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "This term has been replaced by OBI:specimen collection."^^xsd:string ;
-                rdfs:label "material sampling process"@en ;
+                rdfs:label "obsolete material sampling process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -782,7 +781,7 @@ obo:bco_0000023 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO." ;
-                rdfs:label "data sampling process"@en ;
+                rdfs:label "obsolete data sampling process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -791,7 +790,7 @@ obo:bco_0000024 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO." ;
-                rdfs:label "statistical sampling process"@en ;
+                rdfs:label "obsolete statistical sampling process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -815,7 +814,7 @@ obo:bco_0000026 rdf:type owl:Class ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "This term has been replaced by OBI:specimen role."^^xsd:string ;
-                rdfs:label "material sample role"@en ;
+                rdfs:label "obsolete material sample role"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -825,7 +824,7 @@ obo:bco_0000027 rdf:type owl:Class ;
                 obo:IAO_0000115 "A sampling process that has as output some material sample."@en ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "Do not need this class. By virtue of the existance of the material sample, we know that the sampling process was successful."@en ;
-                rdfs:label "successful material sampling process"@en ;
+                rdfs:label "obsolete successful material sampling process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -835,7 +834,7 @@ obo:bco_0000028 rdf:type owl:Class ;
                 obo:IAO_0000115 "A material sampling process that has as output exactly zero material samples."@en ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "Do not need this class. By virtue of the absence of the material sample, we know that the sampling process was unsuccessful." ;
-                rdfs:label "unsuccessful material sampling process"@en ;
+                rdfs:label "obsolete unsuccessful material sampling process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -844,7 +843,7 @@ obo:bco_0000029 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "At the GSC14 hackathon in 09/2012, we decided to deprecate this term." ;
-                rdfs:label "museum collection entity"@en ;
+                rdfs:label "obsolete museum collection entity"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -858,7 +857,7 @@ obo:bco_0000030 rdf:type owl:Class ;
 The relation 'depends on' cannot really be used here. Old BFO has 'inverse depends on', but this is not in the current BFO. See dwc_bfo2_new.owl for the original logical definition.
 
 At the GSC14 hackathon in 09/2012, we decided to deprecate this term."""@en ;
-                rdfs:label "organismal museum collection entity"@en ;
+                rdfs:label "obsolete organismal museum collection entity"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -895,7 +894,7 @@ obo:bco_0000033 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
                 rdfs:comment "Replaced by OBI organization. Request institution as synonym in OBI." ;
-                rdfs:label "institution"@en ;
+                rdfs:label "obsolete institution"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -933,7 +932,7 @@ obo:bco_0000036 rdf:type owl:Class ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "This term has been replaced by OBI:specimen."^^xsd:string ;
-                rdfs:label "material sample"@en ;
+                rdfs:label "obsolete material sample"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -943,7 +942,7 @@ obo:bco_0000037 rdf:type owl:Class ;
                 obo:IAO_0000115 "An information content entity (?) that is the result of some data sampling process."@en ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO." ;
-                rdfs:label "data sample"@en ;
+                rdfs:label "obsolete data sample"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -952,7 +951,7 @@ obo:bco_0000038 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO." ;
-                rdfs:label "statistical sample"@en ;
+                rdfs:label "obsolete statistical sample"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -961,7 +960,7 @@ obo:bco_0000039 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "If sampling is a OBI planned process, that captures that it is protocal governed." ;
-                rdfs:label "protocol governed sampling activity"@en ;
+                rdfs:label "obsolete protocol governed sampling activity"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -989,7 +988,7 @@ obo:bco_0000043 rdf:type owl:Class ;
                 rdfs:comment """Includes as output rubbings, casts, photographic prints, audio or video tapes.
 
 Needs a better name. Current name is the definition."""@en ;
-                rdfs:label "process that yields a material representation of a material entity"@en ;
+                rdfs:label "obsolete process that yields a material representation of a material entity"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -1018,7 +1017,7 @@ obo:bco_0000045 rdf:type owl:Class ;
                 rdfs:comment """Includes audio recordings and photographs (which are information artifacts).
 
 Needs a better name. Current name is the definition.""" ;
-                rdfs:label "process that yields an information artifact that is a representation of a material entity"@en ;
+                rdfs:label "obsolete process that yields an information artifact that is a representation of a material entity"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
