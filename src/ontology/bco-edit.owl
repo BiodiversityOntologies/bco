@@ -13,8 +13,7 @@
                                                       <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
                                                       <http://purl.obolibrary.org/obo/ro/core.owl> ,
                                                       <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl> ,
-                                                      <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> ,
-                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> ;
+                                                      <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> ;
                                           dc:contributor "Barry Smith" ,
                                                          "Biocode Commons Ontology Hackathon members" ,
                                                          "John Deck" ,
