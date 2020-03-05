@@ -1,0 +1,12 @@
+format-version: 1.2
+data-version: bco/releases/2020-03-05/bco-base.owl
+ontology: bco/bco-base
+property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "BioCollections Ontology" xsd:string
+property_value: http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 xsd:string
+property_value: http://purl.org/dc/terms/license "Unspecified" xsd:string
+
+[Term]
+id: BCO:00000000
+name: root node
+
