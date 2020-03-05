@@ -1,3 +1,10 @@
+## Contact BCO
+
+Join the BCO Google Groups mailing list at bco-discuss@googlegroups.com. You can browse the list at https://groups.google.com/forum/?fromgroups#!forum/bco-discuss.
+
+New terms requests or changes to the ontology should be made using our [issue tracker](https://github.com/BiodiversityOntologies/bco/issues)
+
+
 ## Before you write a new request, please consider the following: 
 
 - **Does the term already exist?** Before submitting suggestions for new ontology terms, check whether the term exist, either as a primary term or a synonym term. You can search using [OLS](http://www.ebi.ac.uk/ols/ontologies/bco)
@@ -6,7 +13,7 @@
 
 1. **Write a detailed request:** Please be specific and include as many details as necessary, providing background information, and if possible, suggesting a solution. GOC editors will be better equipped to address your suggestions if you offer details regarding *'what is wrong'*, *'why'*, and *'how to fix it'*.
 
-2. **Provide examples and references:** Please include PMIDs for new term requests, and include also screenshots, or URLs illustrating the current ontology structure for other types of requests. 
+2. **Provide examples and references:** Please include DOIs or PMIDs for new term requests, and include also screenshots, or URLs illustrating the current ontology structure for other types of requests. 
 
 3. **For new term request:** Be sure to provide suggestions for label (name), definition, references, position in hierarchy, etc.
 
