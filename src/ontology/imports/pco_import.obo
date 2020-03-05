@@ -1,0 +1,261 @@
+format-version: 1.2
+data-version: bco/releases/2020-03-05/imports/pco_import.owl
+ontology: bco/imports/pco_import
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/CARO_0001010>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000225>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000409>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000017>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000018>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000029>))\nDeclaration(Class(<http://www.geneontology.org/formats/oboInOwl#Subset>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002350>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000002>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000103>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000120>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000121>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000122>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000123>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000124>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000125>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000224>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000226>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000227>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000228>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000229>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000410>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000420>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000421>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000423>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000428>))\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000078> (curation status specification)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000078> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000002> <http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/IAO_0000121> <http://purl.obolibrary.org/obo/IAO_0000122> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/IAO_0000124> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/IAO_0000423> <http://purl.obolibrary.org/obo/IAO_0000428>))\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000225> (obsolescence reason specification)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000225> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000103> <http://purl.obolibrary.org/obo/IAO_0000226> <http://purl.obolibrary.org/obo/IAO_0000227> <http://purl.obolibrary.org/obo/IAO_0000228> <http://purl.obolibrary.org/obo/IAO_0000229>))\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000409> (denotator type)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000409> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000410> <http://purl.obolibrary.org/obo/IAO_0000420> <http://purl.obolibrary.org/obo/IAO_0000421>))\n\n# Class: <http://purl.obolibrary.org/obo/PCO_0000002> (ecological community)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PCO_0000002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PCO_0000029> ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/PCO_0000001>)))\n\n# Class: <http://purl.obolibrary.org/obo/PCO_0000018> (single-species collection of organisms)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PCO_0000018> ObjectIntersectionOf(ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/CARO_0001010>) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectExactCardinality(1 <http://purl.obolibrary.org/obo/RO_0002350> <http://purl.obolibrary.org/obo/PCO_0000017>)) ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/CARO_0001010>)))\n\n# Class: <http://purl.obolibrary.org/obo/PCO_0000029> (multi-species collection of organisms)\n\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PCO_0000029> \"\"@en)\n\n# Class: <http://www.geneontology.org/formats/oboInOwl#Subset> (<http://www.geneontology.org/formats/oboInOwl#Subset>)\n\nEquivalentClasses(<http://www.geneontology.org/formats/oboInOwl#Subset> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000224>))\n\n\n############################\n#   Named Individuals\n############################\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000120> (metadata complete)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000121> (organizational term)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000122> (ready for release)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000123> (metadata incomplete)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000124> (uncurated)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000125> (pending final vetting)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000226> (placeholder removed)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000227> (terms merged)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000228> (term imported)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000229> (term split)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000423> (to be replaced with external ontology term)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000428> (requires discussion)\n\n\n\nDifferentIndividuals(<http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/IAO_0000121> <http://purl.obolibrary.org/obo/IAO_0000122> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/IAO_0000124> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/IAO_0000423> <http://purl.obolibrary.org/obo/IAO_0000428>)\nDifferentIndividuals(<http://purl.obolibrary.org/obo/IAO_0000226> <http://purl.obolibrary.org/obo/IAO_0000227> <http://purl.obolibrary.org/obo/IAO_0000228> <http://purl.obolibrary.org/obo/IAO_0000229>)\n)
+
+[Term]
+id: BFO:0000001
+name: entity
+property_value: BFO:0000179 "entity" xsd:string
+property_value: BFO:0000180 "Entity" xsd:string
+property_value: IAO:0000112 "Julius Caesar" xsd:string
+property_value: IAO:0000112 "the Second World War" xsd:string
+property_value: IAO:0000112 "Verdi’s Requiem" xsd:string
+property_value: IAO:0000112 "your body mass index" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: In all areas of empirical inquiry we encounter general terms of two sorts. First are general terms which refer to universals or types:animaltuberculosissurgical procedurediseaseSecond, are general terms used to refer to groups of entities which instantiate a given universal but do not correspond to the extension of any subuniversal of that universal because there is nothing intrinsic to the entities in question by virtue of which they – and only they – are counted as belonging to the given group. Examples are: animal purchased by the Emperortuberculosis diagnosed on a Wednesdaysurgical procedure performed on a patient from Stockholmperson identified as candidate for clinical trial #2056-555person who is signatory of Form 656-PPVpainting by Leonardo da VinciSuch terms, which represent what are called ‘specializations’ in [81" xsd:string
+property_value: IAO:0000116 "Entity doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. For example Werner Ceusters 'portions of reality' include 4 sorts, entities (as BFO construes them), universals, configurations, and relations. It is an open question as to whether entities as construed in BFO will at some point also include these other portions of reality. See, for example, 'How to track absolutely everything' at http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000004", comment="per discussion with Barry Smith", http://www.w3.org/2000/01/rdf-schema#seeAlso="http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf"}
+property_value: IAO:0000600 "An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/001-001"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000002
+name: continuant
+is_a: BFO:0000001 ! entity
+property_value: BFO:0000179 "continuant" xsd:string
+property_value: BFO:0000180 "Continuant" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: Continuant entities are entities which can be sliced to yield parts only along the spatial dimension, yielding for example the parts of your table which we call its legs, its top, its nails. ‘My desk stretches from the window to the door. It has spatial parts, and can be sliced (in space) in two. With respect to time, however, a thing is a continuant.’ [60, p. 240" xsd:string
+property_value: IAO:0000116 "Continuant doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. For example, in an expansion involving bringing in some of Ceuster's other portions of reality, questions are raised as to whether universals are continuants" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000007"}
+property_value: IAO:0000600 "A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity. (axiom label in BFO2 Reference: [008-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/008-002"}
+property_value: IAO:0000601 "if b is a continuant and if, for some t, c has_continuant_part b at t, then c is a continuant. (axiom label in BFO2 Reference: [126-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/126-001"}
+property_value: IAO:0000601 "if b is a continuant and if, for some t, cis continuant_part of b at t, then c is a continuant. (axiom label in BFO2 Reference: [009-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/009-002"}
+property_value: IAO:0000601 "if b is a material entity, then there is some temporal interval (referred to below as a one-dimensional temporal region) during which b exists. (axiom label in BFO2 Reference: [011-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/011-002"}
+property_value: IAO:0000602 "(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/009-002"}
+property_value: IAO:0000602 "(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/126-001"}
+property_value: IAO:0000602 "(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/008-002"}
+property_value: IAO:0000602 "(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/011-002"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000004
+name: independent continuant
+def: "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
+is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000031 ! generically dependent continuant
+property_value: BFO:0000179 "ic" xsd:string
+property_value: BFO:0000180 "IndependentContinuant" xsd:string
+property_value: IAO:0000112 "a chair" xsd:string
+property_value: IAO:0000112 "a heart" xsd:string
+property_value: IAO:0000112 "a leg" xsd:string
+property_value: IAO:0000112 "a molecule" xsd:string
+property_value: IAO:0000112 "a spatial region" xsd:string
+property_value: IAO:0000112 "an atom" xsd:string
+property_value: IAO:0000112 "an orchestra." xsd:string
+property_value: IAO:0000112 "an organism" xsd:string
+property_value: IAO:0000112 "the bottom right portion of a human torso" xsd:string
+property_value: IAO:0000112 "the interior of your mouth" xsd:string
+property_value: IAO:0000601 "For any independent continuant b and any time t there is some spatial region r such that b is located_in r at t. (axiom label in BFO2 Reference: [134-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/134-001"}
+property_value: IAO:0000601 "For every independent continuant b and time t during the region of time spanned by its life, there are entities which s-depends_on b during t. (axiom label in BFO2 Reference: [018-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/018-002"}
+property_value: IAO:0000602 "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/018-002"}
+property_value: IAO:0000602 "(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/134-001"}
+property_value: IAO:0000602 "(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000027
+name: object aggregate
+is_a: BFO:0000040 ! material entity
+property_value: BFO:0000179 "object-aggregate" xsd:string
+property_value: BFO:0000180 "ObjectAggregate" xsd:string
+property_value: IAO:0000112 "a collection of cells in a blood biobank." xsd:string
+property_value: IAO:0000112 "a swarm of bees is an aggregate of members who are linked together through natural bonds" xsd:string
+property_value: IAO:0000112 "a symphony orchestra" xsd:string
+property_value: IAO:0000112 "an organization is an aggregate whose member parts have roles of specific types (for example in a jazz band, a chess club, a football team)" xsd:string
+property_value: IAO:0000112 "defined by fiat: the aggregate of members of an organization" xsd:string
+property_value: IAO:0000112 "defined through physical attachment: the aggregate of atoms in a lump of granite" xsd:string
+property_value: IAO:0000112 "defined through physical containment: the aggregate of molecules of carbon dioxide in a sealed container" xsd:string
+property_value: IAO:0000112 "defined via attributive delimitations such as: the patients in this hospital" xsd:string
+property_value: IAO:0000112 "the aggregate of bearings in a constant velocity axle joint" xsd:string
+property_value: IAO:0000112 "the aggregate of blood cells in your body" xsd:string
+property_value: IAO:0000112 "the nitrogen atoms in the atmosphere" xsd:string
+property_value: IAO:0000112 "the restaurants in Palo Alto" xsd:string
+property_value: IAO:0000112 "your collection of Meissen ceramic plates." xsd:string
+property_value: IAO:0000116 "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000301"}
+property_value: IAO:0000116 "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000011"}
+property_value: IAO:0000116 "BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee)." xsd:string
+property_value: IAO:0000119 "ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, 'A Theory of Granular Partitions', in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158." xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000300"}
+property_value: IAO:0000600 "b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/025-004"}
+property_value: IAO:0000602 "(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/025-004"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000031
+name: generically dependent continuant
+def: "b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/074-001"}
+is_a: BFO:0000002 ! continuant
+property_value: BFO:0000179 "gdc" xsd:string
+property_value: BFO:0000180 "GenericallyDependentContinuant" xsd:string
+property_value: IAO:0000112 "The entries in your database are patterns instantiated as quality instances in your hard drive. The database itself is an aggregate of such patterns. When you create the database you create a particular instance of the generically dependent continuant type database. Each entry in the database is an instance of the generically dependent continuant type IAO: information content entity." xsd:string
+property_value: IAO:0000112 "the pdf file on your laptop, the pdf file that is a copy thereof on my laptop" xsd:string
+property_value: IAO:0000112 "the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule." xsd:string
+property_value: IAO:0000602 "(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/074-001"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000040
+name: material entity
+is_a: BFO:0000004 ! independent continuant
+property_value: BFO:0000179 "material" xsd:string
+property_value: BFO:0000180 "MaterialEntity" xsd:string
+property_value: IAO:0000112 "a flame" xsd:string
+property_value: IAO:0000112 "a forest fire" xsd:string
+property_value: IAO:0000112 "a human being" xsd:string
+property_value: IAO:0000112 "a hurricane" xsd:string
+property_value: IAO:0000112 "a photon" xsd:string
+property_value: IAO:0000112 "a puff of smoke" xsd:string
+property_value: IAO:0000112 "a sea wave" xsd:string
+property_value: IAO:0000112 "a tornado" xsd:string
+property_value: IAO:0000112 "an aggregate of human beings." xsd:string
+property_value: IAO:0000112 "an energy wave" xsd:string
+property_value: IAO:0000112 "an epidemic" xsd:string
+property_value: IAO:0000112 "the undetached arm of a human being" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: Material entities (continuants) can preserve their identity even while gaining and losing material parts. Continuants are contrasted with occurrents, which unfold themselves in successive temporal parts or phases [60" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: Object, Fiat Object Part and Object Aggregate are not intended to be exhaustive of Material Entity. Users are invited to propose new subcategories of Material Entity." xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here." xsd:string
+property_value: IAO:0000600 "A material entity is an independent continuant that has some portion of matter as proper or improper continuant part. (axiom label in BFO2 Reference: [019-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/019-002"}
+property_value: IAO:0000601 "every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/021-002"}
+property_value: IAO:0000601 "Every entity which has a material entity as continuant part is a material entity. (axiom label in BFO2 Reference: [020-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/020-002"}
+property_value: IAO:0000602 "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/021-002"}
+property_value: IAO:0000602 "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/020-002"}
+property_value: IAO:0000602 "(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/019-002"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: CARO:0001010
+name: organism or virus or viroid
+def: "Material anatomical entity that is a member of an individual species or is a viral or viroid particle." []
+is_a: PCO:0000031 ! organismal entity
+property_value: http://purl.obolibrary.org/obo/IAO_created_by "Melissa Haendel" xsd:string
+property_value: http://purl.obolibrary.org/obo/IAO_creation_date "9/18/11" xsd:string
+property_value: IAO:0000589 "organism or virus" xsd:string
+
+[Term]
+id: IAO:0000027
+name: data item
+is_a: IAO:0000030 ! information content entity
+
+[Term]
+id: IAO:0000030
+name: information content entity
+is_a: BFO:0000031 ! generically dependent continuant
+
+[Term]
+id: IAO:0000078
+name: curation status specification
+def: "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value." []
+is_a: IAO:0000102 ! data about an ontology part
+property_value: IAO:0000111 "curation status specification" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "Better to represent curation as a process with parts and then relate labels to that process (in IAO meeting)" xsd:string
+property_value: IAO:0000117 "PERSON:Bill Bug" xsd:string
+property_value: IAO:0000119 GROUP:OBI:<http://purl.obolibrary.org/obo/obi> xsd:string
+property_value: IAO:0000119 "OBI_0000266" xsd:string
+
+[Term]
+id: IAO:0000102
+name: data about an ontology part
+def: "data about an ontology part is a data item about a part of an ontology, for example a term" []
+is_a: IAO:0000027 ! data item
+property_value: IAO:0000117 "Person:Alan Ruttenberg" xsd:string
+
+[Term]
+id: IAO:0000225
+name: obsolescence reason specification
+def: "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value." []
+is_a: IAO:0000102 ! data about an ontology part
+property_value: IAO:0000111 "obsolescence reason specification" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "The creation of this class has been inspired in part by Werner Ceusters' paper, Applying evolutionary terminology auditing to the Gene Ontology." xsd:string
+property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
+property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
+
+[Term]
+id: IAO:0000409
+name: denotator type
+def: "A denotator type indicates how a term should be interpreted from an ontological perspective." []
+is_a: IAO:0000102 ! data about an ontology part
+property_value: IAO:0000112 "The Basic Formal Ontology ontology makes a distinction between Universals and defined classes, where the formal are \"natural kinds\" and the latter arbitrary collections of entities." xsd:string
+property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
+property_value: IAO:0000119 "Barry Smith, Werner Ceusters" xsd:string
+
+[Term]
+id: PCO:0000000
+name: collection of organisms
+def: "A material entity that consists of two or more organisms, viruses, or viroids." []
+comment: May be of the same or different species.
+is_a: BFO:0000027 ! object aggregate
+is_a: PCO:0000031 ! organismal entity
+intersection_of: RO:0002351 CARO:0001010 {all_only="true"} ! organism or virus or viroid
+intersection_of: RO:0002351 CARO:0001010 {minCardinality="2"} ! organism or virus or viroid
+relationship: RO:0002351 CARO:0001010 ! organism or virus or viroid
+property_value: IAO:0000112 "Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000118 "group of organism" xsd:string
+property_value: IAO:0000118 "organism collection" xsd:string
+
+[Term]
+id: PCO:0000001
+name: population of organisms
+def: "A collection of organisms, all of the same species, that live in the same place." []
+comment: It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population of organisms. \n\nClasses for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used.
+is_a: PCO:0000018 ! single-species collection of organisms
+property_value: IAO:0000112 "" xsd:string
+property_value: IAO:0000112 "This a general term that can include every organism of a species living in an area or any subset of them.  Subclasses can be more specific as needed." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000119 ISBN:0878932739 xsd:string
+
+[Term]
+id: PCO:0000002
+name: ecological community
+def: "A multi-species collection of organisms of at least two different species, living in a particular area. Must have at least two populations of different species as members." []
+comment: Ecological community is defined broadly here, but includes both ecological interactions (inherited from parent term community) and spatial co-existence. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). The word community, as it often used to describe a group of humans living together, is a type of single-species collection of organisms, not an ecological community.
+property_value: IAO:0000118 "multispecies community" xsd:string
+property_value: IAO:0000119 ISBN:0865423504 xsd:string
+
+[Term]
+id: PCO:0000017
+name: species as a collection of organisms
+def: "A collection of organisms that has as parts every organism of given species and no organisms of any other species." []
+comment: This term is neutral with respect to which organisms are included in a species. Membership will depend on the species concept and the taxonomic assertions used to define the species. These criteria must be specified by the user.
+is_a: PCO:0000018 ! single-species collection of organisms
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000116 "At the moment there is no way to specify in an OWL axiom that the collection includes every individual of a species. This should be added, if possible." xsd:string
+
+[Term]
+id: PCO:0000018
+name: single-species collection of organisms
+def: "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species." []
+is_a: PCO:0000000 ! collection of organisms
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000118 "collection of organisms of the same species" xsd:string
+
+[Term]
+id: PCO:0000029
+name: multi-species collection of organisms
+def: "A collection of organisms that consists of two or more organisms from at least two species." []
+is_a: PCO:0000000 ! collection of organisms
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000116 "Need to add axiom to specify that it has at a mimum members of two different species, but not sure how to specify that. Can't say \"('has member' only ('member of' min 2 'species as a collection of organisms'))\"." xsd:string
+
+[Term]
+id: PCO:0000031
+name: organismal entity
+def: "A material entity that is one or more organisms, viruses or viroids." []
+is_a: BFO:0000040 ! material entity
+union_of: CARO:0001010 ! organism or virus or viroid
+union_of: PCO:0000000 ! collection of organisms
+property_value: IAO:0000114 IAO:0000120
+
+[Term]
+id: Subset
+is_a: IAO:0000102 ! data about an ontology part
+
