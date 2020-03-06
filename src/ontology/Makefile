@@ -67,7 +67,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  obi pco
+IMPORTS =  obi pco iao
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
@@ -262,6 +262,15 @@ mirror/pco.owl: mirror/pco.trigger
 
 .PRECIOUS: mirror/%.owl
 
+
+## ONTOLOGY: iao
+## Copy of iao is re-downloaded whenever source changes
+mirror/iao.trigger: $(SRC)
+
+mirror/iao.owl: mirror/iao.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/iao.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
 
 
 # ----------------------------------------
