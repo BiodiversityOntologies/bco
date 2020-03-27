@@ -588,10 +588,6 @@ obo:BFO_0000027 rdf:type owl:Class ;
                 rdfs:label "object aggregate"@en .
 
 
-###  http://purl.obolibrary.org/obo/BFO_0000029
-obo:BFO_0000029 rdf:type owl:Class .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000030
 obo:BFO_0000030 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ;
