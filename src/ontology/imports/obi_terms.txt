@@ -1,0 +1,13 @@
+http://purl.obolibrary.org/obo/OBI_0000011 #planned process
+http://purl.obolibrary.org/obo/OBI_0000070 #assay
+http://purl.obolibrary.org/obo/OBI_0600047 #sequencing assay
+http://purl.obolibrary.org/obo/OBI_0000272 #protocol
+http://purl.obolibrary.org/obo/OBI_0000245 #organization
+http://purl.obolibrary.org/obo/OBI_0000973 #sequence data
+http://purl.obolibrary.org/obo/OBI_0001573 #DNA sequence data
+http://purl.obolibrary.org/obo/OBI_0000185 #imaging assay
+http://purl.obolibrary.org/obo/OBI_0000659 #specimen collection
+http://purl.obolibrary.org/obo/OBI_0100051 #specimen
+http://purl.obolibrary.org/obo/OBI_0000112 #specimen role
+http://purl.obolibrary.org/obo/OBI_0000295 #is specified input of
+http://purl.obolibrary.org/obo/OBI_0000245 #organization

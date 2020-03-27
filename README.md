@@ -1,8 +1,6 @@
 Biological Collections Ontology
 ===
 
-A slightly outdated 12 minute overview of the BCO is available on YouTube at https://www.youtube.com/watch?v=j37IH9PIeaA.
-
 ## How to cite the BCO
 If you are using the ontology, please cite its IRI (https://purl.obolibrary.org/obo/bco.owl). 
 
@@ -13,6 +11,8 @@ Please cite the original PLOS ONE paper: https://doi.org/10.1371/journal.pone.00
 The Biological Collections Ontology (BCO) is a the OBO Foundry library. The goal of the BCO is to support the interoperability of biodiversity data, including data on museum collections, environmental/metagenomic samples, and ecological surveys.
 
 The BCO covers distinctions between individuals, organisms, voucher specimens, lots, samples, the relations between these entities, and the processes governing the creation and use of "samples". Also within scope are properties including collector, location, time, storage environment, containers, institution, and collection identifiers. 
+
+A slightly outdated 12 minute overview of the BCO is available on YouTube at https://www.youtube.com/watch?v=j37IH9PIeaA.
 
 ## Links
 Please join the BCO Google Groups mailing list: bco-discuss@googlegroups.com. You can browse the list at https://groups.google.com/forum/?fromgroups#!forum/bco-discuss.

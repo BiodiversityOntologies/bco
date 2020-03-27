@@ -1,0 +1,67 @@
+allow_equivalents: all
+catalog_file: catalog-v001.xml
+components: null
+contact: null
+contributors: null
+creators: null
+description: None
+dosdp_tools_options: --obo-prefixes=true
+edit_format: owl
+exclude_tautologies: structural
+export_formats:
+- owl
+- obo
+git_user: ''
+github_org: BiodiversityOntologies
+gzip_main: false
+id: bco
+import_group:
+  directory: imports/
+  disabled: false
+  ids:
+  - obi
+  - pco
+  - bfo
+  products:
+  - description: null
+    id: obi
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: pco
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: bfo
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  rebuild_if_source_changes: true
+import_pattern_ontology: false
+license: Unspecified
+namespaces: null
+obo_format_options: ''
+pattern_group: null
+pattern_pipelines_group: null
+primary_release: full
+public_release: none
+public_release_assets: null
+reasoner: ELK
+release_artefacts:
+- full
+- base
+release_date: false
+repo: bco
+report_fail_on: null
+robot_java_args: ''
+robot_settings: null
+robot_version: null
+robotemplate_group: null
+subset_group: null
+title: BioCollections Ontology
+travis_emails: null
+uribase: http://purl.obolibrary.org/obo
+use_dosdps: false
+use_external_date: false

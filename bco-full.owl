@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/bco.owl#"
-     xml:base="http://purl.obolibrary.org/obo/bco.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/bco/bco-full.owl#"
+     xml:base="http://purl.obolibrary.org/obo/bco/bco-full.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -14,8 +14,8 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bco.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bco/releases/2020-03-27/bco.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bco/bco-full.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bco/releases/2020-03-27/bco-full.owl"/>
         <dc:contributor>Barry Smith</dc:contributor>
         <dc:contributor>Biocode Commons Ontology Hackathon members</dc:contributor>
         <dc:contributor>John Deck</dc:contributor>
@@ -17462,11 +17462,11 @@ This interpretation is *not* the same as an at-all-times relation
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000111 xml:lang="en">has_specified_input</obo:IAO_0000111>
         <rdfs:label xml:lang="en">has_specified_input</rdfs:label>
-        <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000111>has_specified_input</obo:IAO_0000111>
         <obo:IAO_0000116>8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how &apos;has participant&apos; works.</obo:IAO_0000116>
         <obo:IAO_0000112 xml:lang="en">see is_input_of example_of_usage</obo:IAO_0000112>
-        <obo:IAO_0000111>has_specified_input</obo:IAO_0000111>
         <obo:IAO_0000117>PERSON: Melanie Coutot</obo:IAO_0000117>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Event">

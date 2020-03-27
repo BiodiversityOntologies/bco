@@ -9,12 +9,12 @@
 @base <http://purl.obolibrary.org/obo/bco.owl> .
 
 <http://purl.obolibrary.org/obo/bco.owl> rdf:type owl:Ontology ;
-                                          owl:imports <http://purl.obolibrary.org/obo/bco/dwcterms.owl> ,
+                                          owl:imports <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/dwcterms.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2020-03-27/imports/iao_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2020-03-27/imports/obi_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2020-03-27/imports/pco_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
-                                                      <http://purl.obolibrary.org/obo/ro/core.owl> ,
-                                                      <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/obi_bco_imports.owl> ,
-                                                      <https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/src/ontology/pco_bco_imports.owl> ,
-                                                      <https://raw.githubusercontent.com/tucotuco/bco/master/src/ontology/bfo_bco_imports.owl> ;
+                                                      <http://purl.obolibrary.org/obo/ro/core.owl> ;
                                           dc:contributor "Barry Smith" ,
                                                          "Biocode Commons Ontology Hackathon members" ,
                                                          "John Deck" ,
@@ -148,6 +148,14 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty .
 
 ###  http://purl.obolibrary.org/obo/BFO_0000066
 obo:BFO_0000066 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000087
+obo:BFO_0000087 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+obo:IAO_0000136 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000295
@@ -584,10 +592,6 @@ obo:BFO_0000027 rdf:type owl:Class ;
                 rdfs:label "object aggregate"@en .
 
 
-###  http://purl.obolibrary.org/obo/BFO_0000029
-obo:BFO_0000029 rdf:type owl:Class .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000030
 obo:BFO_0000030 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ;
@@ -607,6 +611,10 @@ obo:CARO_0001010 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/IAO_0000015
 obo:IAO_0000015 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000104
+obo:IAO_0000104 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000178
@@ -635,9 +643,18 @@ obo:OBI_0000659 rdf:type owl:Class ;
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0100051
-obo:OBI_0100051 owl:equivalentClass <http://rs.tdwg.org/dwc/terms/MaterialSample> ;
+obo:OBI_0100051 rdf:type owl:Class ;
+                owl:equivalentClass <http://rs.tdwg.org/dwc/terms/MaterialSample> ;
                 obo:IAO_0000112 "A herbarium or museum specimen."^^xsd:string ,
                                 "A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA."^^xsd:string .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000000
+obo:PCO_0000000 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000031
+obo:PCO_0000031 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/bco_0000000
