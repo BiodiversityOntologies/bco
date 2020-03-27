@@ -521,6 +521,17 @@ created_by: cjm
 creation_date: 2018-05-22T04:16:48Z
 
 [Term]
+id: NCBITaxon:10239
+name: Viruses
+namespace: ncbi_taxonomy
+synonym: "Vira" RELATED synonym []
+synonym: "Viridae" RELATED synonym []
+synonym: "viruses" RELATED blast_name []
+xref: GC_ID:1
+property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
 id: NCBITaxon:117570
 name: Teleostomi
 namespace: ncbi_taxonomy
@@ -566,6 +577,46 @@ is_a: NCBITaxon:9347 ! Eutheria
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
+id: NCBITaxon:2
+name: Bacteria
+namespace: ncbi_taxonomy
+synonym: "bacteria" RELATED blast_name []
+synonym: "eubacteria" EXACT genbank_common_name []
+synonym: "Monera" RELATED in_part []
+synonym: "Procaryotae" RELATED in_part []
+synonym: "Prokaryota" RELATED in_part []
+synonym: "Prokaryotae" RELATED in_part []
+synonym: "prokaryote" RELATED in_part []
+synonym: "prokaryotes" RELATED in_part []
+xref: GC_ID:11
+xref: PMID:10425795
+xref: PMID:10425796
+xref: PMID:10425797
+xref: PMID:10490293
+xref: PMID:10843050
+xref: PMID:10939651
+xref: PMID:10939673
+xref: PMID:10939677
+xref: PMID:11211268
+xref: PMID:11321083
+xref: PMID:11321113
+xref: PMID:11411719
+xref: PMID:11540071
+xref: PMID:11542017
+xref: PMID:11542087
+xref: PMID:11760965
+xref: PMID:12054223
+xref: PMID:2112744
+xref: PMID:270744
+xref: PMID:8123559
+xref: PMID:8590690
+xref: PMID:9103655
+xref: PMID:9336922
+is_a: NCBITaxon:131567 ! cellular organisms
+property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
 id: NCBITaxon:207598
 name: Homininae
 namespace: ncbi_taxonomy
@@ -573,6 +624,50 @@ synonym: "Homo/Pan/Gorilla group" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:9604 ! Hominidae
 property_value: has_rank NCBITaxon:subfamily
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:2157
+name: Archaea
+namespace: ncbi_taxonomy
+synonym: "archaea" RELATED blast_name []
+synonym: "Archaebacteria" RELATED synonym []
+synonym: "Mendosicutes" RELATED synonym []
+synonym: "Metabacteria" RELATED synonym []
+synonym: "Monera" RELATED in_part []
+synonym: "Procaryotae" RELATED in_part []
+synonym: "Prokaryota" RELATED in_part []
+synonym: "Prokaryotae" RELATED in_part []
+synonym: "prokaryote" RELATED in_part []
+synonym: "prokaryotes" RELATED in_part []
+xref: GC_ID:11
+xref: PMID:10425795
+xref: PMID:10425796
+xref: PMID:10425797
+xref: PMID:10490293
+xref: PMID:10843050
+xref: PMID:10939651
+xref: PMID:10939673
+xref: PMID:10939677
+xref: PMID:11211268
+xref: PMID:11321083
+xref: PMID:11321113
+xref: PMID:11411719
+xref: PMID:11540071
+xref: PMID:11541975
+xref: PMID:11542064
+xref: PMID:11542149
+xref: PMID:11760965
+xref: PMID:12054223
+xref: PMID:2112744
+xref: PMID:25527841
+xref: PMID:270744
+xref: PMID:8123559
+xref: PMID:8590690
+xref: PMID:9103655
+xref: PMID:9336922
+is_a: NCBITaxon:131567 ! cellular organisms
+property_value: has_rank NCBITaxon:superkingdom
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
@@ -850,6 +945,35 @@ xref: GC_ID:1
 is_a: NCBITaxon:9605 ! Homo
 property_value: has_rank NCBITaxon:species
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: PATO:0000001
+name: quality
+namespace: quality
+alt_id: PATO:0000072
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+synonym: "trait" EXACT []
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+namespace: quality
+alt_id: PATO:0001237
+alt_id: PATO:0001238
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+comment: Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+xref: snap:Quality
+is_a: PATO:0000001 ! quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
 
 [Term]
 id: PCO:0000000

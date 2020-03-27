@@ -1,3 +1,74 @@
 Level	Rule Name	Subject	Property	Value
-WARN	missing_definition	BCO:00000000	IAO:0000115		
-INFO	missing_superclass	BCO:00000000	rdfs:subClassOf		
+ERROR	missing_label	OBI:0000011	rdfs:label		
+ERROR	missing_label	OBI:0000112	rdfs:label		
+ERROR	missing_label	OBI:0000659	rdfs:label		
+ERROR	missing_label	OBI:0100051	rdfs:label		
+ERROR	missing_label	http://purl.org/dc/dcmitype/Event	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Location	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Occurrence	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Taxon	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Event	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/FossilSpecimen	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/GeologicalContext	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/HumanObservation	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Identification	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/LivingSpecimen	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/MachineObservation	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/MaterialSample	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Occurrence	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Organism	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/PreservedSpecimen	rdfs:label		
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Taxon	rdfs:label		
+ERROR	deprecated_class_reference	bco:0000005	rdfs:subClassOf	bco:0000006	
+ERROR	deprecated_class_reference	bco:0000029	rdfs:subClassOf	bco:0000030	
+ERROR	deprecated_class_reference	bco:0000042	rdfs:subClassOf	bco:0000034	
+ERROR	missing_ontology_description	bco.owl	dc11:description		
+ERROR	missing_ontology_title	bco.owl	dc11:title		
+WARN	equivalent_pair	BCO:0000042	owl:equivalentClass	http://rs.tdwg.org/dwc/terms/Identification	
+WARN	equivalent_pair	BFO:0000006	owl:equivalentClass	http://rs.tdwg.org/dwc/dwctype/Location	
+WARN	equivalent_pair	BFO:0000015	owl:equivalentClass	http://rs.tdwg.org/dwc/terms/Event	
+WARN	equivalent_pair	OBI:0100051	owl:equivalentClass	http://rs.tdwg.org/dwc/terms/MaterialSample	
+WARN	missing_definition	BCO:0000057	IAO:0000115		
+WARN	missing_definition	BCO:0000060	IAO:0000115		
+WARN	missing_definition	BCO:0000074	IAO:0000115		
+WARN	missing_definition	BCO:0000085	IAO:0000115		
+WARN	missing_definition	BCO:0000086	IAO:0000115		
+WARN	missing_definition	BCO:0000087	IAO:0000115		
+WARN	missing_definition	BFO:0000027	IAO:0000115		
+WARN	missing_definition	BFO:0000030	IAO:0000115		
+WARN	missing_definition	IAO:0000120	IAO:0000115		
+WARN	missing_definition	OBI:0000011	IAO:0000115		
+WARN	missing_definition	OBI:0000112	IAO:0000115		
+WARN	missing_definition	OBI:0000295	IAO:0000115		
+WARN	missing_definition	OBI:0000659	IAO:0000115		
+WARN	missing_definition	OBI:0100051	IAO:0000115		
+WARN	missing_definition	http://purl.org/dc/dcmitype/Event	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Location	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Occurrence	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Taxon	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Event	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/FossilSpecimen	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/GeologicalContext	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/HumanObservation	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Identification	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/LivingSpecimen	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/MachineObservation	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/MaterialSample	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Occurrence	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Organism	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/PreservedSpecimen	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Taxon	IAO:0000115		
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/attributes/status	IAO:0000115		
+WARN	missing_definition	oboInOwl:ObsoleteClass	IAO:0000115		
+WARN	missing_obsolete_label	BCO:0000067	rdfs:label	derives from by planned process@en	
+WARN	missing_obsolete_label	BCO:0000068	rdfs:label	is derived into by planned process@en	
+WARN	missing_obsolete_label	bco:0000006	rdfs:label	obolete printed observational report@en	
+INFO	missing_superclass	BCO:0000047	rdfs:subClassOf		
+INFO	missing_superclass	OBI:0000659	rdfs:subClassOf		
+INFO	missing_superclass	OBI:0100051	rdfs:subClassOf		
+INFO	missing_superclass	http://rs.tdwg.org/dwc/dwctype/Location	rdfs:subClassOf		
+INFO	missing_superclass	http://rs.tdwg.org/dwc/terms/Event	rdfs:subClassOf		
+INFO	missing_superclass	http://rs.tdwg.org/dwc/terms/Identification	rdfs:subClassOf		
+INFO	missing_superclass	http://rs.tdwg.org/dwc/terms/MaterialSample	rdfs:subClassOf		

@@ -1,12 +1,815 @@
 format-version: 1.2
-data-version: bco/releases/2020-03-05/bco-base.owl
+data-version: bco/releases/2020-03-27/bco-base.owl
+remark: This is the editor's version of the ontology. Use with caution. For the live version of the ontology, use http://purl.obolibrary.org/obo/bco.owl.\n\nThe Biological Collections Ontology was originally created at the Biocode Commons Hackathon at GSC14. Older versions can be viewed at http://code.google.com/p/biocode-commons/source/browse/#svn%2Ftrunk%2Fontologies%2Fbiocollections.  Some of the classes in this ontology may be replaced by existing or newly requested terms from OBI or other ontologies.
 ontology: bco/bco-base
-property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
-property_value: http://purl.org/dc/elements/1.1/title "BioCollections Ontology" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Barry Smith" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Biocode Commons Ontology Hackathon members" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "John Deck" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "John Wieczorek" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Ramona Walls" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Robert Guralnick" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 xsd:string
-property_value: http://purl.org/dc/terms/license "Unspecified" xsd:string
+property_value: http://purl.org/dc/terms/license http://creativecommons.org/publicdomain/zero/1.0/
+name: The Biological Collections Ontology
 
 [Term]
-id: BCO:00000000
-name: root node
+id: BCO:0000003
+name: observing process
+def: "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." []
+comment: An observing process is distinguished from a specimen collecting process in by having an information content entity as an output rather than a specimen. The information artifact may be written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, which is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances.
+is_a: OBI:0000011
+relationship: OBI:0000293 BFO:0000040
+relationship: OBI:0000299 IAO:0000030
+property_value: BCO:0000057 "sighting" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." xsd:string
+property_value: IAO:0000112 "Observing and recording the presence or absence of butterflies during a transect walk." xsd:string
+property_value: IAO:0000112 "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This class replaces class bco_0000003, which was made obsolete because of identifier format." xsd:string
+property_value: IAO:0000116 "We are having conversation with OBI developers about how this term relates to OBI:assay (). Is it equivalent, broader, narrower? What does it mean to be the input to an observation." xsd:string
+
+[Term]
+id: BCO:0000016
+name: submitting process
+def: "A planned process whereby a person submits a material sample to an organization." []
+is_a: OBI:0000011
+relationship: OBI:0000299 BFO:0000040
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "a curator submitting a herbarium speciman to a museum" xsd:string
+property_value: IAO:0000112 "a researcher submitting a water sample to a laboratory storage collection" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "false" xsd:boolean
+
+[Term]
+id: BCO:0000025
+name: locality description
+def: "An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured." []
+comment: Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site.
+is_a: IAO:0000030
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term replaces the obsolete class bco_0000025, but with the correct identifier format." xsd:string
+
+[Term]
+id: BCO:0000031
+name: museum collection
+def: "An object aggregate that has as member part a material sample that is located in museum as a result of a process of curation." []
+comment: Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection.
+is_a: BFO:0000027 ! object aggregate
+relationship: BFO:0000051 OBI:0100051
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "The herbarium collection at the New York Botanical Garden." xsd:string
+property_value: IAO:0000112 "the painting collection at the Louvre Museum" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term replaced bco_0000031, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000032
+name: organismal museum collection
+def: "A museum collection that has as member part a material sample that was derived from an organism." []
+is_a: BCO:0000031 ! museum collection
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the insect collection at the Smithsonian Institution" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term replaced bco_0000032, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000042
+name: taxonomic identification process
+def: "A planned process by which an organismal entity is associated with a taxon or taxa." []
+is_a: OBI:0000011
+equivalent_to: http://rs.tdwg.org/dwc/terms/Identification
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "Associating a museum specimen with a specific taxonomic concept based on its characters." xsd:string
+property_value: IAO:0000112 "Using a key to identify a plant in the field." xsd:string
+property_value: IAO:0000112 "Using BLAST to identify the taxa present in an environmental (metagenomic) sample." xsd:string
+property_value: IAO:0000112 "Using DNA barcoding to identify a plant species." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "Need to add a relation for has specified output some taxonomic association." xsd:string
+property_value: IAO:0000116 "This term replaces bco_0000042, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000044
+name: material target of observation
+def: "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process." []
+is_a: BFO:0000040
+intersection_of: BFO:0000040
+intersection_of: BFO:0000087 BCO:0000046 ! material target of observation role
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A bird observed during a Christmas Bird Count" xsd:string
+property_value: IAO:0000112 "A bird observed during a transect walk." xsd:string
+property_value: IAO:0000112 "A tree is forest plot that is measured for diameter at breast height (DBH)." xsd:string
+property_value: IAO:0000112 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term replaces bco_0000044, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000046
+name: material target of observation role
+def: "A role that is borne by some material entity and is realized by the material entity being the input of an observing process." []
+is_a: BFO:0000023
+intersection_of: BFO:0000023
+intersection_of: BFO:0000054 BCO:0000003 ! observing process
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the role borne by a bird during a Christmas Bird Count" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This term replaced bco_0000046, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000047
+name: taxonomic inventory process
+def: "A planned process by which a taxonomic inventory is created." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+comment: not sure if this should be a type of assay or a type of planned process
+intersection_of: BCO:0000003 ! observing process
+intersection_of: OBI:0000299 BCO:0000048 ! taxonomic inventory
+property_value: BCO:0000057 "inventory  type" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000114 IAO:0000124
+
+[Term]
+id: BCO:0000048
+name: taxonomic inventory
+def: "A list of names ascribed to biological entities of specified organismal scope recorded over some defined spatial and temporal scope following a described sampling protocol and sampling effort, potentially including values indicating abundance or biomass of the biological entities" []
+comment: The biological entities are almost always species and the organismal scope typically a taxon but potentially also an ecologically or functionally defined grouping (e.g. ‘water birds’ or ‘trees’) or other operational unit (e.g. genes). The list would typically contain multiple entities, but may be as short as a single entity or, if a sampling effort focused on a certain taxon yielded no results, even contain none.
+is_a: IAO:0000030
+intersection_of: IAO:0000030
+intersection_of: OBI:0000312 BCO:0000047 ! taxonomic inventory process
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: http://purl.org/dc/elements/1.1/source https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0 xsd:string
+property_value: IAO:0000112 "\"The Flora of North America\"" xsd:string
+property_value: IAO:0000112 "The butterflies of Great Britain" xsd:string
+property_value: IAO:0000112 "The plants of Yosemite National Park" xsd:string
+property_value: IAO:0000114 IAO:0000125
+
+[Term]
+id: BCO:0000051
+name: restricted search taxonomic inventory process
+def: "A taxonomic inventory process that is restricted to plots, transects, or points, in which a person or group of people is comprehensively covering the entire area, usually with a well-described survey time or pace. The search is restricted to a defined and human-scale geospatial area (usually traversable within a time course of less than a day) within which there is an expectation of a comprehensive accounting of the taxonomic items of interest." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "restricted search" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "Pollard transect-- \"walk a 1km transect at a slow&steady pace, and report on all TOI within 5m in front, and 2.5m on either side of you.\"" xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000052
+name: open search taxonomic inventory process
+def: "A taxonomic inventory process in which the search is restricted within a larger defined geographic area, but where effort isn't even or complete across the region, and thus not a comprehensive accounting of taxa of interest. Temporal duration is typically longer than restricted searches, lasting hours to several days." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "open search" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "Individual Christmas Bird Count by some team.  Organized field trip to a State Park." xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000053
+name: opportunistic search taxonomic inventory process
+def: "A taxonomic inventory process that is a more casual reporting of occurrences of taxa of interest, still intended to be a comprehensive accounting of the taxa of interest, but with no pre-specified investment of effort nor planned trajectory for discovery, thus of often idiosyncratic length or spatial scope." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+comment: This is more typically used to report multiple sightings, where the motivation is to record presence and abundance, rather than for individual anecdotal occurrences that are noteworthy.
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "opportunistic search" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "Many E-Bird lists are of this nature; useful supplementary information is that observers should state whether they documented every taxon of interest they saw." xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000054
+name: trap or sample taxonomic inventory process
+def: "A taxonomic inventory process that is typically restricted in geospatial extent that involves either the physical extraction of some evidence of the presence of the taxa of interest, such as a whole organisms, scat, fur, other material samples or information artifacts such as photographs or sound recordings" [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+comment: Can be highly targeted and or baited (pheromone trap), or general (pitfall). Trap events can either be "triggered" but of long-term deployment, or rigorously temporally specified (left out overnight). 
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "trap or sample inventory" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "an inventory of insects in a area using pheremone traps" xsd:string
+property_value: IAO:0000112 "an inventory of the large mammals of a park based on camera traps" xsd:string
+property_value: IAO:0000112 "inventories based on trawl samples" xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000055
+name: adventitious taxonomic inventory process
+def: "A taxonomic inventory process in which taxon occurrences are recorded as co-variates of another study, or by happenstance, and later compiled as a taxonomic inventory." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "incidental or adventitious inventory" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "data from ecological studies in which presence of some taxa is recorded to clarify population or community parameters" xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000056
+name: compilation taxonomic inventory process
+def: "A taxonomic inventory process in which a list of taxa of interest is assembled from various combinations of existing taxonomic inventories, rather than generated de novo from observations or samples." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+comment: A compiliation taxonomic inventory process is typically required to document the occurences of taxa of interest over large geospatial areas, or to derive the most comprehensive accounting of presence and absence of taxa of interest in a larger region.
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "compilation inventory" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "Atlases and Checklists" xsd:string
+property_value: IAO:0000114 IAO:0000124
+
+[Term]
+id: BCO:0000059
+name: museum
+def: "An institution that cares for (conserves) a collection of artifacts and other objects of scientific, artistic, cultural, or historical importance." []
+comment: A museum may make its collections available for public viewing through exhibits that may be permanent or temporary. The class museum has meaning that is much broader than biological collecitons. It may be better to import this term from another, more general ontology and create a specific subclass for natural history museum.
+is_a: OBI:0000245
+relationship: BFO:0000051 BCO:0000031 ! museum collection
+property_value: IAO:0000112 "The Louvre Museum" xsd:string
+property_value: IAO:0000112 "The Smithsonian Institution" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000119 ISBN:9780759105096 xsd:string
+
+[Term]
+id: BCO:0000061
+name: obsolete fossil specimen
+def: "A specimen that is derived from a fossil." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000112 "a fossil housed in a natural history museum" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: BCO:0000062
+name: obsolete living specimen
+def: "A specimen that is alive." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000112 "a bacterial culture in a culture collection" xsd:string
+property_value: IAO:0000112 "a tree in an arboretum" xsd:string
+property_value: IAO:0000112 "an animal in a zoo" xsd:string
+property_value: IAO:0000112 "germplasm" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: BCO:0000063
+name: obsolete preserved specimen
+def: "A specimen that has been preserved." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: BCO:0000064
+name: obsolete darwin core class
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: BCO:0000065
+name: human observation process
+def: "An observing process in which the observing entity consists of one or more humans." []
+comment: May be able to use the has agent = has active participant relationship for defining this. May want to work with OBI to define this term in a more general sense for investigations.
+is_a: BCO:0000003 ! observing process
+property_value: IAO:0000112 "a biologist recording an observation of an animal in a field notebook" xsd:string
+property_value: IAO:0000112 "an entomologist recording the presense of butterflies while walking a transect" xsd:string
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: BCO:0000066
+name: machine observation process
+def: "An observing process in which the observing entity consists of one or more machines." []
+comment: May want to work with OBI to define this term in a more general sense for investigations.
+is_a: BCO:0000003 ! observing process
+property_value: IAO:0000112 "a camera trap recording the presence of a jaguar" xsd:string
+property_value: IAO:0000112 "a sensor periodically recording the surface temperature of a leaf over several hours" xsd:string
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: BCO:0000080
+name: zooarcheological specimen
+def: "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some animal." []
+comment: Zooarchaeological specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture.
+is_a: http://rs.tdwg.org/dwc/terms/PreservedSpecimen
+property_value: IAO:0000112 "A set of gastropod and bivalve shells found in shell midden from an archaeological site in Alaska." xsd:string
+property_value: IAO:0000119 "Rob Guralnick" xsd:string
+
+[Term]
+id: BCO:0000081
+name: archeobotanical specimen
+def: "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some plant." []
+comment: Archaeologicalbotanical specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture.
+is_a: http://rs.tdwg.org/dwc/terms/PreservedSpecimen
+property_value: IAO:0000112 "Preserved seeds found in a storage jar at an archeological site." xsd:string
+property_value: IAO:0000119 "Rob Guralnick" xsd:string
+
+[Term]
+id: BCO:0000084
+name: identification assertion
+def: "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." []
+is_a: IAO:0000027
+relationship: BCO:0000085 http://rs.tdwg.org/dwc/terms/Taxon ! to taxon
+relationship: BCO:0000086 PCO:0000031 ! of organism
+property_value: IAO:0000119 "PPO hackathon Sep. 2016." xsd:string
+
+[Term]
+id: BFO:0000006
+equivalent_to: http://rs.tdwg.org/dwc/dwctype/Location
+
+[Term]
+id: BFO:0000015
+equivalent_to: http://rs.tdwg.org/dwc/terms/Event
+
+[Term]
+id: BFO:0000027
+name: object aggregate
+is_a: BFO:0000040
+
+[Term]
+id: BFO:0000030
+name: object
+is_a: BFO:0000040
+
+[Term]
+id: CARO:0001010
+name: organism or virus or viroid
+def: "Material anatomical entity that is a member of an individual species or is a viral or viroid particle." []
+is_a: BFO:0000040
+property_value: http://purl.obolibrary.org/obo/IAO_creation_date "9/18/11" xsd:string
+property_value: IAO:0000117 "Melissa Haendel" xsd:string
+property_value: IAO:0000412 "Common Anatomy Reference Onotology - CARO2" xsd:string
+property_value: IAO:0000589 "organism or virus" xsd:string
+
+[Term]
+id: OBI:0000011
+is_a: BFO:0000015
+
+[Term]
+id: OBI:0000659
+property_value: BCO:0000060 "specimen collection process" xsd:string
+
+[Term]
+id: OBI:0100051
+equivalent_to: http://rs.tdwg.org/dwc/terms/MaterialSample
+property_value: IAO:0000112 "A herbarium or museum specimen." xsd:string
+property_value: IAO:0000112 "A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA." xsd:string
+
+[Term]
+id: ObsoleteClass
+name: Obsolete Class
+
+[Term]
+id: bco:0000000
+name: obsolete evidence role
+def: "A role that is borne by some entity as a result of the entity providing evidence to support an assertion." []
+comment: Will be replaced by an external ontology class.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000112 "A museum specimen that serves as evidence for a taxonomic identification process bears an evidence role." xsd:string
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000001
+name: obsolete persistent evidence role
+def: "An evidence role that persists through time." []
+comment: Could add relation that persistant evidence role is specifically dependent on a museum material samples.\n\nDeprecated because we do not need this term. Can use OBI:evidence role. Not clear what it means for an evidence role to persist through time.
+is_a: ObsoleteClass ! Obsolete Class
+is_obsolete: true
+
+[Term]
+id: bco:0000002
+name: obsolete collecting process
+comment: This term is now redundant and is merged with material sampling process  http://purl.obolibrary.org/obo/bco_0000022.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+
+[Term]
+id: bco:0000003
+name: obsolete observing process
+def: "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." []
+comment: The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: BCO:0000057 "sighting" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." xsd:string
+property_value: IAO:0000112 "Observing and recording the presence or absence of butterflies during a transect walk." xsd:string
+property_value: IAO:0000112 "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." xsd:string
+property_value: IAO:0000116 "This class was made obsolete because of the incorrect identifier format. It has been replaced by BCO_0000003." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000004
+name: obsolete being there process
+def: "A process of existing in a particular spatio-temporal region." []
+comment: This term was originally developed at the Semantics of Biodiversity workshop in 5/2012. It is no longer needed for the BCO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000005
+name: obsolete printed report
+comment: IAO has the term document, which is defined as "A collection of information content entities intended to be understood together as a whole" and has as examples journal article, patent application, laboratory notebook, and book.  IAO also has a term for report, but it is not defined. With this term, we want to describe the physical object that corresponds to some information content entity, together with the information content contained in the document or report. This class may be less important for modeling collection data, but could be important for efforts to get hand written (specifically dependent) reports into an electronic (generically dependent) report, and monitoring that process.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "a book" xsd:string
+property_value: IAO:0000112 "a field notebook" xsd:string
+property_value: IAO:0000114 IAO:0000124
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000006
+name: obolete printed observational report
+def: "A printed report that records the outcome of some observing process." []
+is_a: bco:0000005 ! obsolete printed report
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A field notebook." xsd:string
+property_value: IAO:0000114 IAO:0000124
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000007
+name: obsolete selecting process
+def: "A process by which a person or machine decides that a particular material entity as worthy of collection or observation." []
+comment: The criteria for selection may be specified in a protocol or may be ad hoc. Should be replaced by OBI:selection, but first OBI needs to fix the definition.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "deciding which branch to collect for a herbarium specimen" xsd:string
+property_value: IAO:0000112 "Filtering sea water to extract only organisms smaller than a certain size." xsd:string
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000016
+name: obsolete submitting process
+def: "A planned process whereby a person submits a material sample to an organization." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "a curator submitting a herbarium speciman to a museum" xsd:string
+property_value: IAO:0000112 "a researcher submitting a water sample to a laboratory storage collection" xsd:string
+property_value: IAO:0000116 "This term was made obsolete because it had the incorrect identifier format. It has been replaced by BCO_0000016." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000021
+name: obsolete physical extraction process
+def: "A process that involves removing a material entity from its original site to another site." []
+comment: Considered acquisition in OBI, but that is about taking possession. Physical extraction may involve taking pocession, but it may also just involve extraction of something that is already posessed (e.g. of dna from cells). 
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "picking leaves from a plant" xsd:string
+property_value: IAO:0000112 "removing a fish from the ocean with a net" xsd:string
+property_value: IAO:0000112 "removing dna from cells" xsd:string
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000022
+name: obsolete material sampling process
+def: "A planned process that includes selecting a material entity for study, physically extracting the material entity, and submitting the material entity to some institution for preservation or study." []
+comment: This term has been replaced by OBI:specimen collection.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "collecting plant parts for herbarium specimens" xsd:string
+property_value: IAO:0000112 "collecting sea water samples as part of Ocean Sampling Day" xsd:string
+property_value: IAO:0000118 "collecting event" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000023
+name: obsolete data sampling process
+comment: This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000024
+name: obsolete statistical sampling process
+comment: This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000025
+name: obsolete locality description
+def: "An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured." []
+comment: Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000116 "This term was deprecated because it has the wrong ID format. It is replaced by BCO_0000025." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000026
+name: obsolete material sample role
+def: "A role that is borne by some material entity and  is realized by the material entity being the output of a material sampling process." []
+comment: This term has been replaced by OBI:specimen role.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the role borne by a branch when it becomes a herbarium specimen" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000027
+name: obsolete successful material sampling process
+def: "A sampling process that has as output some material sample." []
+comment: Do not need this class. By virtue of the existance of the material sample, we know that the sampling process was successful.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000028
+name: obsolete unsuccessful material sampling process
+def: "A material sampling process that has as output exactly zero material samples." []
+comment: Do not need this class. By virtue of the absence of the material sample, we know that the sampling process was unsuccessful.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000029
+name: obsolete museum collection entity
+comment: At the GSC14 hackathon in 09/2012, we decided to deprecate this term.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000030
+name: obsolete organismal museum collection entity
+def: "A museum collections entity that derives from an organismal entity,  has a persistent evidence role and 'depends on' a process of collecting." []
+comment: The label for this on the original diagram was 'collection object'. However, not all entities in collections will fit the defition of 'object', so 'collection entity is probably a better name.\n\nThe relation 'depends on' cannot really be used here. Old BFO has 'inverse depends on', but this is not in the current BFO. See dwc_bfo2_new.owl for the original logical definition.\n\nAt the GSC14 hackathon in 09/2012, we decided to deprecate this term.
+is_a: bco:0000029 ! obsolete museum collection entity
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000031
+name: obsolete museum collection
+def: "An object aggregate that has as member part a material sample that is located in museum as a result of a process of curation." []
+comment: Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "The herbarium collection at the New York Botanical Garden." xsd:string
+property_value: IAO:0000112 "the painting collection at the Louvre Museum" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It has been replaced by BCO_0000031." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000032
+name: obsolete organismal museum collection
+def: "A museum collection that has as member part a material sample that was derived from an organism." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the insect collection at the Smithsonian Institution" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000031." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000033
+name: obsolete institution
+comment: Replaced by OBI organization. Request institution as synonym in OBI.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000034
+name: obsolete organismal entity
+def: "A material entity that derives from an organism or virus or viroid." []
+comment: This class is understood to mean: A material entity that is either an organism, a part of an organism, a collection of organisms, or a fossil.\n\nThe relation 'organismal entity derives from organism' was in the original diagram. Subclasses of organismal entity include organism, and It is not clear if it is valid to that an organism derives from an organism (is the derives from relation reflexive?).\n\nAt the GSC14 hackathon in 09/2012, we decided to deprecate this term.
+is_a: bco:0000042 ! obsolete taxonomic identification process
+is_obsolete: true
+
+[Term]
+id: bco:0000035
+name: obsolete organism or virus or viroid
+comment: This terms was replaced by a term imported from CARO.\n\nThe original diagram only had organsim, but DWC and GOs both need to include viruses and viroids.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000036
+name: obsolete material sample
+def: "A material entity that has a material sample role. A material entity takes on the material sample role by being the output of a material samping process. That is, is selected for study, collected, and submitted to an institution for preservation or study." []
+comment: This term has been replaced by OBI:specimen.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A herbarium or museum specimen." xsd:string
+property_value: IAO:0000112 "A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA.\n" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000037
+name: obsolete data sample
+def: "An information content entity (?) that is the result of some data sampling process." []
+comment: This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000038
+name: obsolete statistical sample
+comment: This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000039
+name: obsolete protocol governed sampling activity
+comment: If sampling is a OBI planned process, that captures that it is protocal governed.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000042
+name: obsolete taxonomic identification process
+def: "A process by which a material sample is associated with a taxon or taxa." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "Associating a museum specimen with a specific taxonomic concept based on its characters." xsd:string
+property_value: IAO:0000112 "Using a key to identify a plant in the field." xsd:string
+property_value: IAO:0000112 "Using BLAST to identify the taxa present in an environmental (metagenomic) sample." xsd:string
+property_value: IAO:0000112 "Using DNA barcoding to identify a plant species." xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000042." xsd:string
+is_obsolete: true
+
+[Term]
+id: bco:0000043
+name: obsolete process that yields a material representation of a material entity
+comment: Includes as output rubbings, casts, photographic prints, audio or video tapes.\n\nNeeds a better name. Current name is the definition.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It should be replaced by an external ontology term." xsd:string
+property_value: IAO:0000231 IAO:0000423
+property_value: IAO:0000232 "Consider term from OBI or IAO." xsd:string
+is_obsolete: true
+
+[Term]
+id: bco:0000044
+name: obsolete material target of observation
+def: "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A bird observed during a Christmas Bird Count" xsd:string
+property_value: IAO:0000112 "A bird observed during a transect walk." xsd:string
+property_value: IAO:0000112 "A tree is forest plot that is measured for diameter at breast height (DBH)." xsd:string
+property_value: IAO:0000112 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrected identifier format. It is replaced by BCO_0000044." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000045
+name: obsolete process that yields an information artifact that is a representation of a material entity
+comment: Includes audio recordings and photographs (which are information artifacts).\n\nNeeds a better name. Current name is the definition.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It should be replaced by an external ontology term." xsd:string
+property_value: IAO:0000231 IAO:0000423
+property_value: IAO:0000232 "Some instances of term could possibly be replaced by OBI:image acquisition. Maybe request another OBI term for audio recording acquisition." xsd:string
+is_obsolete: true
+
+[Term]
+id: bco:0000046
+name: obsolete material target of observation role
+def: "A role that is borne by some material entity and is realized by the material entity being the input of an observing process." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the role borne by a bird during a Christmas Bird Count" xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000046." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: http://purl.org/dc/dcam/VocabularyEncodingScheme
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: http://rs.tdwg.org/dwc/dwctype/Location
+property_value: BCO:0000060 "location of an event" xsd:string
+property_value: IAO:0000114 IAO:0000123
+expand_expression_to: "The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken." []
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Event
+property_value: BCO:0000060 "event" xsd:string
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/FossilSpecimen
+is_a: http://rs.tdwg.org/dwc/terms/PreservedSpecimen
+property_value: BCO:0000060 "fossil specimen" xsd:string
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/HumanObservation
+is_a: IAO:0000027
+property_value: BCO:0000060 "human observation" xsd:string
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Identification
+property_value: BCO:0000060 "identification" xsd:string
+property_value: BCO:0000074 BCO:0000042
+property_value: IAO:0000114 IAO:0000125
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/LivingSpecimen
+is_a: OBI:0100051
+property_value: BCO:0000060 "living specimen" xsd:string
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/MachineObservation
+is_a: IAO:0000027
+property_value: BCO:0000060 "machine observation" xsd:string
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/MaterialSample
+property_value: BCO:0000060 "specimen" xsd:string
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/MeasurementOrFact
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 "This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here." xsd:string
+is_obsolete: true
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Organism
+is_a: PCO:0000031
+property_value: BCO:0000060 "organism" xsd:string
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/PreservedSpecimen
+is_a: OBI:0100051
+property_value: BCO:0000060 "preserved specimen" xsd:string
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/ResourceRelationship
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 "This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here." xsd:string
+is_obsolete: true
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Taxon
+is_a: PCO:0000000
+property_value: BCO:0000060 "taxon" xsd:string
+
+[Typedef]
+id: BCO:0000058
+name: obsolete has role
+def: "The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of." []
+comment: This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, BFO:0000087 was replaced by 'has role at some time', which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace 'has role' in both BCO and OBI.\n\nThere are currently two versions of 'has role', the old one from BFO (which is used in OBI's definition of specimen) and the RO version.  For consistency with OBI, we have used the BFO relation in BCO, but this should be resolved at a higher level.
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Typedef]
+id: BCO:0000067
+name: derives from by planned process
+property_value: IAO:0000231 IAO:0000423
+is_transitive: true
+is_obsolete: true
+
+[Typedef]
+id: BCO:0000068
+name: is derived into by planned process
+property_value: IAO:0000116 "This property used an old version of the has input relation, so it has been deprecated." http://www.w3.org/2000/01/rdf-schema#Literal
+property_value: IAO:0000231 IAO:0000423
+is_transitive: true
+is_obsolete: true
+
+[Typedef]
+id: BCO:0000085
+name: to taxon
+comment: This relation is used specifically to link a taxonomic association to a taxon and is used with the of organism relation.
+domain: BCO:0000084 ! identification assertion
+range: http://rs.tdwg.org/dwc/terms/Taxon
+is_a: IAO:0000136
+
+[Typedef]
+id: BCO:0000086
+name: of organism
+comment: This relation specifically links an identification association to an organismal entity and is used together with the to taxon relation.
+domain: BCO:0000084 ! identification assertion
+range: PCO:0000031
+is_a: IAO:0000136
+
+[Typedef]
+id: BCO:0000087
+name: member of taxon
+comment: A shortcut relation to an organsimal entity to a taxon or taxa.
+is_a: BFO:0000050
+
+[Typedef]
+id: OBI:0000295
+name: is_specified_input_of
 

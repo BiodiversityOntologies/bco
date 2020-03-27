@@ -1,17 +1,315 @@
 format-version: 1.2
-data-version: releases/2020-03-06
+data-version: releases/2020-03-27
+remark: This is the editor's version of the ontology. Use with caution. For the live version of the ontology, use http://purl.obolibrary.org/obo/bco.owl.\n\nThe Biological Collections Ontology was originally created at the Biocode Commons Hackathon at GSC14. Older versions can be viewed at http://code.google.com/p/biocode-commons/source/browse/#svn%2Ftrunk%2Fontologies%2Fbiocollections.  Some of the classes in this ontology may be replaced by existing or newly requested terms from OBI or other ontologies.
 ontology: bco
-property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
-property_value: http://purl.org/dc/elements/1.1/title "BioCollections Ontology" xsd:string
-property_value: http://purl.org/dc/terms/license "Unspecified" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Barry Smith" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Biocode Commons Ontology Hackathon members" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "John Deck" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "John Wieczorek" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Ramona Walls" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Robert Guralnick" xsd:string
+property_value: http://purl.org/dc/terms/license http://creativecommons.org/publicdomain/zero/1.0/
+name: The Biological Collections Ontology
 
 [Term]
-id: BCO:00000000
-name: root node
+id: BCO:0000003
+name: observing process
+def: "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." []
+comment: An observing process is distinguished from a specimen collecting process in by having an information content entity as an output rather than a specimen. The information artifact may be written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, which is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances.
+is_a: OBI:0000011 ! planned process
+relationship: OBI:0000293 BFO:0000040 ! has_specified_input material entity
+relationship: OBI:0000299 IAO:0000030 ! has_specified_output information content entity
+property_value: BCO:0000057 "sighting" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." xsd:string
+property_value: IAO:0000112 "Observing and recording the presence or absence of butterflies during a transect walk." xsd:string
+property_value: IAO:0000112 "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This class replaces class bco_0000003, which was made obsolete because of identifier format." xsd:string
+property_value: IAO:0000116 "We are having conversation with OBI developers about how this term relates to OBI:assay (). Is it equivalent, broader, narrower? What does it mean to be the input to an observation." xsd:string
+
+[Term]
+id: BCO:0000016
+name: submitting process
+def: "A planned process whereby a person submits a material sample to an organization." []
+is_a: OBI:0000011 ! planned process
+relationship: OBI:0000299 BFO:0000040 ! has_specified_output material entity
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "a curator submitting a herbarium speciman to a museum" xsd:string
+property_value: IAO:0000112 "a researcher submitting a water sample to a laboratory storage collection" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "false" xsd:boolean
+
+[Term]
+id: BCO:0000025
+name: locality description
+def: "An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured." []
+comment: Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site.
+is_a: IAO:0000030 ! information content entity
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term replaces the obsolete class bco_0000025, but with the correct identifier format." xsd:string
+
+[Term]
+id: BCO:0000031
+name: museum collection
+def: "An object aggregate that has as member part a material sample that is located in museum as a result of a process of curation." []
+comment: Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection.
+is_a: BFO:0000027 ! object aggregate
+relationship: BFO:0000051 OBI:0100051 ! has part specimen
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "The herbarium collection at the New York Botanical Garden." xsd:string
+property_value: IAO:0000112 "the painting collection at the Louvre Museum" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term replaced bco_0000031, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000032
+name: organismal museum collection
+def: "A museum collection that has as member part a material sample that was derived from an organism." []
+is_a: BCO:0000031 ! museum collection
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the insect collection at the Smithsonian Institution" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term replaced bco_0000032, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000042
+name: taxonomic identification process
+def: "A planned process by which an organismal entity is associated with a taxon or taxa." []
+is_a: http://rs.tdwg.org/dwc/terms/Identification ! Identification
+equivalent_to: http://rs.tdwg.org/dwc/terms/Identification ! Identification
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "Associating a museum specimen with a specific taxonomic concept based on its characters." xsd:string
+property_value: IAO:0000112 "Using a key to identify a plant in the field." xsd:string
+property_value: IAO:0000112 "Using BLAST to identify the taxa present in an environmental (metagenomic) sample." xsd:string
+property_value: IAO:0000112 "Using DNA barcoding to identify a plant species." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "Need to add a relation for has specified output some taxonomic association." xsd:string
+property_value: IAO:0000116 "This term replaces bco_0000042, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000044
+name: material target of observation
+def: "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process." []
+is_a: BFO:0000040 ! material entity
+intersection_of: BFO:0000040 ! material entity
+intersection_of: BFO:0000087 BCO:0000046 ! material target of observation role
+relationship: BFO:0000087 BCO:0000046 ! material target of observation role
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A bird observed during a Christmas Bird Count" xsd:string
+property_value: IAO:0000112 "A bird observed during a transect walk." xsd:string
+property_value: IAO:0000112 "A tree is forest plot that is measured for diameter at breast height (DBH)." xsd:string
+property_value: IAO:0000112 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term replaces bco_0000044, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000046
+name: material target of observation role
+def: "A role that is borne by some material entity and is realized by the material entity being the input of an observing process." []
+is_a: BFO:0000023 ! role
+intersection_of: BFO:0000023 ! role
+intersection_of: BFO:0000054 BCO:0000003 ! realized in observing process
+relationship: BFO:0000054 BCO:0000003 ! realized in observing process
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the role borne by a bird during a Christmas Bird Count" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This term replaced bco_0000046, which was made obsolete because of incorrect identifier format." xsd:string
+
+[Term]
+id: BCO:0000047
+name: taxonomic inventory process
+def: "A planned process by which a taxonomic inventory is created." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+comment: not sure if this should be a type of assay or a type of planned process
+is_a: BCO:0000003 ! observing process
+intersection_of: BCO:0000003 ! observing process
+intersection_of: OBI:0000299 BCO:0000048 ! has_specified_output taxonomic inventory
+relationship: OBI:0000299 BCO:0000048 ! has_specified_output taxonomic inventory
+property_value: BCO:0000057 "inventory  type" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000114 IAO:0000124
+
+[Term]
+id: BCO:0000048
+name: taxonomic inventory
+def: "A list of names ascribed to biological entities of specified organismal scope recorded over some defined spatial and temporal scope following a described sampling protocol and sampling effort, potentially including values indicating abundance or biomass of the biological entities" []
+comment: The biological entities are almost always species and the organismal scope typically a taxon but potentially also an ecologically or functionally defined grouping (e.g. ‘water birds’ or ‘trees’) or other operational unit (e.g. genes). The list would typically contain multiple entities, but may be as short as a single entity or, if a sampling effort focused on a certain taxon yielded no results, even contain none.
+is_a: IAO:0000030 ! information content entity
+intersection_of: IAO:0000030 ! information content entity
+intersection_of: OBI:0000312 BCO:0000047 ! is_specified_output_of taxonomic inventory process
+relationship: OBI:0000312 BCO:0000047 ! is_specified_output_of taxonomic inventory process
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: http://purl.org/dc/elements/1.1/source https://docs.google.com/spreadsheet/ccc?key=0AhrY0qRdO4budC1mSUNWTDlkOXBVMjcza2Y3aV84SkE#gid=0 xsd:string
+property_value: IAO:0000112 "\"The Flora of North America\"" xsd:string
+property_value: IAO:0000112 "The butterflies of Great Britain" xsd:string
+property_value: IAO:0000112 "The plants of Yosemite National Park" xsd:string
+property_value: IAO:0000114 IAO:0000125
+
+[Term]
+id: BCO:0000051
+name: restricted search taxonomic inventory process
+def: "A taxonomic inventory process that is restricted to plots, transects, or points, in which a person or group of people is comprehensively covering the entire area, usually with a well-described survey time or pace. The search is restricted to a defined and human-scale geospatial area (usually traversable within a time course of less than a day) within which there is an expectation of a comprehensive accounting of the taxonomic items of interest." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "restricted search" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "Pollard transect-- \"walk a 1km transect at a slow&steady pace, and report on all TOI within 5m in front, and 2.5m on either side of you.\"" xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000052
+name: open search taxonomic inventory process
+def: "A taxonomic inventory process in which the search is restricted within a larger defined geographic area, but where effort isn't even or complete across the region, and thus not a comprehensive accounting of taxa of interest. Temporal duration is typically longer than restricted searches, lasting hours to several days." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "open search" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "Individual Christmas Bird Count by some team.  Organized field trip to a State Park." xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000053
+name: opportunistic search taxonomic inventory process
+def: "A taxonomic inventory process that is a more casual reporting of occurrences of taxa of interest, still intended to be a comprehensive accounting of the taxa of interest, but with no pre-specified investment of effort nor planned trajectory for discovery, thus of often idiosyncratic length or spatial scope." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+comment: This is more typically used to report multiple sightings, where the motivation is to record presence and abundance, rather than for individual anecdotal occurrences that are noteworthy.
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "opportunistic search" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "Many E-Bird lists are of this nature; useful supplementary information is that observers should state whether they documented every taxon of interest they saw." xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000054
+name: trap or sample taxonomic inventory process
+def: "A taxonomic inventory process that is typically restricted in geospatial extent that involves either the physical extraction of some evidence of the presence of the taxa of interest, such as a whole organisms, scat, fur, other material samples or information artifacts such as photographs or sound recordings" [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+comment: Can be highly targeted and or baited (pheromone trap), or general (pitfall). Trap events can either be "triggered" but of long-term deployment, or rigorously temporally specified (left out overnight). 
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "trap or sample inventory" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "an inventory of insects in a area using pheremone traps" xsd:string
+property_value: IAO:0000112 "an inventory of the large mammals of a park based on camera traps" xsd:string
+property_value: IAO:0000112 "inventories based on trawl samples" xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000055
+name: adventitious taxonomic inventory process
+def: "A taxonomic inventory process in which taxon occurrences are recorded as co-variates of another study, or by happenstance, and later compiled as a taxonomic inventory." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "incidental or adventitious inventory" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "data from ecological studies in which presence of some taxa is recorded to clarify population or community parameters" xsd:string
+property_value: IAO:0000114 IAO:0000122
+
+[Term]
+id: BCO:0000056
+name: compilation taxonomic inventory process
+def: "A taxonomic inventory process in which a list of taxa of interest is assembled from various combinations of existing taxonomic inventories, rather than generated de novo from observations or samples." [] {http://purl.obolibrary.org/obo/IAO_0000119="http://onlinelibrary.wiley.com/doi/10.1111/ecog.02942/full"}
+comment: A compiliation taxonomic inventory process is typically required to document the occurences of taxa of interest over large geospatial areas, or to derive the most comprehensive accounting of presence and absence of taxa of interest in a larger region.
+is_a: BCO:0000047 ! taxonomic inventory process
+property_value: BCO:0000057 "compilation inventory" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Taxonomic Inventory Metadata Workshop" xsd:string
+property_value: IAO:0000112 "Atlases and Checklists" xsd:string
+property_value: IAO:0000114 IAO:0000124
+
+[Term]
+id: BCO:0000059
+name: museum
+def: "An institution that cares for (conserves) a collection of artifacts and other objects of scientific, artistic, cultural, or historical importance." []
+comment: A museum may make its collections available for public viewing through exhibits that may be permanent or temporary. The class museum has meaning that is much broader than biological collecitons. It may be better to import this term from another, more general ontology and create a specific subclass for natural history museum.
+is_a: OBI:0000245 ! organization
+relationship: BFO:0000051 BCO:0000031 ! has part museum collection
+property_value: IAO:0000112 "The Louvre Museum" xsd:string
+property_value: IAO:0000112 "The Smithsonian Institution" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000119 ISBN:9780759105096 xsd:string
+
+[Term]
+id: BCO:0000061
+name: obsolete fossil specimen
+def: "A specimen that is derived from a fossil." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000112 "a fossil housed in a natural history museum" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: BCO:0000062
+name: obsolete living specimen
+def: "A specimen that is alive." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000112 "a bacterial culture in a culture collection" xsd:string
+property_value: IAO:0000112 "a tree in an arboretum" xsd:string
+property_value: IAO:0000112 "an animal in a zoo" xsd:string
+property_value: IAO:0000112 "germplasm" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: BCO:0000063
+name: obsolete preserved specimen
+def: "A specimen that has been preserved." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: BCO:0000064
+name: obsolete darwin core class
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: BCO:0000065
+name: human observation process
+def: "An observing process in which the observing entity consists of one or more humans." []
+comment: May be able to use the has agent = has active participant relationship for defining this. May want to work with OBI to define this term in a more general sense for investigations.
+is_a: BCO:0000003 ! observing process
+property_value: IAO:0000112 "a biologist recording an observation of an animal in a field notebook" xsd:string
+property_value: IAO:0000112 "an entomologist recording the presense of butterflies while walking a transect" xsd:string
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: BCO:0000066
+name: machine observation process
+def: "An observing process in which the observing entity consists of one or more machines." []
+comment: May want to work with OBI to define this term in a more general sense for investigations.
+is_a: BCO:0000003 ! observing process
+property_value: IAO:0000112 "a camera trap recording the presence of a jaguar" xsd:string
+property_value: IAO:0000112 "a sensor periodically recording the surface temperature of a leaf over several hours" xsd:string
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: BCO:0000080
+name: zooarcheological specimen
+def: "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some animal." []
+comment: Zooarchaeological specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture.
+is_a: http://rs.tdwg.org/dwc/terms/PreservedSpecimen ! Preserved Specimen
+property_value: IAO:0000112 "A set of gastropod and bivalve shells found in shell midden from an archaeological site in Alaska." xsd:string
+property_value: IAO:0000119 "Rob Guralnick" xsd:string
+
+[Term]
+id: BCO:0000081
+name: archeobotanical specimen
+def: "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some plant." []
+comment: Archaeologicalbotanical specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture.
+is_a: http://rs.tdwg.org/dwc/terms/PreservedSpecimen ! Preserved Specimen
+property_value: IAO:0000112 "Preserved seeds found in a storage jar at an archeological site." xsd:string
+property_value: IAO:0000119 "Rob Guralnick" xsd:string
+
+[Term]
+id: BCO:0000084
+name: identification assertion
+def: "A data item that is the output of a taxonomic identification process and associates some organismal entity with a taxon or taxa." []
+is_a: IAO:0000027 ! data item
+relationship: BCO:0000085 http://rs.tdwg.org/dwc/terms/Taxon ! to taxon Taxon
+relationship: BCO:0000086 PCO:0000031 ! of organism organismal entity
+property_value: IAO:0000119 "PPO hackathon Sep. 2016." xsd:string
 
 [Term]
 id: BFO:0000001
 name: entity
+disjoint_from: ObsoleteClass ! Obsolete Class
 property_value: BFO:0000179 "entity" xsd:string
 property_value: BFO:0000180 "Entity" xsd:string
 property_value: IAO:0000112 "Julius Caesar" xsd:string
@@ -90,11 +388,34 @@ property_value: IAO:0000602 "(iff (IndependentContinuant a) (and (Continuant a) 
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
+id: BFO:0000005
+name: obsolete dependent continuant
+def: "A continuant  that is either dependent on one or other independent continuant  bearers or inheres in or is borne by other entities." []
+is_a: ObsoleteClass ! Obsolete Class
+is_obsolete: true
+
+[Term]
+id: BFO:0000006
+name: spatial region
+is_a: http://rs.tdwg.org/dwc/dwctype/Location
+equivalent_to: http://rs.tdwg.org/dwc/dwctype/Location
+property_value: BFO:0000179 "s-region" xsd:string
+property_value: BFO:0000180 "SpatialRegion" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: Spatial regions do not participate in processes." xsd:string
+property_value: IAO:0000116 "Spatial region doesn't have a closure axiom because the subclasses don't exhaust all possibilites. An example would be the union of a spatial point and a spatial line that doesn't overlap the point, or two spatial lines that intersect at a single point. In both cases the resultant spatial region is neither 0-dimensional, 1-dimensional, 2-dimensional, or 3-dimensional." xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000002", comment="per discussion with Barry Smith"}
+property_value: IAO:0000600 "A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/035-001"}
+property_value: IAO:0000601 "All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/036-001"}
+property_value: IAO:0000602 "(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/036-001"}
+property_value: IAO:0000602 "(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/035-001"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
 id: BFO:0000015
 name: process
 def: "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t." []
 def: "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/083-003"}
-is_a: BFO:0000003 ! occurrent
+is_a: http://rs.tdwg.org/dwc/terms/Event ! Event
+equivalent_to: http://rs.tdwg.org/dwc/terms/Event ! Event
 property_value: BFO:0000179 "process" xsd:string
 property_value: BFO:0000180 "Process" xsd:string
 property_value: IAO:0000112 "a process of cell-division, \\ a beating of the heart" xsd:string
@@ -106,6 +427,24 @@ property_value: IAO:0000112 "the life of an organism" xsd:string
 property_value: IAO:0000112 "your process of aging." xsd:string
 property_value: IAO:0000116 "BFO 2 Reference: The realm of occurrents is less pervasively marked by the presence of natural units than is the case in the realm of independent continuants. Thus there is here no counterpart of ‘object’. In BFO 1.0 ‘process’ served as such a counterpart. In BFO 2.0 ‘process’ is, rather, the occurrent counterpart of ‘material entity’. Those natural – as contrasted with engineered, which here means: deliberately executed – units which do exist in the realm of occurrents are typically either parasitic on the existence of natural units on the continuant side, or they are fiat in nature. Thus we can count lives; we can count football games; we can count chemical reactions performed in experiments or in chemical manufacturing. We cannot count the processes taking place, for instance, in an episode of insect mating behavior.Even where natural units are identifiable, for example cycles in a cyclical process such as the beating of a heart or an organism’s sleep/wake cycle, the processes in question form a sequence with no discontinuities (temporal gaps) of the sort that we find for instance where billiard balls or zebrafish or planets are separated by clear spatial gaps. Lives of organisms are process units, but they too unfold in a continuous series from other, prior processes such as fertilization, and they unfold in turn in continuous series of post-life processes such as post-mortem decay. Clear examples of boundaries of processes are almost always of the fiat sort (midnight, a time of death as declared in an operating theater or on a death certificate, the initiation of a state of war)" xsd:string
 property_value: IAO:0000602 "(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/083-003"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000016
+name: disposition
+is_a: BFO:0000017 ! realizable entity
+disjoint_from: BFO:0000023 ! role
+property_value: BFO:0000179 "disposition" xsd:string
+property_value: BFO:0000180 "Disposition" xsd:string
+property_value: IAO:0000112 "an atom of element X has the disposition to decay to an atom of element Y" xsd:string
+property_value: IAO:0000112 "certain people have a predisposition to colon cancer" xsd:string
+property_value: IAO:0000112 "children are innately disposed to categorize objects in certain ways." xsd:string
+property_value: IAO:0000112 "the cell wall is disposed to filter chemicals in endocytosis and exocytosis" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: Dispositions exist along a strength continuum. Weaker forms of disposition are realized in only a fraction of triggering cases. These forms occur in a significant number of cases of a similar type." xsd:string
+property_value: IAO:0000600 "b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/062-002"}
+property_value: IAO:0000601 "If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/063-002"}
+property_value: IAO:0000602 "(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/063-002"}
+property_value: IAO:0000602 "(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/062-002"}
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
@@ -218,6 +557,31 @@ property_value: IAO:0000602 "(forall (x) (if (ObjectAggregate x) (and (MaterialE
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
+id: BFO:0000030
+name: object
+is_a: BFO:0000040 ! material entity
+property_value: BFO:0000179 "object" xsd:string
+property_value: BFO:0000180 "Object" xsd:string
+property_value: IAO:0000112 "atom" xsd:string
+property_value: IAO:0000112 "cell" xsd:string
+property_value: IAO:0000112 "cells and organisms" xsd:string
+property_value: IAO:0000112 "engineered artifacts" xsd:string
+property_value: IAO:0000112 "grain of sand" xsd:string
+property_value: IAO:0000112 "molecule" xsd:string
+property_value: IAO:0000112 "organelle" xsd:string
+property_value: IAO:0000112 "organism" xsd:string
+property_value: IAO:0000112 "planet" xsd:string
+property_value: IAO:0000112 "solid portions of matter" xsd:string
+property_value: IAO:0000112 "star" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: an object is a maximal causally unified material entity" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: BFO rests on the presupposition that at multiple micro-, meso- and macroscopic scales reality exhibits certain stable, spatially separated or separable material units, combined or combinable into aggregates of various sorts (for example organisms into what are called ‘populations’). Such units play a central role in almost all domains of natural science from particle physics to cosmology. Many scientific laws govern the units in question, employing general terms (such as ‘molecule’ or ‘planet’) referring to the types and subtypes of units, and also to the types and subtypes of the processes through which such units develop and interact. The division of reality into such natural units is at the heart of biological science, as also is the fact that these units may form higher-level units (as cells form multicellular organisms) and that they may also form aggregates of units, for example as cells form portions of tissue and organs form families, herds, breeds, species, and so on. At the same time, the division of certain portions of reality into engineered units (manufactured artifacts) is the basis of modern industrial technology, which rests on the distributed mass production of engineered parts through division of labor and on their assembly into larger, compound units such as cars and laptops. The division of portions of reality into units is one starting point for the phenomenon of counting." xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: Each object is such that there are entities of which we can assert unproblematically that they lie in its interior, and other entities of which we can assert unproblematically that they lie in its exterior. This may not be so for entities lying at or near the boundary between the interior and exterior. This means that two objects – for example the two cells depicted in Figure 3 – may be such that there are material entities crossing their boundaries which belong determinately to neither cell. Something similar obtains in certain cases of conjoined twins (see below)." xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: To say that b is causally unified means: b is a material entity which is such that its material parts are tied together in such a way that, in environments typical for entities of the type in question,if c, a continuant part of b that is in the interior of b at t, is larger than a certain threshold size (which will be determined differently from case to case, depending on factors such as porosity of external cover) and is moved in space to be at t at a location on the exterior of the spatial region that had been occupied by b at t, then either b’s other parts will be moved in coordinated fashion or b will be damaged (be affected, for example, by breakage or tearing) in the interval between t and t.causal changes in one part of b can have consequences for other parts of b without the mediation of any entity that lies on the exterior of b. Material entities with no proper material parts would satisfy these conditions trivially. Candidate examples of types of causal unity for material entities of more complex sorts are as follows (this is not intended to be an exhaustive list):CU1: Causal unity via physical coveringHere the parts in the interior of the unified entity are combined together causally through a common membrane or other physical covering\\. The latter points outwards toward and may serve a protective function in relation to what lies on the exterior of the entity [13, 47" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: ‘objects’ are sometimes referred to as ‘grains’ [74" xsd:string
+property_value: IAO:0000600 "b is an object means: b is a material entity which manifests causal unity of one or other of the types CUn listed above & is of a type (a material universal) instances of which are maximal relative to this criterion of causal unity. (axiom label in BFO2 Reference: [024-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/024-001"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
 id: BFO:0000031
 name: generically dependent continuant
 def: "A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time." []
@@ -232,10 +596,25 @@ property_value: IAO:0000602 "(iff (GenericallyDependentContinuant a) (and (Conti
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
+id: BFO:0000034
+name: function
+is_a: BFO:0000016 ! disposition
+property_value: BFO:0000179 "function" xsd:string
+property_value: BFO:0000180 "Function" xsd:string
+property_value: IAO:0000112 "the function of a hammer to drive in nails" xsd:string
+property_value: IAO:0000112 "the function of a heart pacemaker to regulate the beating of a heart through electricity" xsd:string
+property_value: IAO:0000112 "the function of amylase in saliva to break down starch into sugar" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: In the past, we have distinguished two varieties of function, artifactual function and biological function. These are not asserted subtypes of BFO:function however, since the same function – for example: to pump, to transport – can exist both in artifacts and in biological entities. The asserted subtypes of function that would be needed in order to yield a separate monoheirarchy are not artifactual function, biological function, etc., but rather transporting function, pumping function, etc." xsd:string
+property_value: IAO:0000600 "A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/064-001"}
+property_value: IAO:0000602 "(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/064-001"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
 id: BFO:0000040
 name: material entity
 def: "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time." []
 is_a: BFO:0000004 ! independent continuant
+disjoint_from: BFO:0000141 ! immaterial entity
 property_value: BFO:0000179 "material" xsd:string
 property_value: BFO:0000180 "MaterialEntity" xsd:string
 property_value: IAO:0000112 "a flame" xsd:string
@@ -262,13 +641,201 @@ property_value: IAO:0000602 "(forall (x) (if (MaterialEntity x) (IndependentCont
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
+id: BFO:0000141
+name: immaterial entity
+is_a: BFO:0000004 ! independent continuant
+property_value: BFO:0000179 "immaterial" xsd:string
+property_value: BFO:0000180 "ImmaterialEntity" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: Immaterial entities are divided into two subgroups:boundaries and sites, which bound, or are demarcated in relation, to material entities, and which can thus change location, shape and size and as their material hosts move or change shape or size (for example: your nasal passage; the hold of a ship; the boundary of Wales (which moves with the rotation of the Earth) [38, 7, 10" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
 id: CARO:0001010
 name: organism or virus or viroid
 def: "Material anatomical entity that is a member of an individual species or is a viral or viroid particle." []
 is_a: PCO:0000031 ! organismal entity
 property_value: http://purl.obolibrary.org/obo/IAO_created_by "Melissa Haendel" xsd:string
 property_value: http://purl.obolibrary.org/obo/IAO_creation_date "9/18/11" xsd:string
+property_value: IAO:0000117 "Melissa Haendel" xsd:string
+property_value: IAO:0000412 "Common Anatomy Reference Onotology - CARO2" xsd:string
 property_value: IAO:0000589 "organism or virus" xsd:string
+
+[Term]
+id: CHEBI:16670
+name: peptide
+def: "Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid. X = OH, OR, NH2, NHR, etc." []
+is_a: CHEBI:33839 ! macromolecule
+property_value: IAO:0000111 "peptide" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
+id: CHEBI:16991
+name: deoxyribonucleic acid
+def: "High molecular weight, linear polymers, composed of nucleotides containing deoxyribose and linked by phosphodiester bonds; DNA contain the genetic information of organisms." []
+is_a: CHEBI:33696 ! nucleic acid
+property_value: IAO:0000111 "deoxyribonucleic acid" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
+def: "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." []
+is_a: BFO:0000040 ! material entity
+property_value: IAO:0000111 "molecular entity" xsd:string
+property_value: IAO:0000116 "We are assuming that every molecular entity has to be completely connected by chemical bonds. This excludes protein complexes, which are comprised of minimally two separate molecular entities. We will follow up with Chebi to ensure this is their understanding as well" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
+id: CHEBI:33696
+name: nucleic acid
+def: "A macromolecule made up of nucleotide units and hydrolysable into certain pyrimidine or purine bases (usually adenine, cytosine, guanine, thymine, uracil), D-ribose or 2-deoxy-D-ribose and phosphoric acid." []
+is_a: CHEBI:33839 ! macromolecule
+property_value: IAO:0000111 "nucleic acid" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
+id: CHEBI:33697
+name: ribonucleic acid
+def: "High molecular weight, linear polymers, composed of nucleotides containing ribose and linked by phosphodiester bonds; RNA is central to the synthesis of proteins." []
+is_a: CHEBI:33696 ! nucleic acid
+property_value: IAO:0000111 "ribonucleic acid" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
+id: CHEBI:33839
+name: macromolecule
+def: "A macromolecule is a molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." []
+is_a: CHEBI:23367 ! molecular entity
+property_value: IAO:0000111 "macromolecule" xsd:string
+property_value: IAO:0000118 "polymer" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
+
+[Term]
+id: CL:0000000
+name: cell
+def: "A material entity of anatomical origin (part of or deriving from an organism) that has as its parts a maximally connected cell compartment surrounded by a plasma membrane." []
+is_a: BFO:0000040 ! material entity
+property_value: IAO:0000111 "cell" xsd:string
+property_value: IAO:0000111 "cell" xsd:string
+property_value: IAO:0000112 "PMID:18089833.Cancer Res. 2007 Dec 15;67(24):12018-25. \"...Epithelial cells were harvested from histologically confirmed adenocarcinomas ..\"" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
+
+[Term]
+id: CL:0000010
+name: cultured cell
+def: "A cell in vitro that is or has been maintained or propagated as part of a cell culture." []
+is_a: CL:0000578 ! experimentally modified cell in vitro
+property_value: IAO:0000111 "cultured cell" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
+
+[Term]
+id: CL:0000236
+name: B cell
+def: "A lymphocyte of B lineage with the phenotype CD19-positive, CD20-positive, and capable of B cell mediated immunity." []
+is_a: CL:0000542 ! lymphocyte
+property_value: IAO:0000111 "B cell" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
+
+[Term]
+id: CL:0000542
+name: lymphocyte
+def: "A lymphocyte is a leukocyte commonly found in the blood and lymph that has the characteristics of a large nucleus, a neutral staining cytoplasm, and prominent heterochromatin." []
+is_a: CL:0000842 ! mononuclear cell
+property_value: IAO:0000111 "lymphocyte" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
+
+[Term]
+id: CL:0000578
+name: experimentally modified cell in vitro
+def: "A cell in vitro that has undergone physical changes as a consequence of a deliberate and specific experimental procedure." []
+is_a: CL:0000000 ! cell
+is_a: OBI:0000047 ! processed material
+property_value: IAO:0000111 "experimentally modified cell in vitro" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
+
+[Term]
+id: CL:0000842
+name: mononuclear cell
+def: "A leukocyte with a single non-segmented nucleus in the mature form." []
+is_a: CL:0000000 ! cell
+property_value: IAO:0000111 "mononuclear cell" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/cl.owl
+
+[Term]
+id: DbXref
+is_a: IAO:0000102 ! data about an ontology part
+
+[Term]
+id: Definition
+is_a: IAO:0000102 ! data about an ontology part
+
+[Term]
+id: ENVO:00000070
+name: construction
+def: "A feature that has been constructed by deliberate human effort." [MA:ma]
+synonym: "constructed feature" EXACT []
+is_a: ENVO:01000813 ! astronomical body part
+property_value: IAO:0000116 "\"constructed\" should probably be made something like a quality and this class obsoleted or filled only by inference" xsd:string
+
+[Term]
+id: ENVO:00002297
+name: environmental feature
+namespace: ENVO
+def: "A material entity which determines an environmental system." [DOI:10.1186/2041-1480-4-43, NM:nm, ORCID:0000-0002-4366-3088]
+comment: A material entity determines an environmental system when its removal would cause the collapse of that system. For example, a seamount determines a seamount environment, acting as its 'hub'. This class is currently being aligned to the Basic Formal Ontology. Following this alignment, its definition and the definitions of its subclasses will be revised.
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: ENVO:01000744
+name: human dwelling
+def: "A self-contained constructed feature used by one or more households as a home, such as a house, apartment, mobile home, houseboat or other 'substantial' structure. A dwelling typically includes nearby outbuildings, sheds etc. within the curtilage of the property, excluding any 'open fields beyond'. It has significance in relation to search and seizure, conveyancing of real property, burglary, trespass, and land use planning." [https://en.wikipedia.org/wiki/Dwelling accessed 11/25/2015]
+is_a: ENVO:00000070 ! construction
+property_value: IAO:0000116 "See https://github.com/EnvironmentOntology/envo/issues/264 for discussion. This definition needs a lot of clean up and links to household and related classes must be made to form logical definitions for inference to work." xsd:string
+property_value: IAO:0000116 "Subclasses will be added by inference." xsd:string
+
+[Term]
+id: ENVO:01000813
+name: astronomical body part
+def: "A material part of an astronomical body." []
+subset: envoAstro
+subset: envoPolar
+is_a: ENVO:00002297 ! environmental feature
+
+[Term]
+id: GO:0003674
+name: GO:molecular_function
+def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." []
+is_a: BFO:0000015 ! process
+is_a: http://rs.tdwg.org/dwc/terms/Event ! Event
+property_value: IAO:0000111 "molecular_function" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0003824
+name: catalytic activity
+def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." []
+is_a: GO:0003674 ! GO:molecular_function
+property_value: IAO:0000111 "catalytic activity" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0003964
+name: RNA-directed DNA polymerase activity
+def: "Catalysis of the reaction: deoxynucleoside triphosphate + DNA(n) = diphosphate + DNA(n+1). Catalyzes RNA-template-directed extension of the 3'- end of a DNA strand by one deoxynucleotide at a time." []
+is_a: GO:0003824 ! catalytic activity
+property_value: IAO:0000111 "RNA-directed DNA polymerase activity" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0032991
+name: protein-containing complex
+def: "A stable assembly of two or more macromolecules, i.e. proteins, nucleic acids, carbohydrates or lipids, in which at least one component is a protein and the constituent parts function together." []
+is_a: BFO:0000040 ! material entity
+relationship: BFO:0000051 PR:000000001 ! has part protein
+property_value: IAO:0000111 "protein-containing complex" xsd:string
+property_value: IAO:0000112 "A ribosome is a protein complex." xsd:string
+property_value: IAO:0000118 "protein complex" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
 id: IAO:0000003
@@ -517,6 +1084,20 @@ property_value: IAO:0000119 "OBI Plan and Planned Process branch" xsd:string
 property_value: IAO:0000119 "OBI_0000344" xsd:string
 
 [Term]
+id: IAO:0000109
+name: measurement datum
+def: "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device." []
+is_a: IAO:0000027 ! data item
+relationship: OBI:0001938 OBI:0001933 ! has value specification value specification
+property_value: IAO:0000111 "measurement datum" xsd:string
+property_value: IAO:0000112 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "2/2/2009 is_specified_output of some assay?" xsd:string
+property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 group:OBI xsd:string
+property_value: IAO:0000119 "OBI_0000305" xsd:string
+
+[Term]
 id: IAO:0000178
 name: material information bearer
 def: "A material entity in which a concretization of an information content entity inheres." []
@@ -580,6 +1161,27 @@ property_value: IAO:0000118 "scattergraph" xsd:string
 property_value: IAO:0000119 "WEB: http://en.wikipedia.org/wiki/Scatterplot" xsd:string
 
 [Term]
+id: IAO:0000185
+name: photograph
+def: "A photograph is created by projecting an image onto a photosensitive surface such as a chemically treated plate or film, CCD receptor, etc." []
+is_a: IAO:0000101 ! image
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PERSON:Alan Ruttenberg" xsd:string
+property_value: IAO:0000117 "PERSON:Joanne Luciano" xsd:string
+property_value: IAO:0000117 "PERSON:Melanie Courtot" xsd:string
+property_value: IAO:0000119 "WEB: http://en.wiktionary.org/wiki/photograph" xsd:string
+
+[Term]
+id: IAO:0000186
+name: photographic print
+def: "A photographic print is a material entity upon which a photograph generically depends." []
+is_a: IAO:0000178 ! material information bearer
+property_value: IAO:0000111 "photographic print" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "PERSON:Alan Ruttenberg" xsd:string
+property_value: IAO:0000117 "PERSON:Melanie Courtot" xsd:string
+
+[Term]
 id: IAO:0000225
 name: obsolescence reason specification
 def: "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value." []
@@ -630,113 +1232,667 @@ property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
 property_value: IAO:0000119 "Barry Smith, Werner Ceusters" xsd:string
 
 [Term]
+id: IAO:8000000
+name: ontology module
+is_a: IAO:0000102 ! data about an ontology part
+property_value: IAO:0000116 "I have placed this under 'data about an ontology part', but this can be discussed. I think this is OK if 'part' is interpreted reflexively, as an ontology module is the whole ontology rather than part of it." xsd:string
+property_value: IAO:0000118 "ontology file" xsd:string
+property_value: IAO:0000232 "This class and it's subclasses are applied to OWL ontologies. Using an rdf:type triple will result in problems with OWL-DL. I propose that dcterms:type is instead used to connect an ontology URI with a class from this hierarchy. The class hierarchy is not disjoint, so multiple assertions can be made about a single ontology." xsd:string
+created_by: cjm
+creation_date: 2018-05-20T20:55:03Z
+
+[Term]
+id: IAO:8000001
+name: base ontology module
+def: "An ontology module that comprises only of asserted axioms local to the ontology, excludes import directives, and excludes axioms or declarations from external ontologies." []
+is_a: IAO:8000000 ! ontology module
+property_value: seeAlso https://github.com/INCATools/ontology-starter-kit/issues/50
+created_by: cjm
+creation_date: 2018-05-20T20:55:30Z
+
+[Term]
+id: IAO:8000002
+name: editors ontology module
+def: "An ontology module that is intended to be directly edited, typically managed in source control, and typically not intended for direct consumption by end-users." []
+is_a: IAO:8000000 ! ontology module
+property_value: IAO:0000118 "source ontology module" xsd:string
+created_by: cjm
+creation_date: 2018-05-20T20:55:47Z
+
+[Term]
+id: IAO:8000003
+name: main release ontology module
+def: "An ontology module that is intended to be the primary release product and the one consumed by the majority of tools." []
+is_a: IAO:8000000 ! ontology module
+property_value: IAO:0000116 "TODO: Add logical axioms that state that a main release ontology module is derived from (directly or indirectly) an editors module" xsd:string
+created_by: cjm
+creation_date: 2018-05-20T20:56:13Z
+
+[Term]
+id: IAO:8000004
+name: bridge ontology module
+def: "An ontology module that consists entirely of axioms that connect or bridge two distinct ontology modules. For example, the Uberon-to-ZFA bridge module." []
+is_a: IAO:8000000 ! ontology module
+property_value: seeAlso https://github.com/obophenotype/uberon/wiki/inter-anatomy-ontology-bridge-ontologies
+created_by: cjm
+creation_date: 2018-05-20T20:56:23Z
+
+[Term]
+id: IAO:8000005
+name: import ontology module
+def: "A subset ontology module that is intended to be imported from another ontology." []
+is_a: IAO:8000006 ! subset ontology module
+property_value: IAO:0000116 "TODO: add axioms that indicate this is the output of a module extraction process." xsd:string
+property_value: IAO:0000118 "import file" xsd:string
+property_value: seeAlso http://robot.obolibrary.org/extract
+created_by: cjm
+creation_date: 2018-05-20T20:56:47Z
+
+[Term]
+id: IAO:8000006
+name: subset ontology module
+def: "An ontology module that is extracted from a main ontology module and includes only a subset of entities or axioms." []
+is_a: IAO:8000000 ! ontology module
+property_value: IAO:0000118 "ontology slim" xsd:string
+property_value: IAO:0000118 "subset ontology" xsd:string
+property_value: seeAlso http://robot.obolibrary.org/filter
+property_value: seeAlso http://www.geneontology.org/page/go-slim-and-subset-guide
+created_by: cjm
+creation_date: 2018-05-20T20:58:11Z
+
+[Term]
+id: IAO:8000007
+name: curation subset ontology module
+def: "A subset ontology that is intended as a whitelist for curators using the ontology. Such a subset will exclude classes that curators should not use for curation." []
+is_a: IAO:8000006 ! subset ontology module
+created_by: cjm
+creation_date: 2018-05-20T20:58:38Z
+
+[Term]
+id: IAO:8000008
+name: analysis subset ontology module
+def: "An ontology module that is intended for usage in analysis or discovery applications." []
+is_a: IAO:8000006 ! subset ontology module
+created_by: cjm
+creation_date: 2018-05-20T20:58:49Z
+
+[Term]
+id: IAO:8000009
+name: single layer subset ontology module
+def: "A subset ontology that is largely comprised of a single layer or strata in an ontology class hierarchy. The purpose is typically for rolling up for visualization. The classes in the layer need not be disjoint." []
+is_a: IAO:8000006 ! subset ontology module
+property_value: IAO:0000118 "ribbon subset" xsd:string
+created_by: cjm
+creation_date: 2018-05-20T20:59:19Z
+
+[Term]
+id: IAO:8000010
+name: exclusion subset ontology module
+def: "A subset of an ontology that is intended to be excluded for some purpose. For example, a blacklist of classes." []
+is_a: IAO:8000006 ! subset ontology module
+property_value: IAO:0000118 "antislim" xsd:string
+created_by: cjm
+creation_date: 2018-05-20T20:59:57Z
+
+[Term]
+id: IAO:8000011
+name: external import ontology module
+def: "An imported ontology module that is derived from an external ontology. Derivation methods include the OWLAPI SLME approach." []
+is_a: IAO:8000005 ! import ontology module
+property_value: IAO:0000118 "external import" xsd:string
+created_by: cjm
+creation_date: 2018-05-20T21:00:14Z
+
+[Term]
+id: IAO:8000012
+name: species subset ontology module
+def: "A subset ontology that is crafted to either include or exclude a taxonomic grouping of species." []
+is_a: IAO:8000006 ! subset ontology module
+property_value: IAO:0000118 "taxon subset" xsd:string
+property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Taxon-constraints
+created_by: cjm
+creation_date: 2018-05-20T21:14:16Z
+
+[Term]
+id: IAO:8000013
+name: reasoned ontology module
+def: "An ontology module that contains axioms generated by a reasoner. The generated axioms are typically direct SubClassOf axioms, but other possibilities are available." []
+is_a: IAO:8000000 ! ontology module
+property_value: seeAlso http://robot.obolibrary.org/reason
+created_by: cjm
+creation_date: 2018-05-20T21:20:33Z
+
+[Term]
+id: IAO:8000014
+name: generated ontology module
+def: "An ontology module that is automatically generated, for example via a SPARQL query or via template and a CSV." []
+is_a: IAO:8000000 ! ontology module
+property_value: IAO:0000116 "TODO: Add axioms (using PROV-O?) that indicate this is the output-of some reasoning process" xsd:string
+created_by: cjm
+creation_date: 2018-05-20T21:21:12Z
+
+[Term]
+id: IAO:8000015
+name: template generated ontology module
+def: "An ontology module that is automatically generated from a template specification and fillers for slots in that template." []
+is_a: IAO:8000014 ! generated ontology module
+property_value: seeAlso http://robot.obolibrary.org/template
+property_value: seeAlso https://doi.org/10.1186/s13326-017-0126-0
+property_value: seeAlso https://github.com/dosumis/dead_simple_owl_design_patterns/
+created_by: cjm
+creation_date: 2018-05-20T21:21:21Z
+
+[Term]
+id: IAO:8000016
+name: taxonomic bridge ontology module
+is_a: IAO:8000004 ! bridge ontology module
+created_by: cjm
+creation_date: 2018-05-20T21:28:15Z
+
+[Term]
+id: IAO:8000017
+name: ontology module subsetted by expressivity
+is_a: IAO:8000006 ! subset ontology module
+created_by: cjm
+creation_date: 2018-05-22T04:15:54Z
+
+[Term]
+id: IAO:8000018
+name: obo basic subset ontology module
+def: "A subset ontology that is designed for basic applications to continue to make certain simplifying assumptions; many of these simplifying assumptions were based on the initial version of the Gene Ontology, and have become enshrined in many popular and useful tools such as term enrichment tools.\n\nExamples of such assumptions include: traversing the ontology graph ignoring relationship types using a naive algorithm will not lead to cycles (i.e. the ontology is a DAG); every referenced term is declared in the ontology (i.e. there are no dangling clauses).\n\nAn ontology is OBO Basic if and only if it has the following characteristics:\nDAG\nUnidirectional\nNo Dangling Clauses\nFully Asserted\nFully Labeled\nNo equivalence axioms\nSingly labeled edges\nNo qualifier lists\nNo disjointness axioms\nNo owl-axioms header\nNo imports" []
+is_a: IAO:8000017 ! ontology module subsetted by expressivity
+property_value: seeAlso "6.2"
+created_by: cjm
+creation_date: 2018-05-22T04:16:10Z
+
+[Term]
+id: IAO:8000019
+name: ontology module subsetted by OWL profile
+is_a: IAO:8000017 ! ontology module subsetted by expressivity
+created_by: cjm
+creation_date: 2018-05-22T04:16:28Z
+
+[Term]
+id: IAO:8000020
+name: EL++ ontology module
+is_a: IAO:8000019 ! ontology module subsetted by OWL profile
+created_by: cjm
+creation_date: 2018-05-22T04:16:48Z
+
+[Term]
 id: NCBITaxon:10239
 name: Viruses
+namespace: ncbi_taxonomy
+synonym: "Vira" RELATED synonym []
+synonym: "Viridae" RELATED synonym []
+synonym: "viruses" RELATED blast_name []
+xref: GC_ID:1
 is_a: OBI:0100026 ! organism
+property_value: has_rank NCBITaxon:superkingdom
 property_value: IAO:0000111 "Viruses" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:117570
+name: Teleostomi
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:7776 ! Gnathostomata <vertebrate>
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:117571
 name: Euteleostomi
-is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:40673
+synonym: "bony vertebrates" EXACT genbank_common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:117570 ! Teleostomi
 property_value: IAO:0000111 "Euteleostomi" xsd:string
 property_value: IAO:0000118 "bony vertebrates" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:131567
+name: cellular organisms
+namespace: ncbi_taxonomy
+synonym: "biota" RELATED synonym []
+xref: GC_ID:1
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:1338369
+name: Dipnotetrapodomorpha
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:8287 ! Sarcopterygii
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:1437010
+name: Boreoeutheria
+namespace: ncbi_taxonomy
+synonym: "Boreotheria" RELATED synonym []
+xref: GC_ID:1
+xref: PMID:11743200
+xref: PMID:11791233
+is_a: NCBITaxon:9347 ! Eutheria
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:2
 name: Bacteria
+namespace: ncbi_taxonomy
+synonym: "bacteria" RELATED blast_name []
+synonym: "eubacteria" EXACT genbank_common_name []
+synonym: "Monera" RELATED in_part []
+synonym: "Procaryotae" RELATED in_part []
+synonym: "Prokaryota" RELATED in_part []
+synonym: "Prokaryotae" RELATED in_part []
+synonym: "prokaryote" RELATED in_part []
+synonym: "prokaryotes" RELATED in_part []
+xref: GC_ID:11
+xref: PMID:10425795
+xref: PMID:10425796
+xref: PMID:10425797
+xref: PMID:10490293
+xref: PMID:10843050
+xref: PMID:10939651
+xref: PMID:10939673
+xref: PMID:10939677
+xref: PMID:11211268
+xref: PMID:11321083
+xref: PMID:11321113
+xref: PMID:11411719
+xref: PMID:11540071
+xref: PMID:11542017
+xref: PMID:11542087
+xref: PMID:11760965
+xref: PMID:12054223
+xref: PMID:2112744
+xref: PMID:270744
+xref: PMID:8123559
+xref: PMID:8590690
+xref: PMID:9103655
+xref: PMID:9336922
+is_a: NCBITaxon:131567 ! cellular organisms
 is_a: OBI:0100026 ! organism
+property_value: has_rank NCBITaxon:superkingdom
 property_value: IAO:0000111 "Bacteria" xsd:string
 property_value: IAO:0000118 "eubacteria" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:207598
+name: Homininae
+namespace: ncbi_taxonomy
+synonym: "Homo/Pan/Gorilla group" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:9604 ! Hominidae
+property_value: has_rank NCBITaxon:subfamily
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:2157
 name: Archaea
+namespace: ncbi_taxonomy
+synonym: "archaea" RELATED blast_name []
+synonym: "Archaebacteria" RELATED synonym []
+synonym: "Mendosicutes" RELATED synonym []
+synonym: "Metabacteria" RELATED synonym []
+synonym: "Monera" RELATED in_part []
+synonym: "Procaryotae" RELATED in_part []
+synonym: "Prokaryota" RELATED in_part []
+synonym: "Prokaryotae" RELATED in_part []
+synonym: "prokaryote" RELATED in_part []
+synonym: "prokaryotes" RELATED in_part []
+xref: GC_ID:11
+xref: PMID:10425795
+xref: PMID:10425796
+xref: PMID:10425797
+xref: PMID:10490293
+xref: PMID:10843050
+xref: PMID:10939651
+xref: PMID:10939673
+xref: PMID:10939677
+xref: PMID:11211268
+xref: PMID:11321083
+xref: PMID:11321113
+xref: PMID:11411719
+xref: PMID:11540071
+xref: PMID:11541975
+xref: PMID:11542064
+xref: PMID:11542149
+xref: PMID:11760965
+xref: PMID:12054223
+xref: PMID:2112744
+xref: PMID:25527841
+xref: PMID:270744
+xref: PMID:8123559
+xref: PMID:8590690
+xref: PMID:9103655
+xref: PMID:9336922
+is_a: NCBITaxon:131567 ! cellular organisms
 is_a: OBI:0100026 ! organism
+property_value: has_rank NCBITaxon:superkingdom
 property_value: IAO:0000111 "Archaea" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:2759
 name: Eukaryota
+namespace: ncbi_taxonomy
+synonym: "Eucarya" RELATED synonym []
+synonym: "Eucaryotae" RELATED synonym []
+synonym: "eucaryotes" EXACT genbank_common_name []
+synonym: "Eukarya" RELATED synonym []
+synonym: "Eukaryotae" RELATED synonym []
+synonym: "eukaryotes" EXACT common_name []
+synonym: "eukaryotes" RELATED blast_name []
+xref: GC_ID:1
+xref: PMID:23020233
+is_a: NCBITaxon:131567 ! cellular organisms
 is_a: OBI:0100026 ! organism
+property_value: has_rank NCBITaxon:superkingdom
 property_value: IAO:0000111 "Eukaryota" xsd:string
 property_value: IAO:0000118 "eucaryotes" xsd:string
 property_value: IAO:0000118 "eukaryotes" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:314146
 name: Euarchontoglires
-is_a: NCBITaxon:40674 ! Mammalia
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+xref: PMID:11214319
+xref: PMID:12082125
+xref: PMID:12878460
+xref: PMID:15522813
+is_a: NCBITaxon:1437010 ! Boreoeutheria
+property_value: has_rank NCBITaxon:superorder
 property_value: IAO:0000111 "Euarchontoglires" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:314293
+name: Simiiformes
+namespace: ncbi_taxonomy
+synonym: "Anthropoidea" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:376913 ! Haplorrhini
+property_value: has_rank NCBITaxon:infraorder
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:314295
+name: Hominoidea
+namespace: ncbi_taxonomy
+synonym: "ape" EXACT common_name []
+synonym: "apes" EXACT genbank_common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:9526 ! Catarrhini
+property_value: has_rank NCBITaxon:superfamily
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:32523
 name: Tetrapoda
-is_a: NCBITaxon:117571 ! Euteleostomi
+namespace: ncbi_taxonomy
+synonym: "tetrapods" EXACT genbank_common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:1338369 ! Dipnotetrapodomorpha
 property_value: IAO:0000111 "Tetrapoda" xsd:string
 property_value: IAO:0000118 "tetrapods" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:32524
 name: Amniota
+namespace: ncbi_taxonomy
+synonym: "amniotes" EXACT genbank_common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:32523 ! Tetrapoda
 property_value: IAO:0000111 "Amniota" xsd:string
 property_value: IAO:0000118 "amniotes" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:32525
+name: Theria <Mammalia>
+namespace: ncbi_taxonomy
+synonym: "Theria" EXACT scientific_name []
+xref: GC_ID:1
+is_a: NCBITaxon:40674 ! Mammalia
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33154
 name: Opisthokonta
+namespace: ncbi_taxonomy
+synonym: "Fungi/Metazoa group" RELATED synonym []
+synonym: "opisthokonts" RELATED synonym []
+xref: GC_ID:1
 is_a: NCBITaxon:2759 ! Eukaryota
 property_value: IAO:0000111 "Opisthokonta" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:33208
+name: Metazoa
+namespace: ncbi_taxonomy
+synonym: "Animalia" RELATED synonym []
+synonym: "animals" RELATED blast_name []
+synonym: "metazoans" EXACT genbank_common_name []
+synonym: "multicellular animals" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:33154 ! Opisthokonta
+property_value: has_rank NCBITaxon:kingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33213
 name: Bilateria
-is_a: NCBITaxon:33154 ! Opisthokonta
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:6072 ! Eumetazoa
 property_value: IAO:0000111 "Bilateria" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:33511
+name: Deuterostomia
+namespace: ncbi_taxonomy
+synonym: "deuterostomes" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:33213 ! Bilateria
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:376913
+name: Haplorrhini
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:9443 ! Primates
+property_value: has_rank NCBITaxon:suborder
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:40674
 name: Mammalia
+namespace: ncbi_taxonomy
+synonym: "mammals" EXACT genbank_common_name []
+synonym: "mammals" RELATED blast_name []
+xref: GC_ID:1
 is_a: NCBITaxon:32524 ! Amniota
+property_value: has_rank NCBITaxon:class
 property_value: IAO:0000111 "Mammalia" xsd:string
 property_value: IAO:0000118 "mammals" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:6072
+name: Eumetazoa
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:33208 ! Metazoa
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:7711
+name: Chordata
+namespace: ncbi_taxonomy
+synonym: "chordates" EXACT genbank_common_name []
+synonym: "chordates" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:33511 ! Deuterostomia
+property_value: has_rank NCBITaxon:phylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:7742
 name: Vertebrata <Metazoa>
-is_a: NCBITaxon:33213 ! Bilateria
+namespace: ncbi_taxonomy
+synonym: "Vertebrata" EXACT scientific_name []
+synonym: "vertebrates" EXACT genbank_common_name []
+synonym: "vertebrates" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:89593 ! Craniata <chordata>
 property_value: IAO:0000111 "Vertebrata <Metazoa>" xsd:string
 property_value: IAO:0000118 "Vertebrata" xsd:string
 property_value: IAO:0000118 "vertebrates" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:7776
+name: Gnathostomata <vertebrate>
+namespace: ncbi_taxonomy
+synonym: "Gnathostomata" EXACT scientific_name []
+synonym: "jawed vertebrates" EXACT genbank_common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:8287
+name: Sarcopterygii
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:117571 ! Euteleostomi
+property_value: has_rank NCBITaxon:superclass
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:89593
+name: Craniata <chordata>
+namespace: ncbi_taxonomy
+synonym: "Craniata" EXACT scientific_name []
+xref: GC_ID:1
+is_a: NCBITaxon:7711 ! Chordata
+property_value: has_rank NCBITaxon:subphylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:9347
+name: Eutheria
+namespace: ncbi_taxonomy
+synonym: "eutherian mammals" EXACT common_name []
+synonym: "placental mammals" EXACT common_name []
+synonym: "Placentalia" RELATED synonym []
+synonym: "placentals" EXACT genbank_common_name []
+synonym: "placentals" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:32525 ! Theria <Mammalia>
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:9443
+name: Primates
+namespace: ncbi_taxonomy
+synonym: "Primata" RELATED synonym []
+synonym: "primate" EXACT equivalent_name []
+synonym: "primates" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:314146 ! Euarchontoglires
+property_value: has_rank NCBITaxon:order
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:9526
+name: Catarrhini
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:314293 ! Simiiformes
+property_value: has_rank NCBITaxon:parvorder
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:9604
+name: Hominidae
+namespace: ncbi_taxonomy
+synonym: "great apes" EXACT genbank_common_name []
+synonym: "Pongidae" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:314295 ! Hominoidea
+property_value: has_rank NCBITaxon:family
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:9605
+name: Homo
+namespace: ncbi_taxonomy
+synonym: "humans" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:207598 ! Homininae
+property_value: has_rank NCBITaxon:genus
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:9606
 name: Homo sapiens
-is_a: NCBITaxon:314146 ! Euarchontoglires
+namespace: ncbi_taxonomy
+synonym: "Home sapiens" RELATED misspelling []
+synonym: "Homo sampiens" RELATED misspelling []
+synonym: "Homo sapeins" RELATED misspelling []
+synonym: "Homo sapian" RELATED misspelling []
+synonym: "Homo sapians" RELATED misspelling []
+synonym: "Homo sapien" RELATED misspelling []
+synonym: "Homo sapience" RELATED misspelling []
+synonym: "Homo sapiense" RELATED misspelling []
+synonym: "Homo sapients" RELATED misspelling []
+synonym: "Homo sapines" RELATED misspelling []
+synonym: "Homo spaiens" RELATED misspelling []
+synonym: "Homo spiens" RELATED misspelling []
+synonym: "human" EXACT genbank_common_name []
+synonym: "Humo sapiens" RELATED misspelling []
+synonym: "man" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:9605 ! Homo
+property_value: has_rank NCBITaxon:species
 property_value: IAO:0000111 "Homo sapiens" xsd:string
 property_value: IAO:0000118 "human" xsd:string
 property_value: IAO:0000118 "human being" xsd:string
 property_value: IAO:0000118 "man" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: OBI:0000011
 name: planned process
 def: "A processual entity that realizes a plan which is the concretization of a plan specification." []
 is_a: BFO:0000015 ! process
+is_a: http://rs.tdwg.org/dwc/terms/Event ! Event
 property_value: IAO:0000111 "planned process" xsd:string
 property_value: IAO:0000111 "planned process" xsd:string
 property_value: IAO:0000112 "Injecting mice with a vaccine in order to test its efficacy" xsd:string
@@ -812,6 +1968,53 @@ property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 
 [Term]
+id: OBI:0000067
+name: evaluant role
+def: "a role that inheres in a material entity that is realized in an assay in which data is generated about the bearer of the evaluant role" []
+is_a: BFO:0000023 ! role
+relationship: BFO:0000054 OBI:0000070 ! realized in assay
+relationship: RO:0000052 BFO:0000040 ! inheres in material entity
+property_value: IAO:0000111 "evaluant role" xsd:string
+property_value: IAO:0000112 "When a specimen of blood is assayed for glucose concentration, the blood has the evaluant role. When measuring the mass of a mouse, the evaluant is the mouse. When measuring the time of DNA replication, the evaluant is the DNA. When measuring the intensity of light on a surface, the evaluant is the light source." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000116 "examples of features that could be described in an evaluant: quality.... e.g. \"contains 10 pg/ml IL2\", or \"no glucose detected\")" xsd:string
+property_value: IAO:0000116 "Role call - 17nov-08: JF and MC think an evaluant role is always specified input of a process. Even in the case where we have an assay taking blood as evaluant and outputting blood, the blood is not the specified output at the end of the assay (the concentration of glucose in the blood is)" xsd:string
+property_value: IAO:0000117 "GROUP:  Role Branch" xsd:string
+property_value: IAO:0000119 "OBI" xsd:string
+property_value: IAO:0000232 "Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term." xsd:string
+
+[Term]
+id: OBI:0000070
+name: assay
+def: "A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies." []
+is_a: OBI:0000011 ! planned process
+disjoint_from: OBI:0200000 ! data transformation
+relationship: BFO:0000055 OBI:0000067 ! realizes evaluant role
+relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
+property_value: IAO:0000111 "assay" xsd:string
+property_value: IAO:0000112 "Assay the wavelength of light emitted by excited Neon atoms. Count of geese flying over a house." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000116 "12/3/12: BP: the reference to the 'physical examination' is included to point out that a prediction is not an assay, as that does not require physical examiniation. " xsd:string
+property_value: IAO:0000117 "PlanAndPlannedProcess Branch" xsd:string
+property_value: IAO:0000118 "measuring" xsd:string
+property_value: IAO:0000118 "scientific observation" xsd:string
+property_value: IAO:0000119 "OBI branch derived" xsd:string
+property_value: OBI:0001847 "study assay" xsd:string
+property_value: OBI:9991118 "any method" xsd:string
+
+[Term]
+id: OBI:0000079
+name: culture medium
+def: "a processed material that provides the needed nourishment for microorganisms or cells grown in vitro." []
+is_a: OBI:0000047 ! processed material
+property_value: IAO:0000111 "culture medium" xsd:string
+property_value: IAO:0000112 "A growth medium or culture medium is a substance in which microorganisms or cells can grow.  Wikipedia, growth medium, Feb 29, 2008" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000116 "changed from a role to a processed material based on on Aug 22, 2011 dev call. Details see the tracker item: http://sourceforge.net/tracker/?func=detail&aid=3325270&group_id=177891&atid=886178\nModification made by JZ." xsd:string
+property_value: IAO:0000117 "Person: Jennifer Fostel, Jie Zheng" xsd:string
+property_value: IAO:0000119 "OBI" xsd:string
+
+[Term]
 id: OBI:0000094
 name: material processing
 def: "A planned process which results in physical changes in a specified input material" []
@@ -843,7 +2046,19 @@ property_value: IAO:0000116 "blood taken from animal: animal continues in study,
 property_value: IAO:0000116 "Note: definition is in specimen creation objective which is defined as an objective to obtain and store a material entity for potential use as an input during an investigation." xsd:string
 property_value: IAO:0000116 "parasite example\n- when parasite in people we study people, people are subjects and parasites are specimen\n- when parasite extracted, they become subject in the following study\nspecimen can later be subject." xsd:string
 property_value: IAO:0000117 "GROUP:  Role Branch" xsd:string
+property_value: IAO:0000118 "material sample" xsd:string
 property_value: IAO:0000119 "OBI" xsd:string
+
+[Term]
+id: OBI:0000185
+name: imaging assay
+def: "An assay that produces a picture of an entity." []
+is_a: OBI:0000070 ! assay
+relationship: OBI:0000299 IAO:0000101 ! has_specified_output image
+property_value: IAO:0000111 "imaging assay" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "PlanAndPlannedProcess Branch" xsd:string
+property_value: IAO:0000119 "OBI branch derived" xsd:string
 
 [Term]
 id: OBI:0000245
@@ -861,6 +2076,63 @@ property_value: IAO:0000117 "PERSON: Susanna Sansone" xsd:string
 property_value: IAO:0000119 "GROUP: OBI" xsd:string
 
 [Term]
+id: OBI:0000272
+name: protocol
+def: "A plan specification which has sufficient level of detail and quantitative information to communicate it between investigation agents, so that different investigation agents will reliably be able to independently reproduce the process." []
+is_a: IAO:0000104 ! plan specification
+property_value: IAO:0000111 "protocol" xsd:string
+property_value: IAO:0000112 "PCR protocol, has objective specification, amplify DNA fragment of interest, and has action specification describes the amounts of experimental reagents used (e..g. buffers, dNTPS, enzyme), and the temperature and cycle time settings for running the PCR." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PlanAndPlannedProcess Branch" xsd:string
+property_value: IAO:0000119 "OBI branch derived + wikipedia (http://en.wikipedia.org/wiki/Protocol_%28natural_sciences%29)" xsd:string
+property_value: OBI:0001847 "study protocol" xsd:string
+
+[Term]
+id: OBI:0000419
+name: reverse transcriptase
+def: "enzyme and has_function some GO:0003964 (RNA-directed DNA polymerase\nactivity)" []
+is_a: OBI:0000427 ! enzyme
+property_value: IAO:0000111 "reverse transcriptase" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "person:Melanie Courtot" xsd:string
+property_value: IAO:0000119 group:OBI xsd:string
+
+[Term]
+id: OBI:0000423
+name: extract
+def: "an extract is a material entity which results from an extraction process" []
+is_a: OBI:0000047 ! processed material
+relationship: OBI:0000312 OBI:0302884 ! is_specified_output_of extraction
+property_value: IAO:0000111 "extract" xsd:string
+property_value: IAO:0000112 "Up-regulation of inflammatory signalings by areca nut extract and role of cyclooxygenase-2 -1195G>a polymorphism reveal risk of oral cancer. Cancer Res. 2008 Oct 15;68(20):8489-98. PMID: 18922923" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Philippe Rocca-Serra" xsd:string
+property_value: IAO:0000118 "extracted material" xsd:string
+property_value: IAO:0000119 "GROUP: OBI Biomatrial Branch" xsd:string
+
+[Term]
+id: OBI:0000427
+name: enzyme
+def: "(protein or rna) or has_part (protein or rna) and\nhas_function some GO:0003824 (catalytic activity)" []
+is_a: BFO:0000040 ! material entity
+property_value: IAO:0000111 "enzyme" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "MC: known issue: enzyme doesn't classify under material entity for now as it isn't stated that anything\nthat has_part some material entity is a material entity. If we add as equivalent classes to material entity has_part some material entity and part_of some material entity  (each one in his own necessary and sufficient block) Pellet in P3 doesn't classify any more." xsd:string
+property_value: IAO:0000117 "person: Melanie Courtot" xsd:string
+property_value: IAO:0000119 GROUP:OBI xsd:string
+
+[Term]
+id: OBI:0000441
+name: assay objective
+def: "an objective specification to determine a specified type of information about an evaluated entity (the material entity bearing evaluant role)" []
+is_a: IAO:0000005 ! objective specification
+property_value: IAO:0000111 "assay objective" xsd:string
+property_value: IAO:0000112 "the objective to determine the weight of a mouse." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PPPB branch" xsd:string
+property_value: IAO:0000119 "PPPB branch" xsd:string
+
+[Term]
 id: OBI:0000450
 name: regulatory agency
 def: "A regulatory agency is a organization that has responsibility over or for  the legislation (acts and regulations) for a given sector of the government." []
@@ -873,6 +2145,20 @@ property_value: IAO:0000112 "The US Environmental Protection Agency" xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "GROUP: OBI Biomaterial Branch" xsd:string
 property_value: IAO:0000119 "WEB: en.wikipedia.org/wiki/Regulator" xsd:string
+
+[Term]
+id: OBI:0000453
+name: measure function
+def: "Measure function is a function that is borne by a processed material  and realized in a process in which information about some entity is expressed relative to some reference." []
+is_a: BFO:0000034 ! function
+relationship: RO:0000079 OBI:0000047 ! function of processed material
+property_value: IAO:0000111 "measure function" xsd:string
+property_value: IAO:0000112 "A glucometer measures blood glucose concentration, the glucometer has a measure function." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PERSON: Daniel Schober" xsd:string
+property_value: IAO:0000117 "PERSON: Helen Parkinson" xsd:string
+property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
+property_value: IAO:0000117 "PERSON:Frank Gibson" xsd:string
 
 [Term]
 id: OBI:0000456
@@ -935,6 +2221,19 @@ property_value: IAO:0000117 "GROUP:  Role Branch" xsd:string
 property_value: IAO:0000119 "OBI" xsd:string
 
 [Term]
+id: OBI:0000639
+name: material separation objective
+def: "is an objective to transform a material entity into spatially separated components." []
+is_a: OBI:0000456 ! material transformation objective
+union_of: OBI:0000678 ! portioning objective
+union_of: OBI:0000681 ! separation into different composition objective
+property_value: IAO:0000111 "material separation objective" xsd:string
+property_value: IAO:0000112 "The objective to obtain multiple aliquots of an enzyme preparation. The objective to obtain cells contained in a sample of blood." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PPPB branch" xsd:string
+property_value: IAO:0000119 "PPPB branch" xsd:string
+
+[Term]
 id: OBI:0000648
 name: clustered data set
 def: "A data set that is produced as the output of a class discovery data transformation and consists of a data set with assigned discovered class labels." []
@@ -958,6 +2257,7 @@ intersection_of: OBI:0000417 OBI:0000684 ! achieves_planned_objective specimen c
 relationship: OBI:0000293 BFO:0000040 ! has_specified_input material entity
 relationship: OBI:0000299 OBI:0100051 ! has_specified_output specimen
 relationship: OBI:0000417 OBI:0000684 ! achieves_planned_objective specimen collection objective
+property_value: BCO:0000060 "specimen collection process" xsd:string
 property_value: IAO:0000111 "specimen collection process" xsd:string
 property_value: IAO:0000112 "drawing blood from a patient for analysis, collecting a piece of a plant for depositing in a herbarium, buying meat from a butcher in order to measure its protein content in an investigation" xsd:string
 property_value: IAO:0000114 IAO:0000122
@@ -980,6 +2280,41 @@ property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "James Malone" xsd:string
 property_value: IAO:0000118 "supervised classification data transformation" xsd:string
 property_value: IAO:0000119 "PERSON: James Malone" xsd:string
+
+[Term]
+id: OBI:0000671
+name: sample from organism
+def: "a material obtained from an organism in order to be a representative of the whole" []
+is_a: OBI:0000747 ! material sample
+is_a: OBI:0001479 ! specimen from organism
+intersection_of: OBI:0000312 OBI:0600005 ! is_specified_output_of collecting specimen from organism
+intersection_of: RO:0000087 OBI:0000740 ! has role material sample role
+relationship: OBI:0000312 OBI:0600005 ! is_specified_output_of collecting specimen from organism
+relationship: RO:0001000 UBERON:0000465 ! derives from material anatomical entity
+property_value: IAO:0000111 "sample from organism" xsd:string
+property_value: IAO:0000114 IAO:0000002
+property_value: IAO:0000116 "5/29: This is a helper class for now" xsd:string
+property_value: IAO:0000116 "we need to work on this: Is taking a urine sample a material separation process? If not, we will need to specify what 'taking a sample from organism' entails. We can argue that the objective to obtain a urine sample from a patient is enough to call it a material separation process, but it could dilute what material separation was supposed to be about." xsd:string
+
+[Term]
+id: OBI:0000678
+name: portioning objective
+def: "A material separation objective aiming to separate material into multiple portions, each of which contains a similar composition of the input material." []
+is_a: OBI:0000639 ! material separation objective
+disjoint_from: OBI:0000681 ! separation into different composition objective
+property_value: IAO:0000111 "portioning objective" xsd:string
+property_value: IAO:0000112 "The objective to obtain multiple aliquots of an enzyme preparation." xsd:string
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: OBI:0000681
+name: separation into different composition objective
+def: "A material separation objective aiming to separate a material entity that has parts of different types, and end with at least one output that is a material with parts of fewer types (modulo impurities)." []
+is_a: OBI:0000639 ! material separation objective
+property_value: IAO:0000111 "separation into different composition objective" xsd:string
+property_value: IAO:0000112 "The objective to obtain cells contained in a sample of blood." xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000116 "We should be using has the grain relations or concentrations to distinguish the portioning and other sub-objectives" xsd:string
 
 [Term]
 id: OBI:0000684
@@ -1062,6 +2397,47 @@ property_value: IAO:0000118 "k-NN" xsd:string
 property_value: IAO:0000119 "PERSON: James Malone" xsd:string
 
 [Term]
+id: OBI:0000740
+name: material sample role
+def: "A material sample role is a specimen role borne by a material entity that is the output of a material sampling process." []
+is_a: OBI:0000112 ! specimen role
+property_value: IAO:0000111 "material sample role" xsd:string
+property_value: IAO:0000112 "a role borne by a portion of blood taken to represent all the blood in an organism; the role borne by a population of humans with HIV enrolled in a study taken to represent patients with HIV in general." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "7/13/09: Note that this is a relational role: between the sample taken and the 'sampled' material of which the sample is thought to be representative off." xsd:string
+
+[Term]
+id: OBI:0000744
+name: material sampling process
+def: "A specimen gathering process with the objective to obtain a specimen that is representative of the input material entity" []
+is_a: OBI:0000659 ! specimen collection process
+intersection_of: OBI:0000659 ! specimen collection process
+intersection_of: OBI:0000293 BFO:0000040 ! has_specified_input material entity
+intersection_of: OBI:0000299 OBI:0000747 ! has_specified_output material sample
+relationship: OBI:0000299 OBI:0000747 ! has_specified_output material sample
+property_value: IAO:0000111 "material sampling process" xsd:string
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000118 "sample collection" xsd:string
+property_value: IAO:0000118 "sampling" xsd:string
+property_value: IAO:0000233 https://github.com/obi-ontology/obi/issues/1002 xsd:string
+
+[Term]
+id: OBI:0000747
+name: material sample
+def: "A material entity that has the material sample role" []
+is_a: http://rs.tdwg.org/dwc/terms/MaterialSample ! Material Sample
+is_a: OBI:0100051 ! specimen
+intersection_of: BFO:0000040 ! material entity
+intersection_of: RO:0000087 OBI:0000740 ! has role material sample role
+relationship: RO:0000087 OBI:0000740 ! has role material sample role
+property_value: IAO:0000111 "material sample" xsd:string
+property_value: IAO:0000112 "blood drawn from patient to measure his systemic glucose level. A population of humans with HIV enrolled in a study taken to represent patients with HIV in general." xsd:string
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000117 "OBI: workshop" xsd:string
+property_value: IAO:0000118 "sample population" xsd:string
+property_value: OBI:0001847 "sample" xsd:string
+
+[Term]
 id: OBI:0000749
 name: CART
 def: "A CART (classification and regression trees) is a data transformation method for producing a classification or regression model with a tree-based structure." []
@@ -1085,6 +2461,40 @@ property_value: IAO:0000117 "Helen Parkinson" xsd:string
 property_value: IAO:0000119 http://en.wikipedia.org/wiki/Cross-validation_%28statistics%29 xsd:string
 
 [Term]
+id: OBI:0000806
+name: material maintenance objective
+def: "An objective specification maintains some or all of the qualities of a material over time." []
+is_a: IAO:0000005 ! objective specification
+property_value: IAO:0000111 "material maintenance objective" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
+property_value: IAO:0000119 "PERSON: Bjoern Peters" xsd:string
+
+[Term]
+id: OBI:0000811
+name: primary structure of DNA macromolecule
+def: "a quality of a DNA molecule that inheres in its bearer due to the order of its DNA nucleotide residues." []
+is_a: SO:0000001 ! region
+property_value: IAO:0000111 "primary structure of DNA macromolecule" xsd:string
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000116 "placeholder for SO" xsd:string
+property_value: IAO:0000117 "BP et al" xsd:string
+
+[Term]
+id: OBI:0000832
+name: measurement device
+def: "A device in which a measure function inheres." []
+is_a: OBI:0000968 ! device
+intersection_of: OBI:0000968 ! device
+intersection_of: RO:0000085 OBI:0000453 ! has function measure function
+relationship: RO:0000085 OBI:0000453 ! has function measure function
+property_value: IAO:0000111 "measurement device" xsd:string
+property_value: IAO:0000112 "A ruler, a microarray scanner, a Geiger counter." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "GROUP:OBI Philly workshop" xsd:string
+property_value: IAO:0000119 "OBI" xsd:string
+
+[Term]
 id: OBI:0000835
 name: manufacturer
 def: "A person or organization that has a manufacturer role" []
@@ -1092,6 +2502,24 @@ is_a: BFO:0000040 ! material entity
 relationship: RO:0000087 OBI:0000571 ! has role manufacturer role
 property_value: IAO:0000111 "manufacturer" xsd:string
 property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: OBI:0000838
+name: material maintenance
+def: "a process with that achieves the objective to maintain some or all of the characteristics of an input material over time" []
+is_a: OBI:0000011 ! planned process
+relationship: OBI:0000417 OBI:0000806 ! achieves_planned_objective material maintenance objective
+property_value: IAO:0000111 "material maintenance" xsd:string
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: OBI:0000845
+name: primary structure of RNA molecule
+def: "The primary structure of an RNA molecule that is completely defined by the set of its nucleic residue parts and the linear order induced by the peptide bonds that hold them together" []
+is_a: SO:0000001 ! region
+property_value: IAO:0000111 "primary structure of RNA molecule" xsd:string
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000117 "Person:Bjoern Peters" xsd:string
 
 [Term]
 id: OBI:0000947
@@ -1109,6 +2537,7 @@ id: OBI:0000953
 name: processed specimen
 def: "A specimen that has been intentionally physically modified." []
 comment: A tissue sample that has been sliced and stained for a histology study.
+is_a: http://rs.tdwg.org/dwc/terms/MaterialSample ! Material Sample
 is_a: OBI:0000047 ! processed material
 is_a: OBI:0100051 ! specimen
 intersection_of: OBI:0000047 ! processed material
@@ -1131,6 +2560,31 @@ property_value: IAO:0000117 "Bjoern Peters" xsd:string
 property_value: IAO:0000119 "Bjoern Peters" xsd:string
 
 [Term]
+id: OBI:0000968
+name: device
+def: "A material entity that is designed to perform a function in a scientific investigation, but is not a reagent." []
+is_a: OBI:0000047 ! processed material
+relationship: RO:0000085 BFO:0000034 ! has function function
+property_value: IAO:0000111 "device" xsd:string
+property_value: IAO:0000112 "A voltmeter is a measurement device which is intended to perform some measure function." xsd:string
+property_value: IAO:0000112 "An autoclave is a device that sterlizes instruments or contaminated waste by applying high temperature and pressure." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000116 "2012-12-17 JAO: In common lab usage, there is a distinction made between devices and reagents that is difficult to model. Therefore we have chosen to specifically exclude reagents from the definition of \"device\", and are enumerating the types of roles that a reagent can perform.\n\n2013-6-5 MHB: The following clarifications are outcomes of the May 2013 Philly Workshop. Reagents are distinguished from devices that also participate in scientific techniques by the fact that reagents are chemical or biological in nature and necessarily participate in some chemical interaction or reaction during the realization of their experimental role. By contrast, devices do not participate in such chemical reactions/interactions.  Note that there are cases where devices use reagent components during their operation, where the reagent-device distinction is less clear.  For example:\n\n(1) An HPLC machine is considered a device, but has a column that holds a stationary phase resin as an operational component.  This resin qualifies as a device if it participates purely in size exclusion, but bears a reagent role that is realized in the running of a column if it interacts electrostatically or chemically with the evaluant. The container the resin is in (“the column”) considered alone is a device. So the entire column as well as the entire HPLC machine are devices that have a reagent as an operating part.\n\n(2) A pH meter is a device, but its electrode component bears a reagent role in virtue of its interacting directly with the evaluant in execution of an assay.\n\n(3) A gel running  box  is a device that has a metallic lead as a component that participates in a chemical reaction with the running buffer when a charge is passed through it.  This metallic lead is considered to have a reagent role as a component of this device realized in the running of a gel.\n\nIn the examples above, a reagent is an operational component of a device, but the device itself does not realize a reagent role (as bearing a reagent role is not transitive across the part_of relation).  In this way, the asserted disjointness between a reagent and device holds, as both roles are never realized in the same bearer during execution of an assay.  " xsd:string
+property_value: IAO:0000117 "PERSON: Helen Parkinson" xsd:string
+property_value: IAO:0000118 "instrument" xsd:string
+property_value: IAO:0000119 "OBI development call 2012-12-17." xsd:string
+
+[Term]
+id: OBI:0000973
+name: sequence data
+def: "A measurement datum that representing the primary structure of a macromolecule(it's sequence) sometimes associated with an indicator of confidence of that measurement.\n" []
+property_value: IAO:0000111 "sequence data" xsd:string
+property_value: IAO:0000112 "example of usage: the representation of a nucleotide sequence in FASTA format used for a sequence similarity search." xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "Person:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 "GROUP: OBI" xsd:string
+
+[Term]
 id: OBI:0001000
 name: questionnaire
 def: "A document with a set of printed or written questions with a choice of answers, devised for the purposes of a survey or statistical study." []
@@ -1141,6 +2595,74 @@ property_value: IAO:0000116 "JT: It plays a role in collecting data that could b
 property_value: IAO:0000116 "Need to clarify if this is a document or a directive information entity (or what their connection is))" xsd:string
 property_value: IAO:0000117 "PERSON: Jessica Turner" xsd:string
 property_value: IAO:0000119 "Merriam-Webster" xsd:string
+
+[Term]
+id: OBI:0001010
+name: nucleic acid extract
+def: "An extract that is the output of an extraction process in which nucleic acid molecules are isolated from a specimen." []
+is_a: OBI:0000423 ! extract
+is_a: OBI:0000953 ! processed specimen
+relationship: OBI:0000312 OBI:0666667 ! is_specified_output_of nucleic acid extraction
+relationship: OBI:0000643 CHEBI:33696 ! has grain nucleic acid
+relationship: RO:0000087 OBI:0000112 ! has role specimen role
+property_value: IAO:0000111 "nucleic acid extract" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
+property_value: IAO:0000119 "UPenn Group" xsd:string
+
+[Term]
+id: OBI:0001108
+name: nucleic acid sequencer
+def: "An device that is used to determine the order of nucleotides in nucleic acid sequences." []
+is_a: OBI:0000832 ! measurement device
+property_value: IAO:0000111 "nucleic acid sequencer" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Erik Segerdell" xsd:string
+property_value: IAO:0000119 "PERSON: Erik Segerdell" xsd:string
+
+[Term]
+id: OBI:0001137
+name: protein sequencer
+def: "An device that is used to determine the order of amino acids in protein sequences." []
+is_a: OBI:0000832 ! measurement device
+property_value: IAO:0000111 "protein sequencer" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Erik Segerdell" xsd:string
+property_value: IAO:0000119 "PERSON: Erik Segerdell" xsd:string
+
+[Term]
+id: OBI:0001479
+name: specimen from organism
+def: "A specimen that derives from an anatomical part or substance arising from an organism. Examples of tissue specimen include tissue, organ, physiological system, blood, or body location (arm)." []
+is_a: http://rs.tdwg.org/dwc/terms/MaterialSample ! Material Sample
+is_a: OBI:0100051 ! specimen
+property_value: IAO:0000111 "specimen from organism" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PERSON: Chris Stoeckert, Jie Zheng" xsd:string
+property_value: IAO:0000118 "tissue specimen" xsd:string
+property_value: IAO:0000119 "MO_954 organism_part" xsd:string
+
+[Term]
+id: OBI:0001573
+name: DNA sequence data
+def: "A sequence data item that is about the primary structure of DNA" []
+is_a: OBI:0000973 ! sequence data
+relationship: IAO:0000136 OBI:0000811 ! is about primary structure of DNA macromolecule
+property_value: IAO:0000111 "DNA sequence data" xsd:string
+property_value: IAO:0000112 "The part of a FASTA file that contains the letters ACTGGGAA " xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "OBI call; Bjoern Peters" xsd:string
+property_value: IAO:0000119 "OBI call; Melanie Courtout" xsd:string
+property_value: IAO:0000232 "8/29/11 call: This is added after a request from Melanie and Yu. They should review it further. This should be a child of 'sequence data', and as of the current definition will infer there.  " xsd:string
+
+[Term]
+id: OBI:0001912
+name: cell freezing medium
+def: "A processed material that serves as a liquid vehicle for freezing cells for long term quiescent stroage, which contains chemicls needed to sustain cell viability across freeze-thaw cycles. " []
+is_a: OBI:0000047 ! processed material
+property_value: IAO:0000111 "cell freezing medium" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Matthew Brush" xsd:string
 
 [Term]
 id: OBI:0001930
@@ -1161,6 +2683,17 @@ property_value: IAO:0000112 "The value of 'positive' in a classification scheme 
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000116 "This term is currently a descendant of 'information content entity', which requires that it 'is about' something. A value specification of '20g' for a measurement data item of the mass of a particular mouse 'is about' the mass of that mouse. However there are cases where a value specification is not clearly about any particular. In the future we may change 'value specification' to remove the 'is about' requirement." xsd:string
 property_value: IAO:0000117 "PERSON:Bjoern Peters" xsd:string
+
+[Term]
+id: OBI:0001977
+name: cytometry assay
+def: "An assay that measures properties of cells." []
+is_a: OBI:0000070 ! assay
+property_value: IAO:0000111 "cytometry assay" xsd:string
+property_value: IAO:0000112 "An intracellular material detection by flow cytometry assay measuring peforin inside a culture of T cells." xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "IEDB" xsd:string
+property_value: IAO:0000119 "IEDB" xsd:string
 
 [Term]
 id: OBI:0002076
@@ -1452,6 +2985,17 @@ property_value: IAO:0000119 "NCI BBRB, OBI" xsd:string
 property_value: IAO:0000234 "NCI BBRB" xsd:string
 
 [Term]
+id: OBI:0100010
+name: Epstein Barr virus transformed B cell
+def: "A material entity which results from viral transformation process using EBV as transformation agent when applied to B-cell entity" []
+is_a: OBI:0000047 ! processed material
+property_value: IAO:0000111 "Epstein Barr virus transformed B cell" xsd:string
+property_value: IAO:0000112 "PMID: 8777380. Expression of thyroid peroxidase in EBV-transformed B cell lines using adenovirus.Thyroid. 1996 Feb;6(1):23-8." xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Susanna Sansone" xsd:string
+property_value: IAO:0000119 "GROUP: OBI Biomaterial Branch" xsd:string
+
+[Term]
 id: OBI:0100026
 name: organism
 def: "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs." []
@@ -1475,17 +3019,36 @@ property_value: IAO:0000119 "WEB: http://en.wikipedia.org/wiki/Organism" xsd:str
 id: OBI:0100051
 name: specimen
 def: "A material entity that has the specimen role." []
-is_a: BFO:0000040 ! material entity
+is_a: http://rs.tdwg.org/dwc/terms/MaterialSample ! Material Sample
 intersection_of: BFO:0000040 ! material entity
 intersection_of: RO:0000087 OBI:0000112 ! has role specimen role
-relationship: RO:0000087 OBI:0000112 ! has role specimen role
+equivalent_to: http://rs.tdwg.org/dwc/terms/MaterialSample ! Material Sample
 property_value: IAO:0000111 "specimen" xsd:string
+property_value: IAO:0000112 "A herbarium or museum specimen." xsd:string
+property_value: IAO:0000112 "A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA." xsd:string
 property_value: IAO:0000112 "Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen." xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000116 "Note: definition is in specimen creation objective which is defined as an objective to obtain and store a material entity for potential use as an input during an investigation." xsd:string
 property_value: IAO:0000117 "PERSON: James Malone" xsd:string
 property_value: IAO:0000117 "PERSON: Philippe Rocca-Serra" xsd:string
 property_value: IAO:0000119 "GROUP: OBI Biomaterial Branch" xsd:string
+
+[Term]
+id: OBI:0100060
+name: cultured cell population
+def: "A processed material comprised of a collection of cultured cells that has been continuously maintained together in culture and shares a common propagation history." []
+comment: The extent of a 'cultured cell population' is restricted only in that all cell members must share a propagation history (ie be derived through a common lineage of passages from an initial culture). In being defined in this way, this class can be used to refer to the populations that researchers actually use in the practice of science - ie are the inputs to culturing, experimentation, and sharing. The cells in such populations will be a relatively uniform population as they have experienced similar selective pressures due to their continuous co-propagation. And this population will also have a single passage number, again owing to their common passaging history. Cultured cell populations represent only a collection of cells (ie do not include media, culture dishes, etc), and include populations of cultured unicellular organisms or cultured multicellular organism cells. They can exist under active culture, stored in a quiescent state for future use, or applied experimentally.
+is_a: OBI:0000047 ! processed material
+relationship: OBI:0000312 OBI:0600024 ! is_specified_output_of maintaining cell culture
+relationship: OBI:0000643 CL:0000010 ! has grain cultured cell
+relationship: OBI:0000643 CL:0000010 ! has grain cultured cell
+property_value: IAO:0000111 "cultured cell population" xsd:string
+property_value: IAO:0000112 "A cultured cell population applied in an experiment: \"293 cells expressing TrkA were serum-starved for 18 hours and then neurotrophins were added for 10 min before cell harvest.\"  (Lee, Ramee, et al. \"Regulation of cell survival by secreted proneurotrophins.\" Science 294.5548 (2001): 1945-1948).\n\nA cultured cell population maintained in vitro: \"Rat cortical neurons from 15 day embryos are grown in dissociated cell culture and maintained in vitro for 8–12 weeks\" (Dichter, Marc A. \"Rat cortical neurons in cell culture: culture methods, cell morphology, electrophysiology, and synapse formation.\" Brain Research 149.2 (1978): 279-293)." xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000116 "2013-6-5 MHB: This OBI class was formerly called 'cell culture', but label changed and definition updated following CLO alignment efforts in spring 2013, during which the intent of this class was clarified to refer to portions of a culture or line rather than a complete cell culture or line." xsd:string
+property_value: IAO:0000117 "PERSON:Matthew Brush" xsd:string
+property_value: IAO:0000118 "cell culture sample" xsd:string
+property_value: IAO:0000119 "PERSON:Matthew Brush" xsd:string
 
 [Term]
 id: OBI:0200000
@@ -1699,6 +3262,120 @@ property_value: IAO:0000114 IAO:0000123
 property_value: IAO:0000117 "James Malone" xsd:string
 
 [Term]
+id: OBI:0302884
+name: extraction
+def: "A material separation in which a desired component of an input material is separated from the remainder" []
+is_a: OBI:0600014 ! material component separation
+relationship: OBI:0000417 OBI:0000681 ! achieves_planned_objective separation into different composition objective
+property_value: IAO:0000111 "extraction" xsd:string
+property_value: IAO:0000112 "nucleic acid extraction using phenol chloroform" xsd:string
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000116 "Current the output of material processing defined as the molecular entity, main component in the output material entity, rather than the material entity that have grain molecular entity. \n'nucleic acid extract' is the output of 'nucleic acid extraction' and has grain 'nucleic acid'. However, the output of 'nucleic acid extraction' is 'nucleic acid' rather than 'nucleic acid extract'. We are aware of this issue and will work it out in the future." xsd:string
+property_value: IAO:0000117 "Person:Bjoern Peters" xsd:string
+property_value: IAO:0000117 "Philippe Rocca-Serra" xsd:string
+
+[Term]
+id: OBI:0400103
+name: DNA sequencer
+def: "A DNA sequencer is an instrument that determines the order of deoxynucleotides in deoxyribonucleic acid sequences." []
+is_a: OBI:0000832 ! measurement device
+property_value: IAO:0000111 "DNA sequencer" xsd:string
+property_value: IAO:0000112 "ABI 377 DNA Sequencer, ABI 310 DNA Sequencer" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "Trish Whetzel" xsd:string
+property_value: IAO:0000119 "MO" xsd:string
+
+[Term]
+id: OBI:0600005
+name: collecting specimen from organism
+def: "a process with the objective to obtain a material entity that was part of an organism for potential future use in an investigation" []
+is_a: OBI:0000659 ! specimen collection process
+relationship: OBI:0000293 OBI:0100026 ! has_specified_input organism
+property_value: IAO:0000111 "collecting specimen from organism" xsd:string
+property_value: IAO:0000112 "taking a sputum sample from a cancer patient, taking the spleen from a killed mouse, collecting a urine sample from a patient" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PERSON:Bjoern Peters" xsd:string
+property_value: IAO:0000119 "IEDB" xsd:string
+
+[Term]
+id: OBI:0600014
+name: material component separation
+def: "a material processing in which components of an input material become segregated in space" []
+is_a: OBI:0000094 ! material processing
+relationship: OBI:0000293 BFO:0000040 ! has_specified_input material entity
+relationship: OBI:0000417 OBI:0000639 ! achieves_planned_objective material separation objective
+property_value: IAO:0000111 "material component separation" xsd:string
+property_value: IAO:0000112 "Using a cell sorter to separate a mixture of T cells into two fractions; one with surface receptor CD8 and the other lacking the receptor, or purification" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "Bjoern Peters" xsd:string
+property_value: IAO:0000119 "IEDB" xsd:string
+
+[Term]
+id: OBI:0600024
+name: maintaining cell culture
+def: "a protocol application in which cells are kept alive in a defined environment outside of an organism.  part of cell_culturing" []
+is_a: OBI:0000838 ! material maintenance
+relationship: OBI:0000293 OBI:0100060 ! has_specified_input cultured cell population
+relationship: OBI:0000299 OBI:0100060 ! has_specified_output cultured cell population
+property_value: IAO:0000111 "maintaining cell culture" xsd:string
+property_value: IAO:0000112 "When harvesting blood from a human, isolating T cells, and then limited dilution cloning of the cells, the maintaining_cell_culture step comprises all steps after the initial dilution and plating of the cells into culture, e.g. placing the culture into an incubator, changing or adding media, and splitting a cell culture" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "PlanAndPlannedProcess Branch" xsd:string
+property_value: IAO:0000119 "OBI branch derived" xsd:string
+
+[Term]
+id: OBI:0600036
+name: establishing cell culture
+def: "a process through which a new type of cell culture or cell line is created, either through the isolation and culture of one or more cells from a fresh source, or the deliberate experimental modification of an existing cell culture (e.g passaging a primary culture to become a secondary culture or line, or the immortalization or stable genetic modification of an existing culture or line)." []
+comment: A 'cell culture' as used here referes to a new lineage of cells in culture deriving from a single biological source.. New cultures are established through the initial isolation and culturing of cells from an organismal source, or through changes in an existing cell culture or line that result in a new culture with unique characteristics.  This can occur through the passaging/selection of a primary culture into a secondary culture or line, or experimental modifications of an existing cell culture or line such as an immortalization process or other stable genetic modification. This class covers establishment of cultures of either multicellular organism cells or unicellular organisms.
+is_a: OBI:0000094 ! material processing
+relationship: OBI:0000293 CL:0000000 ! has_specified_input cell
+relationship: OBI:0000293 OBI:0000079 ! has_specified_input culture medium
+relationship: OBI:0000299 OBI:0100060 ! has_specified_output cultured cell population
+property_value: IAO:0000111 "'establishing cell culture'" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON:Matthew Brush" xsd:string
+property_value: IAO:0000119 "PERSON:Matthew Brush" xsd:string
+
+[Term]
+id: OBI:0600047
+name: sequencing assay
+def: "An assay the uses chemical or biochemical means to infer the sequence of a biomaterial" []
+is_a: OBI:0000070 ! assay
+relationship: OBI:0000299 OBI:0000973 ! has_specified_output sequence data
+property_value: IAO:0000111 "sequencing assay" xsd:string
+property_value: IAO:0000112 "The use of the Sanger method of DNA sequencing to determine the order of the nucleotides in a DNA template" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "PlanAndPlannedProcess Branch" xsd:string
+property_value: IAO:0000119 "OBI branch derived" xsd:string
+
+[Term]
+id: OBI:0666667
+name: nucleic acid extraction
+def: "a material separation to recover the nucleic acid fraction of an input material" []
+is_a: OBI:0302884 ! extraction
+relationship: OBI:0000299 CHEBI:33696 ! has_specified_output nucleic acid
+property_value: IAO:0000111 "nucleic acid extraction" xsd:string
+property_value: IAO:0000112 "Phenol / chlorophorm extraction disolvation of protein content folllowed by ethanol precipitation of the nucleic acid fraction over night in the fridge followed by centrifugation to obtain a nucleic acid pellet." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "PlanAndPlannedProcess Branch" xsd:string
+property_value: IAO:0000119 "OBI branch derived" xsd:string
+property_value: IAO:0000232 "requested by Helen Parkinson for MO. Could be defined class" xsd:string
+
+[Term]
+id: ObsoleteClass
+name: Obsolete Class
+
+[Term]
+id: PATO:0000001
+name: quality
+namespace: quality
+alt_id: PATO:0000072
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+synonym: "trait" EXACT []
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
 id: PATO:0000186
 name: behavioral quality
 def: "An organismal quality inhering in a bearer by virtue of the bearer's behavior aggregate of the responses or reactions or movements in a given situation." []
@@ -1709,10 +3386,25 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 [Term]
 id: PATO:0001241
 name: physical object quality
-def: "A quality which inheres in a continuant." []
+namespace: quality
+alt_id: PATO:0001237
+alt_id: PATO:0001238
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+comment: Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+xref: snap:Quality
 is_a: BFO:0000019 ! quality
+is_a: PATO:0000001 ! quality
 property_value: IAO:0000111 "physical object quality" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
 
 [Term]
 id: PATO:0001995
@@ -1770,25 +3462,6 @@ property_value: IAO:0000118 "group of organism" xsd:string
 property_value: IAO:0000118 "organism collection" xsd:string
 
 [Term]
-id: PCO:0000001
-name: population of organisms
-def: "A collection of organisms, all of the same species, that live in the same place." []
-comment: It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population of organisms. \n\nClasses for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used.
-is_a: PCO:0000018 ! single-species collection of organisms
-property_value: IAO:0000112 "" xsd:string
-property_value: IAO:0000112 "This a general term that can include every organism of a species living in an area or any subset of them.  Subclasses can be more specific as needed." xsd:string
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000119 ISBN:0878932739 xsd:string
-
-[Term]
-id: PCO:0000002
-name: ecological community
-def: "A multi-species collection of organisms of at least two different species, living in a particular area. Must have at least two populations of different species as members." []
-comment: Ecological community is defined broadly here, but includes both ecological interactions (inherited from parent term community) and spatial co-existence. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). The word community, as it often used to describe a group of humans living together, is a type of single-species collection of organisms, not an ecological community.
-property_value: IAO:0000118 "multispecies community" xsd:string
-property_value: IAO:0000119 ISBN:0865423504 xsd:string
-
-[Term]
 id: PCO:0000017
 name: species as a collection of organisms
 def: "A collection of organisms that has as parts every organism of given species and no organisms of any other species." []
@@ -1806,12 +3479,36 @@ property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000118 "collection of organisms of the same species" xsd:string
 
 [Term]
-id: PCO:0000029
-name: multi-species collection of organisms
-def: "A collection of organisms that consists of two or more organisms from at least two species." []
-is_a: PCO:0000000 ! collection of organisms
+id: PCO:0000024
+name: household
+def: "An organismal entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people." []
+is_a: PCO:0000031 ! organismal entity
+relationship: RO:0002321 ENVO:01000744 ! human dwelling
+relationship: RO:0002351 NCBITaxon:9606 {minCardinality="1"} ! has member Homo sapiens
 property_value: IAO:0000114 IAO:0000123
-property_value: IAO:0000116 "Need to add axiom to specify that it has at a mimum members of two different species, but not sure how to specify that. Can't say \"('has member' only ('member of' min 2 'species as a collection of organisms'))\"." xsd:string
+property_value: IAO:0000117 "Person: Jie Zheng" xsd:string
+property_value: IAO:0000119 "WEB: http://en.wikipedia.org/wiki/Household" xsd:string
+
+[Term]
+id: PCO:0000027
+name: collection of humans
+def: "A collection of organisms of the same species that has as members only humans." []
+is_a: PCO:0000018 ! single-species collection of organisms
+intersection_of: PCO:0000018 ! single-species collection of organisms
+intersection_of: RO:0002351 NCBITaxon:9606 {all_only="true"} ! has member Homo sapiens
+intersection_of: RO:0002351 NCBITaxon:9606 {minCardinality="2"} ! has member Homo sapiens
+relationship: RO:0002351 NCBITaxon:9606 ! has member Homo sapiens
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000118 "human community" xsd:string
+property_value: IAO:0000118 "human population" xsd:string
+
+[Term]
+id: PCO:0000030
+name: agricultural household
+def: "A household in which the majority of the income of its members is derived from agricultural activities." []
+is_a: PCO:0000024 ! household
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000116 "This is a more narrow definition in which the majority of income of a house comes from agricultural activities, as opposed to the broad definition in which any income comes from agricultural activities. The narrow definition was chosen to be consistent with the SDGIO (UN Sustainable Development Goals) which requested this term." xsd:string
 
 [Term]
 id: PCO:0000031
@@ -1823,8 +3520,51 @@ union_of: PCO:0000000 ! collection of organisms
 property_value: IAO:0000114 IAO:0000120
 
 [Term]
+id: PR:000000001
+name: protein
+def: "An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA." []
+is_a: CHEBI:16670 ! peptide
+property_value: IAO:0000111 "protein" xsd:string
+property_value: IAO:0000112 "antithrombin III is a protein" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pr.owl
+
+[Term]
+id: SO:0000001
+name: region
+def: "A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids." []
+is_a: BFO:0000031 ! generically dependent continuant
+property_value: IAO:0000111 "region" xsd:string
+property_value: IAO:0000118 "primary structure of sequence macromolecule" xsd:string
+property_value: IAO:0000118 "sequence" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/so.owl
+
+[Term]
 id: Subset
 is_a: IAO:0000102 ! data about an ontology part
+
+[Term]
+id: Synonym
+is_a: IAO:0000102 ! data about an ontology part
+
+[Term]
+id: SynonymType
+is_a: IAO:0000102 ! data about an ontology part
+
+[Term]
+id: UBERON:0000465
+name: material anatomical entity
+def: "Anatomical entity that has mass." []
+is_a: BFO:0000040 ! material entity
+property_value: IAO:0000111 "material anatomical entity" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/uberon.owl
+
+[Term]
+id: UBERON:0000477
+name: anatomical cluster
+def: "Anatomical group that has its parts adjacent to one another." []
+is_a: BFO:0000040 ! material entity
+property_value: IAO:0000111 "anatomical cluster" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/uberon.owl
 
 [Term]
 id: UO:0000001
@@ -1906,6 +3646,631 @@ is_a: IAO:0000003 ! measurement unit label
 property_value: IAO:0000111 "rate unit" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/uo.owl
 
+[Term]
+id: bco:0000000
+name: obsolete evidence role
+def: "A role that is borne by some entity as a result of the entity providing evidence to support an assertion." []
+comment: Will be replaced by an external ontology class.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000112 "A museum specimen that serves as evidence for a taxonomic identification process bears an evidence role." xsd:string
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000001
+name: obsolete persistent evidence role
+def: "An evidence role that persists through time." []
+comment: Could add relation that persistant evidence role is specifically dependent on a museum material samples.\n\nDeprecated because we do not need this term. Can use OBI:evidence role. Not clear what it means for an evidence role to persist through time.
+is_a: ObsoleteClass ! Obsolete Class
+is_obsolete: true
+
+[Term]
+id: bco:0000002
+name: obsolete collecting process
+comment: This term is now redundant and is merged with material sampling process  http://purl.obolibrary.org/obo/bco_0000022.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+
+[Term]
+id: bco:0000003
+name: obsolete observing process
+def: "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." []
+comment: The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: BCO:0000057 "sighting" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A trip camera capture of an image of a jaguar is an observation, because it is \"selected\" by the camera as worthy of obsevation simply by virtue of moving in front of the camera." xsd:string
+property_value: IAO:0000112 "Observing and recording the presence or absence of butterflies during a transect walk." xsd:string
+property_value: IAO:0000112 "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." xsd:string
+property_value: IAO:0000116 "This class was made obsolete because of the incorrect identifier format. It has been replaced by BCO_0000003." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000004
+name: obsolete being there process
+def: "A process of existing in a particular spatio-temporal region." []
+comment: This term was originally developed at the Semantics of Biodiversity workshop in 5/2012. It is no longer needed for the BCO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000005
+name: obsolete printed report
+comment: IAO has the term document, which is defined as "A collection of information content entities intended to be understood together as a whole" and has as examples journal article, patent application, laboratory notebook, and book.  IAO also has a term for report, but it is not defined. With this term, we want to describe the physical object that corresponds to some information content entity, together with the information content contained in the document or report. This class may be less important for modeling collection data, but could be important for efforts to get hand written (specifically dependent) reports into an electronic (generically dependent) report, and monitoring that process.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "a book" xsd:string
+property_value: IAO:0000112 "a field notebook" xsd:string
+property_value: IAO:0000114 IAO:0000124
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000006
+name: obolete printed observational report
+def: "A printed report that records the outcome of some observing process." []
+is_a: bco:0000005 ! obsolete printed report
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A field notebook." xsd:string
+property_value: IAO:0000114 IAO:0000124
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000007
+name: obsolete selecting process
+def: "A process by which a person or machine decides that a particular material entity as worthy of collection or observation." []
+comment: The criteria for selection may be specified in a protocol or may be ad hoc. Should be replaced by OBI:selection, but first OBI needs to fix the definition.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "deciding which branch to collect for a herbarium specimen" xsd:string
+property_value: IAO:0000112 "Filtering sea water to extract only organisms smaller than a certain size." xsd:string
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000016
+name: obsolete submitting process
+def: "A planned process whereby a person submits a material sample to an organization." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "a curator submitting a herbarium speciman to a museum" xsd:string
+property_value: IAO:0000112 "a researcher submitting a water sample to a laboratory storage collection" xsd:string
+property_value: IAO:0000116 "This term was made obsolete because it had the incorrect identifier format. It has been replaced by BCO_0000016." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000021
+name: obsolete physical extraction process
+def: "A process that involves removing a material entity from its original site to another site." []
+comment: Considered acquisition in OBI, but that is about taking possession. Physical extraction may involve taking pocession, but it may also just involve extraction of something that is already posessed (e.g. of dna from cells). 
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "picking leaves from a plant" xsd:string
+property_value: IAO:0000112 "removing a fish from the ocean with a net" xsd:string
+property_value: IAO:0000112 "removing dna from cells" xsd:string
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000022
+name: obsolete material sampling process
+def: "A planned process that includes selecting a material entity for study, physically extracting the material entity, and submitting the material entity to some institution for preservation or study." []
+comment: This term has been replaced by OBI:specimen collection.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "collecting plant parts for herbarium specimens" xsd:string
+property_value: IAO:0000112 "collecting sea water samples as part of Ocean Sampling Day" xsd:string
+property_value: IAO:0000118 "collecting event" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000023
+name: obsolete data sampling process
+comment: This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000024
+name: obsolete statistical sampling process
+comment: This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000025
+name: obsolete locality description
+def: "An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured." []
+comment: Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000116 "This term was deprecated because it has the wrong ID format. It is replaced by BCO_0000025." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000026
+name: obsolete material sample role
+def: "A role that is borne by some material entity and  is realized by the material entity being the output of a material sampling process." []
+comment: This term has been replaced by OBI:specimen role.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the role borne by a branch when it becomes a herbarium specimen" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000027
+name: obsolete successful material sampling process
+def: "A sampling process that has as output some material sample." []
+comment: Do not need this class. By virtue of the existance of the material sample, we know that the sampling process was successful.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000028
+name: obsolete unsuccessful material sampling process
+def: "A material sampling process that has as output exactly zero material samples." []
+comment: Do not need this class. By virtue of the absence of the material sample, we know that the sampling process was unsuccessful.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000029
+name: obsolete museum collection entity
+comment: At the GSC14 hackathon in 09/2012, we decided to deprecate this term.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000030
+name: obsolete organismal museum collection entity
+def: "A museum collections entity that derives from an organismal entity,  has a persistent evidence role and 'depends on' a process of collecting." []
+comment: The label for this on the original diagram was 'collection object'. However, not all entities in collections will fit the defition of 'object', so 'collection entity is probably a better name.\n\nThe relation 'depends on' cannot really be used here. Old BFO has 'inverse depends on', but this is not in the current BFO. See dwc_bfo2_new.owl for the original logical definition.\n\nAt the GSC14 hackathon in 09/2012, we decided to deprecate this term.
+is_a: bco:0000029 ! obsolete museum collection entity
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000031
+name: obsolete museum collection
+def: "An object aggregate that has as member part a material sample that is located in museum as a result of a process of curation." []
+comment: Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "The herbarium collection at the New York Botanical Garden." xsd:string
+property_value: IAO:0000112 "the painting collection at the Louvre Museum" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It has been replaced by BCO_0000031." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000032
+name: obsolete organismal museum collection
+def: "A museum collection that has as member part a material sample that was derived from an organism." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the insect collection at the Smithsonian Institution" xsd:string
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000031." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000033
+name: obsolete institution
+comment: Replaced by OBI organization. Request institution as synonym in OBI.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000034
+name: obsolete organismal entity
+def: "A material entity that derives from an organism or virus or viroid." []
+comment: This class is understood to mean: A material entity that is either an organism, a part of an organism, a collection of organisms, or a fossil.\n\nThe relation 'organismal entity derives from organism' was in the original diagram. Subclasses of organismal entity include organism, and It is not clear if it is valid to that an organism derives from an organism (is the derives from relation reflexive?).\n\nAt the GSC14 hackathon in 09/2012, we decided to deprecate this term.
+is_a: bco:0000042 ! obsolete taxonomic identification process
+is_obsolete: true
+
+[Term]
+id: bco:0000035
+name: obsolete organism or virus or viroid
+comment: This terms was replaced by a term imported from CARO.\n\nThe original diagram only had organsim, but DWC and GOs both need to include viruses and viroids.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: bco:0000036
+name: obsolete material sample
+def: "A material entity that has a material sample role. A material entity takes on the material sample role by being the output of a material samping process. That is, is selected for study, collected, and submitted to an institution for preservation or study." []
+comment: This term has been replaced by OBI:specimen.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A herbarium or museum specimen." xsd:string
+property_value: IAO:0000112 "A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA.\n" xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000037
+name: obsolete data sample
+def: "An information content entity (?) that is the result of some data sampling process." []
+comment: This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000038
+name: obsolete statistical sample
+comment: This term has been deprecated until it is determined whether or not it is needed in the BCO. Should probably be replaced by a term from OBI or IAO.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000039
+name: obsolete protocol governed sampling activity
+comment: If sampling is a OBI planned process, that captures that it is protocal governed.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: bco:0000042
+name: obsolete taxonomic identification process
+def: "A process by which a material sample is associated with a taxon or taxa." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "Associating a museum specimen with a specific taxonomic concept based on its characters." xsd:string
+property_value: IAO:0000112 "Using a key to identify a plant in the field." xsd:string
+property_value: IAO:0000112 "Using BLAST to identify the taxa present in an environmental (metagenomic) sample." xsd:string
+property_value: IAO:0000112 "Using DNA barcoding to identify a plant species." xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000042." xsd:string
+is_obsolete: true
+
+[Term]
+id: bco:0000043
+name: obsolete process that yields a material representation of a material entity
+comment: Includes as output rubbings, casts, photographic prints, audio or video tapes.\n\nNeeds a better name. Current name is the definition.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It should be replaced by an external ontology term." xsd:string
+property_value: IAO:0000231 IAO:0000423
+property_value: IAO:0000232 "Consider term from OBI or IAO." xsd:string
+is_obsolete: true
+
+[Term]
+id: bco:0000044
+name: obsolete material target of observation
+def: "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "A bird observed during a Christmas Bird Count" xsd:string
+property_value: IAO:0000112 "A bird observed during a transect walk." xsd:string
+property_value: IAO:0000112 "A tree is forest plot that is measured for diameter at breast height (DBH)." xsd:string
+property_value: IAO:0000112 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrected identifier format. It is replaced by BCO_0000044." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: bco:0000045
+name: obsolete process that yields an information artifact that is a representation of a material entity
+comment: Includes audio recordings and photographs (which are information artifacts).\n\nNeeds a better name. Current name is the definition.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It should be replaced by an external ontology term." xsd:string
+property_value: IAO:0000231 IAO:0000423
+property_value: IAO:0000232 "Some instances of term could possibly be replaced by OBI:image acquisition. Maybe request another OBI term for audio recording acquisition." xsd:string
+is_obsolete: true
+
+[Term]
+id: bco:0000046
+name: obsolete material target of observation role
+def: "A role that is borne by some material entity and is realized by the material entity being the input of an observing process." []
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/elements/1.1/creator "Biocode Commons Ontology Hackathon" xsd:string
+property_value: IAO:0000112 "the role borne by a bird during a Christmas Bird Count" xsd:string
+property_value: IAO:0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000046." xsd:string
+property_value: IAO:0000231 BCO:0000075
+is_obsolete: true
+
+[Term]
+id: http://purl.org/dc/dcam/VocabularyEncodingScheme
+is_a: ObsoleteClass ! Obsolete Class
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: http://rs.tdwg.org/dwc/dwctype/Location
+is_a: BFO:0000006 ! spatial region
+property_value: BCO:0000060 "location of an event" xsd:string
+property_value: IAO:0000114 IAO:0000123
+expand_expression_to: "The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken." []
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Event
+name: Event
+comment: An action that occurs at some location during some time.
+is_a: BFO:0000015 ! process
+property_value: BCO:0000060 "event" xsd:string
+property_value: http://purl.org/dc/terms/description "Examples: A specimen collection process. A machine observation." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "Event-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2008-11-19" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/terms/Event-2009-04-29
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "DataSets/DataSet/Units/Unit/Gathering" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/FossilSpecimen
+name: Fossil Specimen
+comment: A preserved specimen that is a fossil.
+is_a: http://rs.tdwg.org/dwc/terms/PreservedSpecimen ! Preserved Specimen
+property_value: BCO:0000060 "fossil specimen" xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "FossilSpecimen-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/dwctype/FossilSpecimen-2011-10-16
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "RecordBasisEnum/FossileSpecimen" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/GeologicalContext
+name: Geological Context
+comment: Geological information, such as stratigraphy, that qualifies a region or place.
+property_value: BCO:0000060 "geological context" xsd:string
+property_value: http://purl.org/dc/terms/description "Example: A lithostratigraphic layer." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "GeologicalContext-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2009-07-06" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/terms/GeologicalContext-2009-07-06
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "DataSets/DataSet/Units/Unit/Gathering/Stratigraphy" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: IAO:0000114 IAO:0000124
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/HumanObservation
+name: Human Observation
+comment: An output of a human observation process.
+is_a: IAO:0000027 ! data item
+property_value: BCO:0000060 "human observation" xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "HumanObservation-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/dwctype/HumanObservation-2011-10-16
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "RecordBasisEnum/HumanObservation" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Identification
+name: Identification
+comment: A taxonomic determination (e.g., the assignment to a taxon).
+is_a: BCO:0000042 ! taxonomic identification process
+property_value: BCO:0000060 "identification" xsd:string
+property_value: BCO:0000074 BCO:0000042
+property_value: http://purl.org/dc/terms/description "Example: A subspecies determination of an organism." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "Identification-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2008-11-19" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/terms/Identification-2008-11-19
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "DataSets/DataSet/Units/Unit/Identifications/Identification" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/LivingSpecimen
+name: Living Specimen
+comment: A specimen that is alive.
+is_a: http://rs.tdwg.org/dwc/terms/MaterialSample ! Material Sample
+is_a: OBI:0100051 ! specimen
+property_value: BCO:0000060 "living specimen" xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "LivingSpecimen-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/dwctype/LivingSpecimen-2011-10-16
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "RecordBasisEnum/LivingSpecimen" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/MachineObservation
+name: Machine Observation
+comment: An output of a machine observation process.
+is_a: IAO:0000027 ! data item
+property_value: BCO:0000060 "machine observation" xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "MachineObservation-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/dwctype/MachineObservation-2011-10-16
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "RecordBasisEnum/MachineObservation" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/MaterialSample
+name: Material Sample
+comment: A physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed.
+is_a: OBI:0100051 ! specimen
+property_value: BCO:0000060 "specimen" xsd:string
+property_value: http://purl.org/dc/terms/description "Examples: A whole organism preserved in a collection. A part of an organism isolated for some purpose. A soil sample. A marine microbial sample." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "MaterialSample-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2013-03-28" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/terms/MaterialSample-2013-03-28
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "DataSets/DataSet/Units/Unit" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/MeasurementOrFact
+name: Measurement or Fact
+comment: A measurement of or fact about an rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource).
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/terms/description "Resources can be thought of as identifiable records or instances of classes and may include, but need not be limited to Occurrences, Organisms, MaterialSamples, Events, Locations, GeologicalContexts, Identifications, or Taxa. Examples: The weight of an organism in grams. The number of placental scars." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "MeasurementOrFact-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2009-04-24" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/terms/MeasurementOrFact-2009-04-24
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "Datasets/Dataset/Units/Unit/MeasurementsOrFacts or DataSets/DataSet/Units/Unit/Gathering/SiteMeasurementsOrFacts" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: IAO:0000231 "This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here." xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+is_obsolete: true
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Occurrence
+name: Occurrence
+comment: An existence of an Organism (sensu http://rs.tdwg.org/dwc/terms/Organism) at a particular place at a particular time.
+property_value: BCO:0000060 "occurrence" xsd:string
+property_value: http://purl.org/dc/terms/description "Examples: A wolf pack on the shore of Kluane Lake in 1988. A virus in a plant leaf in a the New York Botanical Garden at 15:29 on 2014-10-23. A fungus in Central Park in the summer of 1929." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "Occurrence-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2008-11-19" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/terms/Occurrence-2009-04-29
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "DataSets/DataSet/Units/Unit" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: IAO:0000116 "This Darwin Core class should not be used when annotating data with BCO.  It is not mapped to BCO classes because its meaning is too ambiguous." xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Organism
+name: Organism
+comment: A particular organism or defined group of organisms considered to be taxonomically homogeneous.
+is_a: PCO:0000031 ! organismal entity
+property_value: BCO:0000060 "organism" xsd:string
+property_value: http://purl.org/dc/terms/description "Instances of the Organism class are intended to facilitate linking of one or more Identification instances to one or more Occurrence instances. Therefore, things that are typically assigned scientific names (such as viruses, hybrids, and lichens) and aggregates whose occurrences are typically recorded (such as packs, clones, and colonies) are included in the scope of this class." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "Organism-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "not in ABCD" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:14
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/PreservedSpecimen
+name: Preserved Specimen
+comment: A specimen that has been preserved.
+is_a: http://rs.tdwg.org/dwc/terms/MaterialSample ! Material Sample
+is_a: OBI:0100051 ! specimen
+property_value: BCO:0000060 "preserved specimen" xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "PreservedSpecimen-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen-2011-10-16
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "RecordBasisEnum/PreservedSpecimen" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/ResourceRelationship
+name: Resource Relationship
+comment: A relationship of one rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource) to another.
+is_a: ObsoleteClass ! Obsolete Class
+property_value: http://purl.org/dc/terms/description "Resources can be thought of as identifiable records or instances of classes and may include, but need not be limited to Occurrences, Organisms, MaterialSamples, Events, Locations, GeologicalContexts, Identifications, or Taxa. Example: An instance of an Organism is the mother of another instance of an Organism." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "ResourceRelationship-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2008-11-19" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/terms/ResourceRelationship-2009-01-21
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "DataSets/DataSet/Units/Unit/Associations" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: IAO:0000231 "This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here." xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+is_obsolete: true
+
+[Term]
+id: http://rs.tdwg.org/dwc/terms/Taxon
+name: Taxon
+comment: A group of organisms (sensu http://purl.obolibrary.org/obo/OBI_0100026) considered by taxonomists to form a homogeneous unit.
+is_a: PCO:0000000 ! collection of organisms
+property_value: BCO:0000060 "taxon" xsd:string
+property_value: http://purl.org/dc/terms/description "Example: The genus Truncorotaloides as published by Brönnimann et al. in 1953 in the Journal of Paleontology Vol. 27(6) p. 817-820." xsd:string
+property_value: http://purl.org/dc/terms/hasVersion "Taxon-2014-10-23"
+property_value: http://purl.org/dc/terms/issued "2008-11-19" xsd:string
+property_value: http://purl.org/dc/terms/modified "2014-10-23" xsd:string
+property_value: http://purl.org/dc/terms/replaces http://rs.tdwg.org/dwc/terms/Taxon-2009-09-21
+property_value: http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence "no simple equivalent in ABCD" xsd:string
+property_value: http://rs.tdwg.org/dwc/terms/attributes/decision Decision-2014-10-26:15
+property_value: http://rs.tdwg.org/dwc/terms/attributes/status "recommended" xsd:string
+property_value: isDefinedBy http://rs.tdwg.org/dwc/terms/
+
+[Typedef]
+id: BCO:0000058
+name: obsolete has role
+def: "The relationship between an independent continuant and a role. Slightly more specific than the parent class bearer of." []
+comment: This property was originally created in OBI, but in OBI it was deprecated and replaced by BFO:0000087. However, BFO:0000087 was replaced by 'has role at some time', which is not yet part of a stable release. Once the BFO role has been tested and released, it may replace 'has role' in both BCO and OBI.\n\nThere are currently two versions of 'has role', the old one from BFO (which is used in OBI's definition of specimen) and the RO version.  For consistency with OBI, we have used the BFO relation in BCO, but this should be resolved at a higher level.
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Typedef]
+id: BCO:0000067
+name: derives from by planned process
+property_value: IAO:0000231 IAO:0000423
+is_transitive: true
+is_obsolete: true
+
+[Typedef]
+id: BCO:0000068
+name: is derived into by planned process
+property_value: IAO:0000116 "This property used an old version of the has input relation, so it has been deprecated." http://www.w3.org/2000/01/rdf-schema#Literal
+property_value: IAO:0000231 IAO:0000423
+is_transitive: true
+is_obsolete: true
+
+[Typedef]
+id: BCO:0000085
+name: to taxon
+comment: This relation is used specifically to link a taxonomic association to a taxon and is used with the of organism relation.
+domain: BCO:0000084 ! identification assertion
+range: http://rs.tdwg.org/dwc/terms/Taxon ! Taxon
+is_a: IAO:0000136 ! is about
+
+[Typedef]
+id: BCO:0000086
+name: of organism
+comment: This relation specifically links an identification association to an organismal entity and is used together with the to taxon relation.
+domain: BCO:0000084 ! identification assertion
+range: PCO:0000031 ! organismal entity
+is_a: IAO:0000136 ! is about
+
+[Typedef]
+id: BCO:0000087
+name: member of taxon
+comment: A shortcut relation to an organsimal entity to a taxon or taxa.
+is_a: BFO:0000050 ! part of
+
 [Typedef]
 id: BFO:0000050
 name: part of
@@ -1968,6 +4333,30 @@ domain: BFO:0000015 ! process
 range: BFO:0000017 ! realizable entity
 
 [Typedef]
+id: BFO:0000066
+name: occurs in
+def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+comment: Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant
+property_value: IAO:0000111 "occurs in" xsd:string
+property_value: IAO:0000118 "occurs_in" xsd:string
+property_value: IAO:0000118 "unfolds in" xsd:string
+property_value: IAO:0000118 "unfolds_in" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000004 ! independent continuant
+holds_over_chain: BFO:0000050 BFO:0000066
+inverse_of: BFO:0000067 ! contains process
+transitive_over: BFO:0000050 ! part of
+
+[Typedef]
+id: BFO:0000067
+name: contains process
+def: "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+comment: Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant
+property_value: IAO:0000111 "site of" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Typedef]
 id: IAO:0000136
 name: is about
 def: "is_about is a (currently) primitive relation that relates an information artifact to an entity." []
@@ -1986,7 +4375,19 @@ property_value: IAO:0000112 "A person's name denotes the person. A variable name
 property_value: IAO:0000116 "2009-11-10 Alan Ruttenberg. Old definition said the following to emphasize the generic nature of this relation. We no longer have 'specifically denotes', which would have been primitive, so make this relation primitive.\ng denotes r =def \nr is a portion of reality\nthere is some c that is a concretization of g \nevery c that is a concretization of g specifically denotes r" xsd:string
 property_value: IAO:0000117 "person:Alan Ruttenberg" xsd:string
 property_value: IAO:0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan" xsd:string
+domain: IAO:0000030 ! information content entity
+range: BFO:0000001 ! entity
 is_a: IAO:0000136 ! is about
+inverse_of: IAO:0000235 ! denoted by
+
+[Typedef]
+id: IAO:0000235
+name: denoted by
+def: "inverse of the relation 'denotes'" []
+property_value: IAO:0000117 "Person: Jie Zheng, Chris Stoeckert, Mike Conlon" xsd:string
+property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/206
+domain: BFO:0000001 ! entity
+range: IAO:0000030 ! information content entity
 
 [Typedef]
 id: OBI:0000293
@@ -2062,6 +4463,17 @@ range: IAO:0000005 ! objective specification
 inverse_of: OBI:0000833 ! objective_achieved_by
 
 [Typedef]
+id: OBI:0000643
+name: has grain
+def: "the relation of the cells in the finger of the skin to the finger, in which an indeterminate number of grains are parts of the whole by virtue of being grains in a collective that is part of the whole, and in which removing one granular part does not nec- essarily damage or diminish the whole. Ontological Whether there is a fixed, or nearly fixed number of parts - e.g. fingers of the hand, chambers of the heart, or wheels of a car - such that there can be a notion of a single one being missing, or whether, by contrast, the number of parts is indeterminate - e.g., cells in the skin of the hand, red cells in blood, or rubber molecules in the tread of the tire of the wheel of the car." []
+property_value: IAO:0000111 "has grain" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000116 "Discussion in Karslruhe with, among others, Alan Rector, Stefan Schulz, Marijke Keet, Melanie Courtot, and Alan Ruttenberg. Definition take from the definition of granular parthood in the cited paper. Needs work to put into standard form" xsd:string
+property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
+property_value: IAO:0000119 "PAPER: Granularity, scale and collectivity: When size does and does not matter, Alan Rector, Jeremy Rogers, Thomas Bittner, Journal of Biomedical Informatics 39 (2006) 333-349" xsd:string
+is_a: BFO:0000051 ! has part
+
+[Typedef]
 id: OBI:0000833
 name: objective_achieved_by
 def: "This relation obtains between an objective specification and a planned process when the criteria specified in the objective specification are met at the end of the planned process." []
@@ -2071,6 +4483,18 @@ property_value: IAO:0000117 "OBI" xsd:string
 property_value: IAO:0000119 "OBI" xsd:string
 domain: IAO:0000005 ! objective specification
 range: OBI:0000011 ! planned process
+
+[Typedef]
+id: OBI:0001938
+name: has value specification
+def: "A relation between an information content entity and a value specification that specifies its value." []
+property_value: IAO:0000111 "has value specification" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: James A. Overton" xsd:string
+property_value: IAO:0000119 "OBI" xsd:string
+domain: IAO:0000030 ! information content entity
+range: OBI:0001933 ! value specification
+is_a: BFO:0000051 ! has part
 
 [Typedef]
 id: RO:0000052
@@ -2144,6 +4568,29 @@ domain: BFO:0000020 ! specifically dependent continuant
 range: BFO:0000031 ! generically dependent continuant
 
 [Typedef]
+id: RO:0000079
+name: function of
+def: "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this catalysis function is a function of this enzyme" xsd:string
+property_value: IAO:0000116 "A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists." xsd:string
+property_value: IAO:0000118 "function_of" xsd:string
+property_value: IAO:0000118 "is function of" xsd:string
+domain: BFO:0000034 ! function
+is_a: RO:0000052 ! inheres in
+inverse_of: RO:0000085 ! has function
+
+[Typedef]
+id: RO:0000080
+name: quality of
+def: "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this red color is a quality of this apple" xsd:string
+property_value: IAO:0000116 "A quality inheres in its bearer at all times for which the quality exists." xsd:string
+property_value: IAO:0000118 "is quality of" xsd:string
+property_value: IAO:0000118 "quality_of" xsd:string
+is_a: RO:0000052 ! inheres in
+inverse_of: RO:0000086 ! has quality
+
+[Typedef]
 id: RO:0000081
 name: role of
 def: "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence" []
@@ -2155,6 +4602,27 @@ is_a: RO:0000052 ! inheres in
 inverse_of: RO:0000087 ! has role
 
 [Typedef]
+id: RO:0000085
+name: has function
+def: "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)" xsd:string
+property_value: IAO:0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists." xsd:string
+property_value: IAO:0000118 "has_function" xsd:string
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000034 ! function
+is_a: RO:0000053 ! bearer of
+
+[Typedef]
+id: RO:0000086
+name: has quality
+def: "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this apple has quality this red color" xsd:string
+property_value: IAO:0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist." xsd:string
+property_value: IAO:0000118 "has_quality" xsd:string
+range: BFO:0000019 ! quality
+is_a: RO:0000053 ! bearer of
+
+[Typedef]
 id: RO:0000087
 name: has role
 def: "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence" []
@@ -2164,6 +4632,101 @@ property_value: IAO:0000118 "has_role" xsd:string
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000023 ! role
 is_a: RO:0000053 ! bearer of
+
+[Typedef]
+id: RO:0000091
+name: has disposition
+def: "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" []
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000016 ! disposition
+is_a: RO:0000053 ! bearer of
+inverse_of: RO:0000092 ! disposition of
+
+[Typedef]
+id: RO:0000092
+name: disposition of
+is_a: RO:0000052 ! inheres in
+
+[Typedef]
+id: RO:0001000
+name: derives from
+def: "a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity" []
+property_value: IAO:0000111 "derives from" xsd:string
+property_value: IAO:0000112 "this cell derives from this parent cell (cell division)" xsd:string
+property_value: IAO:0000112 "this nucleus derives from this parent nucleus (nuclear division)" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops from'." xsd:string
+property_value: IAO:0000118 "derives_from" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000004 ! independent continuant
+inverse_of: RO:0001001 ! derives into
+
+[Typedef]
+id: RO:0001001
+name: derives into
+def: "a relation between two distinct material entities, the old entity and the new entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity" []
+property_value: IAO:0000112 "this parent cell derives into this cell (cell division)" xsd:string
+property_value: IAO:0000112 "this parent nucleus derives into this nucleus (nuclear division)" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops into'. To avoid making statements about a future that may not come to pass, it is often better to use the backward-looking 'derives from' rather than the forward-looking 'derives into'." xsd:string
+property_value: IAO:0000118 "derives_into" xsd:string
+
+[Typedef]
+id: RO:0001015
+name: location of
+def: "a relation between two independent continuants, the location and the target, in which the target is entirely within the location" []
+property_value: IAO:0000111 "is location of" xsd:string
+property_value: IAO:0000112 "my head is the location of my brain" xsd:string
+property_value: IAO:0000112 "this cage is the location of this rat" xsd:string
+property_value: IAO:0000116 "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000118 "location_of" xsd:string
+property_value: RO:0001900 RO:0001901
+is_transitive: true
+inverse_of: RO:0001025 ! located in
+
+[Typedef]
+id: RO:0001025
+name: located in
+def: "a relation between two independent continuants, the target and the location, in which the target is entirely within the location" []
+property_value: http://purl.org/dc/elements/1.1/source http://www.obofoundry.org/ro/#OBO_REL:located_in xsd:string
+property_value: IAO:0000111 "located in" xsd:string
+property_value: IAO:0000112 "my brain is located in my head" xsd:string
+property_value: IAO:0000112 "this rat is located in this cage" xsd:string
+property_value: IAO:0000116 "Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus" xsd:string
+property_value: IAO:0000116 "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000118 "located_in" xsd:string
+property_value: RO:0001900 RO:0001901
+domain: BFO:0000004 {http://purl.obolibrary.org/obo/IAO_0000116="This is redundant with the more specific 'independent and not spatial region' constraint. We leave in the redundant axiom for use with reasoners that do not use negation."} ! independent continuant
+range: BFO:0000004 {http://purl.obolibrary.org/obo/IAO_0000116="This is redundant with the more specific 'independent and not spatial region' constraint. We leave in the redundant axiom for use with reasoners that do not use negation."} ! independent continuant
+is_transitive: true
+
+[Typedef]
+id: RO:0002000
+name: 2D boundary of
+def: "a relation between a 2D immaterial entity (the boundary) and a material entity, in which the boundary delimits the material entity" []
+property_value: IAO:0000112 "the surface of my skin is a 2D boundary of my body" xsd:string
+property_value: IAO:0000116 "A 2D boundary may have holes and gaps, but it must be a single connected entity, not an aggregate of several disconnected parts." xsd:string
+property_value: IAO:0000116 "Although the boundary is two-dimensional, it exists in three-dimensional space and thus has a 3D shape." xsd:string
+property_value: IAO:0000118 "2D_boundary_of" xsd:string
+property_value: IAO:0000118 "boundary of" xsd:string
+property_value: IAO:0000118 "is 2D boundary of" xsd:string
+property_value: IAO:0000118 "is boundary of" xsd:string
+property_value: RO:0001900 RO:0001901
+inverse_of: RO:0002002 ! has 2D boundary
+
+[Typedef]
+id: RO:0002002
+name: has 2D boundary
+def: "a relation between a material entity and a 2D immaterial entity (the boundary), in which the boundary delimits the material entity" []
+property_value: IAO:0000112 "my body has 2D boundary the surface of my skin" xsd:string
+property_value: IAO:0000116 "A 2D boundary may have holes and gaps, but it must be a single connected entity, not an aggregate of several disconnected parts." xsd:string
+property_value: IAO:0000116 "Although the boundary is two-dimensional, it exists in three-dimensional space and thus has a 3D shape." xsd:string
+property_value: IAO:0000118 "has boundary" xsd:string
+property_value: IAO:0000118 "has_2D_boundary" xsd:string
+property_value: RO:0001900 RO:0001901
+domain: BFO:0000040 ! material entity
+range: BFO:0000141 ! immaterial entity
 
 [Typedef]
 id: RO:0002350
