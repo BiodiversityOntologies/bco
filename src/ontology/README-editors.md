@@ -58,6 +58,9 @@ For now, consult the [GO Tutorial on configuring Protege](http://go-protege-tuto
 
 All import modules are in the [imports/](imports/) folder.
 
+Note: the $ontology_terms.txt file may include 'starter' classes seeded from
+the ontology starter kit. These were removed and replaced with the terms BCO needs to import.
+
 There are two ways to include new classes in an import module
 
  1. Reference an external ontology class in the edit ontology. In Protege: "add new entity", then paste in the PURL
@@ -65,12 +68,12 @@ There are two ways to include new classes in an import module
 
 After doing this, you can run
 
-`./run.sh make all_imports`
+`sh ./run.sh make all_imports` 
 
-to regenerate imports.
+from within /bco/src/ontology to regenerate imports.
 
-Note: the bco_terms.txt file may include 'starter' classes seeded from
-the ontology starter kit. It is safe to remove these.
+This stores the new files in `/bco/src/ontology/imports` with today's data in the release IRI.
+
 
 ## Design patterns
 
