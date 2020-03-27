@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/releases/2020-03-06/imports/iao_import.owl" uri="file:/Users/rwalls/gh/bco/imports/iao_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/releases/2020-03-06/imports/obi_import.owl" uri="file:/Users/rwalls/gh/bco/imports/obi_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bco/releases/2020-03-06/imports/pco_import.owl" uri="file:/Users/rwalls/gh/bco/imports/pco_import.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
         <uri id="Automatically generated entry, Timestamp=1585256777842" name="http://bco.googlecode.com/git/src/ontology/bco_example_tdwg2013.owl" uri="examples/bco_example_tdwg2013.owl"/>
         <uri id="Automatically generated entry, Timestamp=1585256777842" name="http://purl.obolibrary.org/obo/bco.owl" uri="bco.owl"/>
