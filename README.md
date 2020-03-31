@@ -8,11 +8,13 @@ Please cite the original PLOS ONE paper: https://doi.org/10.1371/journal.pone.00
 
 
 ## Scope
-The Biological Collections Ontology (BCO) is a the OBO Foundry library. The goal of the BCO is to support the interoperability of biodiversity data, including data on museum collections, environmental/metagenomic samples, and ecological surveys.
+The BCO supports the interoperability of biodiversity and biodiversity related data, including data on museum collections, environmental/metagenomic samples, and ecological surveys. A key aspect of the BCO is distinguishing among material samples (i.e. specimens), observing processes, and data about either of those entities.
 
 The BCO covers distinctions between individuals, organisms, voucher specimens, lots, samples, the relations between these entities, and the processes governing the creation and use of "samples". Also within scope are properties including collector, location, time, storage environment, containers, institution, and collection identifiers. 
 
 A slightly outdated 12 minute overview of the BCO is available on YouTube at https://www.youtube.com/watch?v=j37IH9PIeaA.
+
+The Biological Collections Ontology (BCO) is part of the OBO Foundry library and attempts to conform to [OBO Foundry Principles](http://www.obofoundry.org/principles/fp-000-summary.html)
 
 ## Links
 Please join the BCO Google Groups mailing list: bco-discuss@googlegroups.com. You can browse the list at https://groups.google.com/forum/?fromgroups#!forum/bco-discuss.
