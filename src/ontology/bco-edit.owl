@@ -104,7 +104,7 @@ obo:BCO_0000067 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdf:type owl:TransitiveProperty ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
-                rdfs:label "derives from by planned process"@en ;
+                rdfs:label "obsolete derives from by planned process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -114,7 +114,7 @@ obo:BCO_0000068 rdf:type owl:ObjectProperty ;
                 rdf:type owl:TransitiveProperty ;
                 obo:IAO_0000116 "This property used an old version of the has input relation, so it has been deprecated."^^rdfs:Literal ;
                 obo:IAO_0000231 obo:IAO_0000423 ;
-                rdfs:label "is derived into by planned process"@en ;
+                rdfs:label "obsotlete is derived into by planned process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -702,7 +702,7 @@ obo:bco_0000003 rdf:type owl:Class ;
                                 "Seeing three pelicans flying overhead on Christmas day and report them as part of the Christmas Bird Count." ;
                 obo:IAO_0000115 "A process in which a person or machine sees or detects a material entity and selects it as worthy of observation, and which has as output an information content entity about the selected material entity." ;
                 obo:IAO_0000116 "This class was made obsolete because of the incorrect identifier format. It has been replaced by BCO_0000003." ;
-                obo:IAO_0000231 :BCO_0000075 ;
+                obo:IAO_0000231 obo:BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "The information artifact may written or recorded or just be stored in someone's head (specifically depenedent upon that person). In the context of a taxonomic inventory, an observing process may be called a sighting, and is an ad hoc reporting of, typically, a single taxon occurrence, usually motivated by rarity, individual interest in the taxon, or atypicality of circumstances."@en ;
                 rdfs:label "obsolete observing process"@en ;
@@ -738,7 +738,7 @@ obo:bco_0000006 rdf:type owl:Class ;
                 obo:IAO_0000112 "A field notebook." ;
                 obo:IAO_0000114 obo:IAO_0000124 ;
                 obo:IAO_0000115 "A printed report that records the outcome of some observing process."@en ;
-                obo:IAO_0000231 :BCO_0000075 ;
+                obo:IAO_0000231 obo:BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:label "obolete printed observational report"@en ;
                 owl:deprecated "true"^^xsd:boolean .
@@ -764,7 +764,7 @@ obo:bco_0000016 rdf:type owl:Class ;
                                 "a researcher submitting a water sample to a laboratory storage collection"@en ;
                 obo:IAO_0000115 "A planned process whereby a person submits a material sample to an organization." ;
                 obo:IAO_0000116 "This term was made obsolete because it had the incorrect identifier format. It has been replaced by BCO_0000016." ;
-                obo:IAO_0000231 :BCO_0000075 ;
+                obo:IAO_0000231 obo:BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:label "obsolete submitting process"@en ;
                 owl:deprecated "true"^^xsd:boolean .
@@ -821,7 +821,7 @@ obo:bco_0000025 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000115 "An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured."@en ;
                 obo:IAO_0000116 "This term was deprecated because it has the wrong ID format. It is replaced by BCO_0000025." ;
-                obo:IAO_0000231 :BCO_0000075 ;
+                obo:IAO_0000231 obo:BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., in recording data from a lab notebook),therefore, we made locality description about a spatial temporal region, rather than a site."@en ;
                 rdfs:label "obsolete locality description"@en ;
@@ -891,7 +891,7 @@ obo:bco_0000031 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000428 ;
                 obo:IAO_0000115 "An object aggregate that has as member part a material sample that is located in museum as a result of a process of curation."@en ;
                 obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It has been replaced by BCO_0000031." ;
-                obo:IAO_0000231 :BCO_0000075 ;
+                obo:IAO_0000231 obo:BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:comment "Intent is to document biodiversity for research and education. The class museum collection has meaning that is much broader than biological collections. It would probably be better to import this term from another, more general ontology and create a specific subclass for natural history museum collection."@en ;
                 rdfs:label "obsolete museum collection"@en ;
@@ -905,7 +905,7 @@ obo:bco_0000032 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000428 ;
                 obo:IAO_0000115 "A museum collection that has as member part a material sample that was derived from an organism."@en ;
                 obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000031." ;
-                obo:IAO_0000231 :BCO_0000075 ;
+                obo:IAO_0000231 obo:BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:label "obsolete organismal museum collection"@en ;
                 owl:deprecated "true"^^xsd:boolean .
@@ -1023,7 +1023,7 @@ obo:bco_0000044 rdf:type owl:Class ;
                                 "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ;
                 obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
                 obo:IAO_0000116 "This term was made obsolete because of incorrected identifier format. It is replaced by BCO_0000044." ;
-                obo:IAO_0000231 :BCO_0000075 ;
+                obo:IAO_0000231 obo:BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:label "obsolete material target of observation"@en ;
                 owl:deprecated "true"^^xsd:boolean .
@@ -1049,30 +1049,54 @@ obo:bco_0000046 rdf:type owl:Class ;
                 obo:IAO_0000112 "the role borne by a bird during a Christmas Bird Count"@en ;
                 obo:IAO_0000115 "A role that is borne by some material entity and is realized by the material entity being the input of an observing process." ;
                 obo:IAO_0000116 "This term was made obsolete because of incorrect identifier format. It is replaced by BCO_0000046." ;
-                obo:IAO_0000231 :BCO_0000075 ;
+                obo:IAO_0000231 obo:BCO_0000075 ;
                 dc:creator "Biocode Commons Ontology Hackathon" ;
                 rdfs:label "obsolete material target of observation role"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
+###  http://purl.obolibrary.org/obo/bco_0000080
+obo:bco_0000080 rdf:type owl:Class ;
+                rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
+                obo:IAO_0000112 "A set of gastropod and bivalve shells found in shell midden from an archaeological site in Alaska." ;
+                obo:IAO_0000115 "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some animal." ;
+                obo:IAO_0000119 "Rob Guralnick" ;
+                rdfs:comment "Zooarchaeological specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture." ;
+                rdfs:label "zooarcheological specimen"@en .
+
+
+###  http://purl.obolibrary.org/obo/bco_0000081
+obo:bco_0000081 rdf:type owl:Class ;
+                rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
+                obo:IAO_0000112 "Preserved seeds found in a storage jar at an archeological site." ;
+                obo:IAO_0000115 "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some plant." ;
+                obo:IAO_0000119 "Rob Guralnick" ;
+                rdfs:comment "Archaeologicalbotanical specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture." ;
+                rdfs:label "archeobotanical specimen"@en .
+
+
 ###  http://purl.obolibrary.org/obo/bco.owl/BCO_0000080
 :BCO_0000080 rdf:type owl:Class ;
-             rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
+             rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
              obo:IAO_0000112 "A set of gastropod and bivalve shells found in shell midden from an archaeological site in Alaska." ;
              obo:IAO_0000115 "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some animal." ;
              obo:IAO_0000119 "Rob Guralnick" ;
-             rdfs:comment "Zooarchaeological specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture." ;
-             rdfs:label "zooarcheological specimen"@en .
+             obo:IAO_0000231 obo:BCO_0000075 ;
+             rdfs:comment "This class was deprecated because the ID format is wrong. It is replaced by http://purl.obolibrary.org/obo/BCO_0000080" ;
+             rdfs:label "obsolete zooarcheological specimen"@en ;
+             owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://purl.obolibrary.org/obo/bco.owl/BCO_0000081
 :BCO_0000081 rdf:type owl:Class ;
-             rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/PreservedSpecimen> ;
+             rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
              obo:IAO_0000112 "Preserved seeds found in a storage jar at an archeological site." ;
              obo:IAO_0000115 "A preserved specimen that is the output of an archaeological sampling process and is the remains of a part of some plant." ;
              obo:IAO_0000119 "Rob Guralnick" ;
-             rdfs:comment "Archaeologicalbotanical specimens are typically collections of biological material generated as part of an archaeological collecting process that is separate from the type of processes that would yield other kinds of samples or collections of samples. This process almost always entails collecting in-situ from archaeological sites where there is evidence of past human material culture." ;
-             rdfs:label "archeobotanical specimen"@en .
+             obo:IAO_0000231 obo:BCO_0000075 ;
+             rdfs:comment "This class was deprecated because the ID format is wrong. It is replaced by http://purl.obolibrary.org/obo/BCO_0000081." ;
+             rdfs:label "obsolete archeobotanical specimen"@en ;
+             owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://purl.org/dc/dcam/VocabularyEncodingScheme
@@ -1200,10 +1224,18 @@ obo:BCO_0000073 rdf:type owl:NamedIndividual ;
                 rdfs:label "specimen collection process Y"@en .
 
 
+###  http://purl.obolibrary.org/obo/BCO_0000075
+obo:BCO_0000075 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                rdfs:comment "false"^^xsd:boolean ;
+                rdfs:label "incorrect identifier format, replaced"@en .
+
+
 ###  http://purl.obolibrary.org/obo/bco.owl/BCO_0000075
-:BCO_0000075 rdf:type owl:NamedIndividual ,
-                      obo:IAO_0000078 ;
-             rdfs:label "incorrect identifier format, replaced"@en .
+:BCO_0000075 rdf:type owl:NamedIndividual ;
+             obo:IAO_0000231 obo:BCO_0000075 ;
+             rdfs:label "obsolete incorrect identifier format, do not use"@en ;
+             owl:deprecated "true"^^xsd:boolean .
 
 
 [ obo:IAO_0000231 ""
