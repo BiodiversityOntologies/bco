@@ -34,18 +34,22 @@ The Biological Collections Ontology was originally created at the Biocode Common
 
 ###  http://purl.obolibrary.org/obo/BCO_0000057
 obo:BCO_0000057 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "The label used in Humbolt Core." ;
                 rdfs:label "taxonomic inventory metadata preferred name"@en ;
                 rdfs:subPropertyOf obo:IAO_0000118 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BCO_0000057 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "The label used in Humbolt Core." ;
+   dc:source <https://doi.org/10.1111/ecog.02942>
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BCO_0000060
 obo:BCO_0000060 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "The label preferred for use with this ontology. To be added only with imported terms." ;
                 rdfs:label "BCO preferred label"@en .
-
-
-###  http://purl.obolibrary.org/obo/BCO_0000074
-obo:BCO_0000074 rdf:type owl:AnnotationProperty ;
-                rdfs:label "dwc_bco mapping"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000231
@@ -119,7 +123,7 @@ obo:BCO_0000085 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:IAO_0000136 ;
                 rdfs:domain obo:BCO_0000084 ;
                 rdfs:range <http://rs.tdwg.org/dwc/terms/Taxon> ;
-                rdfs:comment "This relation is used specifically to link a taxonomic association to a taxon and is used with the of organism relation." ;
+                obo:IAO_0000115 "A relation  used  to link a taxonomic association to a taxon. Should be used with the of organism relation." ;
                 rdfs:label "to taxon"@en .
 
 
@@ -128,7 +132,7 @@ obo:BCO_0000086 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:IAO_0000136 ;
                 rdfs:domain obo:BCO_0000084 ;
                 rdfs:range obo:PCO_0000031 ;
-                rdfs:comment "This relation specifically links an identification association to an organismal entity and is used together with the to taxon relation." ;
+                obo:IAO_0000115 "A relation used to link an identification association to an organismal entity. Should be used together with the to taxon relation." ;
                 rdfs:label "of organism"@en .
 
 
@@ -139,7 +143,7 @@ obo:BCO_0000087 rdf:type owl:ObjectProperty ;
                                          ]
                                          obo:BCO_0000085
                                        ) ;
-                rdfs:comment "A shortcut relation to an organsimal entity to a taxon or taxa." ;
+                obo:IAO_0000115 "A shortcut relation from an organsimal entity to a taxon." ;
                 rdfs:label "member of taxon"@en .
 
 
@@ -296,8 +300,8 @@ obo:BCO_0000044 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ;
                 obo:IAO_0000112 "A bird observed during a Christmas Bird Count"@en ,
                                 "A bird observed during a transect walk." ,
-                                "A tree is forest plot that is measured for diameter at breast height (DBH)." ,
-                                "An lizard observed in the field that is not collected but whose location is recorded in a field notebook. " ;
+                                "A lizard observed in the field that is not collected but whose location is recorded in a field notebook." ,
+                                "A tree is forest plot that is measured for diameter at breast height (DBH)." ;
                 obo:IAO_0000114 obo:IAO_0000428 ;
                 obo:IAO_0000115 "A material entity that has a target of observation role, that is, a material entity that is the input of some observing process."@en ;
                 obo:IAO_0000116 "This term replaces bco_0000044, which was made obsolete because of incorrect identifier format." ;
@@ -1105,7 +1109,6 @@ obo:bco_0000046 rdf:type owl:Class ;
 ###  http://rs.tdwg.org/dwc/terms/Identification
 <http://rs.tdwg.org/dwc/terms/Identification> rdf:type owl:Class ;
                                               obo:BCO_0000060 "identification"@en ;
-                                              obo:BCO_0000074 obo:BCO_0000042 ;
                                               obo:IAO_0000114 obo:IAO_0000125 .
 
 
