@@ -56,7 +56,7 @@ For now, consult the [GO Tutorial on configuring Protege](http://go-protege-tuto
 
 ## Imports
 
-All import modules ready for release are in the [imports/](imports/) folder.
+All import modules ready for release are in the root [imports/](../../imports/) folder.
 
 Each ontology that you want to import from must be specified in the makefile. This is done automatically when you set up the repo with ODK, but if you want to import from a new ontology, you need to add it to the makefile in several places.
 
