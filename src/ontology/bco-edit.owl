@@ -10,9 +10,9 @@
 
 <http://purl.obolibrary.org/obo/bco.owl> rdf:type owl:Ontology ;
                                           owl:imports <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/dwcterms.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2020-03-27/imports/iao_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2020-03-27/imports/obi_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2020-03-27/imports/pco_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-09-11/imports/iao_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-09-11/imports/pco_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-09-12/imports/obi_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
                                                       <http://purl.obolibrary.org/obo/ro/core.owl> ;
                                           dc:contributor "Barry Smith" ,

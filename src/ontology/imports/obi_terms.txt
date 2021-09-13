@@ -10,4 +10,7 @@ http://purl.obolibrary.org/obo/OBI_0000659 #specimen collection
 http://purl.obolibrary.org/obo/OBI_0100051 #specimen
 http://purl.obolibrary.org/obo/OBI_0000112 #specimen role
 http://purl.obolibrary.org/obo/OBI_0000295 #is specified input of
-http://purl.obolibrary.org/obo/OBI_0000245 #organization
+http://purl.obolibrary.org/obo/OBI_0000312 #is specified output of
+http://purl.obolibrary.org/obo/OBI_0000293 #has specified input
+http://purl.obolibrary.org/obo/OBI_0000299 #has specified output
+

@@ -1,0 +1,10 @@
+id: bco
+title: Biocollections Ontology
+github_org: BiodiversityOntologies
+repo: bco
+import_group:
+  products:
+    - id: pco
+    - id: obi
+      module_type: custom
+    - id: iao
