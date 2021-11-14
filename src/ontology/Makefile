@@ -273,21 +273,40 @@ mirror/iao.owl: mirror/iao.trigger
 
 #Get current DwC files
 
+#TODO: figure out why curl does not work with make
+
 #mirror/dterms.csv:
-#	curl -LJO https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/terms/terms.csv > $@
+#	curl -LJO https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/terms/terms.csv > ../modules/$@
 
 #mirror/diri.csv:
-#	curl -LJO https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/iri/iri.csv > $@
+#	curl -LJO https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/iri/iri.csv > ../modules/$@
 
 # ----------------------------------------
-# Darwin Core Imports
+# Robot Modules (non-dosdp, not imports)
 # ----------------------------------------
+#TODO: create a make command to run the python script that creates DwC CSV files (dwcrobot.py)
 
 
-#TODO: create a make command to run the python script for DwC imports
 
- 
+MODULES = dwcterms dwciri
+MODULEDIR = ../modules
+ALL_MODS_OWL = $(patsubst %, modules/%.owl, $(MODULES))
+ALL_MODS_CSV = $(patsubst %, %.csv, $(MODULES))
 
+all_modules:: all_modules_owl #all_modules_obo
+all_modules_owl:: $(ALL_MODS_OWL)
+#all_modules_obo: $(patsubst %, modules/%.obo, $(MODS))
+
+#Targets for ROBOT template modules
+#modules/%.owl:: $(MODULEDIR)/%.csv
+#	$(ROBOT) template --template $< --prefix "dwcterms: http://rs.tdwg.org/dwc/terms/"  --prefix "dwciri: http://rs.tdwg.org/dwc/iri/" --ontology-iri $(ONTBASE)/$@ -o $@.tmp.owl && mv $@.tmp.owl $@
+
+
+dwcterms.owl:: $(MODULEDIR)/dwcterms.csv
+	$(ROBOT) template --template ../modules/dwcterms.csv --prefix "DWC: http://rs.tdwg.org/dwc/terms/" --ontology-iri $(ONTBASE)/$@ -o $@.tmp.owl && mv $@.tmp.owl ../modules/$@
+
+dwciri.owl:: $(MODULEDIR)/dwciri.csv
+	$(ROBOT) template --template ../modules/dwciri.csv --prefix "DWC: http://rs.tdwg.org/dwc/iri/" --ontology-iri $(ONTBASE)/$@ -o $@.tmp.owl && mv $@.tmp.owl ../modules/$@
 
 
 # ----------------------------------------

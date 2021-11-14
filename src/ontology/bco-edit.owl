@@ -9,10 +9,10 @@
 @base <http://purl.obolibrary.org/obo/bco.owl> .
 
 <http://purl.obolibrary.org/obo/bco.owl> rdf:type owl:Ontology ;
-                                          owl:imports <http://purl.obolibrary.org/obo/bco/releases/2016-12-14/imports/dwcterms.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-09-11/imports/iao_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-09-11/imports/pco_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-09-12/imports/obi_import.owl> ,
+                                          owl:imports <http://purl.obolibrary.org/obo/bco/dwcterms.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-11-14/imports/iao_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-11-14/imports/obi_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-11-14/imports/pco_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
                                                       <http://purl.obolibrary.org/obo/ro/core.owl> ;
                                           dc:contributor "Barry Smith" ,
@@ -82,6 +82,14 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/source
 dc:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 #################################################################

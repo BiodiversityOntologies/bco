@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/bco/dwciri.owl#"
+     xml:base="http://purl.obolibrary.org/obo/bco/dwciri.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="dcterms:">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bco/dwciri.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- dcterms:description -->
+
+    <owl:AnnotationProperty rdf:about="dcterms:description"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/behavior -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/behavior">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A description of the behavior shown by the subject at the time the Occurrence was recorded.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Behavior (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/dataGeneralizations -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/dataGeneralizations">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actions taken to make the shared data less specific or complete than in its original form. Suggests that alternative data of higher quality may be available on request.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Generalizations (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/degreeOfEstablishment -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/degreeOfEstablishment">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use IRIs from the controlled vocabulary designated for use with this term, listed at http://rs.tdwg.org/dwc/doc/doe/. For details, refer to https://doi.org/10.3897/biss.3.38084 . Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">`http://rs.tdwg.org/dwcdoe/values/d003`, `http://rs.tdwg.org/dwcdoe/values/d005`</obo:IAO_0000112>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which an Organism survives, reproduces, and expands its range at the given place and time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree of Establishment (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/disposition -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/disposition">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current state of a specimen with respect to the collection identified in collectionCode or collectionID.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disposition (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/earliestGeochronologicalEra -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/earliestGeochronologicalEra">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use an IRI from a controlled vocabulary. A &quot;convenience property&quot; that replaces Darwin Core literal-value terms related to geological context. See Section 2.7.6 of the Darwin Core RDF Guide for details.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use to link a dwc:GeologicalContext instance to chronostratigraphic time periods at the lowest possible level in a standardized hierarchy.   Use this property to point to the earliest possible geological time period from which the cataloged item was collected.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earliest Geochronological Era</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/establishmentMeans -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/establishmentMeans">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use IRIs from the controlled vocabulary designated for use with this term, listed at http://rs.tdwg.org/dwc/doc/em/. For details, refer to https://doi.org/10.3897/biss.3.38084 . Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">`http://rs.tdwg.org/dwcem/values/e001`, `http://rs.tdwg.org/dwcem/values/e005`</obo:IAO_0000112>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process by which the biological individual(s) represented in the Occurrence became established at the location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Establishment Means (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/fieldNotes -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/fieldNotes">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subject is a dwc:Event instance and the object is a (possibly IRI-identified) resource that is the field notes.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One of a) an indicator of the existence of, b) a reference to (publication, URI), or c) the text of notes taken in the field about the Event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field Notes (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/fieldNumber -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/fieldNumber">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subject is a (possibly IRI-identified) resource that is the field notes and the object is a dwc:Event instance.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An identifier given to the event in the field. Often serves as a link between field notes and the Event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field Number (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/footprintSRS -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/footprintSRS">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geometry given in footprintWKT is based.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Footprint SRS (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/footprintWKT -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/footprintWKT">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Well-Known Text (WKT) representation of the shape (footprint, geometry) that defines the Location. A Location may have both a point-radius representation (see decimalLatitude) and a footprint representation, and they may differ from each other.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Footprint WKT (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/fromLithostratigraphicUnit -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/fromLithostratigraphicUnit">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use an IRI from a controlled vocabulary. A &quot;convenience property&quot; that replaces Darwin Core literal-value terms related to geological context. See Section 2.7.7 of the Darwin Core RDF Guide for details.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use to link a dwc:GeologicalContext instance to an IRI-identified lithostratigraphic unit at the lowest possible level in a hierarchy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">From Lithostratigraphic Unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/geodeticDatum -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/geodeticDatum">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use an IRI for the EPSG code of the SRS, if known. Otherwise use an IRI or controlled vocabulary for the name or code of the geodetic datum, if known. Otherwise use an IRI or controlled vocabulary for the name or code of the ellipsoid, if known. If none of these is known, use the value `unknown`.</dcterms:description>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">`https://epsg.io/4326`</obo:IAO_0000112>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geodetic Datum (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/georeferenceProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/georeferenceProtocol">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A description or reference to the methods used to determine the spatial footprint, coordinates, and uncertainties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georeference Protocol (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/georeferenceSources -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/georeferenceSources">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A map, gazetteer, or other resource used to georeference the Location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georeference Sources (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/georeferenceVerificationStatus -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/georeferenceVerificationStatus">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A categorical description of the extent to which the georeference has been verified to represent the best possible spatial description for the Location of the Occurrence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georeference Verification Status (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/georeferencedBy -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/georeferencedBy">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person, group, or organization who determined the georeference (spatial representation) for the Location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georeferenced By (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/habitat -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/habitat">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A category or description of the habitat in which the Event occurred.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Habitat (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/identificationQualifier -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/identificationQualifier">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A controlled value to express the determiner&apos;s doubts about the Identification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification Qualifier (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/identificationVerificationStatus -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/identificationVerificationStatus">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects. Recommended best practice is to use a controlled vocabulary such as that used in HISPID and ABCD.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A categorical indicator of the extent to which the taxonomic identification has been verified to be correct.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification Verification Status (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/identifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/identifiedBy">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person, group, or organization who assigned the Taxon to the subject.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identified By (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/inCollection -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/inCollection">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use an IRI from a controlled registry. A &quot;convenience property&quot; that replaces literal-value terms related to collections and institutions. See Section 2.7.3 of the Darwin Core RDF Guide for details.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use to link any subject resource that is part of a collection to the collection containing the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Collection</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/inDataset -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/inDataset">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string literal name of the dataset can be provided using the term dwc:datasetName. See the Darwin Core RDF Guide for details.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use to link a subject dataset record to the dataset which contains it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Dataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/inDescribedPlace -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/inDescribedPlace">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use an IRI from a controlled registry. A &quot;convenience property&quot; that replaces Darwin Core literal-value terms related to locations. See Section 2.7.5 of the Darwin Core RDF Guide for details.</dcterms:description>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">`http://vocab.getty.edu/tgn/1019987`</obo:IAO_0000112>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use to link a dcterms:Location instance subject to the lowest level standardized hierarchically-described resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Described Place</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/informationWithheld -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/informationWithheld">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Additional information that exists, but that has not been shared in the given record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Withheld (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/latestGeochronologicalEra -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/latestGeochronologicalEra">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use an IRI from a controlled vocabulary. A &quot;convenience property&quot; that replaces Darwin Core literal-value terms related to geological context. See Section 2.7.6 of the Darwin Core RDF Guide for details.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use to link a dwc:GeologicalContext instance to chronostratigraphic time periods at the lowest possible level in a standardized hierarchy.   Use this property to point to the latest possible geological time period from which the cataloged item was collected.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latest Geochronological Era</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/lifeStage -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/lifeStage">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age class or life stage of the Organism(s) at the time the Occurrence was recorded.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Stage (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/locationAccordingTo -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/locationAccordingTo">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information about the source of this Location information. Could be a publication (gazetteer), institution, or team of individuals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location According To (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/measurementDeterminedBy -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/measurementDeterminedBy">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person, group, or organization who determined the value of the MeasurementOrFact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Determined By (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/measurementMethod -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/measurementMethod">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The method or protocol used to determine the measurement, fact, characteristic, or assertion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Method (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/measurementType -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/measurementType">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The nature of the measurement, fact, characteristic, or assertion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Type (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/measurementUnit -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/measurementUnit">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use the International System of Units (SI).</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The units associated with the measurementValue.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Unit (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/measurementValue -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/measurementValue">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">`http://vocab.nerc.ac.uk/collection/L22/current/TOOL0960/`</obo:IAO_0000112>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The value of the measurement, fact, characteristic, or assertion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Value (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/occurrenceStatus -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/occurrenceStatus">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A statement about the presence or absence of a Taxon at a Location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occurrence Status (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/organismQuantityType -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/organismQuantityType">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dwc:organismQuantityType must have a corresponding dwc:organismQuantity.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The type of quantification system used for the quantity of organisms.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organism Quantity Type (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/pathway -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/pathway">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use IRIs from the controlled vocabulary designated for use with this term, listed at http://rs.tdwg.org/dwc/doc/pw/. For details, refer to https://doi.org/10.3897/biss.3.38084 . Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">`http://rs.tdwg.org/dwcpw/values/p002`, `http://rs.tdwg.org/dwcpw/values/p046`</obo:IAO_0000112>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process by which an Organism came to be in a given place at a given time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/preparations -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/preparations">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A preparation or preservation method for a specimen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preparations (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/recordNumber -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/recordNumber">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subject is a dwc:Occurrence and the object is a (possibly IRI-identified) resource that is the field notes.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An identifier given to the Occurrence at the time it was recorded. Often serves as a link between field notes and an Occurrence record, such as a specimen collector&apos;s number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Record Number (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/recordedBy -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/recordedBy">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person, group, or organization responsible for recording the original Occurrence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recorded By (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/reproductiveCondition -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/reproductiveCondition">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The reproductive condition of the biological individual(s) represented in the Occurrence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reproductive Condition (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/sampleSizeUnit -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/sampleSizeUnit">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sampleSizeUnit must have a corresponding sampleSizeValue. Recommended best practice is to use a controlled vocabulary such as the Ontology of Units of Measure http://www.wurvoc.org/vocabularies/om-1.8/ of SI units, derived units, or other non-SI units accepted for use within the SI.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The unit of measurement of the size (time duration, length, area, or volume) of a sample in a sampling event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sampling Size Unit (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/samplingProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/samplingProtocol">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is describe an Event with no more than one sampling protocol. In the case of a summary Event in which a specific protocol can not be attributed to specific Occurrences, the recommended best practice is to repeat the property for each IRI that denotes a different sampling protocol that applies to the Occurrence.</dcterms:description>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">`https://doi.org/10.1111/j.1466-8238.2009.00467.x`</obo:IAO_0000112>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The methods or protocols used during an Event, denoted by an IRI.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sampling Protocol (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/sex -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/sex">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The sex of the biological individual(s) represented in the Occurrence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sex (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/toTaxon -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/toTaxon">
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &quot;convenience property&quot; that replaces Darwin Core literal-value terms related to taxonomic entities. See Section 2.7.4 of the Darwin Core RDF Guide for details.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use to link a dwc:Identification instance subject to a taxonomic entity such as a taxon, taxon concept, or taxon name use.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To Taxon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/typeStatus -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/typeStatus">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nomenclatural type (type status, typified scientific name, publication) applied to the subject.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type Status (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/verbatimCoordinateSystem -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/verbatimCoordinateSystem">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The spatial coordinate system for the verbatimLatitude and verbatimLongitude or the verbatimCoordinates of the Location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbatim Coordinate System (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/verbatimSRS -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/verbatimSRS">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use an IRI for the EPSG code of the SRS, if known. Otherwise use a controlled vocabulary IRI for the name or code of the geodetic datum, if known. Otherwise use a controlled vocabulary IRI for the name or code of the ellipsoid, if known.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which coordinates given in verbatimLatitude and verbatimLongitude, or verbatimCoordinates are based.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbatim SRS (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/verticalDatum -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/verticalDatum">
+        <rdfs:domain rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+        <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.</dcterms:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The vertical datum used as the reference upon which the values in the elevation terms are based.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/iri/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vertical Datum (IRI)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+

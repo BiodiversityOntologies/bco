@@ -44,7 +44,7 @@ def get_args():
                         help='modified output file',
                         metavar='string',
                         type=str,
-                        default='dwcterms.csv')
+                        default='../modules/dwcterms.csv')
 
     return parser.parse_args()
 
@@ -79,7 +79,7 @@ def main():
     #The rdf type for class is interpretted correctly already.
     #The type for DwCType is http://purl.org/dc/dcam/VocabularyEncodingScheme. This is interpretted as an individual.
     #However, since DwCType is deprecated, I will ignore it for now.
-    if args.inputfile == 'mirrors/terms.csv':
+    if args.inputfile == 'mirror/terms.csv':
         type = 'owl:DataProperty'
     else:
         type = 'owl:ObjectProperty'
