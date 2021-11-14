@@ -271,6 +271,23 @@ mirror/iao.owl: mirror/iao.trigger
 	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/iao.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
+#Get current DwC files
+
+#mirror/dterms.csv:
+#	curl -LJO https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/terms/terms.csv > $@
+
+#mirror/diri.csv:
+#	curl -LJO https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/iri/iri.csv > $@
+
+# ----------------------------------------
+# Darwin Core Imports
+# ----------------------------------------
+
+
+#TODO: create a make command to run the python script for DwC imports
+
+ 
+
 
 
 # ----------------------------------------
