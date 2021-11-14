@@ -96,6 +96,7 @@ def main():
     new =  new.sort_index()
     new.to_csv(outfile, index=False)
 
+#TODO: write code to remove http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI as the domain for IRI terms. I've done this manually for now.
 
 # --------------------------------------------------
 if __name__ == '__main__':
