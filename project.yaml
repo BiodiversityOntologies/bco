@@ -10,7 +10,6 @@ edit_format: owl
 exclude_tautologies: structural
 export_formats:
 - owl
-- obo
 git_user: ''
 github_org: BiodiversityOntologies
 gzip_main: false
@@ -21,10 +20,11 @@ import_group:
   ids:
   - obi
   - pco
-  - bfo
+  - iao
   products:
   - description: null
     id: obi
+    module_type: custom
     mirror_from: null
     rebuild_if_source_changes: true
     robot_settings: null
@@ -34,7 +34,8 @@ import_group:
     rebuild_if_source_changes: true
     robot_settings: null
   - description: null
-    id: bfo
+    id: iao
+    module_type: filter
     mirror_from: null
     rebuild_if_source_changes: true
     robot_settings: null
