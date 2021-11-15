@@ -1,67 +1,70 @@
 Level	Rule Name	Subject	Property	Value
-ERROR	missing_label	planned process	label	
-ERROR	missing_label	specimen role	label	
-ERROR	missing_label	specimen collection process	label	
-ERROR	missing_label	specimen	label	
-ERROR	missing_label	http://purl.org/dc/dcmitype/Event	label	
-ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Location	label	
-ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist	label	
-ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Occurrence	label	
-ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Taxon	label	
-ERROR	missing_label	Event	label	
-ERROR	missing_label	Fossil Specimen	label	
-ERROR	missing_label	Geological Context	label	
-ERROR	missing_label	Human Observation	label	
-ERROR	missing_label	Identification	label	
-ERROR	missing_label	Living Specimen	label	
-ERROR	missing_label	Machine Observation	label	
-ERROR	missing_label	Material Sample	label	
-ERROR	missing_label	Occurrence	label	
-ERROR	missing_label	Organism	label	
-ERROR	missing_label	Preserved Specimen	label	
-ERROR	missing_label	Taxon	label	
+ERROR	missing_label	OBI:0000011	rdfs:label	
+ERROR	missing_label	OBI:0000112	rdfs:label	
+ERROR	missing_label	OBI:0000659	rdfs:label	
+ERROR	missing_label	OBI:0100051	rdfs:label	
+ERROR	missing_label	http://purl.org/dc/dcmitype/Event	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Location	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Occurrence	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/dwctype/Taxon	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Event	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/FossilSpecimen	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/GeologicalContext	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/HumanObservation	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Identification	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/LivingSpecimen	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/MachineObservation	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/MaterialSample	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Occurrence	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Organism	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/PreservedSpecimen	rdfs:label	
+ERROR	missing_label	http://rs.tdwg.org/dwc/terms/Taxon	rdfs:label	
 ERROR	deprecated_class_reference	obsolete printed report	rdfs:subClassOf	<http://purl.obolibrary.org/obo/bco_0000006>
 ERROR	deprecated_class_reference	obsolete museum collection entity	rdfs:subClassOf	<http://purl.obolibrary.org/obo/bco_0000030>
 ERROR	deprecated_class_reference	obsolete taxonomic identification process	rdfs:subClassOf	<http://purl.obolibrary.org/obo/bco_0000034>
 ERROR	missing_ontology_description	http://purl.obolibrary.org/obo/bco.owl	dc11:description	
 ERROR	missing_ontology_title	http://purl.obolibrary.org/obo/bco.owl	dc11:title	
+WARN	annotation_whitespace	obsolete material sample	IAO:0000112	"A jar of water, the microbes that were filtered from that water, the DNA extracted from those microbes, a subsample of that DNA.
+"
+WARN	annotation_whitespace	obsolete material target of observation	IAO:0000112	An lizard observed in the field that is not collected but whose location is recorded in a field notebook. 
 WARN	equivalent_pair	taxonomic identification process	owl:equivalentClass	<http://rs.tdwg.org/dwc/terms/Identification>
-WARN	equivalent_pair	spatial region	owl:equivalentClass	<http://rs.tdwg.org/dwc/dwctype/Location>
-WARN	equivalent_pair	process	owl:equivalentClass	<http://rs.tdwg.org/dwc/terms/Event>
-WARN	equivalent_pair	specimen	owl:equivalentClass	<http://rs.tdwg.org/dwc/terms/MaterialSample>
-WARN	missing_definition	object aggregate	definition	
-WARN	missing_definition	object	definition	
-WARN	missing_definition	metadata complete	definition	
-WARN	missing_definition	planned process	definition	
-WARN	missing_definition	specimen role	definition	
-WARN	missing_definition	is_specified_input_of	definition	
-WARN	missing_definition	specimen collection process	definition	
-WARN	missing_definition	specimen	definition	
-WARN	missing_definition	http://purl.org/dc/dcmitype/Event	definition	
-WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Location	definition	
-WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist	definition	
-WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Occurrence	definition	
-WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Taxon	definition	
-WARN	missing_definition	Event	definition	
-WARN	missing_definition	Fossil Specimen	definition	
-WARN	missing_definition	Geological Context	definition	
-WARN	missing_definition	Human Observation	definition	
-WARN	missing_definition	Identification	definition	
-WARN	missing_definition	Living Specimen	definition	
-WARN	missing_definition	Machine Observation	definition	
-WARN	missing_definition	Material Sample	definition	
-WARN	missing_definition	Occurrence	definition	
-WARN	missing_definition	Organism	definition	
-WARN	missing_definition	Preserved Specimen	definition	
-WARN	missing_definition	Taxon	definition	
-WARN	missing_definition	dwc_terms status	definition	
-WARN	missing_definition	Obsolete Class	definition	
-WARN	missing_obsolete_label	obsotlete is derived into by planned process	label	obsotlete is derived into by planned process@en
-WARN	missing_obsolete_label	obolete printed observational report	label	obolete printed observational report@en
+WARN	equivalent_pair	BFO:0000006	owl:equivalentClass	<http://rs.tdwg.org/dwc/dwctype/Location>
+WARN	equivalent_pair	BFO:0000015	owl:equivalentClass	<http://rs.tdwg.org/dwc/terms/Event>
+WARN	equivalent_pair	OBI:0100051	owl:equivalentClass	<http://rs.tdwg.org/dwc/terms/MaterialSample>
+WARN	missing_definition	object aggregate	IAO:0000115	
+WARN	missing_definition	object	IAO:0000115	
+WARN	missing_definition	FossilSpecimen	IAO:0000115	
+WARN	missing_definition	OBI:0000011	IAO:0000115	
+WARN	missing_definition	OBI:0000112	IAO:0000115	
+WARN	missing_definition	is_specified_input_of	IAO:0000115	
+WARN	missing_definition	OBI:0000659	IAO:0000115	
+WARN	missing_definition	OBI:0100051	IAO:0000115	
+WARN	missing_definition	http://purl.org/dc/dcmitype/Event	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Location	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/NomenclaturalChecklist	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Occurrence	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/dwctype/Taxon	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Event	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/FossilSpecimen	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/GeologicalContext	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/HumanObservation	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Identification	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/LivingSpecimen	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/MachineObservation	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/MaterialSample	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Occurrence	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Organism	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/PreservedSpecimen	IAO:0000115	
+WARN	missing_definition	http://rs.tdwg.org/dwc/terms/Taxon	IAO:0000115	
+WARN	missing_definition	dwc_terms status	IAO:0000115	
+WARN	missing_definition	Obsolete Class	IAO:0000115	
+WARN	missing_obsolete_label	obsotlete is derived into by planned process	rdfs:label	obsotlete is derived into by planned process@en
+WARN	missing_obsolete_label	obolete printed observational report	rdfs:label	obolete printed observational report@en
 INFO	missing_superclass	taxonomic inventory process	rdfs:subClassOf	
-INFO	missing_superclass	specimen collection process	rdfs:subClassOf	
-INFO	missing_superclass	specimen	rdfs:subClassOf	
+INFO	missing_superclass	OBI:0000659	rdfs:subClassOf	
+INFO	missing_superclass	OBI:0100051	rdfs:subClassOf	
 INFO	missing_superclass	http://rs.tdwg.org/dwc/dwctype/Location	rdfs:subClassOf	
-INFO	missing_superclass	Event	rdfs:subClassOf	
-INFO	missing_superclass	Identification	rdfs:subClassOf	
-INFO	missing_superclass	Material Sample	rdfs:subClassOf	
+INFO	missing_superclass	http://rs.tdwg.org/dwc/terms/Event	rdfs:subClassOf	
+INFO	missing_superclass	http://rs.tdwg.org/dwc/terms/Identification	rdfs:subClassOf	
+INFO	missing_superclass	http://rs.tdwg.org/dwc/terms/MaterialSample	rdfs:subClassOf	

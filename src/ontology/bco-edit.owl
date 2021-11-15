@@ -10,16 +10,16 @@
 
 <http://purl.obolibrary.org/obo/bco.owl> rdf:type owl:Ontology ;
                                           owl:imports <http://purl.obolibrary.org/obo/bco/dwcterms.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-11-14/imports/iao_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-11-14/imports/obi_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/bco/releases/2021-11-14/imports/pco_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/imports/iao_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/imports/obi_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/bco/imports/pco_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/iao/ontology-metadata.owl> ,
                                                       <http://purl.obolibrary.org/obo/ro/core.owl> ;
-                                          dc:contributor "Barry Smith" ,
+                                          dc:contributor "Ramona Walls" ,
+                                                         "John Wieczorek" ,
                                                          "Biocode Commons Ontology Hackathon members" ,
                                                          "John Deck" ,
-                                                         "John Wieczorek" ,
-                                                         "Ramona Walls" ,
+                                                         "Barry Smith" ,
                                                          "Robert Guralnick" ;
                                           <http://purl.org/dc/terms/description> "The BCO supports the interoperability of biodiversity and biodiversity related data, including data on museum collections, environmental/metagenomic samples, and ecological surveys. A key aspect of the BCO is distinguishing among material samples (i.e. specimens), observing processes, and data about either of those entities." ;
                                           <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> ;
