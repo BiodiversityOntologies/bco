@@ -302,7 +302,7 @@ subsets/%.owl: $(ONT).owl
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
 .PHONY: release
-release: $(ONT).owl $(ONT).obo
+release: $(ONT).owl #$(ONT).obo
 	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
 
 # ----------------------------------------

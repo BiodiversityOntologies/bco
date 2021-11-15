@@ -4,3 +4,6 @@ src/ontology/catalog-v001.xml
 src/ontology/mirror/*
 imports/catalog-v001.xml
 src/ontology/imports/catalog-v001.xml
+src/ontology/tmp
+*combined.txt
+

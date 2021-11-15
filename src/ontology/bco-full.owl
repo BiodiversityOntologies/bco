@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/bco.owl#"
-     xml:base="http://purl.obolibrary.org/obo/bco.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/bco/bco-full.owl#"
+     xml:base="http://purl.obolibrary.org/obo/bco/bco-full.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -18,8 +18,8 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bco.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bco/releases/2021-11-14/bco.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bco/bco-full.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bco/releases/2021-11-14/bco-full.owl"/>
         <dc:contributor>Barry Smith</dc:contributor>
         <dc:contributor>Biocode Commons Ontology Hackathon members</dc:contributor>
         <dc:contributor>John Deck</dc:contributor>
@@ -12025,8 +12025,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000293">
         <obo:IAO_0000117>PERSON: Larry Hunter</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.</obo:IAO_0000115>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000111 xml:lang="en">has_specified_input</obo:IAO_0000111>
         <rdfs:label xml:lang="en">has_specified_input</rdfs:label>
@@ -12039,11 +12039,11 @@ Needs a better name. Current name is the definition.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002233">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000118>consumes</obo:IAO_0000118>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <obo:IAO_0000115>p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <rdfs:label xml:lang="en">has input</rdfs:label>
@@ -12065,8 +12065,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/Dataset">
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dataset</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</owl:deprecated>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The category of information pertaining to a logical set of records.</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/Event">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event</rdfs:label>
@@ -12082,8 +12082,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Container class for information about attributes related to a given sampling event.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/EventMeasurement">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event Measurement</rdfs:label>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event Measurement</rdfs:label>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The category of information pertaining to measurements associated with an event.</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</owl:deprecated>
     </rdf:Description>
@@ -12105,8 +12105,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/HumanObservation">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An output of a human observation process.</rdfs:comment>
         <obo:BCO_0000060 xml:lang="en">human observation</obo:BCO_0000060>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence of an Occurrence taken from field notes or literature. A record of an Occurrence without physical evidence nor evidence captured with a machine. </obo:IAO_0000112>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Observation</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/Identification">
@@ -12134,8 +12134,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/MaterialCitation">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Material Citation</rdfs:label>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reference to or citation of one, a part of, or multiple specimens in scholarly publications.</rdfs:comment>
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A citation of a physical specimen from a scientific collection in a taxonomic treatment in a scientific publication. A citation of a group of physical specimens, such as paratypes in a taxonomic treatment in a scientific publication. An occurrence mentioned in a field note book.</obo:IAO_0000112>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reference to or citation of one, a part of, or multiple specimens in scholarly publications.</rdfs:comment>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class constitutes a new value for the controlled vocabulary in the recommendations for basisOfRecord. When importing Darwin Core Archives of literature-based datasets to GBIF, the basisOfRecord should be changed from “Occurrence”, &quot;PreservedSpecimen&quot; or &quot;Literature&quot; to “MaterialCitation”.</dcterms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/MaterialSample">
@@ -12148,8 +12148,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/MeasurementOrFact">
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The weight of an organism in grams. The number of placental scars. Surface water temperature in Celsius.</obo:IAO_0000112>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <obo:IAO_0000231 xml:lang="en">This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here.</obo:IAO_0000231>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement of or fact about an rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource).</rdfs:comment>
+        <obo:IAO_0000231 xml:lang="en">This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here.</obo:IAO_0000231>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement or Fact</rdfs:label>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resources can be thought of as identifiable records or instances of classes and may include, but need not be limited to dwc:Occurrence, dwc:Organism, dwc:MaterialSample, dwc:Event, dwc:Location, dwc:GeologicalContext, dwc:Identification, or dwc:Taxon.</dcterms:description>
@@ -12188,8 +12188,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship of one rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource) to another.</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An instance of an Organism is the mother of another instance of an Organism. A uniquely identified Occurrence represents the same Occurrence as another uniquely identified Occurrence. A MaterialSample is a subsample of another MaterialSample.</obo:IAO_0000112>
-        <obo:IAO_0000231 xml:lang="en">This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here.</obo:IAO_0000231>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
+        <obo:IAO_0000231 xml:lang="en">This term was not deprecated from the dwc terms vocabulary, merely from the dwcterms ontology, because it is not needed here.</obo:IAO_0000231>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource Relationship</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/Sample">
@@ -12213,8 +12213,8 @@ Needs a better name. Current name is the definition.</rdfs:comment>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/SamplingLocation">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Container class for information about the location where a sampling event occurred.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</owl:deprecated>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sampling Location</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/Taxon">
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The genus Truncorotaloides as published by Brönnimann et al. in 1953 in the Journal of Paleontology Vol. 27(6) p. 817-820.</obo:IAO_0000112>
