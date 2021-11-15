@@ -1,1 +1,1 @@
-docker run -v %cd%\..\..\:/work -w /work/src/ontology --rm -ti obolibrary/odkfull %*
+docker run -v %cd%\..\..\:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='' -e JAVA_OPTS='' --rm -ti obolibrary/odkfull %*

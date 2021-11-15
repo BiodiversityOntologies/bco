@@ -3770,8 +3770,8 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Container class for information about attributes related to a given sampling event.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/EventMeasurement">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event Measurement</rdfs:label>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event Measurement</rdfs:label>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The category of information pertaining to measurements associated with an event.</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</owl:deprecated>
     </rdf:Description>
@@ -3828,8 +3828,8 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/Sample">
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rs.tdwg.org/dwc/terms/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sample</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</owl:deprecated>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sample</rdfs:label>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Container class for information about the results of a sampling event (specimen, observation, etc.)</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/SampleAttribute">
